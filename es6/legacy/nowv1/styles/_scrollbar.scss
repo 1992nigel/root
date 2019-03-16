@@ -1,0 +1,161 @@
+body { margin-right: 0; }
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background-color: none;
+  width: 0;
+  height: 0;
+  overflow: visible; }
+
+body::-webkit-scrollbar {
+  width: 0;
+  margin: 0;
+  height: 0; }
+
+body::-webkit-scrollbar-thumb {
+  width: 0;
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  background-color: none; }
+
+
+.scrollbaryhidden {
+  margin-right: 0; }
+
+.scrollbaryhidden::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background-color: none;
+  width: 0;
+  height: 0;
+  overflow: visible; }
+
+.scrollbaryhidden::-webkit-scrollbar {
+  width: 0;
+  margin: 0;
+  height: 0; }
+
+.scrollbaryhidden::-webkit-scrollbar-thumb {
+  width: 0;
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  background-color: none; }
+
+.scrollbary {
+  margin-right: 0; }
+
+.scrollbary::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background-color: none;
+  width: 2.5vh;
+  height: 5vh;
+  overflow: visible; }
+
+.scrollbary::-webkit-scrollbar {
+  width: 2.5vh;
+  margin: 1.25vh;
+  height: 10vh; }
+
+.scrollbary-scrollbar-track-yellow {
+  margin-right: 0; }
+
+.scrollbary-scrollbar-track-yellow::-webkit-scrollbar-track {
+  border-left: 1.25vh solid $yellow;
+  background-color: $white;
+  width: 2.5vh;
+  height: 5vh;
+  overflow: visible; }
+
+.scrollbary-scrollbar-yellow::-webkit-scrollbar {
+  width: 2.5vh;
+  margin: 1.25vh;
+  height: 10vh; }
+
+.scrollbary-light-yellow::-webkit-scrollbar-thumb {
+  width: calc(100% - .2vh);
+  margin: 1.25vh;
+  height: 5vh;
+  overflow: hidden;
+  background-color: $white; 
+  border-top: 1.25vh solid $yellow;
+  border-bottom: 1.25vh solid $yellow;
+  border-left: 1.25vh solid $yellow;
+  }
+
+.scrollbary-light-yellow-border-dark-yellow::-webkit-scrollbar-thumb {
+  width: 2.5vh;
+  margin: 1.25vh;
+  height: 5vh;
+  overflow: hidden;
+  background-color: $white;
+  border: 1.25vh solid $yellow;
+  box-shadow: -1vh 1vh 0 0 $black; }
+
+.scrollbarxhidden {
+  margin-right: 0; }
+
+.scrollbarxhidden::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background-color: none;
+  width: 0;
+  height: 0;
+  overflow: visible; }
+
+.scrollbarxhidden::-webkit-scrollbar {
+  width: 0;
+  margin: 0;
+  height: 0; }
+
+.scrollbarxhidden::-webkit-scrollbar-thumb {
+  width: 0;
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  background-color: none; }
+
+.scrollbarx {
+  margin-bottom: 0; }
+
+.scrollbarx::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background-color: none;
+  width: 5vh;
+  height: 1.25vh;
+  overflow: visible; }
+
+.scrollbarx::-webkit-scrollbar {
+  width: 10vh;
+  margin: 1.25vh;
+  height: 1.25vh; }
+
+.scrollbarx-scrollbar-track-yellow::-webkit-scrollbar-track {
+  width: 2.5vh;
+  height: 1vh;
+  overflow: visible;
+  border: 1.25vh solid $black;
+  background-color: $white;
+}
+
+.scrollbarx-scrollbar-yellow::-webkit-scrollbar {
+  width: 2.5vh;
+  margin: 1.25vh;
+  height: 1vh; }
+
+.scrollbarx-light-yellow::-webkit-scrollbar-thumb {
+  width: 5vh;
+  margin: 1.25vh;
+  height: 1.25vh;
+  overflow: hidden;
+  border: 1.25vh solid $black;
+  background-color: $white;
+}
+
+.scrollbarx-light-yellow-border-dark-yellow::-webkit-scrollbar-thumb {
+  width: 5vh;
+  margin: 1.25vh;
+  height: 1.25vh;
+  overflow: hidden;
+  border: 1.25vh solid $black;
+  background-color: $white;
+}

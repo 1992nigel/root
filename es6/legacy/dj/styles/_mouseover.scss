@@ -1,0 +1,151 @@
+//hover_show
+
+.mouseover_show {
+  display: none;
+}
+
+div:hover.mouseover_show, span:hover.mouseover_show, li:hover.mouseover_show, ol:hover.mouseover_show, ul:hover.mouseover_show {
+  display: inherit;
+}
+
+// hover_hide
+
+.mouseover_hide {
+  display: inherit;
+}
+
+div:hover.mouseover_hide, span:hover.mouseover_hide, li:hover.mouseover_hide, ol:hover.mouseover_hide, ul:hover.mouseover_hide {
+  display: none;
+}
+
+// widths hovers
+
+div:hover.mouseover_width_1vh, span:hover.mouseover_width_1vh, li:hover.mouseover_width_1vh, ol:hover.mouseover_width_1vh, ul:hover.mouseover_width_1vh {
+  width: 1vh;
+}
+
+div:hover.mouseover_width_105vh, span:hover.mouseover_width_105vh, li:hover.mouseover_width_105vh, ol:hover.mouseover_width_105vh, ul:hover.mouseover_width_105vh {
+  width: 1.5vh;
+}
+
+div:hover.mouseover_width_2vh, span:hover.mouseover_width_2vh, li:hover.mouseover_width_2vh, ol:hover.mouseover_width_2vh, ul:hover.mouseover_width_2vh {
+  width: 2vh;
+}
+
+div:hover.mouseover_width_205vh, span:hover.mouseover_width_205vh, li:hover.mouseover_width_205vh, ol:hover.mouseover_width_205vh, ul:hover.mouseover_width_205vh {
+  width: 2.5vh;
+}
+
+div:hover.mouseover_width_5vh, span:hover.mouseover_width_5vh, li:hover.mouseover_width_5vh, ol:hover.mouseover_width_5vh, ul:hover.mouseover_width_5vh {
+  width: 5vh;
+}
+
+div:hover.mouseover_width_505vh, span:hover.mouseover_width_505vh, li:hover.mouseover_width_505vh, ol:hover.mouseover_width_505vh, ul:hover.mouseover_width_505vh {
+  width: 5.5vh;
+}
+
+div:hover.mouseover_width_10vh, span:hover.mouseover_width_10vh, li:hover.mouseover_width_10vh, ol:hover.mouseover_width_10vh, ul:hover.mouseover_width_10vh {
+  width: 10vh;
+}
+
+div:hover.mouseover_width_1005vh, span:hover.mouseover_width_1005vh, li:hover.mouseover_width_1005vh, ol:hover.mouseover_width_1005vh, ul:hover.mouseover_width_1005vh {
+  width: 10.5vh;
+}
+
+div:hover.mouseover_width_10vh, span:hover.mouseover_width_10vh, li:hover.mouseover_width_10vh, ol:hover.mouseover_width_10vh, ul:hover.mouseover_width_10vh {
+  width: 10vh;
+}
+
+div:hover.mouseover_width_15vh, span:hover.mouseover_width_15vh, li:hover.mouseover_width_15vh, ol:hover.mouseover_width_15vh, ul:hover.mouseover_width_15vh {
+  width: 15vh;
+}
+
+div:hover.mouseover_width_20vh, span:hover.mouseover_width_20vh, li:hover.mouseover_width_20vh, ol:hover.mouseover_width_20vh, ul:hover.mouseover_width_20vh {
+  width: 20vh;
+}
+
+div:hover.mouseover_width_25vh, span:hover.mouseover_width_25vh, li:hover.mouseover_width_25vh, ol:hover.mouseover_width_25vh, ul:hover.mouseover_width_25vh {
+  width: 25vh;
+}
+
+div:hover.mouseover_width_50vh, span:hover.mouseover_width_50vh, li:hover.mouseover_width_50vh, ol:hover.mouseover_width_50vh, ul:hover.mouseover_width_50vh {
+  width: 50vh;
+}
+
+div:hover.mouseover_width_50, span:hover.mouseover_width_50, li:hover.mouseover_width_50, ol:hover.mouseover_width_50, ul:hover.mouseover_width_50 {
+  width: 50%;
+}
+
+div:hover.mouseover_width_100vh, span:hover.mouseover_width_100vh, li:hover.mouseover_width_100vh, ol:hover.mouseover_width_100vh, ul:hover.mouseover_width_100vh {
+  width: 100vh;
+}
+
+div:hover.mouseover_width_100, span:hover.mouseover_width_100, li:hover.mouseover_width_100, ol:hover.mouseover_width_100, ul:hover.mouseover_width_100 {
+  width: 100%;
+}
+
+// heights hovers
+
+div:hover.mouseover_height_1vh, span:hover.mouseover_height_1vh, li:hover.mouseover_height_1vh, ol:hover.mouseover_height_1vh, ul:hover.mouseover_height_1vh {
+  height: 1vh;
+}
+
+div:hover.mouseover_height_105vh, span:hover.mouseover_height_105vh, li:hover.mouseover_height_105vh, ol:hover.mouseover_height_105vh, ul:hover.mouseover_height_105vh {
+  height: 1.5vh;
+}
+
+div:hover.mouseover_height_2vh, span:hover.mouseover_height_2vh, li:hover.mouseover_height_2vh, ol:hover.mouseover_height_2vh, ul:hover.mouseover_height_2vh {
+  height: 2vh;
+}
+
+div:hover.mouseover_height_205vh, span:hover.mouseover_height_205vh, li:hover.mouseover_height_205vh, ol:hover.mouseover_height_205vh, ul:hover.mouseover_height_205vh {
+  height: 2.5vh;
+}
+
+div:hover.mouseover_height_5vh, span:hover.mouseover_height_5vh, li:hover.mouseover_height_5vh, ol:hover.mouseover_height_5vh, ul:hover.mouseover_height_5vh {
+  height: 5vh;
+}
+
+div:hover.mouseover_height_505vh, span:hover.mouseover_height_505vh, li:hover.mouseover_height_505vh, ol:hover.mouseover_height_505vh, ul:hover.mouseover_height_505vh {
+  height: 5.5vh;
+}
+
+div:hover.mouseover_height_10vh, span:hover.mouseover_height_10vh, li:hover.mouseover_height_10vh, ol:hover.mouseover_height_10vh, ul:hover.mouseover_height_10vh {
+  height: 10vh;
+}
+
+div:hover.mouseover_height_1005vh, span:hover.mouseover_height_1005vh, li:hover.mouseover_height_1005vh, ol:hover.mouseover_height_1005vh, ul:hover.mouseover_height_1005vh {
+  height: 10.5vh;
+}
+
+div:hover.mouseover_height_10vh, span:hover.mouseover_height_10vh, li:hover.mouseover_height_10vh, ol:hover.mouseover_height_10vh, ul:hover.mouseover_height_10vh {
+  height: 10vh;
+}
+
+div:hover.mouseover_height_15vh, span:hover.mouseover_height_15vh, li:hover.mouseover_height_15vh, ol:hover.mouseover_height_15vh, ul:hover.mouseover_height_15vh {
+  height: 15vh;
+}
+
+div:hover.mouseover_height_20vh, span:hover.mouseover_height_20vh, li:hover.mouseover_height_20vh, ol:hover.mouseover_height_20vh, ul:hover.mouseover_height_20vh {
+  height: 20vh;
+}
+
+div:hover.mouseover_height_25vh, span:hover.mouseover_height_25vh, li:hover.mouseover_height_25vh, ol:hover.mouseover_height_25vh, ul:hover.mouseover_height_25vh {
+  height: 25vh;
+}
+
+div:hover.mouseover_height_50vh, span:hover.mouseover_height_50vh, li:hover.mouseover_height_50vh, ol:hover.mouseover_height_50vh, ul:hover.mouseover_height_50vh {
+  height: 50vh;
+}
+
+div:hover.mouseover_height_50, span:hover.mouseover_height_50, li:hover.mouseover_height_50, ol:hover.mouseover_height_50, ul:hover.mouseover_height_50 {
+  height: 50%;
+}
+
+div:hover.mouseover_height_100vh, span:hover.mouseover_height_100vh, li:hover.mouseover_height_100vh, ol:hover.mouseover_height_100vh, ul:hover.mouseover_height_100vh {
+  height: 100vh;
+}
+
+div:hover.mouseover_height_100, span:hover.mouseover_height_100, li:hover.mouseover_height_100, ol:hover.mouseover_height_100, ul:hover.mouseover_height_100 {
+  height: 100%;
+}

@@ -1,0 +1,175 @@
+/*
+Theme Name: Knewest Theme (WP Parcel)
+Theme URI: gnougn.com
+Author: Gnougn Team
+Author URI: https://gnougn.com/
+Description: Mixing JS, Firebase, Wordpress JSON, SCSS and some PHP, oh Boy!
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Javascript, Jquery, JSON, PHP, CSS, SASS, SCSS, AJAX, XML, HTTP, PHP
+Tags: Javascript, Jquery, JSON, PHP, CSS, SASS, SCSS, AJAX, XML, HTTP, PHP
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+ 
+// imports
+@import './styles/required/_reset.scss';
+@import './styles/required/_font.scss';  
+@import './styles/required/_normal.scss';
+@import './styles/required/_colors.scss';
+@import './styles/required/_wordpress.scss';
+
+@import './styles/required/_responsive.scss';
+
+@import './styles/_background.scss'; 
+@import './styles/_calc.scss';
+@import './styles/_color.scss';
+@import './styles/_display.scss'; 
+@import './styles/_float.scss';
+@import './styles/_font_size.scss';
+@import './styles/_height.scss';
+@import './styles/_index.scss';
+@import './styles/_line_height.scss';
+@import './styles/_easing.scss'; 
+@import './styles/_margin.scss';
+@import './styles/_opacity.scss'; 
+@import './styles/_overflow.scss';
+@import './styles/_padding.scss';
+@import './styles/_position.scss';
+@import './styles/_text_align.scss';
+@import './styles/_transform.scss';
+@import './styles/_webkit.scss';
+@import './styles/_width.scss';
+@import './styles/_border.scss';
+@import './styles/_radius.scss';
+@import './styles/_box-shadow.scss';
+@import './styles/_text-shadow.scss';
+@import './styles/_pseudo.scss';
+@import './styles/_hover.scss';
+@import './styles/_mouseover.scss';
+@import './styles/_photos.scss';
+@import './styles/_gradient.scss';
+@import './styles/_scrollbar.scss';
+@import './styles/_inputs.scss';  
+@import './styles/_list.scss'; 
+@import './styles/_form.scss';
+
+@import './styles/graphics/_graphics.scss';
+
+@import './styles/animation/_animated.scss';
+@import './styles/animation/_motion.scss';
+@import './styles/animation/_delay.scss';
+
+// Cursor
+:root {
+    cursor: url("./assets/gui_cursor_handdrawn.svg"), auto;
+}
+
+:root:active {
+    cursor: url("./assets/gui_cursor_handdrawn_active.svg"), auto; 
+}
+
+.auto, .default, .none, .context-menu, .help, .pointer, .progress, .wait, .cell, .crosshair, .text, .vertical-text, .alias, .copy, .move, .no-drop, .not-allowed, .all-scroll, .col-resize, .row-resize, .n-resize, .e-resize, .s-resize, .w-resize, .ns-resize, .ew-resize, .ne-resize, .nw-resize, .se-resize, .sw-resize, .nesw-resize, .nwse-resize {
+    cursor: url("./assets/gui_cursor_handdrawn_active.svg"), auto;
+}
+
+xmp {
+  white-space:pre-wrap;
+  word-wrap:break-word;
+}
+
+#component_app_scrolling {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+hr {
+  position:relative;
+  border: none;
+  height: 0;
+  width: 100%;
+  float: left;
+  margin: 0 auto;
+}
+
+pre {
+  width: min-content;
+font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", 
+"Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", 
+"Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  white-space: pre-wrap;
+  tab-width: 4;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+
+.player .vp-player-layout {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  perspective: 100;
+}
+
+// cube
+
+#componentDraggable {
+  width: 50vh;
+  height: 50vh;
+  perspective: 1000px;
+}
+
+#componentShape {
+  width: 50vh;
+  height: 50vh;
+  perspective: 1000px;
+}
+
+#componentCube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+#componentCube figure {
+  margin: 0;
+  width: calc(100% - .1vh);
+  height: calc(100% - .1vh);
+  display: block;
+  position: absolute;
+  border: .1vh solid black;
+}
+
+#componentCube { transform: translateZ( -25vh ); transition: transform 1s; }
+#componentCube .front  { transform: rotateY(   0deg ) translateZ( 25vh ); }
+#componentCube .back   { transform: rotateX( 180deg ) translateZ( 25vh ); }
+#componentCube .right  { transform: rotateY(  90deg ) translateZ( 25vh ); }
+#componentCube .left   { transform: rotateY( -90deg ) translateZ( 25vh ); }
+#componentCube .top    { transform: rotateX(  90deg ) translateZ( 25vh ); }
+#componentCube .bottom { transform: rotateX( -90deg ) translateZ( 25vh ); }
+
+#componentCube.show-front  { transform: translateZ( -25vh ) rotateY(    0deg ); }
+#componentCube.show-back   { transform: translateZ( -25vh ) rotateX( -180deg ); }
+#componentCube.show-right  { transform: translateZ( -25vh ) rotateY(  -90deg ); }
+#componentCube.show-left   { transform: translateZ( -25vh ) rotateY(   90deg ); }
+#componentCube.show-top    { transform: translateZ( -25vh ) rotateX(  -90deg ); }
+#componentCube.show-bottom { transform: translateZ( -25vh ) rotateX(   90deg ); }
