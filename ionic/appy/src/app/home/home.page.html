@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Appy (ionic)
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+	<span class="width_100vw height_100vh bg_yellow float_left">
+
+		<span class="position_relative float_left width_100vw height_90vh webkit_box_pack_center webkit_box_align display_webkit_box ">
+			<span class="position_relative float_left width_50 height_50 gui_logo">
+			</span>
+		</span>
+
+  	</span>
+
+
+	<span id="yo" class="width_100vw height_100vh bg_yellow float_left">
+		
+		<span class="bg_pink">
+			The world is Nigga!
+	  	</span>
+
+		<p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+		<!-- Default Checkbox -->
+		<ion-checkbox></ion-checkbox>
+
+		<!-- Disabled Checkbox -->
+		<ion-checkbox disabled="true"></ion-checkbox>
+
+		<!-- Checked Checkbox -->
+		<ion-checkbox checked="true"></ion-checkbox>
+
+		<!-- Checkbox Colors -->
+		<ion-checkbox color="primary"></ion-checkbox>
+		<ion-checkbox color="secondary"></ion-checkbox>
+		<ion-checkbox color="danger"></ion-checkbox>
+		<ion-checkbox color="light"></ion-checkbox>
+		<ion-checkbox color="dark"></ion-checkbox>
+
+		<!-- Checkboxes in a List -->
+		<ion-list>
+		  <ion-item *ngFor="let entry of form">
+		    <ion-label>{{entry.val}}</ion-label>
+		    <ion-checkbox id="button" slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+		  </ion-item>
+		</ion-list>
+
+	</span>
+
+</ion-content>
