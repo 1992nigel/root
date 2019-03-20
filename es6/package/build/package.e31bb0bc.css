@@ -650,6 +650,16 @@ template {
   float: left;
 }
 
+@media screen and (orientation: portrait) {
+  .responsive_landscape {
+    display: none;
+  }
+}
+@media screen and (orientation: landscape) {
+  .responsive_portrait {
+    display: none;
+  }
+}
 @media (min-width: 1050px) {
   .responsive_ipad_only {
     display: none;

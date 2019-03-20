@@ -230,250 +230,60 @@ let colors = [
         <div id="fold_filler" class="position_relative width_100 height_100vh margin_auto float_left">
           
           <div id="fold" class="position_relative width_100 height_100vh margin_auto float_left display_none opacity_0 easing_01 transform_translate3d_left0 ">
-            <div class="position_relative width_100 height_100vh margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align ">
-
-              <div class="responsive_desktop_only calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
-
-                  <div id="logo_motion" class="animated1 fadeIn width_50 height_50 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
-                      
-                    <div id="logo_left_container" class="animated1 fadeIn width_50 height_100 position_absolute top_0 bottom_0 right_100 margin_auto">
-                        <div id="logo" class="gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                    </div>
-
-                    <div id="logo_center_container" class="animated1 fadeIn width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto">
-                      <div id="logo" class="gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                      <div id="logo" class="gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                      <div id="logo" class="gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                      <div id="logo" class="gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                      <div id="logo" class="gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                      <div id="logo" class="gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                    </div>
-
-                    <div id="logo_right_container" class="animated1 fadeIn width_50 height_100 position_absolute top_0 bottom_0 left_100 margin_auto">
-                      <div id="logo" class="gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                    </div>
-
-                    <div id="logo_bottom_container" class="animated1 fadeIn width_100 height_50 position_absolute bottom_100 left_0 right_0 margin_auto">
-
-                      <div id="fold_note" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
-                          
-                          <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note">
-                          
-                          </div>
-                      
-                      </div>
-
-                    </div>
-
-                    <div id="logo_bottom_container" class="animated1 fadeIn width_100 height_50 position_absolute top_100 left_0 right_0 margin_auto">
-
-                        <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left">
-
-                              <div class="display_flex_flow position_relative width_100 margin_auto float_left">
-                                
-                                  <div class="position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align">
-
-                                      <div id="gui_start" class="gui_button_start position_relative width_33 height_100 float_left">
-                                      </div>
-
-                                      <div class="gui_or position_relative width_1205 height_100 float_left">
-                                      </div>
-                                      
-                                      <div id="gui_learn" class="gui_button_learn position_relative width_33 height_100 float_left">
-                                      </div>
-
-                                  </div>
-
-                              </div>
-
-                        </div>
-
-                    </div>
-
-                  </div>
-
-              </div>
-
-              <div class="responsive_ipad_only calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
-
-                  <div id="logo_motion" class="animated1 fadeIn width_50 height_50 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
-                    
-                    <div id="logo_left_container" class="animated1 fadeIn width_50 height_100 position_absolute top_0 bottom_0 right_100 margin_auto">
-                        <div id="logo" class="gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                    </div>
-
-                    <div id="logo_center_container" class="animated1 fadeIn width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto">
-                      <div id="logo" class="gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                      <div id="logo" class="gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                      <div id="logo" class="gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                      <div id="logo" class="gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                      <div id="logo" class="gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                      <div id="logo" class="gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                    </div>
-
-                    <div id="logo_right_container" class="animated1 fadeIn width_50 height_100 position_absolute top_0 bottom_0 left_100 margin_auto">
-                      <div id="logo" class="gui_move_note width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                    </div>
-
-                    <div id="logo_bottom_container" class="animated1 fadeIn width_100 height_50 position_absolute bottom_100 left_0 right_0 margin_auto">
-
-                      <div id="fold_note" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
-                          
-                          <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note">
-                          
-                          </div>
-                      
-                      </div>
-
-                    </div>
-
-                    <div id="logo_bottom_container" class="animated1 fadeIn width_100 height_50 position_absolute top_100 left_0 right_0 margin_auto">
-
-                        <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left">
-
-                              <div class="display_flex_flow position_relative width_100 margin_auto float_left">
-                                
-                                  <div class="position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align">
-
-                                      <div id="gui_start" class="gui_button_start position_relative width_33 height_100 float_left">
-                                      </div>
-
-                                      <div class="gui_or position_relative width_1205 height_100 float_left">
-                                      </div>
-                                      
-                                      <div id="gui_learn" class="gui_button_learn position_relative width_33 height_100 float_left">
-                                      </div>
-
-                                  </div>
-
-                              </div>
-
-                        </div>
-
-                    </div>
-
-                  </div>
-
-              </div>
-
-              <div class="responsive_iphone_only calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
-
-                  <div id="logo_motion" class="animated1 fadeIn width_8705 height_25 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
-                    
-                    <div id="logo_bottom_container" class="animated1 fadeIn width_100 position_absolute bottom_100 left_0 right_0 margin_auto">
-
-                      <div id="logo_bottom_container" class="width_100 height_1205vh position_relative margin_auto">
-
-                        <div id="fold_note" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
-                            
-                            <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note">
-                            
-                            </div>
-                        
-                        </div>
-
-                      </div>
-
-                      <div id="logo_bottom_container" class="width_100 height_1205vh position_relative margin_auto">
-
-                          <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left">
-
-                                <div class="display_flex_flow position_relative width_100 margin_auto float_left">
-                                  
-                                    <div class="position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align">
-
-                                        <div id="gui_start" class="gui_button_start position_relative width_33 height_100 float_left">
-                                        </div>
-
-                                        <div class="gui_or position_relative width_1205 height_100 float_left">
-                                        </div>
-                                        
-                                        <div id="gui_learn" class="gui_button_learn position_relative width_33 height_100 float_left">
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                          </div>
-
-                      </div>
-
-                    </div>
-
-                    <div id="logo_center_container" class="animated1 fadeIn width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto">
-                      <div id="logo" class="gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                      <div id="logo" class="gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                      <div id="logo" class="gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                      <div id="logo" class="gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                      <div id="logo" class="gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                      <div id="logo" class="gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
-                    </div>
-
-                    <div id="logo_bottom_container" class="animated1 fadeIn width_100 position_absolute top_100 left_0 right_0 margin_auto">
-
-                      <div id="logo_bottom_container" class="width_100 height_1205vh position_relative margin_auto">
-
-                          <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left">
-
-                                <div class="display_flex_flow position_relative width_100 margin_auto float_left">
-                                  
-                                    <div class="position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align">
-
-                                        <div id="gui_start" class="gui_button_start position_relative width_33 height_100 float_left">
-                                        </div>
-
-                                        <div class="gui_or position_relative width_1205 height_100 float_left">
-                                        </div>
-                                        
-                                        <div id="gui_learn" class="gui_button_learn position_relative width_33 height_100 float_left">
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                          </div>
-
-                      </div>
-
-                      <div id="logo_bottom_container" class="width_100 height_1205vh position_relative margin_auto">
-
-                        <div id="fold_note" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
-                            
-                            <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note">
-                            
-                            </div>
-                        
-                        </div>
-
-                      </div>
-
-                    </div>
-
-                  </div>
-
-              </div>
+            <div id="fold_container" class="position_relative width_100 height_100vh margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align ">
 
             </div>
           </div>
 
         </div>
 
+element_input_post_username
+less_posts
+more_posts
+
+        <p class="bg_yellow width_100 float_left">less_posts_value?</p>
+        <button id="less_posts" class="width_100 float_left">less_posts</button>
+        <div id="less_posts_value"></div>
+        <p class="bg_yellow width_100 float_left">more_posts_value?</p>
+        <button id="more_posts" class="width_100 float_left">more_posts</button>
+        <div id="more_posts_value"></div>
+        <p class="bg_yellow width_100 float_left">are you logged in?</p>
+        <div id="users_username"></div>
+        <p class="bg_yellow width_100 float_left">username?</p>
+        <input id="username" type="text" placeholder="username" class="width_100 bg_pink float_left" />
+        <p class="bg_yellow width_100 float_left">password?</p>
+        <input id="password" type="text" placeholder="password" class="width_100 bg_pink float_left" />
+        <p class="bg_yellow width_100 float_left">sign in?</p>
+        <div id="element_user_sign_in" class="width_100 bg_pink float_left" >sign in</div>
+        <p class="bg_yellow width_100 float_left">sign out?</p>
+        <div id="element_user_sign_out" class="width_100 bg_pink float_left" >sign out</div>        
+        <p class="bg_yellow width_100 float_left">sort by type?</p>
+        <input id="element_input_sorting_type" type="text" placeholder="element_input_sorting_type" class="width_100 bg_pink float_left" />
+        <p class="bg_yellow width_100 float_left">blog style?</p>
+        <input id="element_input_style" type="text" placeholder="element_input_style" class="width_100 bg_pink float_left" />
+
+        <p class="bg_yellow width_100 float_left">element_input_filter?</p>
+        <input id="element_input_filter" type="text" placeholder="element_input_filter" class="width_100 bg_pink float_left" />
+
         <div class="position_relative width_100 height_100 overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-white float_left">
 
-          <h2 id="">element_ol_firebase_skills</h2>
-          <ol id="element_ol_firebase_skills"></ol>
-          <h2 id="">element_ol_firebase_services</h2>
-          <ol id="element_ol_firebase_services"></ol>
-          <h2 id="">element_ol_firebase_partners</h2>
-          <ol id="element_ol_firebase_partners"></ol>
-          <h2 id="">element_ol_firebase_abilities</h2>
-          <ol id="element_ol_firebase_abilities"></ol>
-          <h2 id="">element_ol_firebase_library</h2>
+
+          <h2 width_100 bg_white font_size_205vh line_height_5vh" id="">element_ol_firebase_feature_library</h2>
+          <ol id="element_ol_firebase_feature_library"></ol>
+          <h2 width_100 bg_white font_size_205vh line_height_5vh" id="">element_ol_firebase_after_feature_library</h2>
+          <ol id="element_ol_firebase_after_feature_library"></ol>
+          <h2 width_100 bg_white font_size_205vh line_height_5vh" id="">element_ol_firebase_library</h2>
           <ol id="element_ol_firebase_library"></ol>
-          <h2 id="">element_ol_firebase_roster</h2>
+          <h2 width_100 bg_white font_size_205vh line_height_5vh" id="">element_ol_firebase_roster</h2>
           <ol id="element_ol_firebase_roster"></ol>
+          <h2 width_100 bg_white font_size_205vh line_height_5vh" id="">element_ol_firebase_skills</h2>
+          <ol id="element_ol_firebase_skills"></ol>
+          <h2 width_100 bg_white font_size_205vh line_height_5vh" id="">element_ol_firebase_services</h2>
+          <ol id="element_ol_firebase_services"></ol>
+          <h2 width_100 bg_white font_size_205vh line_height_5vh" id="">element_ol_firebase_partners</h2>
+          <ol id="element_ol_firebase_partners"></ol>
+          <h2 width_100 bg_white font_size_205vh line_height_5vh" id="">element_ol_firebase_abilities</h2>
+          <ol id="element_ol_firebase_abilities"></ol>
 
         </div>
 

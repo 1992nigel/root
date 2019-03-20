@@ -80,15 +80,15 @@ let Generate_new_li = (data) => {
     // console.log(document.querySelectorAll('#element_ol_firebase_library_posts'))
 
     ELEMENT.children[0].children[2].children[0].addEventListener("click", function(event) {
-        //from_index.likeWhoListings(data.child, data.id);
+        from_index.likeWhoListings(data.child, data.id);
     });
 
     ELEMENT.children[0].children[2].children[1].addEventListener("click", function(event) {
-        //from_index.dislikeWhoListings(data.child, data.id);
+        from_index.dislikeWhoListings(data.child, data.id);
     });
 
     ELEMENT.children[0].children[2].children[2].addEventListener("click", function(event) {
-        //from_index.viewWhoListings(data.child, data.id);
+        from_index.viewWhoListings(data.child, data.id);
     });
 
     ELEMENT.children[0].children[2].children[3].addEventListener("click", function(event) {

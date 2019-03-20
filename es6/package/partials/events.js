@@ -49,42 +49,43 @@ setTimeout(
                 state.events.key.keys.push(event.keyCode);
             };
 
+            // q
+            if (keyCode == 81) {
+                from_index.HANDLE_gui_hide();
+            };
+
+            // w
+            if (keyCode == 87) {
+                from_index.HANDLE_gui_show();
+                state.ui.interaction.player_1.yaxis += (1/8);
+            };
             
-                
-                // w
-                if (keyCode == 87) {
-                    state.ui.interaction.player_1.yaxis += (1/8);
-                };
+            //[
+            if (keyCode == 219) {
+                from_index.player_1_shrink();
+            };
 
-                
-                //[
-                if (keyCode == 219) {
-                    from_index.player_1_shrink();
-                };
+            //]
+            if (keyCode == 221) {
+                from_index.player_1_grow();
+            };
 
-                //]
-                if (keyCode == 221) {
-                    from_index.player_1_grow();
-                };
+            // a
+            if (keyCode == 65) {
+                state.ui.interaction.player_1.stance = 5;
+                state.ui.interaction.player_1.cycles.walking = true;
+            };
 
+            // s
+            if (keyCode == 83) {
+                state.ui.interaction.player_1.yaxis -= (1/8);
+            };
 
-                // a
-                if (keyCode == 65) {
-                    state.ui.interaction.player_1.stance = 5;
-                    state.ui.interaction.player_1.cycles.walking = true;
-                };
-
-                // s
-                if (keyCode == 83) {
-                    state.ui.interaction.player_1.yaxis -= (1/8);
-                };
-
-                // d
-                if (keyCode == 68) {
-                    state.ui.interaction.player_1.stance = 13;
-                    state.ui.interaction.player_1.cycles.walking = true;
-                };
-
+            // d
+            if (keyCode == 68) {
+                state.ui.interaction.player_1.stance = 13;
+                state.ui.interaction.player_1.cycles.walking = true;
+            };
 
             // esc
             if (keyCode == 27) {
@@ -96,15 +97,17 @@ setTimeout(
                 from_index.addListings('skills');
             };
 
-            // q
-            if (keyCode == 81) {
-                state.ui.gui.bottom_right.transform = !state.ui.gui.bottom_right.transform;
-                state.ui.gui.bottom_right.display = !state.ui.gui.bottom_right.display;
-            };
-
             // space
             if (keyCode == 32) {
                 event.preventDefault();
+
+                if (state.app.route == 'start') {
+                    from_index.Handle_check_route('start_to_null', '');
+                };
+
+                if (state.app.route == 'learn') {
+                    from_index.Handle_check_route('learn_to_null', '');
+                };
             };
 
             if (keyCode == 40) {

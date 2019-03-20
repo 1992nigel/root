@@ -1,7 +1,7 @@
 let default_state = {
 
     app: {
-        route: 'null'
+        route: '/'
     },
 
     data: {
@@ -11,7 +11,7 @@ let default_state = {
         wordpress: {},
         feature_posts_limit: 1,
         posts_start: 1,
-        posts_limit: 7,
+        posts_limit: 3,
         refs: false,
         sort: 'likes',
         view: 'grid',

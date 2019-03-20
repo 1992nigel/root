@@ -1,3 +1,25 @@
+ @media screen and (orientation:portrait) {
+  
+  .responsive_portrait {
+  };
+  
+  .responsive_landscape {
+    display: none;
+  };
+
+};
+
+ @media screen and (orientation:landscape) {
+  
+  .responsive_portrait {
+    display: none;
+  };
+  
+  .responsive_landscape {
+  };
+
+};
+
 // desktop & ipad pro
 @media (min-width: 1050px) {
 

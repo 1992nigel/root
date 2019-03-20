@@ -220,7 +220,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var default_state = {
   app: {
-    route: 'null'
+    route: '/'
   },
   data: {
     dev_mode: false,
@@ -229,7 +229,7 @@ var default_state = {
     wordpress: {},
     feature_posts_limit: 1,
     posts_start: 1,
-    posts_limit: 7,
+    posts_limit: 3,
     refs: false,
     sort: 'likes',
     view: 'grid',
@@ -1259,11 +1259,14 @@ var Generate_new_li = function Generate_new_li(data) {
   ; // Objects: Firebase Library Items
   // console.log(document.querySelectorAll('#element_ol_firebase_library_posts'))
 
-  ELEMENT.children[0].children[2].children[0].addEventListener("click", function (event) {//from_index.likeWhoListings(data.child, data.id);
+  ELEMENT.children[0].children[2].children[0].addEventListener("click", function (event) {
+    _index.default.likeWhoListings(data.child, data.id);
   });
-  ELEMENT.children[0].children[2].children[1].addEventListener("click", function (event) {//from_index.dislikeWhoListings(data.child, data.id);
+  ELEMENT.children[0].children[2].children[1].addEventListener("click", function (event) {
+    _index.default.dislikeWhoListings(data.child, data.id);
   });
-  ELEMENT.children[0].children[2].children[2].addEventListener("click", function (event) {//from_index.viewWhoListings(data.child, data.id);
+  ELEMENT.children[0].children[2].children[2].addEventListener("click", function (event) {
+    _index.default.viewWhoListings(data.child, data.id);
   });
   ELEMENT.children[0].children[2].children[3].addEventListener("click", function (event) {
     _index.default.deleteWhoListings(data.child, data.id);
@@ -1725,7 +1728,7 @@ var colors = [{
   parent: 'component_app_content',
   id: '',
   classList: '',
-  innerHTML: "\n\n      <div class=\"position_relative width_100 height_100 overflow_y float_left\">\n        \n        <div id=\"fold_filler\" class=\"position_relative width_100 height_100vh margin_auto float_left\">\n          \n          <div id=\"fold\" class=\"position_relative width_100 height_100vh margin_auto float_left display_none opacity_0 easing_01 transform_translate3d_left0 \">\n            <div class=\"position_relative width_100 height_100vh margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align \">\n\n              <div class=\"responsive_desktop_only calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n\n                  <div id=\"logo_motion\" class=\"animated1 fadeIn width_50 height_50 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                      \n                    <div id=\"logo_left_container\" class=\"animated1 fadeIn width_50 height_100 position_absolute top_0 bottom_0 right_100 margin_auto\">\n                        <div id=\"logo\" class=\"gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                    </div>\n\n                    <div id=\"logo_center_container\" class=\"animated1 fadeIn width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto\">\n                      <div id=\"logo\" class=\"gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                      <div id=\"logo\" class=\"gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                      <div id=\"logo\" class=\"gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                      <div id=\"logo\" class=\"gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                      <div id=\"logo\" class=\"gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                      <div id=\"logo\" class=\"gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                    </div>\n\n                    <div id=\"logo_right_container\" class=\"animated1 fadeIn width_50 height_100 position_absolute top_0 bottom_0 left_100 margin_auto\">\n                      <div id=\"logo\" class=\"gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                    </div>\n\n                    <div id=\"logo_bottom_container\" class=\"animated1 fadeIn width_100 height_50 position_absolute bottom_100 left_0 right_0 margin_auto\">\n\n                      <div id=\"fold_note\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                          \n                          <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note\">\n                          \n                          </div>\n                      \n                      </div>\n\n                    </div>\n\n                    <div id=\"logo_bottom_container\" class=\"animated1 fadeIn width_100 height_50 position_absolute top_100 left_0 right_0 margin_auto\">\n\n                        <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n\n                              <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                \n                                  <div class=\"position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                                      <div id=\"gui_start\" class=\"gui_button_start position_relative width_33 height_100 float_left\">\n                                      </div>\n\n                                      <div class=\"gui_or position_relative width_1205 height_100 float_left\">\n                                      </div>\n                                      \n                                      <div id=\"gui_learn\" class=\"gui_button_learn position_relative width_33 height_100 float_left\">\n                                      </div>\n\n                                  </div>\n\n                              </div>\n\n                        </div>\n\n                    </div>\n\n                  </div>\n\n              </div>\n\n              <div class=\"responsive_ipad_only calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n\n                  <div id=\"logo_motion\" class=\"animated1 fadeIn width_50 height_50 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                    \n                    <div id=\"logo_left_container\" class=\"animated1 fadeIn width_50 height_100 position_absolute top_0 bottom_0 right_100 margin_auto\">\n                        <div id=\"logo\" class=\"gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                    </div>\n\n                    <div id=\"logo_center_container\" class=\"animated1 fadeIn width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto\">\n                      <div id=\"logo\" class=\"gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                      <div id=\"logo\" class=\"gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                      <div id=\"logo\" class=\"gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                      <div id=\"logo\" class=\"gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                      <div id=\"logo\" class=\"gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                      <div id=\"logo\" class=\"gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                    </div>\n\n                    <div id=\"logo_right_container\" class=\"animated1 fadeIn width_50 height_100 position_absolute top_0 bottom_0 left_100 margin_auto\">\n                      <div id=\"logo\" class=\"gui_move_note width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                    </div>\n\n                    <div id=\"logo_bottom_container\" class=\"animated1 fadeIn width_100 height_50 position_absolute bottom_100 left_0 right_0 margin_auto\">\n\n                      <div id=\"fold_note\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                          \n                          <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note\">\n                          \n                          </div>\n                      \n                      </div>\n\n                    </div>\n\n                    <div id=\"logo_bottom_container\" class=\"animated1 fadeIn width_100 height_50 position_absolute top_100 left_0 right_0 margin_auto\">\n\n                        <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n\n                              <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                \n                                  <div class=\"position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                                      <div id=\"gui_start\" class=\"gui_button_start position_relative width_33 height_100 float_left\">\n                                      </div>\n\n                                      <div class=\"gui_or position_relative width_1205 height_100 float_left\">\n                                      </div>\n                                      \n                                      <div id=\"gui_learn\" class=\"gui_button_learn position_relative width_33 height_100 float_left\">\n                                      </div>\n\n                                  </div>\n\n                              </div>\n\n                        </div>\n\n                    </div>\n\n                  </div>\n\n              </div>\n\n              <div class=\"responsive_iphone_only calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n\n                  <div id=\"logo_motion\" class=\"animated1 fadeIn width_8705 height_25 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                    \n                    <div id=\"logo_bottom_container\" class=\"animated1 fadeIn width_100 position_absolute bottom_100 left_0 right_0 margin_auto\">\n\n                      <div id=\"logo_bottom_container\" class=\"width_100 height_1205vh position_relative margin_auto\">\n\n                        <div id=\"fold_note\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                            \n                            <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note\">\n                            \n                            </div>\n                        \n                        </div>\n\n                      </div>\n\n                      <div id=\"logo_bottom_container\" class=\"width_100 height_1205vh position_relative margin_auto\">\n\n                          <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n\n                                <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                  \n                                    <div class=\"position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                                        <div id=\"gui_start\" class=\"gui_button_start position_relative width_33 height_100 float_left\">\n                                        </div>\n\n                                        <div class=\"gui_or position_relative width_1205 height_100 float_left\">\n                                        </div>\n                                        \n                                        <div id=\"gui_learn\" class=\"gui_button_learn position_relative width_33 height_100 float_left\">\n                                        </div>\n\n                                    </div>\n\n                                </div>\n\n                          </div>\n\n                      </div>\n\n                    </div>\n\n                    <div id=\"logo_center_container\" class=\"animated1 fadeIn width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto\">\n                      <div id=\"logo\" class=\"gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                      <div id=\"logo\" class=\"gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                      <div id=\"logo\" class=\"gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                      <div id=\"logo\" class=\"gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                      <div id=\"logo\" class=\"gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                      <div id=\"logo\" class=\"gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                    </div>\n\n                    <div id=\"logo_bottom_container\" class=\"animated1 fadeIn width_100 position_absolute top_100 left_0 right_0 margin_auto\">\n\n                      <div id=\"logo_bottom_container\" class=\"width_100 height_1205vh position_relative margin_auto\">\n\n                          <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n\n                                <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                  \n                                    <div class=\"position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                                        <div id=\"gui_start\" class=\"gui_button_start position_relative width_33 height_100 float_left\">\n                                        </div>\n\n                                        <div class=\"gui_or position_relative width_1205 height_100 float_left\">\n                                        </div>\n                                        \n                                        <div id=\"gui_learn\" class=\"gui_button_learn position_relative width_33 height_100 float_left\">\n                                        </div>\n\n                                    </div>\n\n                                </div>\n\n                          </div>\n\n                      </div>\n\n                      <div id=\"logo_bottom_container\" class=\"width_100 height_1205vh position_relative margin_auto\">\n\n                        <div id=\"fold_note\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                            \n                            <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note\">\n                            \n                            </div>\n                        \n                        </div>\n\n                      </div>\n\n                    </div>\n\n                  </div>\n\n              </div>\n\n            </div>\n          </div>\n\n        </div>\n\n        <div class=\"position_relative width_100 height_100 overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-white float_left\">\n\n          <h2 id=\"\">element_ol_firebase_skills</h2>\n          <ol id=\"element_ol_firebase_skills\"></ol>\n          <h2 id=\"\">element_ol_firebase_services</h2>\n          <ol id=\"element_ol_firebase_services\"></ol>\n          <h2 id=\"\">element_ol_firebase_partners</h2>\n          <ol id=\"element_ol_firebase_partners\"></ol>\n          <h2 id=\"\">element_ol_firebase_abilities</h2>\n          <ol id=\"element_ol_firebase_abilities\"></ol>\n          <h2 id=\"\">element_ol_firebase_library</h2>\n          <ol id=\"element_ol_firebase_library\"></ol>\n          <h2 id=\"\">element_ol_firebase_roster</h2>\n          <ol id=\"element_ol_firebase_roster\"></ol>\n\n        </div>\n\n      </div>\n\n    "
+  innerHTML: "\n\n      <div class=\"position_relative width_100 height_100 overflow_y float_left\">\n        \n        <div id=\"fold_filler\" class=\"position_relative width_100 height_100vh margin_auto float_left\">\n          \n          <div id=\"fold\" class=\"position_relative width_100 height_100vh margin_auto float_left display_none opacity_0 easing_01 transform_translate3d_left0 \">\n            <div id=\"fold_container\" class=\"position_relative width_100 height_100vh margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align \">\n\n            </div>\n          </div>\n\n        </div>\n\nelement_input_post_username\nless_posts\nmore_posts\n\n        <p class=\"bg_yellow width_100 float_left\">less_posts_value?</p>\n        <button id=\"less_posts\" class=\"width_100 float_left\">less_posts</button>\n        <div id=\"less_posts_value\"></div>\n        <p class=\"bg_yellow width_100 float_left\">more_posts_value?</p>\n        <button id=\"more_posts\" class=\"width_100 float_left\">more_posts</button>\n        <div id=\"more_posts_value\"></div>\n        <p class=\"bg_yellow width_100 float_left\">are you logged in?</p>\n        <div id=\"users_username\"></div>\n        <p class=\"bg_yellow width_100 float_left\">username?</p>\n        <input id=\"username\" type=\"text\" placeholder=\"username\" class=\"width_100 bg_pink float_left\" />\n        <p class=\"bg_yellow width_100 float_left\">password?</p>\n        <input id=\"password\" type=\"text\" placeholder=\"password\" class=\"width_100 bg_pink float_left\" />\n        <p class=\"bg_yellow width_100 float_left\">sign in?</p>\n        <div id=\"element_user_sign_in\" class=\"width_100 bg_pink float_left\" >sign in</div>\n        <p class=\"bg_yellow width_100 float_left\">sign out?</p>\n        <div id=\"element_user_sign_out\" class=\"width_100 bg_pink float_left\" >sign out</div>        \n        <p class=\"bg_yellow width_100 float_left\">sort by type?</p>\n        <input id=\"element_input_sorting_type\" type=\"text\" placeholder=\"element_input_sorting_type\" class=\"width_100 bg_pink float_left\" />\n        <p class=\"bg_yellow width_100 float_left\">blog style?</p>\n        <input id=\"element_input_style\" type=\"text\" placeholder=\"element_input_style\" class=\"width_100 bg_pink float_left\" />\n\n        <p class=\"bg_yellow width_100 float_left\">element_input_filter?</p>\n        <input id=\"element_input_filter\" type=\"text\" placeholder=\"element_input_filter\" class=\"width_100 bg_pink float_left\" />\n\n        <div class=\"position_relative width_100 height_100 overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-white float_left\">\n\n\n          <h2 width_100 bg_white font_size_205vh line_height_5vh\" id=\"\">element_ol_firebase_feature_library</h2>\n          <ol id=\"element_ol_firebase_feature_library\"></ol>\n          <h2 width_100 bg_white font_size_205vh line_height_5vh\" id=\"\">element_ol_firebase_after_feature_library</h2>\n          <ol id=\"element_ol_firebase_after_feature_library\"></ol>\n          <h2 width_100 bg_white font_size_205vh line_height_5vh\" id=\"\">element_ol_firebase_library</h2>\n          <ol id=\"element_ol_firebase_library\"></ol>\n          <h2 width_100 bg_white font_size_205vh line_height_5vh\" id=\"\">element_ol_firebase_roster</h2>\n          <ol id=\"element_ol_firebase_roster\"></ol>\n          <h2 width_100 bg_white font_size_205vh line_height_5vh\" id=\"\">element_ol_firebase_skills</h2>\n          <ol id=\"element_ol_firebase_skills\"></ol>\n          <h2 width_100 bg_white font_size_205vh line_height_5vh\" id=\"\">element_ol_firebase_services</h2>\n          <ol id=\"element_ol_firebase_services\"></ol>\n          <h2 width_100 bg_white font_size_205vh line_height_5vh\" id=\"\">element_ol_firebase_partners</h2>\n          <ol id=\"element_ol_firebase_partners\"></ol>\n          <h2 width_100 bg_white font_size_205vh line_height_5vh\" id=\"\">element_ol_firebase_abilities</h2>\n          <ol id=\"element_ol_firebase_abilities\"></ol>\n\n        </div>\n\n      </div>\n\n    "
 }, {
   parent: 'component_app_modals',
   id: '',
@@ -1795,9 +1798,17 @@ setTimeout(function () {
         state.events.key.keys.push(event.keyCode);
       }
 
+      ; // q
+
+      if (keyCode == 81) {
+        _index.default.HANDLE_gui_hide();
+      }
+
       ; // w
 
       if (keyCode == 87) {
+        _index.default.HANDLE_gui_show();
+
         state.ui.interaction.player_1.yaxis += 1 / 8;
       }
 
@@ -1849,17 +1860,22 @@ setTimeout(function () {
         _index.default.addListings('skills');
       }
 
-      ; // q
-
-      if (keyCode == 81) {
-        state.ui.gui.bottom_right.transform = !state.ui.gui.bottom_right.transform;
-        state.ui.gui.bottom_right.display = !state.ui.gui.bottom_right.display;
-      }
-
       ; // space
 
       if (keyCode == 32) {
         event.preventDefault();
+
+        if (state.app.route == 'start') {
+          _index.default.Handle_check_route('start_to_null', '');
+        }
+
+        ;
+
+        if (state.app.route == 'learn') {
+          _index.default.Handle_check_route('learn_to_null', '');
+        }
+
+        ;
       }
 
       ;
@@ -3636,7 +3652,8 @@ var gnougnRef;
 var wordpressRef;
 var fb_response;
 var fb_writeable;
-var first_load; // Assignment
+var first_load;
+var sorting_type = 'timeup'; // Assignment
 
 state = _state.default.default_state;
 defaults = _defaults.default;
@@ -3701,9 +3718,7 @@ var Handle_display_with_delay = function Handle_display_with_delay() {
 };
 
 var Handle_check_states = function Handle_check_states() {
-  console.log('checked ui_components');
   ui_components = components.ui_components();
-  console.log('checked stage_components');
   stage_components = components.stage_components();
   Handle_display_with_delay();
   Handle_transform();
@@ -3721,6 +3736,216 @@ var Handle_return_state = function Handle_return_state() {
 
 var Handle_get_state_from_events = function Handle_get_state_from_events() {
   state = _events.default.Handle_return_state_from_events();
+};
+
+var Handle_EventListeners = function Handle_EventListeners() {
+  // sign_in
+  if (document.getElementById('element_user_sign_in') != null) {
+    document.getElementById('element_user_sign_in').addEventListener('click', function (event) {
+      for (var i = 0; i < state.data.firebase.gnougn.roster.length; i++) {
+        var trying_username = document.getElementById('username').value;
+        var trying_password = document.getElementById('password').value;
+
+        if (state.data.firebase.gnougn.roster[i].username == trying_username) {
+          var validate_username = true;
+          var validated_user = state.data.firebase.gnougn.roster[i];
+
+          if (validated_user.password == trying_password) {
+            var validate_password = true;
+            state.data.user = validated_user;
+            localStorage.setItem("user", state.data.user);
+            localStorage.setItem("username", state.data.user.username);
+            localStorage.setItem("password", state.data.user.password);
+            sign_in_ui();
+          }
+
+          ;
+        }
+
+        ;
+      }
+
+      ;
+    });
+  }
+
+  ; // sign_out
+
+  if (document.getElementById('element_user_sign_out') != null) {
+    document.getElementById('element_user_sign_out').addEventListener('click', function (event) {
+      sign_out_ui();
+    });
+  }
+
+  ; // filter by title
+
+  if (document.getElementById('element_input_filter') != null) {
+    document.getElementById('element_input_filter').addEventListener('keydown', function (event) {
+      // filter library
+      setTimeout(function () {
+        Handle_Firebase_Refs_and_Render();
+      }, 0);
+    });
+  }
+
+  ; // less_posts post
+
+  if (document.getElementById('less_posts') != null) {
+    document.getElementById('less_posts').addEventListener('click', function (event) {
+      less_posts();
+    });
+  }
+
+  ; // more_posts post
+
+  if (document.getElementById('more_posts') != null) {
+    document.getElementById('more_posts').addEventListener('click', function (event) {
+      more_posts();
+    });
+  }
+
+  ;
+};
+
+var Handle_Timers = function Handle_Timers() {
+  // start timer
+  (function () {
+    var int = 0;
+    setInterval(function () {
+      console.log(state.events.key.keys); // desktop
+
+      if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        if (state.events.key.keys.length == 0) {
+          state.events.key.up = true;
+          state.events.key.down = false;
+        }
+
+        ;
+
+        if (state.events.key.keys.length != 0) {
+          state.events.key.up = false;
+          state.events.key.down = true;
+        }
+
+        ;
+
+        if (state.events.key.up == true) {
+          state.events.key.timer -= 1;
+          console.log('state.events.key.timer: ' + state.events.key.timer);
+
+          if (document.getElementById('timer_key_up') != null) {
+            document.getElementById('timer_key_up').innerHTML = state.events.key.timer;
+          }
+        }
+
+        if (state.events.key.up == false) {
+          state.events.key.timer += 1;
+          console.log('state.events.key.timer: ' + state.events.key.timer);
+
+          if (document.getElementById('timer_key_up') != null) {
+            document.getElementById('timer_key_up').innerHTML = state.events.key.timer;
+          }
+        }
+
+        if (state.events.mouse.up == true) {
+          state.events.mouse.timer -= 1;
+          console.log('state.events.mouse.timer: ' + state.events.mouse.timer);
+
+          if (document.getElementById('timer_mouse_up') != null) {
+            document.getElementById('timer_mouse_up').innerHTML = state.events.mouse.timer;
+          }
+        }
+
+        if (state.events.mouse.up == false) {
+          state.events.mouse.timer += 1;
+          console.log('state.events.mouse.timer: ' + state.events.mouse.timer);
+
+          if (document.getElementById('timer_mouse_up') != null) {
+            document.getElementById('timer_mouse_up').innerHTML = state.events.mouse.timer;
+          }
+        }
+
+        if (state.events.mouse.enter == true) {
+          state.events.mouse.leavetimer = 0;
+          console.log('state.events.mouse.leavetimer: ' + state.events.mouse.leavetimer);
+
+          if (document.getElementById('timer_mouse_leave') != null) {
+            document.getElementById('timer_mouse_leave').innerHTML = state.events.mouse.leavetimer;
+          }
+        }
+
+        if (state.events.mouse.enter == false) {
+          state.events.mouse.leavetimer += 1;
+          console.log('state.events.mouse.leavetimer: ' + state.events.mouse.leavetimer);
+
+          if (document.getElementById('timer_mouse_leave') != null) {
+            document.getElementById('timer_mouse_leave').innerHTML = state.events.mouse.leavetimer;
+          }
+        }
+
+        if (state.events.mouse.leavetimer == 5) {
+          console.log('timeout active');
+        }
+
+        ;
+      }
+
+      ; // Mobile
+
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        if (state.events.touch.enter == true) {
+          state.events.touch.leavetimer = 0;
+          console.log('state.events.touch.leavetimer: ' + state.events.touch.leavetimer);
+
+          if (document.getElementById('timer_mouse_leave') != null) {
+            document.getElementById('timer_mouse_leave').innerHTML = state.events.touch.leavetimer;
+          }
+        }
+
+        if (state.events.touch.enter == false) {
+          state.events.touch.leavetimer += 1;
+          console.log('state.events.touch.leavetimer: ' + state.events.touch.leavetimer);
+
+          if (document.getElementById('timer_mouse_leave') != null) {
+            document.getElementById('timer_mouse_leave').innerHTML = state.events.touch.leavetimer;
+          }
+        }
+
+        if (state.events.touch.leavetimer == 30) {
+          console.log('timeout active');
+        }
+
+        ;
+
+        if (state.events.touch.leavetimer == 60) {
+          console.log('timeout active');
+        }
+
+        ;
+      }
+
+      ;
+      int += 1;
+      console.log(int);
+    }, 1000);
+  })(); // console.log(state.ui.interaction.dice);
+  // console.log(state.ui.interaction.random);
+
+
+  (function () {
+    setInterval(function () {
+      if (document.getElementById('time') != null) {
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var date = new Date();
+        state.data.time = 'Today is ' + days[date.getDay()] + ', ' + months[date.getMonth()] + ', ' + date.getDay() + ', ' + date.getFullYear() + '. Current time: ' + date.getHours() + ':' + date.getMinutes() + '.' + date.getSeconds() + '.' + date.getMilliseconds();
+        console.log(state.data.time);
+        document.getElementById('time').innerText = state.data.time;
+      }
+
+      ;
+    }, 1000);
+  })();
 };
 
 var HANDLE_animation_paint_hand = function HANDLE_animation_paint_hand() {
@@ -4236,7 +4461,10 @@ var Handle_Repeat_Firebase_Validation = setInterval(function () {
 
             ; // After "48 frames" exc..
 
-            if (interval == 24 * 1) {// display fold here
+            if (interval == 24 * 5) {
+              // display fold here
+              Handle_check_route('null', '');
+              Handle_Timers();
             }
 
             ;
@@ -4281,8 +4509,9 @@ var Handle_Repeat_Firebase_Validation = setInterval(function () {
       fb_response.gnougn.skills = result_skills;
       setTimeout(function () {
         Handle_firebase_render();
+        console.clear();
         console.log('contected!');
-      }, 4000);
+      }, 0);
       console.log(fb_response.gnougn);
     }
 
@@ -4297,9 +4526,52 @@ var Handle_firebase_render = function Handle_firebase_render() {
   (function () {
     setTimeout(function () {
       if (fb_response != null) {
-        for (var i = 0; i < fb_response.gnougn.library.length; i++) {
-          // console.log(state.data.firebase.gnougn.roster[i]);
-          document.getElementById('element_ol_firebase_library').appendChild(_functions.default.Generate_new_fragment.appendChild(_functions.default.Generate_new_li(fb_response.gnougn.library[i])));
+        find_view();
+        var sorted_library = fb_response.gnougn.library.sort(find_sort());
+        var filtered_library = []; //  filter by title
+
+        for (var i = 0; i < sorted_library.length; i++) {
+          if (sorted_library[i].title.toString().toLowerCase().includes(document.getElementById('element_input_filter').value)) {
+            filtered_library.push(sorted_library[i]);
+          }
+
+          ;
+        }
+
+        ;
+
+        for (var i = 0; i < filtered_library.length; i++) {
+          // pagination hack
+          if (i < state.data.feature_posts_limit) {
+            // console.log(state.data.firebase.gnougn.roster[i]);
+            document.getElementById('element_ol_firebase_feature_library').appendChild(_functions.default.Generate_new_fragment.appendChild(_functions.default.Generate_new_li(filtered_library[i])));
+          }
+
+          ;
+        }
+
+        ;
+
+        for (var i = 0; i < filtered_library.length; i++) {
+          // pagination hack
+          if (i >= state.data.posts_start && i < state.data.posts_limit) {
+            // console.log(state.data.firebase.gnougn.roster[i]);
+            document.getElementById('element_ol_firebase_after_feature_library').appendChild(_functions.default.Generate_new_fragment.appendChild(_functions.default.Generate_new_li(filtered_library[i])));
+          }
+
+          ;
+        }
+
+        ;
+
+        for (var i = 0; i < filtered_library.length; i++) {
+          // pagination hack
+          if (i < state.data.posts_limit) {
+            // console.log(state.data.firebase.gnougn.roster[i]);
+            document.getElementById('element_ol_firebase_library').appendChild(_functions.default.Generate_new_fragment.appendChild(_functions.default.Generate_new_li(filtered_library[i])));
+          }
+
+          ;
         }
 
         ;
@@ -4341,7 +4613,7 @@ var Handle_firebase_render = function Handle_firebase_render() {
       }
 
       ;
-    }, 1);
+    }, 0);
   })();
 };
 
@@ -4366,6 +4638,18 @@ var Handle_Firebase_Refs_and_Render = function Handle_Firebase_Refs_and_Render()
 
   if (document.getElementById('element_ol_firebase_abilities') != null) {
     document.getElementById('element_ol_firebase_abilities').innerHTML = '';
+  }
+
+  ;
+
+  if (document.getElementById('element_ol_firebase_feature_library') != null) {
+    document.getElementById('element_ol_firebase_feature_library').innerHTML = '';
+  }
+
+  ;
+
+  if (document.getElementById('element_ol_firebase_after_feature_library') != null) {
+    document.getElementById('element_ol_firebase_after_feature_library').innerHTML = '';
   }
 
   ;
@@ -4399,31 +4683,292 @@ var Handle_Firebase_Refs_and_Render = function Handle_Firebase_Refs_and_Render()
   (function () {
     setTimeout(function () {
       Handle_Repeat_Firebase_Validation;
-    }, 100);
+    }, 0);
   })();
-}; // Closures
+};
+
+var check_local_user = function check_local_user() {
+  // Localize data
+  if (localStorage.username == null) {
+    console.log('welcome first timer');
+    document.getElementById('users_username').innerHTML = 'Welcome <u>new user!</u> Please sign up or Log in.';
+    return;
+  }
+
+  ; // Localize data
+
+  if (localStorage.username == 'null') {
+    console.log('welcome back, login please');
+    document.getElementById('users_username').innerHTML = 'Welcome back <u>returning user!</u> please login';
+    return;
+  }
+
+  ;
+
+  if (localStorage.username != 'null') {
+    console.log('weolcome back: ' + localStorage.username);
+
+    for (var i = 0; i < state.data.firebase.gnougn.roster.length; i++) {
+      var trying_username = localStorage.username;
+      var trying_password = localStorage.password;
+
+      if (state.data.firebase.gnougn.roster[i].username == trying_username) {
+        var validate_username = true;
+        var validated_user = state.data.firebase.gnougn.roster[i];
+
+        if (validated_user.password == trying_password) {
+          var validate_password = true;
+          state.data.user = validated_user;
+          localStorage.setItem("user", state.data.user);
+          localStorage.setItem("username", state.data.user.username);
+          localStorage.setItem("password", state.data.user.password);
+          sign_in_ui();
+        }
+
+        ;
+      }
+
+      ;
+    }
+
+    ;
+  }
+
+  ;
+};
+
+var sign_in_ui = function sign_in_ui() {
+  /*
+  // set user avatar
+  document.getElementById('user_thumb').style.backgroundImage = 'url(' + state.data.user.feature_image_src + ')'
+   // set author page
+  document.getElementById('component_app_modal_element_page_right_content').innerHTML = imported_elements.route_dashboard(state.data.user);
+   document.getElementById('icon_sign_out').classList.remove('display_none')
+  document.getElementById('icon_sign_in').classList.add('display_none')
+  document.getElementById('icon_sign_up').classList.add('display_none')
+  */
+  document.getElementById('users_username').innerHTML = 'Hello ' + "".concat(state.data.user.username) + '!'; // render author data
+  // Set firebase data
+
+  setTimeout(function () {
+    Handle_Firebase_Refs_and_Render();
+  }, 0);
+};
+
+var sign_out_ui = function sign_out_ui() {
+  document.getElementById('users_username').innerHTML = 'See you next time, ' + "".concat(state.data.user.username);
+  state.data.user = default_user;
+  localStorage.setItem("user", default_user);
+  localStorage.setItem("username", default_user.username);
+  localStorage.setItem("password", default_user.password);
+  /*
+  // set user avatar
+  document.getElementById('user_thumb').style.backgroundImage = 'url(' + state.data.user.feature_image_src + ')'
+   // set author page
+  document.getElementById('component_app_modal_element_page_right_content').innerHTML = imported_elements.route_dashboard_not_logged();
+   document.getElementById('icon_sign_out').classList.add('display_none')
+  document.getElementById('icon_sign_in').classList.remove('display_none')
+  document.getElementById('icon_sign_up').classList.remove('display_none')
+  */
+  // render author data
+  // Set firebase data
+
+  setTimeout(function () {
+    Handle_Firebase_Refs_and_Render();
+  }, 0);
+}; // more_posts
 
 
-var default_post = {
-  "dislikes": 0,
-  "feature_image_src": "http://nownigel.com/photos/gui_user_blank.svg",
-  "id": "007",
-  "likes": 0,
-  "password": "null",
-  "subs": [{
-    "username": "null"
-  }],
-  "time": 1.550374996382E9,
-  "title": "nigel johnson",
-  "categories": ["null"],
-  "subcategories": ["null"],
-  "tags": ["null"],
-  "types": [{
-    "title": "null"
-  }],
-  "username": "null",
-  "views": 0
+var less_posts = function less_posts() {
+  state.data.posts_start -= 1;
+  state.data.posts_limit -= 1; // Set firebase data
+
+  document.getElementById('less_posts_value').innerHTML = state.data.posts_start;
+  document.getElementById('more_posts_value').innerHTML = state.data.posts_limit;
+  setTimeout(function () {
+    Handle_Firebase_Refs_and_Render();
+  }, 0);
+};
+
+var more_posts = function more_posts() {
+  state.data.posts_start += 1;
+  state.data.posts_limit += 1; // Set firebase data
+
+  document.getElementById('less_posts_value').innerHTML = state.data.posts_start;
+  document.getElementById('more_posts_value').innerHTML = state.data.posts_limit;
+  setTimeout(function () {
+    Handle_Firebase_Refs_and_Render();
+  }, 0);
+};
+
+var find_sort = function find_sort() {
+  if (document.getElementById('element_input_sorting_type').value == 'likesup' || '') {
+    sorting_type = 'likesup';
+  }
+
+  if (document.getElementById('element_input_sorting_type').value == 'likesdown') {
+    sorting_type = 'likesdown';
+  }
+
+  if (document.getElementById('element_input_sorting_type').value == 'viewsup') {
+    sorting_type = 'viewsup';
+  }
+
+  if (document.getElementById('element_input_sorting_type').value == 'viewsdown') {
+    sorting_type = 'viewsdown';
+  }
+
+  if (document.getElementById('element_input_sorting_type').value == 'timeup') {
+    sorting_type = 'timeup';
+  }
+
+  if (document.getElementById('element_input_sorting_type').value == 'timedown') {
+    sorting_type = 'timedown';
+  }
+
+  if (document.getElementById('element_input_sorting_type').value == 'titleup') {
+    sorting_type = 'titleup';
+  }
+
+  if (document.getElementById('element_input_sorting_type').value == 'titledown') {
+    sorting_type = 'titledown';
+  }
+
+  if (sorting_type == 'likesup') {
+    if (sorting_type == 'likesup') {
+      return function (a, b) {
+        return a.likes - b.likes;
+      };
+    }
+
+    ;
+  }
+
+  ;
+
+  if (sorting_type == 'likesdown') {
+    if (sorting_type == 'likesdown') {
+      return function (a, b) {
+        return b.likes - a.likes;
+      };
+    }
+
+    ;
+  }
+
+  ;
+
+  if (sorting_type == 'viewsup') {
+    if (sorting_type == 'viewsup') {
+      return function (a, b) {
+        return a.views - b.views;
+      };
+    }
+
+    ;
+  }
+
+  ;
+
+  if (sorting_type == 'viewsdown') {
+    if (sorting_type == 'viewsdown') {
+      return function (a, b) {
+        return b.views - a.views;
+      };
+    }
+
+    ;
+  }
+
+  ;
+
+  if (sorting_type == 'timeup') {
+    if (sorting_type == 'timeup') {
+      return function (a, b) {
+        return b.time - a.time;
+      };
+    }
+
+    ;
+  }
+
+  ;
+
+  if (sorting_type == 'timedown') {
+    if (sorting_type == 'timedown') {
+      return function (a, b) {
+        return a.time - b.time;
+      };
+    }
+
+    ;
+  }
+
+  ;
+
+  if (sorting_type == 'titleup') {
+    if (sorting_type == 'titleup') {
+      return function (a, b) {
+        return b.title - a.title;
+      };
+    }
+
+    ;
+  }
+
+  ;
+
+  if (sorting_type == 'titledown') {
+    if (sorting_type == 'titledown') {
+      return function (a, b) {
+        return a.title - b.title;
+      };
+    }
+
+    ;
+  }
+
+  ;
+};
+
+var find_view = function find_view() {
+  document.getElementById('root').classList.remove('grid');
+  document.getElementById('root').classList.remove('list');
+  document.getElementById('root').classList.remove('card');
+  document.getElementById('root').classList.remove('full');
+  document.getElementById('root').classList.remove('thumbs');
+
+  if (document.getElementById('element_input_style').value == 'grid' || document.getElementById('element_input_style').value == '') {
+    document.getElementById('root').classList.add('grid');
+  }
+
+  ;
+
+  if (document.getElementById('element_input_style').value == 'card') {
+    document.getElementById('root').classList.add('card');
+  }
+
+  ;
+
+  if (document.getElementById('element_input_style').value == 'list') {
+    document.getElementById('root').classList.add('list');
+  }
+
+  ;
+
+  if (document.getElementById('element_input_style').value == 'thumbs') {
+    document.getElementById('root').classList.add('thumbs');
+  }
+
+  ;
+
+  if (document.getElementById('element_input_style').value == 'full') {
+    document.getElementById('root').classList.add('full');
+  }
+
+  ;
 }; // Create
+
 
 var addListings = function addListings(child) {
   var current_second = new Date().getTime() / 1000;
@@ -4433,6 +4978,7 @@ var addListings = function addListings(child) {
     time: current_second,
     username: 'xxx',
     password: 'xxx',
+    title: "nice",
     feature_image_src: "http://animalmade.com/files/images/projects/animal/animal_hero.jpg",
     views: 0,
     likes: 0,
@@ -4479,6 +5025,70 @@ var deleteWhoListings = function deleteWhoListings(child, id) {
   var Ref = gnougnRef.child(child);
   console.log(id, 'from deleteWhoListings service');
   Ref.child(id).remove(); // Set firebase data
+
+  setTimeout(function () {
+    Handle_Firebase_Refs_and_Render();
+  }, 0);
+}; // Update
+
+
+var likeWhoListings = function likeWhoListings(child, id) {
+  // Firebase References
+  // Firebase Database
+  var rootRef = firebase.database().ref();
+  var gnougnRef = rootRef.child('gnougn');
+  var Ref = gnougnRef.child(child);
+  console.log(id, 'from likeWhoListings service');
+  var changeThisValue;
+  Ref.child(id).once('value', function (snap) {
+    changeThisValue = snap.val(); // Keep the local user object synced with the Firebase userRef
+  });
+  changeThisValue.likes += 1;
+  Ref.child(id).set(changeThisValue);
+  console.log(id); // Set firebase data
+
+  setTimeout(function () {
+    Handle_Firebase_Refs_and_Render();
+  }, 0);
+}; // Update
+
+
+var dislikeWhoListings = function dislikeWhoListings(child, id) {
+  // Firebase References
+  // Firebase Database
+  var rootRef = firebase.database().ref();
+  var gnougnRef = rootRef.child('gnougn');
+  var Ref = gnougnRef.child(child);
+  console.log(id, 'from likeWhoListings service');
+  var changeThisValue;
+  Ref.child(id).once('value', function (snap) {
+    changeThisValue = snap.val(); // Keep the local user object synced with the Firebase userRef
+  });
+  changeThisValue.likes -= 1;
+  Ref.child(id).set(changeThisValue);
+  console.log(id);
+  console.log(changeThisValue); // Set firebase data
+
+  setTimeout(function () {
+    Handle_Firebase_Refs_and_Render();
+  }, 0);
+}; // Update
+
+
+var viewWhoListings = function viewWhoListings(child, id) {
+  // Firebase References
+  // Firebase Database
+  var rootRef = firebase.database().ref();
+  var gnougnRef = rootRef.child('gnougn');
+  var Ref = gnougnRef.child(child);
+  console.log(id, 'from viewWhoListings service');
+  var changeThisValue;
+  Ref.child(id).once('value', function (snap) {
+    changeThisValue = snap.val(); // Keep the local user object synced with the Firebase userRef
+  });
+  changeThisValue.views += 1;
+  Ref.child(id).set(changeThisValue);
+  console.log(id); // Set firebase data
 
   setTimeout(function () {
     Handle_Firebase_Refs_and_Render();
@@ -5009,12 +5619,55 @@ var HANDLE_inital_load = function HANDLE_inital_load() {
       if (interval == 0) {
         Handle_render_view();
         Handle_Firebase_Refs_and_Render();
+        Handle_EventListeners();
       }
 
       ;
       interval += 1; //console.log('current frame is: ' + interval);
     }, 1000 / 24);
   })();
+};
+
+var HANDLE_gui_hide = function HANDLE_gui_hide() {
+  state.ui.gui.top_left.transform = true;
+  state.ui.gui.top.transform = true;
+  state.ui.gui.top_right.transform = true;
+  state.ui.gui.bottom_left.transform = true;
+  state.ui.gui.bottom.transform = true;
+  state.ui.gui.bottom_right.transform = true;
+  state.ui.gui.right.transform = true;
+  state.ui.gui.left.transform = true;
+  setTimeout(function () {
+    state.ui.gui.top_left.display = false;
+    state.ui.gui.top.display = false;
+    state.ui.gui.top_right.display = false;
+    state.ui.gui.bottom_left.display = false;
+    state.ui.gui.bottom.display = false;
+    state.ui.gui.bottom_right.display = false;
+    state.ui.gui.right.display = false;
+    state.ui.gui.left.display = false;
+  }, 101);
+};
+
+var HANDLE_gui_show = function HANDLE_gui_show() {
+  state.ui.gui.top_left.display = true;
+  state.ui.gui.top.display = true;
+  state.ui.gui.top_right.display = true;
+  state.ui.gui.bottom_left.display = true;
+  state.ui.gui.bottom.display = true;
+  state.ui.gui.bottom_right.display = true;
+  state.ui.gui.right.display = true;
+  state.ui.gui.left.display = true;
+  setTimeout(function () {
+    state.ui.gui.top_left.transform = false;
+    state.ui.gui.top.transform = false;
+    state.ui.gui.top_right.transform = false;
+    state.ui.gui.bottom_left.transform = false;
+    state.ui.gui.bottom.transform = false;
+    state.ui.gui.bottom_right.transform = false;
+    state.ui.gui.right.transform = false;
+    state.ui.gui.left.transform = false;
+  }, 101);
 };
 
 var onload = function onload() {
@@ -5040,6 +5693,233 @@ var onload = function onload() {
   })();
 };
 
+var Handle_check_route = function Handle_check_route(route, info) {
+  state.app.route = route;
+  setTimeout(function () {
+    adaptive_render();
+  }, 0);
+};
+
+var adaptive_render = function adaptive_render() {
+  // null
+  if (state.app.route == 'null') {
+    setTimeout(function () {
+      // Gui Button Actions
+      if (document.getElementById('gui_button_start') != null) {
+        document.getElementById('gui_button_start').addEventListener("click", function (event) {
+          //alert('gui_button_start');
+          Handle_check_route('null_to_start', '');
+        });
+      }
+
+      ; // Gui Button Actions
+
+      if (document.getElementById('gui_button_learn') != null) {
+        document.getElementById('gui_button_learn').addEventListener("click", function (event) {
+          //alert('gui_button_learn');
+          Handle_check_route('null_to_learn', '');
+        });
+      }
+
+      ; // Gui Button Actions
+
+      if (document.getElementById('element_input_sorting_type') != null) {
+        document.getElementById('element_input_sorting_type').addEventListener("keydown", function (event) {
+          //alert('element_input_sorting_type');
+          find_sort();
+        });
+      }
+
+      ; // Gui Button Actions
+
+      if (document.getElementById('element_input_style') != null) {
+        document.getElementById('element_input_style').addEventListener("keydown", function (event) {
+          //alert('element_input_style');
+          find_view();
+        });
+      }
+
+      ;
+    }, 1); // desktop
+
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "\n\n                    <div id=\"fold_desktop\" class=\" calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n\n                      <div id=\"logo_motion\" class=\"animated1 fadeIn width_50 height_50 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                          \n                        <div id=\"logo_left_container\" class=\"animated1 fadeIn width_50 height_100 position_absolute top_0 bottom_0 right_100 margin_auto\">\n                            <div id=\"logo\" class=\"gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_center_container\" class=\"animated1 fadeIn width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_right_container\" class=\"animated1 fadeIn width_50 height_100 position_absolute top_0 bottom_0 left_100 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_bottom_container\" class=\"animated1 fadeIn width_100 height_50 position_absolute bottom_100 left_0 right_0 margin_auto\">\n\n                          <div id=\"fold_note\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                              \n                              <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note\">\n                              \n                              </div>\n                          \n                          </div>\n\n                        </div>\n\n                        <div id=\"logo_bottom_container\" class=\"animated1 fadeIn width_100 height_50 position_absolute top_100 left_0 right_0 margin_auto\">\n\n                            <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n\n                                  <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                    \n                                      <div class=\"position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                                          <div id=\"gui_button_start\" class=\"gui_button_start position_relative width_33 height_100 float_left\">\n                                          </div>\n\n                                          <div class=\"gui_or position_relative width_1205 height_100 float_left\">\n                                          </div>\n                                          \n                                          <div id=\"gui_button_learn\" class=\"gui_button_learn position_relative width_33 height_100 float_left\">\n                                          </div>\n\n                                      </div>\n\n                                  </div>\n\n                            </div>\n\n                        </div>\n\n                      </div>\n\n                    </div>\n            ";
+    }
+
+    ; // ipad
+
+    if (/iPad/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "\n\n                    <div id=\"fold_ipad\" class=\" calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n\n                      <div id=\"logo_motion\" class=\"animated1 fadeIn width_50 height_50 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                        \n                        <div id=\"logo_left_container\" class=\"animated1 fadeIn width_50 height_100 position_absolute top_0 bottom_0 right_100 margin_auto\">\n                            <div id=\"logo\" class=\"gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_center_container\" class=\"animated1 fadeIn width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_right_container\" class=\"animated1 fadeIn width_50 height_100 position_absolute top_0 bottom_0 left_100 margin_auto\">\n                          <div id=\"logo\" class=\"gui_move_note width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_bottom_container\" class=\"animated1 fadeIn width_100 height_50 position_absolute bottom_100 left_0 right_0 margin_auto\">\n\n                          <div id=\"fold_note\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                              \n                              <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note\">\n                              \n                              </div>\n                          \n                          </div>\n\n                        </div>\n\n                        <div id=\"logo_bottom_container\" class=\"animated1 fadeIn width_100 height_50 position_absolute top_100 left_0 right_0 margin_auto\">\n\n                            <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n\n                                  <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                    \n                                      <div class=\"position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                                          <div id=\"gui_button_start\" class=\"gui_button_start position_relative width_33 height_100 float_left\">\n                                          </div>\n\n                                          <div class=\"gui_or position_relative width_1205 height_100 float_left\">\n                                          </div>\n                                          \n                                          <div id=\"gui_button_learn\" class=\"gui_button_learn position_relative width_33 height_100 float_left\">\n                                          </div>\n\n                                      </div>\n\n                                  </div>\n\n                            </div>\n\n                        </div>\n\n                      </div>\n\n                    </div>\n            ";
+    }
+
+    ; // iphone
+
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "\n\n                    <div id=\"fold_iphone\" class=\" calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n\n                      <div id=\"logo_motion\" class=\"animated1 fadeIn width_8705 height_25 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                        \n                        <div id=\"logo_bottom_container\" class=\"animated1 fadeIn width_100 position_absolute bottom_100 left_0 right_0 margin_auto\">\n\n                          <div id=\"logo_bottom_container\" class=\"width_100 height_1205vh position_relative margin_auto\">\n\n                            <div id=\"fold_note\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                                \n                                <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note\">\n                                \n                                </div>\n                            \n                            </div>\n\n                          </div>\n\n                          <div id=\"logo_bottom_container\" class=\"width_100 height_1205vh position_relative margin_auto\">\n\n                              <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n\n                                    <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                      \n                                        <div class=\"position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                                            <div id=\"gui_button_start\" class=\"gui_button_start position_relative width_33 height_100 float_left\">\n                                            </div>\n\n                                            <div class=\"gui_or position_relative width_1205 height_100 float_left\">\n                                            </div>\n                                            \n                                            <div id=\"gui_button_learn\" class=\"gui_button_learn position_relative width_33 height_100 float_left\">\n                                            </div>\n\n                                        </div>\n\n                                    </div>\n\n                              </div>\n\n                          </div>\n\n                        </div>\n\n                        <div id=\"logo_center_container\" class=\"animated1 fadeIn width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_bottom_container\" class=\"animated1 fadeIn width_100 position_absolute top_100 left_0 right_0 margin_auto\">\n\n                          <div id=\"logo_bottom_container\" class=\"width_100 height_1205vh position_relative margin_auto\">\n\n                              <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n\n                                    <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                      \n                                        <div class=\"position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                                            <div id=\"gui_button_start\" class=\"gui_button_start position_relative width_33 height_100 float_left\">\n                                            </div>\n\n                                            <div class=\"gui_or position_relative width_1205 height_100 float_left\">\n                                            </div>\n                                            \n                                            <div id=\"gui_button_learn\" class=\"gui_button_learn position_relative width_33 height_100 float_left\">\n                                            </div>\n\n                                        </div>\n\n                                    </div>\n\n                              </div>\n\n                          </div>\n\n                          <div id=\"logo_bottom_container\" class=\"width_100 height_1205vh position_relative margin_auto\">\n\n                            <div id=\"fold_note\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                                \n                                <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note\">\n                                \n                                </div>\n                            \n                            </div>\n\n                          </div>\n\n                        </div>\n\n                      </div>\n\n                    </div>\n            ";
+    }
+
+    ;
+  }
+
+  ; // null
+
+  if (state.app.route == 'null_to_start') {
+    setTimeout(function () {}, 1); // desktop
+
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "\n\n                    <div id=\"fold_desktop\" class=\"fadeOut animated1 calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n\n                      <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                          \n                        <div id=\"logo_left_container\" class=\"width_50 height_100 position_absolute top_0 bottom_0 right_100 margin_auto\">\n                            <div id=\"logo\" class=\"gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_center_container\" class=\"width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_right_container\" class=\"width_50 height_100 position_absolute top_0 bottom_0 left_100 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_bottom_container\" class=\"width_100 height_50 position_absolute bottom_100 left_0 right_0 margin_auto\">\n\n                          <div id=\"fold_note\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                              \n                              <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note\">\n                              \n                              </div>\n                          \n                          </div>\n\n                        </div>\n\n                        <div id=\"logo_bottom_container\" class=\"width_100 height_50 position_absolute top_100 left_0 right_0 margin_auto\">\n\n                            <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n\n                                  <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                    \n                                      <div class=\"position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                                          <div id=\"gui_button_start\" class=\"gui_button_start position_relative width_33 height_100 float_left\">\n                                          </div>\n\n                                          <div class=\"gui_or position_relative width_1205 height_100 float_left\">\n                                          </div>\n                                          \n                                          <div id=\"gui_button_learn\" class=\"gui_button_learn position_relative width_33 height_100 float_left\">\n                                          </div>\n\n                                      </div>\n\n                                  </div>\n\n                            </div>\n\n                        </div>\n\n                      </div>\n\n                    </div>\n            ";
+    }
+
+    ; // ipad
+
+    if (/iPad/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "\n\n                    <div id=\"fold_ipad\" class=\"fadeOut animated1 calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n\n                      <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                        \n                        <div id=\"logo_left_container\" class=\"width_50 height_100 position_absolute top_0 bottom_0 right_100 margin_auto\">\n                            <div id=\"logo\" class=\"gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_center_container\" class=\"width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_right_container\" class=\"width_50 height_100 position_absolute top_0 bottom_0 left_100 margin_auto\">\n                          <div id=\"logo\" class=\"gui_move_note width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_bottom_container\" class=\"width_100 height_50 position_absolute bottom_100 left_0 right_0 margin_auto\">\n\n                          <div id=\"fold_note\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                              \n                              <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note\">\n                              \n                              </div>\n                          \n                          </div>\n\n                        </div>\n\n                        <div id=\"logo_bottom_container\" class=\"width_100 height_50 position_absolute top_100 left_0 right_0 margin_auto\">\n\n                            <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n\n                                  <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                    \n                                      <div class=\"position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                                          <div id=\"gui_button_start\" class=\"gui_button_start position_relative width_33 height_100 float_left\">\n                                          </div>\n\n                                          <div class=\"gui_or position_relative width_1205 height_100 float_left\">\n                                          </div>\n                                          \n                                          <div id=\"gui_button_learn\" class=\"gui_button_learn position_relative width_33 height_100 float_left\">\n                                          </div>\n\n                                      </div>\n\n                                  </div>\n\n                            </div>\n\n                        </div>\n\n                      </div>\n\n                    </div>\n            ";
+    }
+
+    ; // iphone
+
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "\n\n                    <div id=\"fold_iphone\" class=\"fadeOut animated1 calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n\n                      <div id=\"logo_motion\" class=\"width_8705 height_25 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                        \n                        <div id=\"logo_bottom_container\" class=\"width_100 position_absolute bottom_100 left_0 right_0 margin_auto\">\n\n                          <div id=\"logo_bottom_container\" class=\"width_100 height_1205vh position_relative margin_auto\">\n\n                            <div id=\"fold_note\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                                \n                                <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note\">\n                                \n                                </div>\n                            \n                            </div>\n\n                          </div>\n\n                          <div id=\"logo_bottom_container\" class=\"width_100 height_1205vh position_relative margin_auto\">\n\n                              <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n\n                                    <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                      \n                                        <div class=\"position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                                            <div id=\"gui_button_start\" class=\"gui_button_start position_relative width_33 height_100 float_left\">\n                                            </div>\n\n                                            <div class=\"gui_or position_relative width_1205 height_100 float_left\">\n                                            </div>\n                                            \n                                            <div id=\"gui_button_learn\" class=\"gui_button_learn position_relative width_33 height_100 float_left\">\n                                            </div>\n\n                                        </div>\n\n                                    </div>\n\n                              </div>\n\n                          </div>\n\n                        </div>\n\n                        <div id=\"logo_center_container\" class=\"width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_bottom_container\" class=\"width_100 position_absolute top_100 left_0 right_0 margin_auto\">\n\n                          <div id=\"logo_bottom_container\" class=\"width_100 height_1205vh position_relative margin_auto\">\n\n                              <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n\n                                    <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                      \n                                        <div class=\"position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                                            <div id=\"gui_button_start\" class=\"gui_button_start position_relative width_33 height_100 float_left\">\n                                            </div>\n\n                                            <div class=\"gui_or position_relative width_1205 height_100 float_left\">\n                                            </div>\n                                            \n                                            <div id=\"gui_button_learn\" class=\"gui_button_learn position_relative width_33 height_100 float_left\">\n                                            </div>\n\n                                        </div>\n\n                                    </div>\n\n                              </div>\n\n                          </div>\n\n                          <div id=\"logo_bottom_container\" class=\"width_100 height_1205vh position_relative margin_auto\">\n\n                            <div id=\"fold_note\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                                \n                                <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note\">\n                                \n                                </div>\n                            \n                            </div>\n\n                          </div>\n\n                        </div>\n\n                      </div>\n\n                    </div>\n            ";
+    }
+
+    ;
+    setTimeout(function () {
+      Handle_check_route('start', '');
+    }, 1000);
+  }
+
+  ; // null
+
+  if (state.app.route == 'start') {
+    // desktop
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "\n\n                <div id=\"folds_16\" class=\"fadeIn animated1 width_100 height_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n                    \n                  <div class=\"calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n        \n                      <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute top_0 left_0 margin_auto\">\n                        \n                        <div id=\"logo_right_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n\n                      </div>\n\n                      <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute top_0 right_0 margin_auto\">\n                        \n                        <div id=\"logo_center_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                      </div>\n\n                      <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute bottom_0 left_0 margin_auto\">\n                        \n                        <div id=\"logo_bottom_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n\n                          <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left webkit_box_pack_center webkit_box_align display_webkit_box\">\n\n                              <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                \n                                  <div class=\"position_relative margin_auto float_left\">\n\n                                      <div id=\"gui_back\" class=\"gui_button_back position_relative  width_1205vh height_10vh float_left\">\n                                      </div>\n                                      <div id=\"gui_enter\" class=\"gui_button_enter position_relative  width_1205vh height_10vh float_left\">\n                                      </div>\n\n                                  </div>\n\n                              </div>\n\n                          </div>\n\n                        </div>\n\n                      </div>\n\n                      <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute bottom_0 right_0 margin_auto\">\n                          \n                        <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute top_0 right_0 margin_auto\">\n                          \n                          <div id=\"logo_bottom_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n\n                            <div id=\"fold_scroll\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                                \n                                <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel\">\n                                \n                                </div>\n                            \n                            </div>\n\n                          </div>\n\n                        </div>\n\n                        <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute top_0 left_0 margin_auto\">\n                          \n                          <div id=\"logo_bottom_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n\n                            <div id=\"fold_scroll\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                                \n                                <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel\">\n                                \n                                </div>\n                            \n                            </div>\n\n                          </div>\n\n                        </div>\n\n                        <div id=\"logo_motion\" class=\"width_100 height_50 position_absolute bottom_0 right_0 margin_auto\">\n                          \n                          <div id=\"logo_bottom_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n\n                            <div id=\"fold_scroll\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                                \n                                <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel\">\n                                \n                                </div>\n                            \n                            </div>\n\n                          </div>\n\n                        </div>\n\n                      </div>\n                </div>\n            ";
+    }
+
+    ; // ipad
+
+    if (/iPad/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "";
+    }
+
+    ; // iphone
+
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "";
+    }
+
+    ;
+  }
+
+  ; // null
+
+  if (state.app.route == 'start_to_null') {
+    // desktop
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "\n\n                <div id=\"folds_16\" class=\"fadeOut animated1 width_100 height_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n                    \n                  <div class=\"calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n        \n                      <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute top_0 left_0 margin_auto\">\n                        \n                        <div id=\"logo_right_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n\n                      </div>\n\n                      <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute top_0 right_0 margin_auto\">\n                        \n                        <div id=\"logo_center_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                      </div>\n\n                      <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute bottom_0 left_0 margin_auto\">\n                        \n                        <div id=\"logo_bottom_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n\n                          <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left webkit_box_pack_center webkit_box_align display_webkit_box\">\n\n                              <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                \n                                  <div class=\"position_relative margin_auto float_left\">\n\n                                      <div id=\"gui_back\" class=\"gui_button_back position_relative  width_1205vh height_10vh float_left\">\n                                      </div>\n                                      <div id=\"gui_enter\" class=\"gui_button_enter position_relative  width_1205vh height_10vh float_left\">\n                                      </div>\n\n                                  </div>\n\n                              </div>\n\n                          </div>\n\n                        </div>\n\n                      </div>\n\n                      <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute bottom_0 right_0 margin_auto\">\n                          \n                        <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute top_0 right_0 margin_auto\">\n                          \n                          <div id=\"logo_bottom_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n\n                            <div id=\"fold_scroll\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                                \n                                <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel\">\n                                \n                                </div>\n                            \n                            </div>\n\n                          </div>\n\n                        </div>\n\n                        <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute top_0 left_0 margin_auto\">\n                          \n                          <div id=\"logo_bottom_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n\n                            <div id=\"fold_scroll\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                                \n                                <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel\">\n                                \n                                </div>\n                            \n                            </div>\n\n                          </div>\n\n                        </div>\n\n                        <div id=\"logo_motion\" class=\"width_100 height_50 position_absolute bottom_0 right_0 margin_auto\">\n                          \n                          <div id=\"logo_bottom_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n\n                            <div id=\"fold_scroll\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                                \n                                <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel\">\n                                \n                                </div>\n                            \n                            </div>\n\n                          </div>\n\n                        </div>\n\n                      </div>\n                </div>\n            ";
+    }
+
+    ; // ipad
+
+    if (/iPad/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "";
+    }
+
+    ; // iphone
+
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "";
+    }
+
+    ;
+    setTimeout(function () {
+      Handle_check_route('null', '');
+    }, 1000);
+  }
+
+  ; // null
+
+  if (state.app.route == 'null_to_learn') {
+    setTimeout(function () {}, 1); // desktop
+
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "\n\n                    <div id=\"fold_desktop\" class=\"fadeOut animated1 calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n\n                      <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                          \n                        <div id=\"logo_left_container\" class=\"width_50 height_100 position_absolute top_0 bottom_0 right_100 margin_auto\">\n                            <div id=\"logo\" class=\"gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_center_container\" class=\"width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_right_container\" class=\"width_50 height_100 position_absolute top_0 bottom_0 left_100 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_bottom_container\" class=\"width_100 height_50 position_absolute bottom_100 left_0 right_0 margin_auto\">\n\n                          <div id=\"fold_note\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                              \n                              <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note\">\n                              \n                              </div>\n                          \n                          </div>\n\n                        </div>\n\n                        <div id=\"logo_bottom_container\" class=\"width_100 height_50 position_absolute top_100 left_0 right_0 margin_auto\">\n\n                            <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n\n                                  <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                    \n                                      <div class=\"position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                                          <div id=\"gui_button_start\" class=\"gui_button_start position_relative width_33 height_100 float_left\">\n                                          </div>\n\n                                          <div class=\"gui_or position_relative width_1205 height_100 float_left\">\n                                          </div>\n                                          \n                                          <div id=\"gui_button_learn\" class=\"gui_button_learn position_relative width_33 height_100 float_left\">\n                                          </div>\n\n                                      </div>\n\n                                  </div>\n\n                            </div>\n\n                        </div>\n\n                      </div>\n\n                    </div>\n            ";
+    }
+
+    ; // ipad
+
+    if (/iPad/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "\n\n                    <div id=\"fold_ipad\" class=\"fadeOut animated1 calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n\n                      <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                        \n                        <div id=\"logo_left_container\" class=\"width_50 height_100 position_absolute top_0 bottom_0 right_100 margin_auto\">\n                            <div id=\"logo\" class=\"gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_center_container\" class=\"width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_right_container\" class=\"width_50 height_100 position_absolute top_0 bottom_0 left_100 margin_auto\">\n                          <div id=\"logo\" class=\"gui_move_note width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_bottom_container\" class=\"width_100 height_50 position_absolute bottom_100 left_0 right_0 margin_auto\">\n\n                          <div id=\"fold_note\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                              \n                              <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note\">\n                              \n                              </div>\n                          \n                          </div>\n\n                        </div>\n\n                        <div id=\"logo_bottom_container\" class=\"width_100 height_50 position_absolute top_100 left_0 right_0 margin_auto\">\n\n                            <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n\n                                  <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                    \n                                      <div class=\"position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                                          <div id=\"gui_button_start\" class=\"gui_button_start position_relative width_33 height_100 float_left\">\n                                          </div>\n\n                                          <div class=\"gui_or position_relative width_1205 height_100 float_left\">\n                                          </div>\n                                          \n                                          <div id=\"gui_button_learn\" class=\"gui_button_learn position_relative width_33 height_100 float_left\">\n                                          </div>\n\n                                      </div>\n\n                                  </div>\n\n                            </div>\n\n                        </div>\n\n                      </div>\n\n                    </div>\n            ";
+    }
+
+    ; // iphone
+
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "\n\n                    <div id=\"fold_iphone\" class=\"fadeOut animated1 calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n\n                      <div id=\"logo_motion\" class=\"width_8705 height_25 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                        \n                        <div id=\"logo_bottom_container\" class=\"width_100 position_absolute bottom_100 left_0 right_0 margin_auto\">\n\n                          <div id=\"logo_bottom_container\" class=\"width_100 height_1205vh position_relative margin_auto\">\n\n                            <div id=\"fold_note\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                                \n                                <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note\">\n                                \n                                </div>\n                            \n                            </div>\n\n                          </div>\n\n                          <div id=\"logo_bottom_container\" class=\"width_100 height_1205vh position_relative margin_auto\">\n\n                              <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n\n                                    <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                      \n                                        <div class=\"position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                                            <div id=\"gui_button_start\" class=\"gui_button_start position_relative width_33 height_100 float_left\">\n                                            </div>\n\n                                            <div class=\"gui_or position_relative width_1205 height_100 float_left\">\n                                            </div>\n                                            \n                                            <div id=\"gui_button_learn\" class=\"gui_button_learn position_relative width_33 height_100 float_left\">\n                                            </div>\n\n                                        </div>\n\n                                    </div>\n\n                              </div>\n\n                          </div>\n\n                        </div>\n\n                        <div id=\"logo_center_container\" class=\"width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                        <div id=\"logo_bottom_container\" class=\"width_100 position_absolute top_100 left_0 right_0 margin_auto\">\n\n                          <div id=\"logo_bottom_container\" class=\"width_100 height_1205vh position_relative margin_auto\">\n\n                              <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n\n                                    <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                      \n                                        <div class=\"position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                                            <div id=\"gui_button_start\" class=\"gui_button_start position_relative width_33 height_100 float_left\">\n                                            </div>\n\n                                            <div class=\"gui_or position_relative width_1205 height_100 float_left\">\n                                            </div>\n                                            \n                                            <div id=\"gui_button_learn\" class=\"gui_button_learn position_relative width_33 height_100 float_left\">\n                                            </div>\n\n                                        </div>\n\n                                    </div>\n\n                              </div>\n\n                          </div>\n\n                          <div id=\"logo_bottom_container\" class=\"width_100 height_1205vh position_relative margin_auto\">\n\n                            <div id=\"fold_note\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                                \n                                <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note\">\n                                \n                                </div>\n                            \n                            </div>\n\n                          </div>\n\n                        </div>\n\n                      </div>\n\n                    </div>\n            ";
+    }
+
+    ;
+    setTimeout(function () {
+      Handle_check_route('learn', '');
+    }, 1000);
+  }
+
+  ; // null
+
+  if (state.app.route == 'learn') {
+    // desktop
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "\n\n                <div id=\"folds_21\" class=\"fadeIn animated1 width_100 height_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n                    \n                  <div class=\"calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n        \n                      <div id=\"logo_motion\" class=\"width_25 height_50 position_absolute top_0 left_0 margin_auto\">\n                        \n                        <div id=\"logo_right_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n\n                      </div>\n\n                      <div id=\"logo_motion\" class=\"width_75 height_50 position_absolute top_0 right_0 margin_auto\">\n                        \n                        <div id=\"logo_center_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                      </div>\n\n                      <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute bottom_0 left_0 margin_auto\">\n                        \n                        <div id=\"logo_bottom_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n\n                          <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left webkit_box_pack_center webkit_box_align display_webkit_box\">\n\n                              <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                \n                                  <div class=\"position_relative margin_auto float_left\">\n\n                                      <div id=\"gui_back_from_learn\" class=\"gui_button_back position_relative  width_1205vh height_10vh float_left\">\n                                      </div>\n                                      <div id=\"gui_enter\" class=\"gui_button_enter position_relative  width_1205vh height_10vh float_left\">\n                                      </div>\n\n                                  </div>\n\n                              </div>\n\n                          </div>\n\n                        </div>\n\n                      </div>\n\n                      <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute bottom_0 right_0 margin_auto\">\n                          \n                        <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute top_0 right_0 margin_auto\">\n                          \n                          <div id=\"logo_bottom_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n\n                            <div id=\"fold_scroll\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                                \n                                <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel\">\n                                \n                                </div>\n                            \n                            </div>\n\n                          </div>\n\n                        </div>\n\n                        <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute top_0 left_0 margin_auto\">\n                          \n                          <div id=\"logo_bottom_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n\n                            <div id=\"fold_scroll\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                                \n                                <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel\">\n                                \n                                </div>\n                            \n                            </div>\n\n                          </div>\n\n                        </div>\n\n                        <div id=\"logo_motion\" class=\"width_100 height_50 position_absolute bottom_0 right_0 margin_auto\">\n                          \n                          <div id=\"logo_bottom_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n\n                            <div id=\"fold_scroll\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                                \n                                <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel\">\n                                \n                                </div>\n                            \n                            </div>\n\n                          </div>\n\n                        </div>\n\n                      </div>\n                </div>\n            ";
+    }
+
+    ; // ipad
+
+    if (/iPad/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "";
+    }
+
+    ; // iphone
+
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "";
+    }
+
+    ;
+  }
+
+  ; // null
+
+  if (state.app.route == 'learn_to_null') {
+    // desktop
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "\n\n                <div id=\"folds_21\" class=\"fadeOut animated1 width_100 height_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n                    \n                  <div class=\"calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto\">\n        \n                      <div id=\"logo_motion\" class=\"width_25 height_50 position_absolute top_0 left_0 margin_auto\">\n                        \n                        <div id=\"logo_right_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n\n                      </div>\n\n                      <div id=\"logo_motion\" class=\"width_75 height_50 position_absolute top_0 right_0 margin_auto\">\n                        \n                        <div id=\"logo_center_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n                          <div id=\"logo\" class=\"gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                          <div id=\"logo\" class=\"gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\"></div>\n                        </div>\n\n                      </div>\n\n                      <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute bottom_0 left_0 margin_auto\">\n                        \n                        <div id=\"logo_bottom_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n\n                          <div id=\"fold_buttons\" class=\"position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left webkit_box_pack_center webkit_box_align display_webkit_box\">\n\n                              <div class=\"display_flex_flow position_relative width_100 margin_auto float_left\">\n                                \n                                  <div class=\"position_relative margin_auto float_left\">\n\n                                      <div id=\"gui_back_from_learn\" class=\"gui_button_back position_relative  width_1205vh height_10vh float_left\">\n                                      </div>\n                                      <div id=\"gui_enter\" class=\"gui_button_enter position_relative  width_1205vh height_10vh float_left\">\n                                      </div>\n\n                                  </div>\n\n                              </div>\n\n                          </div>\n\n                        </div>\n\n                      </div>\n\n                      <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute bottom_0 right_0 margin_auto\">\n                          \n                        <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute top_0 right_0 margin_auto\">\n                          \n                          <div id=\"logo_bottom_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n\n                            <div id=\"fold_scroll\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                                \n                                <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel\">\n                                \n                                </div>\n                            \n                            </div>\n\n                          </div>\n\n                        </div>\n\n                        <div id=\"logo_motion\" class=\"width_50 height_50 position_absolute top_0 left_0 margin_auto\">\n                          \n                          <div id=\"logo_bottom_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n\n                            <div id=\"fold_scroll\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                                \n                                <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel\">\n                                \n                                </div>\n                            \n                            </div>\n\n                          </div>\n\n                        </div>\n\n                        <div id=\"logo_motion\" class=\"width_100 height_50 position_absolute bottom_0 right_0 margin_auto\">\n                          \n                          <div id=\"logo_bottom_container\" class=\"width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto\">\n\n                            <div id=\"fold_scroll\" class=\"position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left\">\n                                \n                                <div class=\"easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel\">\n                                \n                                </div>\n                            \n                            </div>\n\n                          </div>\n\n                        </div>\n\n                      </div>\n                </div>\n            ";
+    }
+
+    ; // ipad
+
+    if (/iPad/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "";
+    }
+
+    ; // iphone
+
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      document.getElementById('fold_container').innerHTML = "";
+    }
+
+    ;
+    setTimeout(function () {
+      Handle_check_route('null', '');
+    }, 1000);
+  }
+
+  ;
+};
+
+window.onresize = function () {
+  adaptive_render();
+};
+
 window.onload = function () {
   console.log('onload');
   onload();
@@ -5049,8 +5929,15 @@ window.onload = function () {
 var _default = {
   Handle_return_state: Handle_return_state,
   Handle_Firebase_Refs_and_Render: Handle_Firebase_Refs_and_Render,
+  Handle_get_state_from_events: Handle_get_state_from_events,
+  Handle_check_route: Handle_check_route,
+  HANDLE_gui_hide: HANDLE_gui_hide,
+  HANDLE_gui_show: HANDLE_gui_show,
   addListings: addListings,
   deleteWhoListings: deleteWhoListings,
+  likeWhoListings: likeWhoListings,
+  dislikeWhoListings: dislikeWhoListings,
+  viewWhoListings: viewWhoListings,
   player_1_grow: player_1_grow,
   player_1_shrink: player_1_shrink
 };
@@ -5082,7 +5969,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64230" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49497" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

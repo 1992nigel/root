@@ -29,6 +29,7 @@ let wordpressRef;
 let fb_response;
 let fb_writeable;
 let first_load;
+let sorting_type = 'timeup';
 
 // Assignment
 state = imported_state.default_state;
@@ -85,9 +86,7 @@ let Handle_display_with_delay = () => {
 };
 
 let Handle_check_states = () => {
-    console.log('checked ui_components');
 	ui_components = components.ui_components();
-    console.log('checked stage_components');
     stage_components = components.stage_components();
 	Handle_display_with_delay();
     Handle_transform();
@@ -105,6 +104,220 @@ let Handle_get_state_from_events = () => {
     state = imported_events.Handle_return_state_from_events();
 };
 
+let Handle_EventListeners = () => {
+
+        // sign_in
+        if (document.getElementById('element_user_sign_in') != null) {
+            document.getElementById('element_user_sign_in').addEventListener('click', (event) => {
+                
+
+                for (var i = 0; i < state.data.firebase.gnougn.roster.length; i++) {
+                    let trying_username = document.getElementById('username').value;
+                    let trying_password = document.getElementById('password').value;
+                    if (state.data.firebase.gnougn.roster[i].username == trying_username) {
+
+                        let validate_username = true;
+                        let validated_user = state.data.firebase.gnougn.roster[i]
+
+                        if (validated_user.password == trying_password) {
+
+                            let validate_password = true;
+                            state.data.user = validated_user;
+                            localStorage.setItem("user", state.data.user);
+                            localStorage.setItem("username", state.data.user.username);
+                            localStorage.setItem("password", state.data.user.password);
+
+                            sign_in_ui();
+                
+                        };
+                    };
+                };
+
+            });
+        };
+
+
+        // sign_out
+        if (document.getElementById('element_user_sign_out') != null) {
+            document.getElementById('element_user_sign_out').addEventListener('click', (event) => {
+                
+                            sign_out_ui();
+
+            })
+        };
+
+
+        // filter by title
+        if (document.getElementById('element_input_filter') != null) {
+            document.getElementById('element_input_filter').addEventListener('keydown', (event) => {
+                // filter library
+                setTimeout(function() {
+                    Handle_Firebase_Refs_and_Render();
+                }, 0);
+
+            });
+        };
+
+        // less_posts post
+        if (document.getElementById('less_posts') != null) {
+            document.getElementById('less_posts').addEventListener('click', (event) => {
+                less_posts();
+            });
+        };
+
+        // more_posts post
+        if (document.getElementById('more_posts') != null) {
+            document.getElementById('more_posts').addEventListener('click', (event) => {
+                more_posts();
+            });
+        };
+
+};
+
+let Handle_Timers = () => {
+    // start timer
+    (() => {
+        let int = 0;
+        setInterval(function() {
+
+            console.log(state.events.key.keys);
+
+            // desktop
+            if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+
+                if (state.events.key.keys.length == 0) {
+                    state.events.key.up = true;
+                    state.events.key.down = false;
+                };
+
+                if (state.events.key.keys.length != 0) {
+                    state.events.key.up = false;
+                    state.events.key.down = true;
+                };
+
+                if (state.events.key.up == true) {
+                    state.events.key.timer -= 1;
+                    console.log('state.events.key.timer: ' + state.events.key.timer);
+
+                    if ((document.getElementById('timer_key_up')) != null ) {
+                        document.getElementById('timer_key_up').innerHTML = (state.events.key.timer)
+                    }
+                }
+
+                if (state.events.key.up == false) {
+                    state.events.key.timer += 1;
+                    console.log('state.events.key.timer: ' + state.events.key.timer);
+
+                    if ((document.getElementById('timer_key_up')) != null ) {
+                        document.getElementById('timer_key_up').innerHTML = (state.events.key.timer)
+                    }
+                }
+
+                if (state.events.mouse.up == true) {
+                    state.events.mouse.timer -= 1;
+                    console.log('state.events.mouse.timer: ' + state.events.mouse.timer);
+
+                    if ((document.getElementById('timer_mouse_up')) != null ) {
+                        document.getElementById('timer_mouse_up').innerHTML = (state.events.mouse.timer)
+                    }
+                }
+
+                if (state.events.mouse.up == false) {
+                    state.events.mouse.timer += 1;
+                    console.log('state.events.mouse.timer: ' + state.events.mouse.timer);
+
+                    if ((document.getElementById('timer_mouse_up')) != null ) {
+                        document.getElementById('timer_mouse_up').innerHTML = (state.events.mouse.timer)
+                    }
+                }
+
+                if (state.events.mouse.enter == true) {
+
+                    state.events.mouse.leavetimer = 0;
+
+                    console.log('state.events.mouse.leavetimer: ' + state.events.mouse.leavetimer);
+
+                    if ((document.getElementById('timer_mouse_leave')) != null ) {
+                        document.getElementById('timer_mouse_leave').innerHTML = (state.events.mouse.leavetimer)
+                    }
+                }
+
+                if (state.events.mouse.enter == false) {
+
+                    state.events.mouse.leavetimer += 1;
+
+                    console.log('state.events.mouse.leavetimer: ' + state.events.mouse.leavetimer);
+                    
+                    if ((document.getElementById('timer_mouse_leave')) != null ) {
+                        document.getElementById('timer_mouse_leave').innerHTML = (state.events.mouse.leavetimer)
+                    }
+                }
+
+                if (state.events.mouse.leavetimer == 5) {
+                    console.log('timeout active')               
+                };
+
+            };
+
+            // Mobile
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+
+                if (state.events.touch.enter == true) {
+
+                    state.events.touch.leavetimer = 0;
+
+                    console.log('state.events.touch.leavetimer: ' + state.events.touch.leavetimer);
+
+                    if ((document.getElementById('timer_mouse_leave')) != null ) {
+                        document.getElementById('timer_mouse_leave').innerHTML = (state.events.touch.leavetimer)
+                    }
+                }
+
+                if (state.events.touch.enter == false) {
+
+                    state.events.touch.leavetimer += 1;
+
+                    console.log('state.events.touch.leavetimer: ' + state.events.touch.leavetimer);
+                    
+                    if ((document.getElementById('timer_mouse_leave')) != null ) {
+                        document.getElementById('timer_mouse_leave').innerHTML = (state.events.touch.leavetimer)
+                    }
+                }
+
+                if (state.events.touch.leavetimer == 30) {
+                    console.log('timeout active')        
+                };
+
+                if (state.events.touch.leavetimer == 60) {
+                    console.log('timeout active')            
+                };
+
+            };
+
+            int += 1;
+            console.log(int);
+        }, 1000);
+    })();
+
+    // console.log(state.ui.interaction.dice);
+    // console.log(state.ui.interaction.random);
+    (() => {
+        setInterval(function() {
+
+            if ( (document.getElementById('time')) != null ) {
+
+                let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                let date = new Date();
+                state.data.time = 'Today is ' + (days[date.getDay()]) + ', ' + (months[date.getMonth()]) + ', ' + (date.getDay()) + ', ' + date.getFullYear() + '. Current time: ' + date.getHours() + ':' + date.getMinutes() + '.' + date.getSeconds() + '.' + date.getMilliseconds();
+                console.log(state.data.time);
+                document.getElementById('time').innerText = state.data.time;
+
+            };
+
+        }, 1000);
+    })();
+};
 
 let HANDLE_animation_paint_hand = () => {
 
@@ -460,9 +673,11 @@ let Handle_Repeat_Firebase_Validation = setInterval( () => {
                             };
 
                             // After "48 frames" exc..
-                            if (interval == (24 * 1) ) {
+                            if (interval == (24 * 5) ) {
                                 
                                 // display fold here
+                                Handle_check_route('null', '');
+                                Handle_Timers();
                             };
 
                             interval += 1;
@@ -470,8 +685,6 @@ let Handle_Repeat_Firebase_Validation = setInterval( () => {
 
                         }, (1000 / 24));
                 }());
-
-
             };
 
             fb_writeable = false; // once firebase server responds, instead of a clearInterval, we use -> !writable
@@ -517,8 +730,10 @@ let Handle_Repeat_Firebase_Validation = setInterval( () => {
 
             setTimeout(function() {
                 Handle_firebase_render();
+
+                console.clear();
                 console.log('contected!');
-            }, 4000);
+            }, 0);
 
 
             console.log(fb_response.gnougn);
@@ -537,14 +752,54 @@ let Handle_firebase_render = () => {
 
             if ((fb_response) != null) {
                 
-                for (var i = 0; i < fb_response.gnougn.library.length; i++) {
-                    
-                    // console.log(state.data.firebase.gnougn.roster[i]);
-                    document.getElementById('element_ol_firebase_library').appendChild(
-                        imported_functions.Generate_new_fragment.appendChild(
-                        imported_functions.Generate_new_li(fb_response.gnougn.library[i])
+                find_view();
+                let sorted_library = fb_response.gnougn.library.sort(find_sort());
+                let filtered_library = [];
+
+                //  filter by title
+                for (var i = 0; i < sorted_library.length; i++) {
+                    if ((sorted_library[i].title.toString().toLowerCase().includes(document.getElementById('element_input_filter').value))) {
+                        filtered_library.push(sorted_library[i]);
+                    };
+                };
+
+                for (var i = 0; i < filtered_library.length; i++) {
+
+                    // pagination hack
+                    if ( (i < state.data.feature_posts_limit) ) {
+                        // console.log(state.data.firebase.gnougn.roster[i]);
+                        document.getElementById('element_ol_firebase_feature_library').appendChild(
+                            imported_functions.Generate_new_fragment.appendChild(
+                            imported_functions.Generate_new_li(filtered_library[i])
+                            )
                         )
-                    )
+                    };
+                };
+
+                for (var i = 0; i < filtered_library.length; i++) {
+
+                    // pagination hack
+                    if ( (i >= (state.data.posts_start)) && (i < state.data.posts_limit) ) {
+                        // console.log(state.data.firebase.gnougn.roster[i]);
+                        document.getElementById('element_ol_firebase_after_feature_library').appendChild(
+                            imported_functions.Generate_new_fragment.appendChild(
+                            imported_functions.Generate_new_li(filtered_library[i])
+                            )
+                        )
+                    };
+                };
+
+                for (var i = 0; i < filtered_library.length; i++) {
+
+                    // pagination hack
+                    if ( (i < state.data.posts_limit) ) {
+                        // console.log(state.data.firebase.gnougn.roster[i]);
+                        document.getElementById('element_ol_firebase_library').appendChild(
+                            imported_functions.Generate_new_fragment.appendChild(
+                            imported_functions.Generate_new_li(filtered_library[i])
+                            )
+                        )
+                    };
                 };
 
                 for (var i = 0; i < fb_response.gnougn.roster.length; i++) {
@@ -599,7 +854,7 @@ let Handle_firebase_render = () => {
 
             };
 
-        }, 1);
+        }, 0);
 
     })();
 
@@ -621,6 +876,14 @@ let Handle_Firebase_Refs_and_Render = () => {
 
     if ((document.getElementById('element_ol_firebase_abilities')) != null) {
         document.getElementById('element_ol_firebase_abilities').innerHTML = '';
+    };
+
+    if ((document.getElementById('element_ol_firebase_feature_library')) != null) {
+        document.getElementById('element_ol_firebase_feature_library').innerHTML = '';
+    };
+
+    if ((document.getElementById('element_ol_firebase_after_feature_library')) != null) {
+        document.getElementById('element_ol_firebase_after_feature_library').innerHTML = '';
     };
 
     if ((document.getElementById('element_ol_firebase_library')) != null) {
@@ -650,36 +913,281 @@ let Handle_Firebase_Refs_and_Render = () => {
     (() => {
         setTimeout(() => {
             Handle_Repeat_Firebase_Validation;
-        }, 100);
+        }, 0);
     })();
 
 };
 
+let check_local_user = () => {
 
-// Closures
+        // Localize data
+        if (localStorage.username == null) {
+            console.log('welcome first timer');
 
-let default_post = {
-    "dislikes" : 0,
-    "feature_image_src" : "http://nownigel.com/photos/gui_user_blank.svg",
-    "id" : "007",
-    "likes" : 0,
-    "password" : "null",
-    "subs" : [ {
-     "username" : "null"
-    } ],
-    "time" : 1.550374996382E9,
-    "title" : "nigel johnson",
-    "categories" : ["null"],
+            document.getElementById('users_username').innerHTML = 'Welcome <u>new user!</u> Please sign up or Log in.';
+            return;
+        };
 
-    "subcategories" : ["null"],
+        // Localize data
+        if (localStorage.username == 'null') {
+            console.log('welcome back, login please');
 
-    "tags" : ["null"],
+            document.getElementById('users_username').innerHTML = 'Welcome back <u>returning user!</u> please login';
+            return;
+        };
 
-    "types" : [{"title" : "null"}],
-    "username" : "null",
-    "views" : 0
+        if (localStorage.username != 'null') {
+            
+            console.log('weolcome back: ' + localStorage.username);
+
+            for (var i = 0; i < state.data.firebase.gnougn.roster.length; i++) {
+                let trying_username = localStorage.username;
+                let trying_password = localStorage.password;
+                if (state.data.firebase.gnougn.roster[i].username == trying_username) {
+
+                    let validate_username = true;
+                    let validated_user = state.data.firebase.gnougn.roster[i]
+
+                    if (validated_user.password == trying_password) {
+
+                        let validate_password = true;
+                        state.data.user = validated_user;
+                        localStorage.setItem("user", state.data.user);
+                        localStorage.setItem("username", state.data.user.username);
+                        localStorage.setItem("password", state.data.user.password);
+
+                        sign_in_ui();
+            
+                    };
+                };
+            };
+
+        };
 };
 
+let sign_in_ui = () => {
+
+    /*
+    // set user avatar
+    document.getElementById('user_thumb').style.backgroundImage = 'url(' + state.data.user.feature_image_src + ')'
+
+    // set author page
+    document.getElementById('component_app_modal_element_page_right_content').innerHTML = imported_elements.route_dashboard(state.data.user);
+
+    document.getElementById('icon_sign_out').classList.remove('display_none')
+    document.getElementById('icon_sign_in').classList.add('display_none')
+    document.getElementById('icon_sign_up').classList.add('display_none')
+    */
+
+    document.getElementById('users_username').innerHTML = 'Hello ' + `${state.data.user.username}` + '!';
+
+    // render author data
+    // Set firebase data
+    setTimeout(function() {
+        Handle_Firebase_Refs_and_Render();
+    }, 0);
+
+};
+
+let sign_out_ui = () => {
+
+    document.getElementById('users_username').innerHTML = 'See you next time, ' + `${state.data.user.username}`;
+    state.data.user = default_user;
+    
+    localStorage.setItem("user", default_user);
+    localStorage.setItem("username", default_user.username);
+    localStorage.setItem("password", default_user.password);
+    
+    /*
+    // set user avatar
+    document.getElementById('user_thumb').style.backgroundImage = 'url(' + state.data.user.feature_image_src + ')'
+
+    // set author page
+    document.getElementById('component_app_modal_element_page_right_content').innerHTML = imported_elements.route_dashboard_not_logged();
+
+    document.getElementById('icon_sign_out').classList.add('display_none')
+    document.getElementById('icon_sign_in').classList.remove('display_none')
+    document.getElementById('icon_sign_up').classList.remove('display_none')
+    */
+
+    // render author data
+    // Set firebase data
+    setTimeout(function() {
+        Handle_Firebase_Refs_and_Render();
+    }, 0);
+
+};
+
+// more_posts
+let less_posts = () => {
+    state.data.posts_start -= 1;
+    state.data.posts_limit -= 1;
+    // Set firebase data
+    document.getElementById('less_posts_value').innerHTML = state.data.posts_start;
+    document.getElementById('more_posts_value').innerHTML = state.data.posts_limit;
+
+    setTimeout(function() {
+        Handle_Firebase_Refs_and_Render();
+    }, 0);
+};
+
+let more_posts = () => {
+    state.data.posts_start += 1;
+    state.data.posts_limit += 1;
+    // Set firebase data
+    document.getElementById('less_posts_value').innerHTML = state.data.posts_start;
+    document.getElementById('more_posts_value').innerHTML = state.data.posts_limit;
+
+    setTimeout(function() {
+        Handle_Firebase_Refs_and_Render();
+    }, 0);
+};
+
+let find_sort = () => {
+
+    if (document.getElementById('element_input_sorting_type').value == 'likesup' || '') {
+        sorting_type = 'likesup';
+    }
+
+    if (document.getElementById('element_input_sorting_type').value == 'likesdown') {
+        sorting_type = 'likesdown';
+    }
+
+
+    if (document.getElementById('element_input_sorting_type').value == 'viewsup') {
+        sorting_type = 'viewsup';
+    }
+
+    if (document.getElementById('element_input_sorting_type').value == 'viewsdown') {
+        sorting_type = 'viewsdown';
+    }
+
+
+    if (document.getElementById('element_input_sorting_type').value == 'timeup') {
+        sorting_type = 'timeup';
+    }
+
+    if (document.getElementById('element_input_sorting_type').value == 'timedown') {
+        sorting_type = 'timedown';
+    }
+
+
+    if (document.getElementById('element_input_sorting_type').value == 'titleup') {
+        sorting_type = 'titleup';
+    }
+
+    if (document.getElementById('element_input_sorting_type').value == 'titledown') {
+        sorting_type = 'titledown';
+    }
+
+    if (sorting_type == 'likesup') {
+            
+            if (sorting_type == 'likesup') {
+                return function(a, b) {
+                    return a.likes - b.likes
+                }
+            };
+    };
+
+    if (sorting_type == 'likesdown') {
+
+            if (sorting_type == 'likesdown') {
+                return function(a, b) {
+                    return b.likes - a.likes
+                }
+            };
+    };
+
+    if (sorting_type == 'viewsup') {
+
+            if (sorting_type == 'viewsup') {
+                return function(a, b) {
+                    return a.views - b.views
+                }
+            };
+
+    };
+
+    if (sorting_type == 'viewsdown') {
+
+            if (sorting_type == 'viewsdown') {
+                return function(a, b) {
+                    return b.views - a.views
+                }
+            };
+
+    };
+
+    if (sorting_type == 'timeup') {
+
+            if (sorting_type == 'timeup') {
+                return function(a, b) {
+                    return b.time - a.time
+                }
+            };
+
+    };
+
+    if (sorting_type == 'timedown') {
+            
+            if (sorting_type == 'timedown') {
+                return function(a, b) {
+                    return a.time - b.time
+                }
+            };
+
+    };
+
+    if (sorting_type == 'titleup') {
+
+            if (sorting_type == 'titleup') {
+                return function(a, b) {
+                    return b.title - a.title
+                }
+            };
+
+    };
+
+    if (sorting_type == 'titledown') {
+            
+            if (sorting_type == 'titledown') {
+                return function(a, b) {
+                    return a.title - b.title
+                }
+            };
+
+    };
+
+};
+
+let find_view = () => {
+
+    document.getElementById('root').classList.remove('grid');
+    document.getElementById('root').classList.remove('list');
+    document.getElementById('root').classList.remove('card');
+    document.getElementById('root').classList.remove('full');
+    document.getElementById('root').classList.remove('thumbs');
+
+    if ((document.getElementById('element_input_style').value == 'grid') || (document.getElementById('element_input_style').value == '' )) {
+        document.getElementById('root').classList.add('grid');
+    };
+
+    if (document.getElementById('element_input_style').value == 'card') {
+        document.getElementById('root').classList.add('card');
+    };
+
+    if (document.getElementById('element_input_style').value == 'list') {
+        document.getElementById('root').classList.add('list');
+    };
+
+    if (document.getElementById('element_input_style').value == 'thumbs') {
+        document.getElementById('root').classList.add('thumbs');
+    };
+
+    if (document.getElementById('element_input_style').value == 'full') {
+        document.getElementById('root').classList.add('full');
+    };
+};
 
 // Create
 let addListings = (child) => {
@@ -692,6 +1200,7 @@ let addListings = (child) => {
             time: current_second,
             username: 'xxx',
             password: 'xxx',
+            title : "nice",
             feature_image_src : "http://animalmade.com/files/images/projects/animal/animal_hero.jpg",
             views: 0,
             likes: 0,
@@ -741,6 +1250,79 @@ let deleteWhoListings = (child, id) => {
     console.log(id, 'from deleteWhoListings service');
     Ref.child(id).remove();
 
+    // Set firebase data
+    setTimeout(function() {
+        Handle_Firebase_Refs_and_Render();
+    }, 0);
+};
+
+// Update
+let likeWhoListings = (child, id) => {
+
+    // Firebase References
+    // Firebase Database
+    const rootRef = firebase.database().ref();
+    const gnougnRef = rootRef.child('gnougn');
+    const Ref = gnougnRef.child(child);
+    console.log(id, 'from likeWhoListings service');
+    var changeThisValue;
+    Ref.child(id).once('value', function(snap) {
+        changeThisValue = snap.val(); // Keep the local user object synced with the Firebase userRef
+    });
+
+    changeThisValue.likes += 1;
+    Ref.child(id).set(changeThisValue);
+    console.log(id);
+    // Set firebase data
+    setTimeout(function() {
+        Handle_Firebase_Refs_and_Render();
+    }, 0);
+};
+
+// Update
+let dislikeWhoListings = (child, id) => {
+
+    // Firebase References
+    // Firebase Database
+    const rootRef = firebase.database().ref();
+    const gnougnRef = rootRef.child('gnougn');
+    const Ref = gnougnRef.child(child);
+    console.log(id, 'from likeWhoListings service');
+    var changeThisValue;
+    Ref.child(id).once('value', function(snap) {
+        changeThisValue = snap.val(); // Keep the local user object synced with the Firebase userRef
+    });
+
+    changeThisValue.likes -= 1;
+
+    Ref.child(id).set(changeThisValue);
+
+    console.log(id);
+    console.log(changeThisValue);
+
+    // Set firebase data
+    setTimeout(function() {
+        Handle_Firebase_Refs_and_Render();
+    }, 0);
+};
+
+// Update
+let viewWhoListings = (child, id) => {
+
+    // Firebase References
+    // Firebase Database
+    const rootRef = firebase.database().ref();
+    const gnougnRef = rootRef.child('gnougn');
+    const Ref = gnougnRef.child(child);
+    console.log(id, 'from viewWhoListings service');
+    var changeThisValue;
+    Ref.child(id).once('value', function(snap) {
+        changeThisValue = snap.val(); // Keep the local user object synced with the Firebase userRef
+    });
+
+    changeThisValue.views += 1;
+    Ref.child(id).set(changeThisValue);
+    console.log(id);
     // Set firebase data
     setTimeout(function() {
         Handle_Firebase_Refs_and_Render();
@@ -1123,6 +1705,7 @@ let HANDLE_inital_load = () => {
                     if (interval == 0 ) {
                         Handle_render_view();
                         Handle_Firebase_Refs_and_Render();
+                        Handle_EventListeners();
                     };
 
                     interval += 1;
@@ -1130,6 +1713,54 @@ let HANDLE_inital_load = () => {
 
                 }, (1000 / 24));
         }());
+
+};
+
+let HANDLE_gui_hide = () => {
+    state.ui.gui.top_left.transform = true;
+    state.ui.gui.top.transform = true;
+    state.ui.gui.top_right.transform = true;
+    state.ui.gui.bottom_left.transform = true;
+    state.ui.gui.bottom.transform = true;
+    state.ui.gui.bottom_right.transform = true;
+    state.ui.gui.right.transform = true;
+    state.ui.gui.left.transform = true;
+
+    setTimeout( () => {  
+        state.ui.gui.top_left.display = false;
+        state.ui.gui.top.display = false;
+        state.ui.gui.top_right.display = false;
+        state.ui.gui.bottom_left.display = false;
+        state.ui.gui.bottom.display = false;
+        state.ui.gui.bottom_right.display = false;
+        state.ui.gui.right.display = false;
+        state.ui.gui.left.display = false;
+
+    }, 101);
+
+};
+
+let HANDLE_gui_show = () => {
+    state.ui.gui.top_left.display = true;
+    state.ui.gui.top.display = true;
+    state.ui.gui.top_right.display = true;
+    state.ui.gui.bottom_left.display = true;
+    state.ui.gui.bottom.display = true;
+    state.ui.gui.bottom_right.display = true;
+    state.ui.gui.right.display = true;
+    state.ui.gui.left.display = true;
+
+    setTimeout( () => {  
+        state.ui.gui.top_left.transform = false;
+        state.ui.gui.top.transform = false;
+        state.ui.gui.top_right.transform = false;
+        state.ui.gui.bottom_left.transform = false;
+        state.ui.gui.bottom.transform = false;
+        state.ui.gui.bottom_right.transform = false;
+        state.ui.gui.right.transform = false;
+        state.ui.gui.left.transform = false;
+            
+    }, 101);
 
 };
 
@@ -1160,6 +1791,1353 @@ let onload = () => {
     })();
 };
 
+let Handle_check_route = (route, info) => {
+
+    state.app.route = route;
+    setTimeout(() => {
+        adaptive_render();
+    }, 0);
+
+};
+
+let adaptive_render = () => {
+
+    // null
+    if (state.app.route == 'null') {
+
+        setTimeout(() => {
+
+            // Gui Button Actions
+            if ((document.getElementById('gui_button_start')) != null ) {
+                document.getElementById('gui_button_start').addEventListener("click", function(event) {
+                    //alert('gui_button_start');
+                    Handle_check_route('null_to_start', '');
+                });
+            };
+
+            // Gui Button Actions
+            if ((document.getElementById('gui_button_learn')) != null ) {
+                document.getElementById('gui_button_learn').addEventListener("click", function(event) {
+                    //alert('gui_button_learn');
+                    Handle_check_route('null_to_learn', '');
+                });
+            };
+
+            // Gui Button Actions
+            if ((document.getElementById('element_input_sorting_type')) != null ) {
+                document.getElementById('element_input_sorting_type').addEventListener("keydown", function(event) {
+                    //alert('element_input_sorting_type');
+                    find_sort();
+                });
+            };
+
+            // Gui Button Actions
+            if ((document.getElementById('element_input_style')) != null ) {
+                document.getElementById('element_input_style').addEventListener("keydown", function(event) {
+                    //alert('element_input_style');
+                    find_view();
+                });
+            };
+
+        }, 1);
+
+        // desktop
+        if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent))) {
+
+            document.getElementById('fold_container').innerHTML = `
+
+                    <div id="fold_desktop" class=" calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
+
+                      <div id="logo_motion" class="animated1 fadeIn width_50 height_50 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+                          
+                        <div id="logo_left_container" class="animated1 fadeIn width_50 height_100 position_absolute top_0 bottom_0 right_100 margin_auto">
+                            <div id="logo" class="gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_center_container" class="animated1 fadeIn width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto">
+                          <div id="logo" class="gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_right_container" class="animated1 fadeIn width_50 height_100 position_absolute top_0 bottom_0 left_100 margin_auto">
+                          <div id="logo" class="gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_bottom_container" class="animated1 fadeIn width_100 height_50 position_absolute bottom_100 left_0 right_0 margin_auto">
+
+                          <div id="fold_note" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                              
+                              <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note">
+                              
+                              </div>
+                          
+                          </div>
+
+                        </div>
+
+                        <div id="logo_bottom_container" class="animated1 fadeIn width_100 height_50 position_absolute top_100 left_0 right_0 margin_auto">
+
+                            <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+
+                                  <div class="display_flex_flow position_relative width_100 margin_auto float_left">
+                                    
+                                      <div class="position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align">
+
+                                          <div id="gui_button_start" class="gui_button_start position_relative width_33 height_100 float_left">
+                                          </div>
+
+                                          <div class="gui_or position_relative width_1205 height_100 float_left">
+                                          </div>
+                                          
+                                          <div id="gui_button_learn" class="gui_button_learn position_relative width_33 height_100 float_left">
+                                          </div>
+
+                                      </div>
+
+                                  </div>
+
+                            </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+            `;
+
+        };
+
+        // ipad
+        if (/iPad/i.test(navigator.userAgent)) {
+            
+            document.getElementById('fold_container').innerHTML = `
+
+                    <div id="fold_ipad" class=" calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
+
+                      <div id="logo_motion" class="animated1 fadeIn width_50 height_50 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+                        
+                        <div id="logo_left_container" class="animated1 fadeIn width_50 height_100 position_absolute top_0 bottom_0 right_100 margin_auto">
+                            <div id="logo" class="gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_center_container" class="animated1 fadeIn width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto">
+                          <div id="logo" class="gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_right_container" class="animated1 fadeIn width_50 height_100 position_absolute top_0 bottom_0 left_100 margin_auto">
+                          <div id="logo" class="gui_move_note width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_bottom_container" class="animated1 fadeIn width_100 height_50 position_absolute bottom_100 left_0 right_0 margin_auto">
+
+                          <div id="fold_note" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                              
+                              <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note">
+                              
+                              </div>
+                          
+                          </div>
+
+                        </div>
+
+                        <div id="logo_bottom_container" class="animated1 fadeIn width_100 height_50 position_absolute top_100 left_0 right_0 margin_auto">
+
+                            <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+
+                                  <div class="display_flex_flow position_relative width_100 margin_auto float_left">
+                                    
+                                      <div class="position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align">
+
+                                          <div id="gui_button_start" class="gui_button_start position_relative width_33 height_100 float_left">
+                                          </div>
+
+                                          <div class="gui_or position_relative width_1205 height_100 float_left">
+                                          </div>
+                                          
+                                          <div id="gui_button_learn" class="gui_button_learn position_relative width_33 height_100 float_left">
+                                          </div>
+
+                                      </div>
+
+                                  </div>
+
+                            </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+            `;
+
+        };
+
+        // iphone
+        if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            
+            document.getElementById('fold_container').innerHTML = `
+
+                    <div id="fold_iphone" class=" calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
+
+                      <div id="logo_motion" class="animated1 fadeIn width_8705 height_25 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+                        
+                        <div id="logo_bottom_container" class="animated1 fadeIn width_100 position_absolute bottom_100 left_0 right_0 margin_auto">
+
+                          <div id="logo_bottom_container" class="width_100 height_1205vh position_relative margin_auto">
+
+                            <div id="fold_note" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                                
+                                <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note">
+                                
+                                </div>
+                            
+                            </div>
+
+                          </div>
+
+                          <div id="logo_bottom_container" class="width_100 height_1205vh position_relative margin_auto">
+
+                              <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+
+                                    <div class="display_flex_flow position_relative width_100 margin_auto float_left">
+                                      
+                                        <div class="position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align">
+
+                                            <div id="gui_button_start" class="gui_button_start position_relative width_33 height_100 float_left">
+                                            </div>
+
+                                            <div class="gui_or position_relative width_1205 height_100 float_left">
+                                            </div>
+                                            
+                                            <div id="gui_button_learn" class="gui_button_learn position_relative width_33 height_100 float_left">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                              </div>
+
+                          </div>
+
+                        </div>
+
+                        <div id="logo_center_container" class="animated1 fadeIn width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto">
+                          <div id="logo" class="gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_bottom_container" class="animated1 fadeIn width_100 position_absolute top_100 left_0 right_0 margin_auto">
+
+                          <div id="logo_bottom_container" class="width_100 height_1205vh position_relative margin_auto">
+
+                              <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+
+                                    <div class="display_flex_flow position_relative width_100 margin_auto float_left">
+                                      
+                                        <div class="position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align">
+
+                                            <div id="gui_button_start" class="gui_button_start position_relative width_33 height_100 float_left">
+                                            </div>
+
+                                            <div class="gui_or position_relative width_1205 height_100 float_left">
+                                            </div>
+                                            
+                                            <div id="gui_button_learn" class="gui_button_learn position_relative width_33 height_100 float_left">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                              </div>
+
+                          </div>
+
+                          <div id="logo_bottom_container" class="width_100 height_1205vh position_relative margin_auto">
+
+                            <div id="fold_note" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                                
+                                <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note">
+                                
+                                </div>
+                            
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+            `;
+
+        };
+
+    };
+
+    // null
+    if (state.app.route == 'null_to_start') {
+
+        setTimeout(() => {
+
+        }, 1);
+
+        // desktop
+        if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent))) {
+
+            document.getElementById('fold_container').innerHTML = `
+
+                    <div id="fold_desktop" class="fadeOut animated1 calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
+
+                      <div id="logo_motion" class="width_50 height_50 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+                          
+                        <div id="logo_left_container" class="width_50 height_100 position_absolute top_0 bottom_0 right_100 margin_auto">
+                            <div id="logo" class="gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_center_container" class="width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto">
+                          <div id="logo" class="gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_right_container" class="width_50 height_100 position_absolute top_0 bottom_0 left_100 margin_auto">
+                          <div id="logo" class="gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_bottom_container" class="width_100 height_50 position_absolute bottom_100 left_0 right_0 margin_auto">
+
+                          <div id="fold_note" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                              
+                              <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note">
+                              
+                              </div>
+                          
+                          </div>
+
+                        </div>
+
+                        <div id="logo_bottom_container" class="width_100 height_50 position_absolute top_100 left_0 right_0 margin_auto">
+
+                            <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+
+                                  <div class="display_flex_flow position_relative width_100 margin_auto float_left">
+                                    
+                                      <div class="position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align">
+
+                                          <div id="gui_button_start" class="gui_button_start position_relative width_33 height_100 float_left">
+                                          </div>
+
+                                          <div class="gui_or position_relative width_1205 height_100 float_left">
+                                          </div>
+                                          
+                                          <div id="gui_button_learn" class="gui_button_learn position_relative width_33 height_100 float_left">
+                                          </div>
+
+                                      </div>
+
+                                  </div>
+
+                            </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+            `;
+
+        };
+
+        // ipad
+        if (/iPad/i.test(navigator.userAgent)) {
+            
+            document.getElementById('fold_container').innerHTML = `
+
+                    <div id="fold_ipad" class="fadeOut animated1 calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
+
+                      <div id="logo_motion" class="width_50 height_50 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+                        
+                        <div id="logo_left_container" class="width_50 height_100 position_absolute top_0 bottom_0 right_100 margin_auto">
+                            <div id="logo" class="gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_center_container" class="width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto">
+                          <div id="logo" class="gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_right_container" class="width_50 height_100 position_absolute top_0 bottom_0 left_100 margin_auto">
+                          <div id="logo" class="gui_move_note width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_bottom_container" class="width_100 height_50 position_absolute bottom_100 left_0 right_0 margin_auto">
+
+                          <div id="fold_note" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                              
+                              <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note">
+                              
+                              </div>
+                          
+                          </div>
+
+                        </div>
+
+                        <div id="logo_bottom_container" class="width_100 height_50 position_absolute top_100 left_0 right_0 margin_auto">
+
+                            <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+
+                                  <div class="display_flex_flow position_relative width_100 margin_auto float_left">
+                                    
+                                      <div class="position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align">
+
+                                          <div id="gui_button_start" class="gui_button_start position_relative width_33 height_100 float_left">
+                                          </div>
+
+                                          <div class="gui_or position_relative width_1205 height_100 float_left">
+                                          </div>
+                                          
+                                          <div id="gui_button_learn" class="gui_button_learn position_relative width_33 height_100 float_left">
+                                          </div>
+
+                                      </div>
+
+                                  </div>
+
+                            </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+            `;
+
+        };
+
+        // iphone
+        if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            
+            document.getElementById('fold_container').innerHTML = `
+
+                    <div id="fold_iphone" class="fadeOut animated1 calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
+
+                      <div id="logo_motion" class="width_8705 height_25 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+                        
+                        <div id="logo_bottom_container" class="width_100 position_absolute bottom_100 left_0 right_0 margin_auto">
+
+                          <div id="logo_bottom_container" class="width_100 height_1205vh position_relative margin_auto">
+
+                            <div id="fold_note" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                                
+                                <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note">
+                                
+                                </div>
+                            
+                            </div>
+
+                          </div>
+
+                          <div id="logo_bottom_container" class="width_100 height_1205vh position_relative margin_auto">
+
+                              <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+
+                                    <div class="display_flex_flow position_relative width_100 margin_auto float_left">
+                                      
+                                        <div class="position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align">
+
+                                            <div id="gui_button_start" class="gui_button_start position_relative width_33 height_100 float_left">
+                                            </div>
+
+                                            <div class="gui_or position_relative width_1205 height_100 float_left">
+                                            </div>
+                                            
+                                            <div id="gui_button_learn" class="gui_button_learn position_relative width_33 height_100 float_left">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                              </div>
+
+                          </div>
+
+                        </div>
+
+                        <div id="logo_center_container" class="width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto">
+                          <div id="logo" class="gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_bottom_container" class="width_100 position_absolute top_100 left_0 right_0 margin_auto">
+
+                          <div id="logo_bottom_container" class="width_100 height_1205vh position_relative margin_auto">
+
+                              <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+
+                                    <div class="display_flex_flow position_relative width_100 margin_auto float_left">
+                                      
+                                        <div class="position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align">
+
+                                            <div id="gui_button_start" class="gui_button_start position_relative width_33 height_100 float_left">
+                                            </div>
+
+                                            <div class="gui_or position_relative width_1205 height_100 float_left">
+                                            </div>
+                                            
+                                            <div id="gui_button_learn" class="gui_button_learn position_relative width_33 height_100 float_left">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                              </div>
+
+                          </div>
+
+                          <div id="logo_bottom_container" class="width_100 height_1205vh position_relative margin_auto">
+
+                            <div id="fold_note" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                                
+                                <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note">
+                                
+                                </div>
+                            
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+            `;
+
+        };
+
+        setTimeout(() => {
+            Handle_check_route('start', '');
+        }, 1000);
+
+    };
+
+    // null
+    if (state.app.route == 'start') {
+
+        // desktop
+        if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent))) {
+
+            document.getElementById('fold_container').innerHTML = `
+
+                <div id="folds_16" class="fadeIn animated1 width_100 height_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
+                    
+                  <div class="calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
+        
+                      <div id="logo_motion" class="width_50 height_50 position_absolute top_0 left_0 margin_auto">
+                        
+                        <div id="logo_right_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+                          <div id="logo" class="gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+
+                      </div>
+
+                      <div id="logo_motion" class="width_50 height_50 position_absolute top_0 right_0 margin_auto">
+                        
+                        <div id="logo_center_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+                          <div id="logo" class="gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                      </div>
+
+                      <div id="logo_motion" class="width_50 height_50 position_absolute bottom_0 left_0 margin_auto">
+                        
+                        <div id="logo_bottom_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+
+                          <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left webkit_box_pack_center webkit_box_align display_webkit_box">
+
+                              <div class="display_flex_flow position_relative width_100 margin_auto float_left">
+                                
+                                  <div class="position_relative margin_auto float_left">
+
+                                      <div id="gui_back" class="gui_button_back position_relative  width_1205vh height_10vh float_left">
+                                      </div>
+                                      <div id="gui_enter" class="gui_button_enter position_relative  width_1205vh height_10vh float_left">
+                                      </div>
+
+                                  </div>
+
+                              </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                      <div id="logo_motion" class="width_50 height_50 position_absolute bottom_0 right_0 margin_auto">
+                          
+                        <div id="logo_motion" class="width_50 height_50 position_absolute top_0 right_0 margin_auto">
+                          
+                          <div id="logo_bottom_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+
+                            <div id="fold_scroll" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                                
+                                <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel">
+                                
+                                </div>
+                            
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                        <div id="logo_motion" class="width_50 height_50 position_absolute top_0 left_0 margin_auto">
+                          
+                          <div id="logo_bottom_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+
+                            <div id="fold_scroll" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                                
+                                <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel">
+                                
+                                </div>
+                            
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                        <div id="logo_motion" class="width_100 height_50 position_absolute bottom_0 right_0 margin_auto">
+                          
+                          <div id="logo_bottom_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+
+                            <div id="fold_scroll" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                                
+                                <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel">
+                                
+                                </div>
+                            
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+                </div>
+            `;
+
+        };
+
+        // ipad
+        if (/iPad/i.test(navigator.userAgent)) {
+            
+            document.getElementById('fold_container').innerHTML = ``;
+
+        };
+
+        // iphone
+        if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            
+            document.getElementById('fold_container').innerHTML = ``;
+
+        };
+
+    };
+
+    // null
+    if (state.app.route == 'start_to_null') {
+
+        // desktop
+        if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent))) {
+
+            document.getElementById('fold_container').innerHTML = `
+
+                <div id="folds_16" class="fadeOut animated1 width_100 height_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
+                    
+                  <div class="calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
+        
+                      <div id="logo_motion" class="width_50 height_50 position_absolute top_0 left_0 margin_auto">
+                        
+                        <div id="logo_right_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+                          <div id="logo" class="gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+
+                      </div>
+
+                      <div id="logo_motion" class="width_50 height_50 position_absolute top_0 right_0 margin_auto">
+                        
+                        <div id="logo_center_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+                          <div id="logo" class="gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                      </div>
+
+                      <div id="logo_motion" class="width_50 height_50 position_absolute bottom_0 left_0 margin_auto">
+                        
+                        <div id="logo_bottom_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+
+                          <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left webkit_box_pack_center webkit_box_align display_webkit_box">
+
+                              <div class="display_flex_flow position_relative width_100 margin_auto float_left">
+                                
+                                  <div class="position_relative margin_auto float_left">
+
+                                      <div id="gui_back" class="gui_button_back position_relative  width_1205vh height_10vh float_left">
+                                      </div>
+                                      <div id="gui_enter" class="gui_button_enter position_relative  width_1205vh height_10vh float_left">
+                                      </div>
+
+                                  </div>
+
+                              </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                      <div id="logo_motion" class="width_50 height_50 position_absolute bottom_0 right_0 margin_auto">
+                          
+                        <div id="logo_motion" class="width_50 height_50 position_absolute top_0 right_0 margin_auto">
+                          
+                          <div id="logo_bottom_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+
+                            <div id="fold_scroll" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                                
+                                <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel">
+                                
+                                </div>
+                            
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                        <div id="logo_motion" class="width_50 height_50 position_absolute top_0 left_0 margin_auto">
+                          
+                          <div id="logo_bottom_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+
+                            <div id="fold_scroll" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                                
+                                <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel">
+                                
+                                </div>
+                            
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                        <div id="logo_motion" class="width_100 height_50 position_absolute bottom_0 right_0 margin_auto">
+                          
+                          <div id="logo_bottom_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+
+                            <div id="fold_scroll" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                                
+                                <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel">
+                                
+                                </div>
+                            
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+                </div>
+            `;
+
+        };
+
+        // ipad
+        if (/iPad/i.test(navigator.userAgent)) {
+            
+            document.getElementById('fold_container').innerHTML = ``;
+
+        };
+
+        // iphone
+        if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            
+            document.getElementById('fold_container').innerHTML = ``;
+
+        };
+
+        setTimeout(() => {
+            Handle_check_route('null', '');
+        }, 1000);
+
+    };
+
+    // null
+    if (state.app.route == 'null_to_learn') {
+
+        setTimeout(() => {
+
+        }, 1);
+
+        // desktop
+        if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent))) {
+
+            document.getElementById('fold_container').innerHTML = `
+
+                    <div id="fold_desktop" class="fadeOut animated1 calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
+
+                      <div id="logo_motion" class="width_50 height_50 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+                          
+                        <div id="logo_left_container" class="width_50 height_100 position_absolute top_0 bottom_0 right_100 margin_auto">
+                            <div id="logo" class="gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_center_container" class="width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto">
+                          <div id="logo" class="gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_right_container" class="width_50 height_100 position_absolute top_0 bottom_0 left_100 margin_auto">
+                          <div id="logo" class="gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_bottom_container" class="width_100 height_50 position_absolute bottom_100 left_0 right_0 margin_auto">
+
+                          <div id="fold_note" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                              
+                              <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note">
+                              
+                              </div>
+                          
+                          </div>
+
+                        </div>
+
+                        <div id="logo_bottom_container" class="width_100 height_50 position_absolute top_100 left_0 right_0 margin_auto">
+
+                            <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+
+                                  <div class="display_flex_flow position_relative width_100 margin_auto float_left">
+                                    
+                                      <div class="position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align">
+
+                                          <div id="gui_button_start" class="gui_button_start position_relative width_33 height_100 float_left">
+                                          </div>
+
+                                          <div class="gui_or position_relative width_1205 height_100 float_left">
+                                          </div>
+                                          
+                                          <div id="gui_button_learn" class="gui_button_learn position_relative width_33 height_100 float_left">
+                                          </div>
+
+                                      </div>
+
+                                  </div>
+
+                            </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+            `;
+
+        };
+
+        // ipad
+        if (/iPad/i.test(navigator.userAgent)) {
+            
+            document.getElementById('fold_container').innerHTML = `
+
+                    <div id="fold_ipad" class="fadeOut animated1 calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
+
+                      <div id="logo_motion" class="width_50 height_50 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+                        
+                        <div id="logo_left_container" class="width_50 height_100 position_absolute top_0 bottom_0 right_100 margin_auto">
+                            <div id="logo" class="gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_center_container" class="width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto">
+                          <div id="logo" class="gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_right_container" class="width_50 height_100 position_absolute top_0 bottom_0 left_100 margin_auto">
+                          <div id="logo" class="gui_move_note width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_bottom_container" class="width_100 height_50 position_absolute bottom_100 left_0 right_0 margin_auto">
+
+                          <div id="fold_note" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                              
+                              <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note">
+                              
+                              </div>
+                          
+                          </div>
+
+                        </div>
+
+                        <div id="logo_bottom_container" class="width_100 height_50 position_absolute top_100 left_0 right_0 margin_auto">
+
+                            <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+
+                                  <div class="display_flex_flow position_relative width_100 margin_auto float_left">
+                                    
+                                      <div class="position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align">
+
+                                          <div id="gui_button_start" class="gui_button_start position_relative width_33 height_100 float_left">
+                                          </div>
+
+                                          <div class="gui_or position_relative width_1205 height_100 float_left">
+                                          </div>
+                                          
+                                          <div id="gui_button_learn" class="gui_button_learn position_relative width_33 height_100 float_left">
+                                          </div>
+
+                                      </div>
+
+                                  </div>
+
+                            </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+            `;
+
+        };
+
+        // iphone
+        if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            
+            document.getElementById('fold_container').innerHTML = `
+
+                    <div id="fold_iphone" class="fadeOut animated1 calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
+
+                      <div id="logo_motion" class="width_8705 height_25 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+                        
+                        <div id="logo_bottom_container" class="width_100 position_absolute bottom_100 left_0 right_0 margin_auto">
+
+                          <div id="logo_bottom_container" class="width_100 height_1205vh position_relative margin_auto">
+
+                            <div id="fold_note" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                                
+                                <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note">
+                                
+                                </div>
+                            
+                            </div>
+
+                          </div>
+
+                          <div id="logo_bottom_container" class="width_100 height_1205vh position_relative margin_auto">
+
+                              <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+
+                                    <div class="display_flex_flow position_relative width_100 margin_auto float_left">
+                                      
+                                        <div class="position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align">
+
+                                            <div id="gui_button_start" class="gui_button_start position_relative width_33 height_100 float_left">
+                                            </div>
+
+                                            <div class="gui_or position_relative width_1205 height_100 float_left">
+                                            </div>
+                                            
+                                            <div id="gui_button_learn" class="gui_button_learn position_relative width_33 height_100 float_left">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                              </div>
+
+                          </div>
+
+                        </div>
+
+                        <div id="logo_center_container" class="width_100 height_100 position_absolute top_0 bottom_25 left_0 right_0 margin_auto">
+                          <div id="logo" class="gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_arrows width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_com width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_since width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                        <div id="logo_bottom_container" class="width_100 position_absolute top_100 left_0 right_0 margin_auto">
+
+                          <div id="logo_bottom_container" class="width_100 height_1205vh position_relative margin_auto">
+
+                              <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+
+                                    <div class="display_flex_flow position_relative width_100 margin_auto float_left">
+                                      
+                                        <div class="position_relative margin_auto float_left width_100 display_webkit_box webkit_box_pack_center webkit_box_align">
+
+                                            <div id="gui_button_start" class="gui_button_start position_relative width_33 height_100 float_left">
+                                            </div>
+
+                                            <div class="gui_or position_relative width_1205 height_100 float_left">
+                                            </div>
+                                            
+                                            <div id="gui_button_learn" class="gui_button_learn position_relative width_33 height_100 float_left">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                              </div>
+
+                          </div>
+
+                          <div id="logo_bottom_container" class="width_100 height_1205vh position_relative margin_auto">
+
+                            <div id="fold_note" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                                
+                                <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_move_note">
+                                
+                                </div>
+                            
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+            `;
+
+        };
+
+        setTimeout(() => {
+            Handle_check_route('learn', '');
+        }, 1000);
+
+    };
+
+    // null
+    if (state.app.route == 'learn') {
+
+        // desktop
+        if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent))) {
+
+            document.getElementById('fold_container').innerHTML = `
+
+                <div id="folds_21" class="fadeIn animated1 width_100 height_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
+                    
+                  <div class="calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
+        
+                      <div id="logo_motion" class="width_25 height_50 position_absolute top_0 left_0 margin_auto">
+                        
+                        <div id="logo_right_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+                          <div id="logo" class="gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+
+                      </div>
+
+                      <div id="logo_motion" class="width_75 height_50 position_absolute top_0 right_0 margin_auto">
+                        
+                        <div id="logo_center_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+                          <div id="logo" class="gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                      </div>
+
+                      <div id="logo_motion" class="width_50 height_50 position_absolute bottom_0 left_0 margin_auto">
+                        
+                        <div id="logo_bottom_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+
+                          <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left webkit_box_pack_center webkit_box_align display_webkit_box">
+
+                              <div class="display_flex_flow position_relative width_100 margin_auto float_left">
+                                
+                                  <div class="position_relative margin_auto float_left">
+
+                                      <div id="gui_back_from_learn" class="gui_button_back position_relative  width_1205vh height_10vh float_left">
+                                      </div>
+                                      <div id="gui_enter" class="gui_button_enter position_relative  width_1205vh height_10vh float_left">
+                                      </div>
+
+                                  </div>
+
+                              </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                      <div id="logo_motion" class="width_50 height_50 position_absolute bottom_0 right_0 margin_auto">
+                          
+                        <div id="logo_motion" class="width_50 height_50 position_absolute top_0 right_0 margin_auto">
+                          
+                          <div id="logo_bottom_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+
+                            <div id="fold_scroll" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                                
+                                <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel">
+                                
+                                </div>
+                            
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                        <div id="logo_motion" class="width_50 height_50 position_absolute top_0 left_0 margin_auto">
+                          
+                          <div id="logo_bottom_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+
+                            <div id="fold_scroll" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                                
+                                <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel">
+                                
+                                </div>
+                            
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                        <div id="logo_motion" class="width_100 height_50 position_absolute bottom_0 right_0 margin_auto">
+                          
+                          <div id="logo_bottom_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+
+                            <div id="fold_scroll" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                                
+                                <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel">
+                                
+                                </div>
+                            
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+                </div>
+            `;
+
+        };
+
+        // ipad
+        if (/iPad/i.test(navigator.userAgent)) {
+            
+            document.getElementById('fold_container').innerHTML = ``;
+
+        };
+
+        // iphone
+        if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            
+            document.getElementById('fold_container').innerHTML = ``;
+
+        };
+
+    };
+
+    // null
+    if (state.app.route == 'learn_to_null') {
+
+        // desktop
+        if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent))) {
+
+            document.getElementById('fold_container').innerHTML = `
+
+                <div id="folds_21" class="fadeOut animated1 width_100 height_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
+                    
+                  <div class="calc_25vh max_width width_100 top_0 bottom_0 left_0 right_0 position_absolute margin_auto">
+        
+                      <div id="logo_motion" class="width_25 height_50 position_absolute top_0 left_0 margin_auto">
+                        
+                        <div id="logo_right_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+                          <div id="logo" class="gui_logo_links width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+
+                      </div>
+
+                      <div id="logo_motion" class="width_75 height_50 position_absolute top_0 right_0 margin_auto">
+                        
+                        <div id="logo_center_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+                          <div id="logo" class="gui_logo_type width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_mark width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                          <div id="logo" class="gui_logo_icons width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto"></div>
+                        </div>
+
+                      </div>
+
+                      <div id="logo_motion" class="width_50 height_50 position_absolute bottom_0 left_0 margin_auto">
+                        
+                        <div id="logo_bottom_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+
+                          <div id="fold_buttons" class="position_absolute width_100 top_0 bottom_0 left_0 right_0 margin_auto float_left webkit_box_pack_center webkit_box_align display_webkit_box">
+
+                              <div class="display_flex_flow position_relative width_100 margin_auto float_left">
+                                
+                                  <div class="position_relative margin_auto float_left">
+
+                                      <div id="gui_back_from_learn" class="gui_button_back position_relative  width_1205vh height_10vh float_left">
+                                      </div>
+                                      <div id="gui_enter" class="gui_button_enter position_relative  width_1205vh height_10vh float_left">
+                                      </div>
+
+                                  </div>
+
+                              </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                      <div id="logo_motion" class="width_50 height_50 position_absolute bottom_0 right_0 margin_auto">
+                          
+                        <div id="logo_motion" class="width_50 height_50 position_absolute top_0 right_0 margin_auto">
+                          
+                          <div id="logo_bottom_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+
+                            <div id="fold_scroll" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                                
+                                <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel">
+                                
+                                </div>
+                            
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                        <div id="logo_motion" class="width_50 height_50 position_absolute top_0 left_0 margin_auto">
+                          
+                          <div id="logo_bottom_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+
+                            <div id="fold_scroll" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                                
+                                <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel">
+                                
+                                </div>
+                            
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                        <div id="logo_motion" class="width_100 height_50 position_absolute bottom_0 right_0 margin_auto">
+                          
+                          <div id="logo_bottom_container" class="width_100 height_100 position_absolute top_0 bottom_0 left_0 right_0 margin_auto">
+
+                            <div id="fold_scroll" class="position_absolute width_100 height_50 top_0 bottom_0 left_0 right_0 margin_auto float_left">
+                                
+                                <div class="easing_01 position_absolute width_50 height_100 top_0 left_0 right_0 bottom_0 margin_auto float_left gui_wheel">
+                                
+                                </div>
+                            
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+                </div>
+            `;
+
+        };
+
+        // ipad
+        if (/iPad/i.test(navigator.userAgent)) {
+            
+            document.getElementById('fold_container').innerHTML = ``;
+
+        };
+
+        // iphone
+        if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            
+            document.getElementById('fold_container').innerHTML = ``;
+
+        };
+
+        setTimeout(() => {
+            Handle_check_route('null', '');
+        }, 1000);
+
+    };
+
+};
+
+window.onresize = () => {
+
+    adaptive_render();
+
+};
+
 window.onload = () => {        
     console.log('onload');
     onload();
@@ -1169,8 +3147,17 @@ window.onload = () => {
 export default {
     Handle_return_state,
     Handle_Firebase_Refs_and_Render,
+    Handle_get_state_from_events,
+    Handle_check_route,
+    HANDLE_gui_hide,
+    HANDLE_gui_show,
+
     addListings,
     deleteWhoListings,
+    likeWhoListings,
+    dislikeWhoListings,
+    viewWhoListings,
+
     player_1_grow,
-    player_1_shrink
+    player_1_shrink,
 };
