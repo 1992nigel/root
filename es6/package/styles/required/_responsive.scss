@@ -1,6 +1,16 @@
 // desktop & ipad pro
 @media (min-width: 1050px) {
 
+  .responsive_desktop_only {
+  };
+
+  .responsive_ipad_only {
+    display: none;
+  };
+
+  .responsive_iphone_only {
+    display: none;
+  };
 
 };
 
@@ -13,6 +23,17 @@
     margin: auto;
     border-radius: 0px;
   }
+
+  .responsive_desktop_only {
+    display: none;
+  };
+
+  .responsive_ipad_only {
+  };
+
+  .responsive_iphone_only {
+    display: none;
+  };
 
 };
 
@@ -39,6 +60,17 @@
       background-position: center;
       background-size: cover;
   }
+
+  .responsive_desktop_only {
+    display: none;
+  };
+
+  .responsive_ipad_only {
+    display: none;
+  };
+
+  .responsive_iphone_only {
+  };
 
 };
 

@@ -650,12 +650,29 @@ template {
   float: left;
 }
 
+@media (min-width: 1050px) {
+  .responsive_ipad_only {
+    display: none;
+  }
+
+  .responsive_iphone_only {
+    display: none;
+  }
+}
 @media (max-width: 1049px) and (min-width: 601px) {
   .reset_at_ipad {
     max-width: 100%;
     width: 100%;
     margin: auto;
     border-radius: 0px;
+  }
+
+  .responsive_desktop_only {
+    display: none;
+  }
+
+  .responsive_iphone_only {
+    display: none;
   }
 }
 @media (max-width: 600px) {
@@ -678,6 +695,14 @@ template {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+  }
+
+  .responsive_desktop_only {
+    display: none;
+  }
+
+  .responsive_ipad_only {
+    display: none;
   }
 }
 @media (min-width: 2000px) {
@@ -25286,8 +25311,6 @@ html {
 }
 
 body {
-  background: #ffd866;
-  color: #ff6188;
   position: fixed;
   top: 0;
   left: 0;
