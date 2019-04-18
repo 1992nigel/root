@@ -1,0 +1,19 @@
+{
+  "name": "phlygh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch",
+    "deploy": "firebase deploy",
+    "build": "parcel build index.html --public-url ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "jest": "^24.7.1",
+    "sass": "^1.18.0"
+  }
+}

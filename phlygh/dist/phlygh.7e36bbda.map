@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["console","log"],"mappings":";;;AACA,aAGA,IAAA,EAAA,EAAA,QAAA,YAEA,SAAA,EAAA,GAAA,OAAA,GAAA,EAAA,WAAA,EAAA,CAAA,QAAA,GAAAA,QAAQC,IAAI","file":"phlygh.7e36bbda.map","sourceRoot":"..","sourcesContent":["// Rules\n'use strict';\n\n// Imports\nimport style from './style';\n\nconsole.log('hello world')"]}
