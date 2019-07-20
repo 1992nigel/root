@@ -1,0 +1,123 @@
+<html>
+
+	<head>
+	<!--
+		<?php wp_head(); ?>
+		<meta name="viewport" content="minimal-ui width=device-width, initial-scale=1.0"/>
+		<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+	-->
+		
+		<title>phlygh : all_everything_</title>
+		<meta name="viewport" content="minimal-ui width=device-width, initial-scale=1.0"/>
+		<meta name="google-site-verification" content="IH6dRhXpRVT_g2wrr4RH0BNT6Qpe7Dvizqa_IaiAfjA" />
+		<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+
+	</head>
+	<!-- wp content end -->
+
+<body id="root" tabindex="1">
+
+    <div id="cardboard" class="width_100 height_100 position_fixed float_left">
+
+        <div bg="vr_bg" class="opacity_005">
+            <div id="row_accent_noise"></div>
+        </div>
+
+        <div id="vr_mg" class="transform_translate3d_top0  position_absolute top_0 left_0 right_0 width_100vw height_100vh webkit_box_pack_center webkit_box_align display_webkit_box easing_01">
+        
+           <div id="column1" class="position_relative float_left width_100vw height_100vh ">
+              <div class="width_100 height_100 float_left position_relative overflow_hidden webkit_box_pack_center webkit_box_align display_webkit_box">
+                 <div class="width_100 height_100 position_absolute top_0 left_0 bottom_0 right_0 margin_auto overflow_hidden ">
+                 </div>
+                 landing1 Left Top
+              </div>
+              <div class="width_100 height_100 float_left position_relative overflow_hidden webkit_box_pack_center webkit_box_align display_webkit_box">
+                 <div class="width_100 height_100 position_absolute top_0 left_0 bottom_0 right_0 margin_auto overflow_hidden ">
+                 </div>
+                 landing2 Left Center
+              </div>
+              <div class="width_100 height_100 float_left position_relative overflow_hidden webkit_box_pack_center webkit_box_align display_webkit_box">
+                 <div class="width_100 height_100 position_absolute top_0 left_0 bottom_0 right_0 margin_auto overflow_hidden ">
+                 </div>
+                 landing2 Left Bottom
+              </div>
+           </div>
+           <div id="column1" class="position_relative float_left width_100vw height_100vh">
+              <div class="width_100 height_100 float_left position_relative overflow_hidden webkit_box_pack_center webkit_box_align display_webkit_box">
+                 <div class="width_100 height_100 position_absolute top_0 left_0 bottom_0 right_0 margin_auto overflow_hidden ">
+                 </div>
+                 landing1 Center Top
+              </div>
+              <div id="vr_mg_center" class="width_100 height_100 float_left position_relative overflow_hidden webkit_box_pack_center webkit_box_align display_webkit_box">
+                 <div class="width_100 height_100 position_absolute top_0 left_0 bottom_0 right_0 margin_auto overflow_hidden ">
+                    <div id="container_object" class="position_absolute bottom_0 left_1205vw width_33vw height_33vh">
+                       <div id="object" class="gui_stage_tv width_100 height_100"></div>
+                    </div>
+                    <div id="container_object" class="position_absolute top_0 right_0 left_0 width_33vw height_33vh">
+                       <div id="object" class="gui_stage_lights width_100 height_100"></div>
+                    </div>
+                    <div id="container_object" class="position_absolute bottom_0 right_1205vw width_33vw height_33vh">
+                       <div id="object" class="gui_stage_desk width_100 height_100"></div>
+                    </div>
+                 </div>
+                 landing2 Center Mid
+              </div>
+              <div class="width_100 height_100 float_left position_relative overflow_hidden webkit_box_pack_center webkit_box_align display_webkit_box">
+                 <div class="width_100 height_100 position_absolute top_0 left_0 bottom_0 right_0 margin_auto overflow_hidden ">
+                 </div>
+                 landing2 Center Bottom
+              </div>
+           </div>
+           <div id="column1" class="position_relative float_left width_100vw height_100vh">
+              <div class="width_100 height_100 float_left position_relative overflow_hidden webkit_box_pack_center webkit_box_align display_webkit_box">
+                 <div class="width_100 height_100 position_absolute top_0 left_0 bottom_0 right_0 margin_auto overflow_hidden ">
+                 </div>
+                 landing1 Right Top
+              </div>
+              <div class="width_100 height_100 float_left position_relative overflow_hidden webkit_box_pack_center webkit_box_align display_webkit_box">
+                 <div class="width_100 height_100 position_absolute top_0 left_0 bottom_0 right_0 margin_auto overflow_hidden ">
+                 </div>
+                 landing2 Right Mid
+              </div>
+              <div class="width_100 height_100 float_left position_relative overflow_hidden webkit_box_pack_center webkit_box_align display_webkit_box">
+                 <div class="width_100 height_100 position_absolute top_0 left_0 bottom_0 right_0 margin_auto overflow_hidden ">
+                 </div>
+                 landing2 Right Bottom
+              </div>
+           </div>
+
+        </div>
+
+        <div id="vr_fg" class="">
+
+            <div id="container_enemy" class="position_absolute">
+                <div id="enemy" class="gui_character"></div>
+            </div>
+
+            <div id="container_character" class="position_absolute ">
+                <div id="character" class="gui_character_1 width_100 height_100"></div>
+            </div>
+
+        </div>
+
+
+        <div id="vr_branding" class="">
+            <div class="position_absolute top_0 left_0 bottom_0 right_0 height_33vh width_33vw margin_auto">
+                <div id="logo_mark" class="gui_logo_mark position_absolute top_0 left_0 bottom_0 right_0 height_33vh width_33vw margin_auto"></div>
+                <div id="row-logo-mark-type_filler"></div>
+                
+                <div class="position_absolute top_100 left_0 right_0 height_33vh width_33vw margin_auto">
+                    <div id="gui_interaction_button_1_filler"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+	<div id="scrollable" class="width_100 height_100vh position_relative margin_auto float_left overflow_y">
+		<div id="status" class="width_100 position_relative margin_auto float_left"></div>
+	</div>
+
+  <script src="./index.js"></script>
+</body>
+</html>

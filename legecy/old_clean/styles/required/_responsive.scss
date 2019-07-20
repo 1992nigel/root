@@ -1,0 +1,103 @@
+ @media screen and (orientation:portrait) {
+  
+  .responsive_portrait {
+  };
+  
+  .responsive_landscape {
+    display: none;
+  };
+
+};
+
+ @media screen and (orientation:landscape) {
+  
+  .responsive_portrait {
+    display: none;
+  };
+  
+  .responsive_landscape {
+  };
+
+};
+
+@media (min-width: 2000px) {
+
+  .max_width {
+    max-width: 2000px;
+  };
+
+};
+
+@media (max-width: 1999px) and (min-width: 1800px) {
+
+  .max_width {
+    max-width: 1800px;
+  };
+
+};
+
+
+@media (max-width: 1799px) and (min-width: 1600px) {
+
+  .max_width {
+    max-width: 1600px;
+  };
+
+};
+
+@media (max-width: 1599px) and (min-width: 1400px) {
+
+  .max_width {
+    max-width: 1400px;
+  };
+
+};
+
+@media (max-width: 1399px) and (min-width: 1200px) {
+
+  .max_width {
+    max-width: 1200px;
+  };
+
+};
+
+@media (max-width: 1199px) and (min-width: 1000px) {
+
+  .max_width {
+    max-width: 1000px;
+  };
+
+};
+
+@media (max-width: 999px) and (min-width: 800px) {
+
+  .max_width {
+    max-width: 800px;
+  };
+
+};
+
+@media (max-width: 799px) and (min-width: 600px) {
+
+  .max_width {
+    max-width: 600px;
+  };
+
+};
+
+@media (max-width: 599px) and (min-width: 500px) {
+
+  .max_width {
+    max-width: 500px;
+  };
+
+};
+
+@media (max-width: 499px) {
+
+  .max_width {
+    max-width: 100%;
+    width: 100%;
+  };
+
+};

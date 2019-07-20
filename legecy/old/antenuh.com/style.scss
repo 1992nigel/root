@@ -1,0 +1,56 @@
+/*
+Theme Name: Knewest Theme (WP Parcel)
+Theme URI: gnougn.com
+Author: Gnougn Team
+Author URI: https://gnougn.com/
+Description: Mixing JS, Firebase, Wordpress JSON, SCSS and some PHP, oh Boy!
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Javascript, Jquery, JSON, PHP, CSS, SASS, SCSS, AJAX, XML, HTTP, PHP
+Tags: Javascript, Jquery, JSON, PHP, CSS, SASS, SCSS, AJAX, XML, HTTP, PHP
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+//@import './styles/required/_reset.scss';
+@import './styles/required/_normal.scss';
+
+html {
+  overflow-x: hidden;
+}
+ 
+body {
+  position:relative;
+  background: #ffffff;
+  color: #2c2c2c;
+  overflow-x: hidden;
+  margin-right: 0;
+};
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background-color: none;
+  width: 0;
+  height: 0;
+  overflow: visible; 
+};
+
+body::-webkit-scrollbar {
+  width: 0;
+  margin: 0;
+  height: 0; 
+};
+
+body::-webkit-scrollbar-thumb {
+  width: 0;
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  background-color: none; 
+};
+
+hr {
+  float:left;
+  width: 100%;
+}

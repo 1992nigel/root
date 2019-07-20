@@ -1,0 +1,58 @@
+// FONTS
+
+@font-face {
+  font-family: 'Amatic SC', cursive;
+  src: url('https://fonts.googleapis.com/css?family=Amatic+SC');
+  src: url('./assets/fonts/Amatic-SC/AmaticSC-Regular.ttf');
+   src:url('./assets/fonts/Amatic-SC/amaticsc-regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./assets/fonts/Amatic-SC/amaticsc-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./assets/fonts/Amatic-SC/AmaticSC-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+	font-family: 'Roboto Slab', serif;
+	src: url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+}
+
+@font-face {
+  font-family: 'Gaegu', cursive;
+  src: url('https://fonts.googleapis.com/css?family=Gaegu');
+}
+
+@font-face {
+  font-family: 'Amatic SC', cursive;
+  src: url('https://fonts.googleapis.com/css?family=Amatic+SC');
+}
+
+.font_gaegu {
+  font-family: 'Gaegu', cursive; 
+}
+
+.font_amatic {
+  font-family: 'Amatic SC', cursive;
+}
+
+.font_pixel {
+font-family: 'VT323', monospace;
+      letter-spacing: .2vh;
+}
+
+// Body
+
+body {
+      font-family: 'VT323', monospace;
+      letter-spacing: .2vh;
+};
+
+button,
+input,
+optgroup,
+select,
+textarea,
+input,
+optgroup,
+select,
+textarea {
+font-family: 'VT323', monospace;
+      letter-spacing: .2vh;
+};

@@ -1,0 +1,21 @@
+{
+  "name": "nownigel.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.17.2"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10"
+  },
+  "scripts": {
+    "test": "jest --watch",
+    "local": "parcel index.html",
+    "deploy": "firebase deploy",
+    "build": "parcel build index.html --public-url ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

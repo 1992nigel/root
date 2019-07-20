@@ -1,0 +1,51 @@
+// yellow
+
+.box_shadow_bottom_right_1vw_dark_inset {
+-webkit-box-shadow: inset 0px 0px 0px 3.125vw rgba(35, 56, 55, 0.1);
+-moz-box-shadow: inset 0px 0px 0px 3.125vw rgba(35, 56, 55, 0.1);
+box-shadow: inset 0px 0px 0px 3.125vw rgba(35, 56, 55, 0.1);
+}
+
+.box_shadow_hover_none:hover {
+    box-shadow: 0vw 0vw rgba(0, 0, 0, 0);
+}
+
+.box_shadow_top_1vw_dark {
+    box-shadow: 0vw -1vw rgba(35, 56, 55, 0.1);
+}
+
+.box_shadow_bottom_1vw_dark {
+    box-shadow: 0vw 1vw rgba(35, 56, 55, 0.1);
+}
+
+.box_shadow_bottom_right_1vw_dark {
+    box-shadow: -1vw 1vw rgba(35, 56, 55, 0.1);
+}
+
+.box_shadow_bottom_left_1vw_dark {
+    box-shadow: 1vw 1vw rgba(35, 56, 55, 0.1);
+}
+
+.box_shadow_top_right_1vw_dark {
+    box-shadow: 1vw -1vw rgba(35, 56, 55, 0.1);
+}
+
+.box_shadow_top_left_1vw_dark {
+    box-shadow: -1vw -1vw rgba(35, 56, 55, 0.1);
+}
+
+.box_shadow_bottom_right_1vw_light_yellow_0 {
+    box-shadow: 1vw -1vw $yellow;
+}
+
+.box_shadow_bottom_left_1vw_light_yellow_0 {
+    box-shadow: 1vw 1vw $yellow;
+}
+
+.box_shadow_top_right_1vw_light_yellow_0 {
+    box-shadow: -1vw -1vw $yellow;
+}
+
+.box_shadow_top_left_1vw_light_yellow_0 {
+    box-shadow: -1vw 1vw $yellow;
+}
