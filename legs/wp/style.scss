@@ -1,0 +1,124 @@
+/*
+Theme Name: Knewest Theme (WP Parcel)
+Theme URI: gnougn.com
+Author: Gnougn Team
+Author URI: https://gnougn.com/
+Description: Mixing JS, Firebase, Wordpress JSON, SCSS and some PHP, oh Boy!
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Javascript, Jquery, JSON, PHP, CSS, SASS, SCSS, AJAX, XML, HTTP, PHP
+Tags: Javascript, Jquery, JSON, PHP, CSS, SASS, SCSS, AJAX, XML, HTTP, PHP
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+ 
+body {
+  background: #ffffff;
+  color: #2c2c2c;
+}
+
+.easing_01 {
+-webkit-transition: all 100ms cubic-bezier(0.100, 0.100, 0.100, 0.100); 
+   -moz-transition: all 100ms cubic-bezier(0.100, 0.100, 0.100, 0.100); 
+     -o-transition: all 100ms cubic-bezier(0.100, 0.100, 0.100, 0.100); 
+        transition: all 100ms cubic-bezier(0.100, 0.100, 0.100, 0.100); /* linear */
+
+-webkit-transition-timing-function: cubic-bezier(0.100, 0.100, 0.100, 0.100); 
+   -moz-transition-timing-function: cubic-bezier(0.100, 0.100, 0.100, 0.100); 
+     -o-transition-timing-function: cubic-bezier(0.100, 0.100, 0.100, 0.100); 
+        transition-timing-function: cubic-bezier(0.100, 0.100, 0.100, 0.100); /* linear */
+}
+
+#wp_feature_img {
+  img {
+    width: 100%;
+  }
+}
+
+input {
+  width: 100%;
+  float: left;
+}
+
+textarea {
+  width: 100%;
+  float: left;
+}
+
+// imports
+@import './styles/graphics/_graphics.scss';
+
+@import './styles/required/_reset.scss';
+//@import './styles/required/_font.scss';  
+@import './styles/required/_normal.scss';
+@import './styles/required/_colors.scss';
+
+@import './styles/required/_margin.scss';
+@import './styles/required/_calc.scss';
+@import './styles/required/_width.scss';
+@import './styles/required/_height.scss';
+
+
+// imports
+@import './styles/_background.scss'; 
+@import './styles/_border.scss'; 
+@import './styles/_color.scss';
+@import './styles/_display.scss'; 
+
+@import './styles/_font_size.scss';
+
+@import './styles/_index.scss';
+@import './styles/_line_height.scss';
+
+@import './styles/_opacity.scss'; 
+@import './styles/_overflow.scss';
+@import './styles/_float.scss';
+
+@import './styles/_padding.scss';
+@import './styles/_position.scss';
+
+@import './styles/_text_align.scss';
+@import './styles/_transform.scss';
+
+@import './styles/_webkit.scss';
+
+@import './styles/_hover.scss';
+@import './styles/_mouseover.scss';
+
+@import './styles/_gradient.scss';
+
+@import './styles/_scrollbar.scss';
+
+@import './styles/_responsive.scss';
+
+// scroll
+body { margin-right: 0;
+};
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background-color: none;
+  width: 0;
+  height: 0;
+  overflow: visible; 
+};
+
+body::-webkit-scrollbar {
+  width: 0;
+  margin: 0;
+  height: 0; 
+};
+
+body::-webkit-scrollbar-thumb {
+  width: 0;
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  background-color: none; 
+};
+
+hr {
+  float:left;
+  width: 100%;
+}

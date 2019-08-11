@@ -1,0 +1,70 @@
+ @media screen and (orientation:portrait) {
+  
+  .responsive_portrait {
+  };
+  
+  .responsive_landscape {
+    display: none;
+  };
+
+};
+
+ @media screen and (orientation:landscape) {
+  
+  .responsive_portrait {
+    display: none;
+  };
+  
+  .responsive_landscape {
+  };
+
+};
+
+@media (min-width: 1501px) {
+
+  .max_width {
+    max-width: 1500px;
+  };
+
+};
+
+
+@media (max-width: 1500px) and (min-width: 1001px) {
+
+  body, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Silkscreen';
+    line-height: 5vw;
+    font-size: 5vw;
+  };
+
+  p {
+    font-family: 'Silkscreen';
+    line-height: 5vw;
+    font-size: 5vw;
+  };
+
+  .max_width {
+    max-width: 1000px;
+  };
+
+};
+
+@media (max-width: 1000px) {
+
+  body, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Silkscreen';
+    line-height: 10vw;
+    font-size: 10vw;
+  };
+
+  p {
+    font-family: 'Silkscreen';
+    line-height: 10vw;
+    font-size: 5vw;
+  };
+
+  .max_width {
+    max-width: 100%;
+  };
+
+};
