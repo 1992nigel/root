@@ -1,0 +1,231 @@
+.is_Mobile {
+
+	#firebase {
+		width: 100%;
+		float: left;
+	}
+
+	#info_scroll_y {
+		width: 100%;
+		height: 100%;
+	}
+	#shot_1 {
+		width: 100%;
+		height: 100%;
+	}
+
+	#interactions_button_1 {
+	  position: fixed;
+	  left: 0;
+	  top: 0;
+	  margin: auto;
+	  width: 12.5%;
+	  height: 12.5vh;
+	  float: left;
+	  z-index: 1;
+	}
+
+	#interactions_button_2 {
+	  position: fixed;
+	  right: 0;
+	  top: 0;
+	  margin: auto;
+	  width: 12.5%;
+	  height: 12.5vh;
+	  float: left;
+	  z-index: 1;
+	}
+
+	#interactions_button_3 {
+	  position: fixed;
+	  left: 0;
+	  bottom: 0;
+	  margin: auto;
+	  width: 12.5%;
+	  height: 12.5vh;
+	  float: left;
+	  z-index: 1;
+	}
+
+	#interactions_button_4 {
+	  position: fixed;
+	  right: 0;
+	  bottom: 0;
+	  margin: auto;
+	  width: 12.5%;
+	  height: 12.5vh;
+	  float: left;
+	  z-index: 1;
+	}
+
+};
+
+.is_Desktop {
+
+	#posts_filtered_container {
+		width: 100%;
+		float: left;
+	    display: -webkit-box;
+	    -webkit-box-pack: center;
+	    -webkit-box-align: center;
+	}
+
+	#posts_filtered {
+		width: 50%;
+		margin: 25vw;
+	}
+
+	#posts_all_container {
+		width: 100%;
+		float: left;
+	    display: -webkit-box;
+	    -webkit-box-pack: center;
+	    -webkit-box-align: center;
+	}
+
+	#posts_all {
+		width: 50%;
+		margin: 25vw;
+	}
+	
+	#firebase {
+		width: 100%;
+		float: left;
+	}
+
+	progress {
+		width: 100%;
+		float: left;
+	}
+
+	#modal-signup {
+		width: 100%;
+		float: left;
+	    display: -webkit-box;
+	    -webkit-box-pack: center;
+	    -webkit-box-align: center;
+	}
+
+	#signup-form {
+		width: 50%;
+		margin: 25vw;
+	}
+
+	#modal-signin {
+		width: 100%;
+		float: left;
+	    display: -webkit-box;
+	    -webkit-box-pack: center;
+	    -webkit-box-align: center;
+	}
+
+	#signin-form {
+		width: 50%;
+		margin: 25vw;
+	}
+
+	#modal-account {
+		width: 100%;
+		float: left;
+	    display: -webkit-box;
+	    -webkit-box-pack: center;
+	    -webkit-box-align: center;
+	}
+
+	#account-form {
+		width: 50%;
+		margin: 25vw;
+	}
+
+	#modal-create {
+		width: 100%;
+		float: left;
+	    display: -webkit-box;
+	    -webkit-box-pack: center;
+	    -webkit-box-align: center;
+	}
+
+	#create-form {
+		width: 50%;
+		margin: 25vw;
+	}
+
+	#modal-edit {
+		width: 100%;
+		float: left;
+	    display: -webkit-box;
+	    -webkit-box-pack: center;
+	    -webkit-box-align: center;
+	}
+
+	#edit-form {
+		width: 50%;
+		margin: 25vw;
+	}
+
+	#create, #edit_button, #signout, #delete_button, #signin, #signup_submit, label {
+		font-size: 10vw;
+		line-height: 10vw;
+		letter-spacing: -1vw;
+		width: 100%;
+		text-align: center;
+		float: left;	
+		background: $grey;
+		color: $white;	
+	}
+	/*
+	#info_scroll_y {
+		width: 100%;
+		height: 100%;
+	}
+	*/
+	#shot_1 {
+		width: 100%;
+		height: 100%;
+	}
+
+	#interactions_button_1 {
+	  position: fixed;
+	  left: 0;
+	  top: 0;
+	  margin: auto;
+	  width: 6.25%;
+	  height: 6.25vh;
+	  float: left;
+	  z-index: 1;
+	}
+
+	#interactions_button_2 {
+	  position: fixed;
+	  right: 0;
+	  top: 0;
+	  margin: auto;
+	  width: 6.25%;
+	  height: 6.25vh;
+	  float: left;
+	  z-index: 1;
+	}
+
+	#interactions_button_3 {
+	  position: fixed;
+	  left: 0;
+	  bottom: 0;
+	  margin: auto;
+	  width: 6.25%;
+	  height: 6.25vh;
+	  float: left;
+	  z-index: 1;
+	}
+
+	#interactions_button_4 {
+	  position: fixed;
+	  right: 0;
+	  bottom: 0;
+	  margin: auto;
+	  width: 6.25%;
+	  height: 6.25vh;
+	  float: left;
+	  z-index: 1;
+	}
+
+};
