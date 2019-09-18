@@ -231,6 +231,28 @@
   height: calc(100% - 5vh);
 }
 
+//6
+.calc_6vw {
+  width: calc(100% - 6vw);
+  height: calc(100% - 6vw); }
+
+.calc_6vh {
+  width: calc(100% - 6vh);
+  height: calc(100% - 6vh); }
+
+.calc_6vw_width {
+  width: calc(100% - 6vw); }
+
+.calc_6vw_height {
+  height: calc(100% - 6vw); }
+
+.calc_6vh_width {
+  width: calc(100% - 6vh); }
+
+.calc_6vh_height {
+  height: calc(100% - 6vh);
+}
+
 // 8
 .calc_805vw {
   width: calc(100% - 8.5vw);

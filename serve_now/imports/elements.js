@@ -96,7 +96,7 @@ let gen = (x) => {
                       <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
 
                         <div id="info_scroll_y" class="position_relative height_50vh width_50 float_left margin_auto bg_white">
-                           <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow">
+                           <div class="position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow">
 
                               <div id="menu_buffer" class="width_100 float_left"></div>
 
@@ -578,58 +578,12 @@ let gen = (x) => {
             </div>
           </div>
           
-          <div id="info_scroll_y" class="position_relative height_100vh width_100 float_left margin_auto bg_white">
-             <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow">
+          <div id="info_scroll_y_text" class="position_relative height_100vh width_100 float_left margin_auto bg_white">
+             <div class="position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow">
 
-                <div id="menu_buffer" class="width_100 float_left"></div>
-                <p class=" ">Routing</p>
-                <p class=" ">pages & post</p>
-                <div class="width_100 position_relative margin_auto float_left  ">(json data recieved from wordpress app) Use this to create <a href="#">data sorts</a>, <a href="#">data from logged user</a> and <a href="#">data based on location</a> </div>
-                <div id="signal">
-                   site_routes: 
-                   <div id="site_routes"></div>
-                </div>
-                <a href="#">loading</a>
-                <a href="#">home</a>
-                <a href="#">latest</a>
-                <a href="#">start game</a>
-                <a href="#">learn game</a>
-                <a href="#">planner</a>
-                <a href="#">contact</a>
-                <a href="#">welcome</a>
-                <a href="#">loading</a>
-                <a href="#">home</a>
-                <a href="#">latest</a>
-                <a href="#">start game</a>
-                <a href="#">learn game</a>
-                <a href="#">planner</a>
-                <a href="#">contact</a>
-                <a href="#">welcome</a>
-                <a href="#">loading</a>
-                <a href="#">home</a>
-                <a href="#">latest</a>
-                <a href="#">start game</a>
-                <a href="#">learn game</a>
-                <a href="#">planner</a>
-                <a href="#">contact</a>
-                <a href="#">welcome</a>
-                <div id="signal">
-                   history_route: 
-                   <div id="history_route"></div>
-                </div>
-                <div id="signal">
-                   current_route: 
-                   <div id="current_route"></div>
-                </div>
-                <div id="signal">
-                   previous_route: 
-                   <div id="previous_route"></div>
-                </div>
-                <div id="signal">
-                   next_route: 
-                   <div id="next_route"></div>
-                </div>
-                
+                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+                </p>
+
              </div>
           </div>
 
@@ -790,6 +744,32 @@ let gen = (x) => {
                               
                             </div>
 
+                        </div>
+                      </div>
+
+                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
+                            <div class="position_relative width_50 height_100 overflow_y scrollbaryhidden float_left">
+
+                              <div class="position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow">
+
+                                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+                                </p>
+
+                              </div>
+                                            
+
+                            </div>
+                            <div class="position_relative width_50 height_100 overflow_y scrollbaryhidden float_left">
+                              
+                                <div class="position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow">
+
+                                  <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+                                  </p>
+
+                               </div>
+
+                            </div>
                         </div>
                       </div>
 

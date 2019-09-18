@@ -2063,23 +2063,31 @@ let get_dimensions = () => {
         }
     };
 
-    if (tiny_height == 0 || tiny_height > state.ux.dimensions.height) {
+    if (state.ux.platform.is_Desktop) {
+
         tiny_height = state.ux.dimensions.height;
         console.log('tiny_height: ' + tiny_height);
-    };
 
-    if (tiny_width == 0 || tiny_width > state.ux.dimensions.width) {
         tiny_width = state.ux.dimensions.width;
         console.log('tiny_width: ' + tiny_width);
-    };
-
-    if (state.ux.platform.is_Desktop) {
+        
         body.classList = "is_Desktop";
         state.interaction.player_1.width = 1;
         state.interaction.player_1.height = 4;
     };
 
     if (state.ux.platform.is_Mobile) {
+        
+        if (tiny_height == 0 || tiny_height > state.ux.dimensions.height) {
+            tiny_height = state.ux.dimensions.height;
+            console.log('tiny_height: ' + tiny_height);
+        };
+
+        if (tiny_width == 0 || tiny_width > state.ux.dimensions.width) {
+            tiny_width = state.ux.dimensions.width;
+            console.log('tiny_width: ' + tiny_width);
+        };
+
         body.classList = "is_Mobile";
         state.interaction.player_1.width = 8;
         state.interaction.player_1.height = 8;
