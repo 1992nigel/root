@@ -1,3 +1,17 @@
+.gui_text_loaded {
+    background: url("./assets/gui/gui_text_loaded.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+}
+
+.gui_text_loading {
+    background: url("./assets/gui/gui_text_loading.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+}
+
 .gui_logo_type {
     background: url("./assets/gui/logo/type/gui_logo_type.svg");
     background-repeat: no-repeat;

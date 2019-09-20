@@ -6,7 +6,7 @@ import elements from './imports/elements';
 let tiny_height = 0;
 let tiny_width = 0;
 let body = document.getElementById('body');
-
+let auth_has_been_checked = false;
 
 let stored_auth_user_cred = {};
 let posts_guides = [];
@@ -37,12 +37,14 @@ auth.onAuthStateChanged(logged_auth_user => {
     if ( (logged_auth_user) == null) {
         get_db_guides();
         console.log('please login');
+        auth_has_been_checked = true;
     };
 
     if ( (logged_auth_user) != null) {
         stored_auth_user_cred = logged_auth_user;
         get_db_guides();
         console.log('logined in: ' + stored_auth_user_cred.uid);
+        auth_has_been_checked = true;
     };
 
 });
@@ -1066,6 +1068,79 @@ let handle_time = () => {
     })();
 };
 
+let handle_if_AUTH_checked_SCENE_1 = () => {
+
+    // 24/fps loop
+    (() => {
+        let interval = 0;
+        let play = setInterval(
+            () => {
+                if ( interval == 0) {
+                
+                    if (document.getElementById('shots') != null) {
+                        let shots = document.getElementById('shots');
+                        shots.innerHTML = ``
+
+                        let element = document.createElement('div');
+
+                        element.setAttribute("id", `shot_1`);
+                        element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
+                        element.innerHTML = `
+                            <div class="width_100 height_100 top_0 right_0 bottom_0 left_0 margin_auto position_absolute">
+                                <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
+                                <div class="width_50 height_50 gui_logo_type_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
+                            </div>
+                        `
+                        element.addEventListener("click", function(event) {
+                            alert('yup');
+                        });
+
+                        document.getElementById('shots').appendChild(
+                            element
+                        );
+
+                    };
+
+                };
+                
+                if (interval == 24 * 1) {
+
+                    if (document.getElementById('shots') != null) {
+                        let shots = document.getElementById('shots');
+                        shots.innerHTML = ``
+
+                        let element = document.createElement('div');
+
+                        element.setAttribute("id", `shot_1`);
+                        element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
+                        element.innerHTML = `
+                            <div id="facer" class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute"></div>
+                            <div class="width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute"></div>
+                            <div class="width_100 height_50 bottom_0 left_0 margin_auto position_absolute">
+                                <div class="width_50 height_50 gui_buttons top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
+                            </div>
+                        `
+                        element.addEventListener("click", function(event) {
+                            handle_if_AUTH_checked_SCENE_1();
+                        });
+
+                        document.getElementById('shots').appendChild(
+                            element
+                        );
+
+                    };
+                    clearInterval(play)
+                };
+
+                //console.log('handle_if_AUTH: ' + interval);
+                interval += 1;
+
+            }, (1000 / state.motion.framerate));
+
+            play;
+    })();
+};
+
 let handle_play_DOMContentLoaded = () => {
 
     // 24/fps loop
@@ -1084,10 +1159,11 @@ let handle_play_DOMContentLoaded = () => {
                         element.setAttribute("id", `shot_1`);
                         element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
                         element.innerHTML = `
-                            <div class="width_50 height_50 gui_logo_type_1 top_0 right_0 margin_auto position_absolute"></div>
+                            <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute"></div>
                             <div class="width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute"></div>
-                            <div class="width_50 height_50 gui_logo_type_1 bottom_0  right_0 margin_auto position_absolute"></div>
-                            <div class="width_50 height_50 gui_logo_type_1 bottom_0 left_0 margin_auto position_absolute"></div>
+                            <div class="width_100 height_50 bottom_0 left_0 margin_auto position_absolute">
+                                <div class="width_50 height_50 gui_text_loading top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
+                            </div>
                         `
                         element.addEventListener("click", function(event) {
                             alert('yup');
@@ -1099,9 +1175,36 @@ let handle_play_DOMContentLoaded = () => {
 
                     };
 
+                    if (document.getElementById('set') != null) {
+                        let set = document.getElementById('set');
+                        set.innerHTML = `
+                            <div id="gui_stage_tv" class=""></div>
+                            <div id="gui_stage_lights" class=""></div>
+                        `
+                    };
+
+                    if (document.getElementById('scene') != null) {
+                        let scene = document.getElementById('scene');
+                        scene.innerHTML = `
+                            <div id="player_1" class=""></div>
+                            <div id="mark" class=""></div>
+                            <div id="logo" class=""></div>
+                        `
+                    };
+
+                    if (document.getElementById('interactions') != null) {
+                        let interactions = document.getElementById('interactions');
+                        interactions.innerHTML = `
+                            <div id="interactions_button_1" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_menu_white width_50 height_50 float_left"></div></div>
+                            <div id="interactions_button_2" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_sign_in_white width_75 height_100 float_left"></div></div>
+                            <div id="interactions_button_3" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_grid_white width_50 height_50 float_left"></div></div>
+                            <div id="interactions_button_4" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_interaction_text_press width_100 height_100 float_left"></div></div>
+                        `
+                    };
+
                 };
                 
-                if ( interval == 24) {
+                if ( interval == (24*.5) ) {
                 
                     if (document.getElementById('shots') != null) {
                         let shots = document.getElementById('shots');
@@ -1112,10 +1215,13 @@ let handle_play_DOMContentLoaded = () => {
                         element.setAttribute("id", `shot_1`);
                         element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
                         element.innerHTML = `
-                            <div class="width_50 height_50 gui_buttons top_0 right_0 margin_auto position_absolute"></div>
-                            <div class="width_50 height_50 gui_buttons top_0 left_0 margin_auto position_absolute"></div>
-                            <div class="width_50 height_50 gui_buttons bottom_0  right_0 margin_auto position_absolute"></div>
-                            <div class="width_50 height_50 gui_buttons bottom_0 left_0 margin_auto position_absolute"></div>
+                            
+                            <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute"></div>
+                            <div class="width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute"></div>
+                            <div class="width_100 height_50 bottom_0 left_0 margin_auto position_absolute">
+                                <div class="width_50 height_50 gui_text_loaded top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
+                            </div>
+
                         `
                         element.addEventListener("click", function(event) {
                             alert('yup');
@@ -1139,7 +1245,7 @@ let handle_play_DOMContentLoaded = () => {
     })();
 };
 
-let handle_play_load = () => {
+let handle_if_AUTH_checked_ANIMATION = () => {
 
     // 24/fps loop
     (() => {
@@ -1330,6 +1436,28 @@ let handle_play_load = () => {
                         'left: ' + (state.interaction.player_1.clientX * (tiny_width / 8)) + 'px;';
                 };
 
+                if (document.getElementById('facer') != null) {
+
+                    if (state.interaction.player_1.stance == 0) {
+                        if (state.interaction.player_1.angle == 0) {
+                        document.getElementById('facer').classList = (' width_50 height_50 top_0 right_0 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+                        
+                        };
+                   
+                        if (state.interaction.player_1.angle == 1) {
+                        document.getElementById('facer').classList = (' width_50 height_50 top_0 right_0 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+                        
+                        };
+                    };
+    
+                    if (state.interaction.player_1.frame == 4) {
+                        state.interaction.player_1.frame = 0;
+                    };
+                
+                    state.interaction.player_1.frame += 1;
+
+                };
+
                 if (document.getElementById('logo') != null) {
 
                     if (state.interaction.player_1.stance == 0) {
@@ -1358,12 +1486,6 @@ let handle_play_load = () => {
                         'left: ' + (state.interaction.player_1.clientX * (tiny_width / 8)) + 'px;';
                 };
 
-                if ( (state.motion.frame) == (24 * 1)) {
-                    //alert('5 seconds have passed')
-                    handle_firebase_events();
-                    handle_if_AUTH();
-                };
-
                 state.motion.frame += 1;
                 //console.log('state.motion.frame: ' + state.motion.frame)
 
@@ -1373,7 +1495,9 @@ let handle_play_load = () => {
 
 let handle_if_AUTH = () => {
 
-    // 24/fps loop
+    handle_if_AUTH_checked_ANIMATION();
+
+    // 24/fps loop !! initial !!
     (() => {
         let interval = 0;
         let play = setInterval(
@@ -1391,11 +1515,12 @@ let handle_if_AUTH = () => {
                         element.innerHTML = `
                             <div class="width_50 height_50 gui_logo_type_1 top_0 right_0 margin_auto position_absolute"></div>
                             <div class="width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute"></div>
-                            <div class="width_50 height_50 gui_logo_type_1 bottom_0  right_0 margin_auto position_absolute"></div>
-                            <div class="width_50 height_50 gui_logo_type_1 bottom_0 left_0 margin_auto position_absolute"></div>
+                            <div class="width_100 height_50 bottom_0 left_0 margin_auto position_absolute">
+                                <div class="width_50 height_50 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
+                            </div>
                         `
                         element.addEventListener("click", function(event) {
-                            alert('yup');
+                            alert('yup auth 1');
                         });
 
                         document.getElementById('shots').appendChild(
@@ -1417,13 +1542,14 @@ let handle_if_AUTH = () => {
                         element.setAttribute("id", `shot_1`);
                         element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
                         element.innerHTML = `
-                            <div class="width_50 height_50 gui_buttons top_0 right_0 margin_auto position_absolute"></div>
-                            <div class="width_50 height_50 gui_buttons top_0 left_0 margin_auto position_absolute"></div>
-                            <div class="width_50 height_50 gui_buttons bottom_0  right_0 margin_auto position_absolute"></div>
-                            <div class="width_50 height_50 gui_buttons bottom_0 left_0 margin_auto position_absolute"></div>
+                            <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute"></div>
+                            <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 left_0 margin_auto position_absolute"></div>
+                            <div class="width_100 height_50 bottom_0 left_0 margin_auto position_absolute">
+                                <div class="width_50 height_50 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
+                            </div>
                         `
                         element.addEventListener("click", function(event) {
-                            alert('yup');
+                            handle_if_AUTH_checked_SCENE_1();
                         });
 
                         document.getElementById('shots').appendChild(
@@ -1442,7 +1568,6 @@ let handle_if_AUTH = () => {
             play;
     })();
 };
-
 
 // sorting
 let find_sort = (mode) => {
@@ -1577,6 +1702,65 @@ let handle_firebase_events = () => {
         });
     });
 
+    // upload
+    let uploader = document.getElementById('uploader');
+    let upload_progress = document.getElementById('upload_progress');
+    let fileButton = document.getElementById('fileButton');
+    fileButton.addEventListener('change', (event) => {
+
+            // assign metadata
+            let metadata = {
+                   customMetadata: {
+                'location': 'Yosemite, CA, USA',
+                'activity': 'Hiking'
+                  }
+            };
+
+            // get file
+            let file = event.target.files[0];
+
+            // create a storage ref
+            let storageRef = firebase.storage().ref('sweet_gifs/' + file.name);
+
+            // upload file
+            let task = storageRef.put(file, metadata);
+
+            // upload progress bar
+            task.on('state_changed',
+            function progress(snapshot){
+                let progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                console.log('Upload is ' + progress + '% done');
+
+                uploader.value = progress;
+                upload_progress.innerHTML = progress;
+            },
+            
+            function error(err) {
+
+            },
+            
+            function complete(snapshot) {
+
+                setTimeout(function () {
+                    uploader.value = 0;
+                    upload_progress.innerHTML = ``;
+                }, 2000);
+                let upload_details = ``;
+                // Handle successful uploads on complete
+                  // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+                  task.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+                    console.log('File available at', downloadURL);
+                    upload_details = downloadURL;
+                    document.getElementById('upload_details').innerHTML = `upload complete, available at: ${upload_details}`;
+                    document.getElementById('upload_details').innerHTML += `
+                    <div id="uploaded_image" style="background-image: url(${(upload_details)})">
+                    </div>`;
+                  });
+            }
+        );
+
+    });
+
     // signout / un-auth
     let signout = document.getElementById('signout');
 
@@ -1699,10 +1883,21 @@ let get_db_guides = () => {
 
             element.setAttribute("id", `post`);
             element.classList = `width_100 margin_auto position_relative float_left`
-            element.innerHTML = `${post.id}
+            element.innerHTML = `
+                <div class="feat_img">
+                    <div class="container"></div>
+                </div>
+                <h2>
+                    post title: ${post.title}
+                </h2>
+                <p>
+                    post id: ${post.id}
+                </p>
             `
             element.addEventListener("click", function(event) {
                 alert('post');
+                post_up = !post_up;
+                get_classes();
             });
 
             document.getElementById('posts_all').appendChild(
@@ -1713,7 +1908,14 @@ let get_db_guides = () => {
         //  filter by title
         if ((filtered_posts_guides) != null) {
             for (var i = 0; i < posts_guides.length; i++) {
-                if ((posts_guides[i].title.toString().toLowerCase().includes(document.getElementById('element_input_filter').value))) {
+                if (
+                    // title filter
+                    (posts_guides[i].title.toString().toLowerCase().includes(document.getElementById('element_input_filter').value))
+                    ||
+                    // if filter
+                    (posts_guides[i].id.toString().includes(document.getElementById('element_input_filter').value))
+
+                    ) {
                     filtered_posts_guides.push(posts_guides[i]);
                 };
                 console.log('filtered_posts_guides[i]');
@@ -2021,6 +2223,18 @@ let handle_update = () => {
 
 };
 
+let post_up = false;
+let get_classes = () => {
+    let class_this = document.getElementById('root');
+    if (post_up == true) {
+        class_this.classList += " post_up"
+    };
+
+    if (post_up == false) {
+        class_this.classList -= " post_up"
+    };
+};
+
 let get_dimensions = () => {
     state.ux = {
         platform: {
@@ -2070,7 +2284,7 @@ let get_dimensions = () => {
 
         tiny_width = state.ux.dimensions.width;
         console.log('tiny_width: ' + tiny_width);
-        
+
         body.classList = "is_Desktop";
         state.interaction.player_1.width = 1;
         state.interaction.player_1.height = 4;
@@ -2187,6 +2401,32 @@ let handle_ReturnedState_fromEvents = () => {
     handle_update();
 };
 
+let check_for_auth_after_load = () => {
+
+    // 24/fps loop
+    (() => {
+        let interval = 0;
+        let play = setInterval(
+            () => {
+                
+                if (interval > (24 * 1) ) {
+
+                    if (auth_has_been_checked == true) {
+                        handle_firebase_events();
+                        handle_if_AUTH();
+                        clearInterval(play)
+                    };
+                };
+
+                console.log('check_for_auth_after_load: ' + interval);
+                interval += 1;
+
+            }, (1000 / state.motion.framerate));
+
+            play;
+    })();
+};
+
 // inital
 document.addEventListener("DOMContentLoaded", (event) => {
     console.log('DOMContentLoaded');
@@ -2206,7 +2446,7 @@ window.addEventListener("load", (event) => {
             body.scrollTo(0, 0);
         }, 0);
     handle_time();
-    handle_play_load();
+    check_for_auth_after_load();
 });
 
 window.addEventListener("resize", (event) => {

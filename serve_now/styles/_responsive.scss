@@ -1,28 +1,253 @@
 .is_Mobile {
+	
+	#post {
+		position: relative;
+		float: left;
+		margin: auto;
+		width: 100%;
 
+		h2 {
+			font-family: serif;
+			color: $black;
+			font-size: 10vw;
+			line-height: 10vw;
+			letter-spacing: -0.5vw;
+		}
+
+		p {
+			font-family: serif;
+			color: $grey;
+			font-size: 10vw;
+			line-height: 10vw;
+			letter-spacing: -0.5vw;
+		}
+
+		.feat_img {
+			background: $grey;
+			height: 25vw;
+			width: 100%;
+			float: left;
+
+			.container {
+				//padding: 2vw;
+				background: $white;
+				border: 1vw solid $grey;
+				width: calc(100% - 2vw);
+				height: calc(100% - 2vw);
+			}
+
+		}
+	}
+	
+	#posts_filtered_container {
+		width: 100%;
+		float: left;
+	    display: -webkit-box;
+	    -webkit-box-pack: center;
+	    -webkit-box-align: center;
+	}
+
+	#posts_filtered {
+		width: 100%;
+		margin: 0vw;
+	}
+
+	#posts_all_container {
+		width: 100%;
+		float: left;
+	    display: -webkit-box;
+	    -webkit-box-pack: center;
+	    -webkit-box-align: center;
+	}
+
+	#posts_all {
+		width: 100%;
+		margin: 0vw;
+	}
+	
 	#firebase {
 		width: 100%;
 		float: left;
 	}
 
-	#info_scroll_y {
+	progress {
 		width: 100%;
+		float: left;
+	}
+
+	#modal-signup {
+		width: 100%;
+		float: left;
+	    display: -webkit-box;
+	    -webkit-box-pack: center;
+	    -webkit-box-align: center;
+	}
+
+	#signup-form {
+		width: 100%;
+		margin: 0vw;
+	}
+
+	#modal-signin {
+		width: 100%;
+		float: left;
+	    display: -webkit-box;
+	    -webkit-box-pack: center;
+	    -webkit-box-align: center;
+	}
+
+	#signin-form {
+		width: 100%;
+		margin: 0vw;
+	}
+
+	#modal-account {
+		width: 100%;
+		float: left;
+	    display: -webkit-box;
+	    -webkit-box-pack: center;
+	    -webkit-box-align: center;
+	}
+
+	#account-form {
+		width: 100%;
+		margin: 0vw;
+	}
+
+	#modal-create {
+		width: 100%;
+		float: left;
+	    display: -webkit-box;
+	    -webkit-box-pack: center;
+	    -webkit-box-align: center;
+	}
+
+	#create-form {
+		width: 100%;
+		margin: 0vw;
+	}
+
+	#modal-edit {
+		width: 100%;
+		float: left;
+	    display: -webkit-box;
+	    -webkit-box-pack: center;
+	    -webkit-box-align: center;
+	}
+
+	#edit-form {
+		width: 100%;
+		margin: 0vw;
+	}
+
+	.info_scroll_y {
+		background: $white;
+		position: relative;
+		float: left;
+		margin: auto;
+		width: 100%;
+		height: 100vh;
+
+		.container {
+			//padding: 2vw;
+			//border: 1vw solid $grey;
+			width: calc(100%);
+			height: calc(100%);
+		}
+	}
+
+	.element_overflow_x_scene {
+		-webkit-box-align: center;
+		-webkit-box-pack: center;
+		display: -webkit-box;
+		position: relative;
+		float: left;
+		margin: auto;
 		height: 100%;
+		width: 100vw;
+	}
+
+	#info_scroll_mix {
+	    position: relative;
+	    float: left;
+	    margin: auto;
+	    height: 100vh;
+	    width: 100%;
+	}
+
+	#preview_info_scroll_x {
+		-webkit-box-align: center;
+		-webkit-box-pack: center;
+		display: -webkit-box;
+		background: $grey;
+		top: 0;
+		right: 0;
+		position: absolute;
+		float: left;
+		margin: auto;
+		height: 25vw;
+		width: 75vw;
+
+	}
+	#preview_info_scroll_y {
+		-webkit-box-align: center;
+		-webkit-box-pack: center;
+		display: -webkit-box;
+		background: $grey;
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		float: left;
+		margin: auto;
+		height: 100vh;
+		width: 25vw;
+	}
+
+	#preview_info_scroll_y_2 {
+		-webkit-box-align: center;
+		-webkit-box-pack: center;
+		display: -webkit-box;
+		background: $grey;
+		top: 25vw;
+		right: 0;
+		position: absolute;
+		float: left;
+		margin: auto;
+		width: 12.5vw;
+		height: calc(100% - 25vw);
+		
 	}
 
 	#info_scroll_y_text {
 		width: 100%;
 		height: 100vh;
+		float: left;	
+		background: $white;
+		margin: auto;
+		position: relative;
+
+		.container {
+			overflow-y: scroll;
+			border: 1vw solid $grey;
+			width: calc(100% - 2vw);
+			height: calc(100% - 2vw);
+		}
 	}
 
-	#info_scroll_x {
+	.info_scroll_x {
 		width: 100%;
 		height: 100vh;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		position: relative;
+		float: left;
 	}
 
 	#shot_1 {
-		width: 100%;
-		height: 100%;
+				border: 1vw solid $grey;
+				width: calc(100% - 2vw);
+				height: calc(100% - 2vw);
 	}
 
 	#interactions_button_1 {
@@ -69,9 +294,80 @@
 	  z-index: 1;
 	}
 
+	#create, #edit_button, #signout, #delete_button, #signin, #signup_submit, label {
+		font-size: 10vw;
+		line-height: 10vw;
+		letter-spacing: -1vw;
+		width: 100%;
+		text-align: center;
+		float: left;	
+		background: $grey;
+		color: $white;	
+	}
+
+	.a_big {
+		font-size: 10vw;
+		line-height: 10vw;
+		letter-spacing: -1vw;
+		width: 100%;
+		text-align: center;
+		float: left;	
+		background: $grey;
+		color: $white;	
+	}
+
+	.p_big{
+		font-size: 10vw;
+		line-height: 10vw;
+		letter-spacing: -1vw;
+		width: 100%;
+		text-align: center;
+		float: left;
+		color: $grey;	
+	}
+	
 };
 
 .is_Desktop {
+
+	#post {
+		position: relative;
+		float: left;
+		margin: auto;
+		width: 100%;
+
+		h2 {
+			font-family: serif;
+			color: $black;
+			font-size: 10vw;
+			line-height: 10vw;
+			letter-spacing: -0.5vw;
+		}
+
+		p {
+			font-family: serif;
+			color: $grey;
+			font-size: 10vw;
+			line-height: 10vw;
+			letter-spacing: -0.5vw;
+		}
+
+		.feat_img {
+			background: $grey;
+			height: 25vw;
+			width: 100%;
+			float: left;
+
+			.container {
+				//padding: 2vw;
+				background: $white;
+				border: 1vw solid $grey;
+				width: calc(100% - 2vw);
+				height: calc(100% - 2vw);
+			}
+
+		}
+	}
 
 	#posts_filtered_container {
 		width: 100%;
@@ -174,36 +470,115 @@
 		margin: 25vw;
 	}
 
-	#create, #edit_button, #signout, #delete_button, #signin, #signup_submit, label {
-		font-size: 10vw;
-		line-height: 10vw;
-		letter-spacing: -1vw;
-		width: 100%;
-		text-align: center;
-		float: left;	
-		background: $grey;
-		color: $white;	
-	}
-	/*
 	#info_scroll_y {
+		background: $white;
+		position: relative;
+		float: left;
+		margin: auto;
 		width: 100%;
-		height: 100%;
+		height: 100vh;
+
+		.container {
+			padding: 2vw;
+			border: 1vw solid $grey;
+			width: calc(100% - 6vw);
+			height: calc(100% - 6vw);
+		}
 	}
-	*/
+
+	.element_overflow_x_scene {
+		-webkit-box-align: center;
+		-webkit-box-pack: center;
+		display: -webkit-box;
+		position: relative;
+		float: left;
+		margin: auto;
+		height: 100%;
+		width: 100vw;
+	}
+
+	#info_scroll_mix {
+	    position: relative;
+	    float: left;
+	    margin: auto;
+	    height: 100vh;
+	    width: 100%;
+	}
+
+	#preview_info_scroll_x {
+		-webkit-box-align: center;
+		-webkit-box-pack: center;
+		display: -webkit-box;
+		background: $grey;
+		top: 0;
+		right: 0;
+		position: absolute;
+		float: left;
+		margin: auto;
+		height: 25vw;
+		width: 75vw;
+
+	}
+	#preview_info_scroll_y {
+		-webkit-box-align: center;
+		-webkit-box-pack: center;
+		display: -webkit-box;
+		background: $grey;
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		float: left;
+		margin: auto;
+		height: 100vh;
+		width: 25vw;
+	}
+
+	#preview_info_scroll_y_2 {
+		-webkit-box-align: center;
+		-webkit-box-pack: center;
+		display: -webkit-box;
+		background: $grey;
+		top: 25vw;
+		right: 0;
+		position: absolute;
+		float: left;
+		margin: auto;
+		width: 12.5vw;
+		height: calc(100% - 25vw);
+		
+	}
 
 	#info_scroll_y_text {
 		width: 100%;
 		height: 100vh;
+		float: left;	
+		background: $white;
+		margin: auto;
+		position: relative;
+		
+		.container {
+			overflow-y: scroll;
+			padding: 2vw;
+			border: 1vw solid $grey;
+			width: calc(100% - 6vw);
+			height: calc(100% - 6vw);
+		}
 	}
 
-	#info_scroll_x {
+	.info_scroll_x {
 		width: 100%;
 		height: 100vh;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		position: relative;
+		float: left;
 	}
 
 	#shot_1 {
-		width: 100%;
-		height: 100%;
+				border: 1vw solid $grey;
+				width: calc(100% - 2vw);
+				height: calc(100% - 2vw);
 	}
 
 	#interactions_button_1 {
@@ -248,6 +623,38 @@
 	  height: 6.25vh;
 	  float: left;
 	  z-index: 1;
+	}
+
+	#create, #edit_button, #signout, #delete_button, #signin, #signup_submit, label {
+		font-size: 10vw;
+		line-height: 10vw;
+		letter-spacing: -1vw;
+		width: 100%;
+		text-align: center;
+		float: left;	
+		background: $grey;
+		color: $white;	
+	}
+	
+	.a_big {
+		font-size: 10vw;
+		line-height: 10vw;
+		letter-spacing: -1vw;
+		width: 100%;
+		text-align: center;
+		float: left;	
+		background: $grey;
+		color: $white;	
+	}
+
+	.p_big{
+		font-size: 10vw;
+		line-height: 10vw;
+		letter-spacing: -1vw;
+		width: 100%;
+		text-align: center;
+		float: left;
+		color: $grey;	
 	}
 
 };

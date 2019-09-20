@@ -49,7 +49,8 @@ let gen = (x) => {
                   <div id="modal-account">
                      <form id="account-form">
                        <p>modal-account</p>
-                       <div id="account-details" class="account-details">account-details</div>
+                       <div id="account-details" class="account-details"><p>account-details<p></div>
+                       <div id="upload_form"></div>
                      </form>
                   </div>
 
@@ -64,6 +65,7 @@ let gen = (x) => {
                         <progress value="0" max="100" id="uploader">0%</progress>
                         <p id="upload_progress">images only</p>
                         <label for="fileButton">Select file</label>
+                        <div id="upload_details"></div>
                         <div id="create" class="">create</div>
                      </form>
                   </div>
@@ -87,16 +89,16 @@ let gen = (x) => {
 
                </ul>
 
-          <div id="info_scroll_x"  class="position_relative float_left height_100vh width_100 display_flex_flow">
+          <div class="info_scroll_x">
                
                <div class="position_relative float_left width_100 height_100 top_0 left_0 overflow_x scrollbarx scrollbarx-scrollbar-track-light-yellow-9 scrollbarx-scrollbar-light-yellow-9 scrollbarx-light-yellow-border-dark-yellow inline_flex">
 
                    <div class="height_100 float_left position_relative display_webkit_box webkit_box_pack_center webkit_box_align">
 
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
 
-                        <div id="info_scroll_y" class="position_relative height_50vh width_50 float_left margin_auto bg_white">
-                           <div class="position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow">
+                        <div class="info_scroll_y">
+                           <div class="container position_absolute bottom_0 left_0 overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow">
 
                               <div id="menu_buffer" class="width_100 float_left"></div>
 
@@ -107,30 +109,30 @@ let gen = (x) => {
                                  site_routes: 
                                  <div id="site_routes"></div>
                               </div>
-                              <a href="#">loading</a>
-                              <a href="#">home</a>
-                              <a href="#">latest</a>
-                              <a href="#">start game</a>
-                              <a href="#">learn game</a>
-                              <a href="#">planner</a>
-                              <a href="#">contact</a>
-                              <a href="#">welcome</a>
-                              <a href="#">loading</a>
-                              <a href="#">home</a>
-                              <a href="#">latest</a>
-                              <a href="#">start game</a>
-                              <a href="#">learn game</a>
-                              <a href="#">planner</a>
-                              <a href="#">contact</a>
-                              <a href="#">welcome</a>
-                              <a href="#">loading</a>
-                              <a href="#">home</a>
-                              <a href="#">latest</a>
-                              <a href="#">start game</a>
-                              <a href="#">learn game</a>
-                              <a href="#">planner</a>
-                              <a href="#">contact</a>
-                              <a href="#">welcome</a>
+                              <a class="a_big" href="#">loading</a>
+                              <a class="a_big" href="#">home</a>
+                              <a class="a_big" href="#">latest</a>
+                              <a class="a_big" href="#">start game</a>
+                              <a class="a_big" href="#">learn game</a>
+                              <a class="a_big" href="#">planner</a>
+                              <a class="a_big" href="#">contact</a>
+                              <a class="a_big" href="#">welcome</a>
+                              <a class="a_big" href="#">loading</a>
+                              <a class="a_big" href="#">home</a>
+                              <a class="a_big" href="#">latest</a>
+                              <a class="a_big" href="#">start game</a>
+                              <a class="a_big" href="#">learn game</a>
+                              <a class="a_big" href="#">planner</a>
+                              <a class="a_big" href="#">contact</a>
+                              <a class="a_big" href="#">welcome</a>
+                              <a class="a_big" href="#">loading</a>
+                              <a class="a_big" href="#">home</a>
+                              <a class="a_big" href="#">latest</a>
+                              <a class="a_big" href="#">start game</a>
+                              <a class="a_big" href="#">learn game</a>
+                              <a class="a_big" href="#">planner</a>
+                              <a class="a_big" href="#">contact</a>
+                              <a class="a_big" href="#">welcome</a>
                               <div id="signal">
                                  history_route: 
                                  <div id="history_route"></div>
@@ -153,7 +155,7 @@ let gen = (x) => {
 
                       </div>
 
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
                         <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
                             <div class="width_50 float_left">
                                  
@@ -185,7 +187,7 @@ let gen = (x) => {
                         </div>
                       </div>
 
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
                         <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
                             <div class="width_50 float_left">
                                       
@@ -201,7 +203,7 @@ let gen = (x) => {
                         </div>
                       </div>
 
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
                         <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
                             <div class="width_50 float_left">
                                       
@@ -226,7 +228,7 @@ let gen = (x) => {
                         </div>
                       </div>
 
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
                         <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
                             <div class="width_50 float_left">
                                       
@@ -259,7 +261,7 @@ let gen = (x) => {
                         </div>
                       </div>
 
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
                         <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
                             <div class="width_50 float_left">
                                       
@@ -293,7 +295,7 @@ let gen = (x) => {
                       </div>
 
 
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
                         <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
                             <div class="width_50 float_left">
                                       
@@ -326,7 +328,7 @@ let gen = (x) => {
                         </div>
                       </div>
 
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
                         <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
                             <div class="width_50 float_left">
                                                                      
@@ -342,7 +344,7 @@ let gen = (x) => {
                         </div>
                       </div>
 
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
                         <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
                             <div class="width_50 float_left">
                                     
@@ -355,7 +357,7 @@ let gen = (x) => {
                         </div>
                       </div>
 
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
                         <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
                             <div class="width_50 float_left">
                                     
@@ -367,7 +369,7 @@ let gen = (x) => {
                       </div>
                       
 
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
                         <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
                             <div class="width_50 float_left">
                                     
@@ -380,7 +382,7 @@ let gen = (x) => {
                         </div>
                       </div>
                       
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
                         <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
                             <div class="width_50 float_left">
 
@@ -416,11 +418,12 @@ let gen = (x) => {
                        </div>
                    </div>
                </div>
+               
           </div>
 
-          <div id="info_scroll_mix" class="position_relative height_100vh width_100 float_left margin_auto">
+          <div id="info_scroll_mix">
 
-            <div id="preview_info_scroll_x" class="position_absolute top_0 right_0 margin_auto float_left width_75vw height_25vw webkit_box_pack_center webkit_box_align display_webkit_box bg_grey">
+            <div id="preview_info_scroll_x">
 
                 <div class="position_relative float_left calc_2vw border_1vw_grey">
                     
@@ -469,7 +472,7 @@ let gen = (x) => {
 
             </div>
 
-            <div id="preview_info_scroll_y" class="position_absolute bottom_0 left_0 margin_auto float_left width_25vw height_100vh webkit_box_pack_center webkit_box_align display_webkit_box bg_grey">
+            <div id="preview_info_scroll_y">
 
                 <div class="position_relative margin_auto float_left width_100 height_100 webkit_box_pack_center webkit_box_align display_webkit_box">
                     
@@ -523,7 +526,7 @@ let gen = (x) => {
 
             </div>
 
-            <div id="preview_info_scroll_y" class="position_absolute top_25vw right_0 margin_auto float_left width_1205vw calc_25vw_height webkit_box_pack_center webkit_box_align display_webkit_box bg_grey">
+            <div id="preview_info_scroll_y_2">
 
                 <div class="position_relative margin_auto float_left width_100 height_100 webkit_box_pack_center webkit_box_align display_webkit_box">
                     
@@ -578,21 +581,21 @@ let gen = (x) => {
             </div>
           </div>
           
-          <div id="info_scroll_y_text" class="position_relative height_100vh width_100 float_left margin_auto bg_white">
-             <div class="position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow">
+          <div id="info_scroll_y_text" class="">
+             <div class="container scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow">
 
-                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+                <p class="p_big">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
                 </p>
 
              </div>
           </div>
 
-          <div id="info_scroll_x"  class="position_relative float_left height_100vh width_100 display_flex_flow">
+          <div class="info_scroll_x">
                <div class="position_relative float_left width_100 height_100 top_0 left_0 overflow_x scrollbarx scrollbarx-scrollbar-track-light-yellow-9 scrollbarx-scrollbar-light-yellow-9 scrollbarx-light-yellow-border-dark-yellow inline_flex">
                    <div class="height_100 float_left position_relative display_webkit_box webkit_box_pack_center webkit_box_align">
 
 
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
                         <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white display_webkit_box webkit_box_pack_center webkit_box_align">
                             
                             <div class="position_relative float_left border_1vw_grey bg_white padding_205vw">
@@ -602,7 +605,7 @@ let gen = (x) => {
                         </div>
                       </div>
 
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
                         <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white display_webkit_box webkit_box_pack_center webkit_box_align">
                             
                             <div class="position_relative float_left border_1vw_grey bg_white padding_205vw">
@@ -615,7 +618,7 @@ let gen = (x) => {
                         </div>
                       </div>
 
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
                         <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white display_webkit_box webkit_box_pack_center webkit_box_align">
                             
                             <div class="position_relative float_left">
@@ -633,7 +636,7 @@ let gen = (x) => {
                         </div>
                       </div>
 
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
                         <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white display_webkit_box webkit_box_pack_center webkit_box_align">
                             
                             <div class="position_relative float_left width_50 display_webkit_box webkit_box_pack_center webkit_box_align">
@@ -679,7 +682,7 @@ let gen = (x) => {
                         </div>
                       </div>
 
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
                         <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white display_webkit_box webkit_box_pack_center webkit_box_align">
                             
                             <div class="position_relative float_left width_50 display_webkit_box webkit_box_pack_center webkit_box_align">
@@ -717,7 +720,7 @@ let gen = (x) => {
                         </div>
                       </div>
 
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
                         <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white display_webkit_box webkit_box_pack_center webkit_box_align">
                             
                             <div class="position_relative float_left width_50">
@@ -747,7 +750,7 @@ let gen = (x) => {
                         </div>
                       </div>
 
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
                         <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
                             <div class="position_relative width_50 height_100 overflow_y scrollbaryhidden float_left">
 
@@ -773,7 +776,7 @@ let gen = (x) => {
                         </div>
                       </div>
 
-                      <div id="element_overflow_x_scene" class=" position_relative width_100vw height_100 margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                      <div class="element_overflow_x_scene">
                         <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
                             <div class="width_50 height_100 overflow_y scrollbaryhidden float_left">
                                  

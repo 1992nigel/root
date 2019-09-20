@@ -86,6 +86,7 @@ app.get('/', (req, res) => {
             <body id="body" tabindex="0">
                   
 
+    <main id="root" class="">
           <div id="lead" class="">
 
             <div id="shots" class="">
@@ -95,7 +96,6 @@ app.get('/', (req, res) => {
           </div>
 
           
-    <main id="root" class="">
 
         <div id="opening" class="">
         </div>
@@ -315,7 +315,6 @@ app.get('/', (req, res) => {
         <button>more info</button>
         -->
 
-    </main>
 
           <div id="set" class="">
             <div id="gui_stage_tv" class=""></div>
@@ -361,6 +360,8 @@ app.get('/', (req, res) => {
                 <script src="https://nownigel-67004.web.app/serve_now.e31bb0bc.js"></script>
 
               </div>
+              
+    </main>
               
             </body>
             <footer id="footer" class="transform_translate3d_top100 easing_01 display_none">
@@ -453,6 +454,7 @@ app.get('/p/:id', function(req, res) {
         <body id="body" tabindex="0">
                           
             
+        <main id="root" class="">
         <div id="post" class="">
           
           <iframe width="560" height="315" src="https://www.youtube.com/embed/-ivY4EUVz-w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -518,7 +520,6 @@ app.get('/p/:id', function(req, res) {
           
         </div>
 
-        <main id="root" class="">
 
             <div id="opening" class="">
             </div>
@@ -738,7 +739,6 @@ app.get('/p/:id', function(req, res) {
             <button>more info</button>
             -->
 
-        </main>
 
         <div id="set" class="">
           <div id="gui_stage_tv" class=""></div>
@@ -785,6 +785,7 @@ app.get('/p/:id', function(req, res) {
 
         </div>
         
+        </main>
       </body>
       <footer id="footer" class="transform_translate3d_top100 easing_01 display_none">
       </footer>
