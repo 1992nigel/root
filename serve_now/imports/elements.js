@@ -59,14 +59,14 @@ let gen = (x) => {
                         <p>modal-create</p>
                         
                         <input class="display_none" type="file" value="upload" id="fileButton" accept="image/*" title="&nbsp;"/>
-                        <input placeholder="title" type="text" id="create-title" required />
-                        <input placeholder="child" type="text" id="create-child" required />
-                        <input placeholder="content" type="text" id="create-content" required />
+                        <input placeholder="title" type="text" id="create_title" required />
+                        <input placeholder="child" type="text" id="create_child" required />
+                        <input placeholder="content" type="text" id="create_content" required />
                         <progress value="0" max="100" id="uploader">0%</progress>
                         <p id="upload_progress">images only</p>
                         <label for="fileButton">Select file</label>
                         <div id="upload_details"></div>
-                        <div id="create" class="">create</div>
+                        <div id="create_button" class="">create</div>
                      </form>
                   </div>
 

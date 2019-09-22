@@ -10,6 +10,7 @@ let auth_has_been_checked = false;
 
 let stored_auth_user_cred = {};
 let posts_guides = [];
+                let upload_details = ``;
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
@@ -48,7 +49,6 @@ auth.onAuthStateChanged(logged_auth_user => {
     };
 
 });
-
 
 let state = {
 	
@@ -1745,7 +1745,6 @@ let handle_firebase_events = () => {
                     uploader.value = 0;
                     upload_progress.innerHTML = ``;
                 }, 2000);
-                let upload_details = ``;
                 // Handle successful uploads on complete
                   // For instance, get the download URL: https://firebasestorage.googleapis.com/...
                   task.snapshot.ref.getDownloadURL().then(function(downloadURL) {
@@ -1779,6 +1778,12 @@ let handle_firebase_events = () => {
     document.getElementById('delete_button').addEventListener('click', (event) => {
         event.preventDefault();
         db_delete_user("users", stored_auth_user_cred.uid);
+    });
+
+
+    document.getElementById('create_button').addEventListener('click', (event) => {
+        event.preventDefault();
+        db_create_post("users");
     });
 
 };
@@ -1893,6 +1898,7 @@ let get_db_guides = () => {
                 <p>
                     post id: ${post.id}
                 </p>
+                <a href="https://nownigel.com/p/${post.id}">see post</a>
             `
             element.addEventListener("click", function(event) {
                 alert('post');
@@ -1944,6 +1950,45 @@ let get_db_guides = () => {
         console.log('posts_guides');
         console.log(posts_guides);
     });
+};
+
+// create post
+let db_create_post = () => {
+    
+    let date = new Date();
+    const ref = db.collection('users').doc();
+    const id = ref.id;
+    let featured_image;
+    if (upload_details == ``) {
+        featured_image = `https://firebasestorage.googleapis.com/v0/b/nownigel-67004.appspot.com/o/sweet_gifs%2FE813A0D5-E695-4AA8-B761-6D340C271F5D.jpeg?alt=media&token=0b501f8f-8fd4-43bd-a2ee-6ddeac61b78c`
+    };
+
+            let create_title = document.getElementById('create_title');
+            let create_child = document.getElementById('create_child');
+            let create_content = document.getElementById('create_content');
+
+    db.collection('users').doc(ref.id).set({
+        title: create_title.value,
+        child: create_child.value,
+        content: create_content.value,
+        image: featured_image,
+        video: create_content.value,
+        likes: 0,
+        views: 0,
+        time: date.getTime(),
+        id: ref.id,
+        author_id: stored_auth_user_cred.uid,
+        email: stored_auth_user_cred.email,
+    }).then(()=> {
+        console.log('guide made');
+        create_title.value = ``;
+        create_child.value = ``;
+        create_content.value = ``;
+        update_db();
+    }).catch(err => {
+        console.log(err.message)
+    })
+
 };
 
 // create user
@@ -2401,6 +2446,8 @@ let handle_ReturnedState_fromEvents = () => {
     handle_update();
 };
 
+let auth_buffer = .5;
+
 let check_for_auth_after_load = () => {
 
     // 24/fps loop
@@ -2409,7 +2456,7 @@ let check_for_auth_after_load = () => {
         let play = setInterval(
             () => {
                 
-                if (interval > (24 * 1) ) {
+                if (interval > (24 * auth_buffer) ) {
 
                     if (auth_has_been_checked == true) {
                         handle_firebase_events();

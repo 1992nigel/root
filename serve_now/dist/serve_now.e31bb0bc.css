@@ -20291,7 +20291,7 @@ body::-webkit-scrollbar-thumb {
   float: left;
   z-index: 1;
 }
-.is_Mobile #create, .is_Mobile #edit_button, .is_Mobile #signout, .is_Mobile #delete_button, .is_Mobile #signin, .is_Mobile #signup_submit, .is_Mobile label {
+.is_Mobile #create_button, .is_Mobile #edit_button, .is_Mobile #signout, .is_Mobile #delete_button, .is_Mobile #signin, .is_Mobile #signup_submit, .is_Mobile label {
   font-size: 10vw;
   line-height: 10vw;
   letter-spacing: -1vw;
@@ -20577,7 +20577,7 @@ body::-webkit-scrollbar-thumb {
   float: left;
   z-index: 1;
 }
-.is_Desktop #create, .is_Desktop #edit_button, .is_Desktop #signout, .is_Desktop #delete_button, .is_Desktop #signin, .is_Desktop #signup_submit, .is_Desktop label {
+.is_Desktop #create_button, .is_Desktop #edit_button, .is_Desktop #signout, .is_Desktop #delete_button, .is_Desktop #signin, .is_Desktop #signup_submit, .is_Desktop label {
   font-size: 10vw;
   line-height: 10vw;
   letter-spacing: -1vw;
