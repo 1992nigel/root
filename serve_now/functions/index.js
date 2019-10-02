@@ -103,6 +103,8 @@ app.get('/', (req, res) => {
         <!-- seo basics -->
         <div id="who">
 
+        <div id="amzn-assoc-ad-6e048fd2-5132-43d3-ab5e-29d7d79883fc"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=6e048fd2-5132-43d3-ab5e-29d7d79883fc"></script>
+
           <div id="who_title" class="display_webkit_box webkit_box_pack_center webkit_box_align">
             <div class="position_relative float_left">
               <h2>who is <u>nownigel</u></h2>
@@ -524,6 +526,8 @@ app.get('/p/:id', function(req, res) {
                   
                   <!-- seo basics -->
                   <div id="who">
+
+                  <div id="amzn-assoc-ad-6e048fd2-5132-43d3-ab5e-29d7d79883fc"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=6e048fd2-5132-43d3-ab5e-29d7d79883fc"></script>
 
                     <div id="who_title" class="display_webkit_box webkit_box_pack_center webkit_box_align">
                       <div class="position_relative float_left">

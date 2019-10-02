@@ -75,15 +75,15 @@ let gen = (x) => {
                         <p>edit profile</p>
                         <input placeholder="title" type="text" id="title"/>
                         <div id="edit_button" class="">edit</div>
-                     </form>
 
-                      <a id="signout" href="https://www.phlygh.com" alt="sign out">
-                         sign out
-                      </a>
-                      <a id="delete_button" href="https://www.phlygh.com" alt="sign out">
-                         delete
-                      </a>
-                      
+                        <div id="signout" alt="sign out">
+                           sign out
+                        </div>
+                        <div id="delete_button" alt="sign out">
+                           delete
+                        </div>
+
+                     </form>                      
                   </div>
 
 

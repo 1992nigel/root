@@ -1,3 +1,54 @@
+/*
+ *Order or operation*
+
+1. Links
+    
+    '/'
+
+    '/p/:id'
+    (post.id === req.params.id)
+
+    '/:id'
+    (post.title === req.params.id)
+
+2. onAuthStateChanged
+
+3. DOMContentLoaded
+    opening.appendChild
+    sequence_Load
+    get_dimensions
+    handle_play_DOMContentLoaded
+
+4. load
+    auth_buffer
+    check_for_auth_after_load
+        handle_firebase_events
+        handle_if_AUTH
+            handle_if_AUTH_checked_ANIMATION_BEGIN (looping animation)
+            handle_if_AUTH_checked_CLICK_SCENE_1 (clickable)
+
+    Still has to:
+        - after post/user made
+        - Events
+        - Modals
+        - Guis
+        - Game shots
+        - sorts
+        - filter types
+        - card views
+        - image upload
+        - signed in/out ui
+
+5. Scene (interval controlled transition)
+
+6. Shots (Views with events)
+
+7. Set
+    - gui_stage_tv
+    - gui_stage_lights
+
+*/
+
 // Imports
 import style from './style.scss';
 import events from './imports/events';
@@ -10,7 +61,7 @@ let auth_has_been_checked = false;
 
 let stored_auth_user_cred = {};
 let posts_guides = [];
-                let upload_details = ``;
+let upload_details = ``;
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
@@ -1068,7 +1119,7 @@ let handle_time = () => {
     })();
 };
 
-let handle_if_AUTH_checked_SCENE_1 = () => {
+let handle_if_AUTH_checked_CLICK_SCENE_1 = () => {
 
     // 24/fps loop
     (() => {
@@ -1092,7 +1143,7 @@ let handle_if_AUTH_checked_SCENE_1 = () => {
                             </div>
                         `
                         element.addEventListener("click", function(event) {
-                            alert('yup');
+                            alert('shot_1 yup');
                         });
 
                         document.getElementById('shots').appendChild(
@@ -1121,7 +1172,7 @@ let handle_if_AUTH_checked_SCENE_1 = () => {
                             </div>
                         `
                         element.addEventListener("click", function(event) {
-                            handle_if_AUTH_checked_SCENE_1();
+                            handle_if_AUTH_checked_CLICK_SCENE_1();
                         });
 
                         document.getElementById('shots').appendChild(
@@ -1166,7 +1217,7 @@ let handle_play_DOMContentLoaded = () => {
                             </div>
                         `
                         element.addEventListener("click", function(event) {
-                            alert('yup');
+                            alert('shot_1 yup');
                         });
 
                         document.getElementById('shots').appendChild(
@@ -1224,7 +1275,7 @@ let handle_play_DOMContentLoaded = () => {
 
                         `
                         element.addEventListener("click", function(event) {
-                            alert('yup');
+                            alert('shot_1 yup');
                         });
 
                         document.getElementById('shots').appendChild(
@@ -1245,7 +1296,7 @@ let handle_play_DOMContentLoaded = () => {
     })();
 };
 
-let handle_if_AUTH_checked_ANIMATION = () => {
+let handle_if_AUTH_checked_ANIMATION_BEGIN = () => {
 
     // 24/fps loop
     (() => {
@@ -1495,7 +1546,7 @@ let handle_if_AUTH_checked_ANIMATION = () => {
 
 let handle_if_AUTH = () => {
 
-    handle_if_AUTH_checked_ANIMATION();
+    handle_if_AUTH_checked_ANIMATION_BEGIN();
 
     // 24/fps loop !! initial !!
     (() => {
@@ -1549,7 +1600,7 @@ let handle_if_AUTH = () => {
                             </div>
                         `
                         element.addEventListener("click", function(event) {
-                            handle_if_AUTH_checked_SCENE_1();
+                            handle_if_AUTH_checked_CLICK_SCENE_1();
                         });
 
                         document.getElementById('shots').appendChild(
@@ -1785,7 +1836,6 @@ let handle_firebase_events = () => {
         event.preventDefault();
         db_create_post("users");
     });
-
 };
 
 let valid_user = {};
@@ -1984,11 +2034,10 @@ let db_create_post = () => {
         create_title.value = ``;
         create_child.value = ``;
         create_content.value = ``;
-        update_db();
+        get_db_guides();
     }).catch(err => {
         console.log(err.message)
     })
-
 };
 
 // create user
@@ -2008,9 +2057,10 @@ let db_create_user = (cred) => {
         stored_auth_user_cred = cred;
         signup_email.value = ``;
         signup_password.value = ``;
+        get_db_guides();
     }).catch(err => {
         console.log(err.message)
-    })
+    });
 };
 
 // update user
@@ -2026,6 +2076,7 @@ let db_update_user = (collection, deletable_id) => {
     }).then(function() {
         document.getElementById('title').value = ``,
         alert("Document successfully written!");
+        get_db_guides();
     }).catch(function(error) {
         console.error("Error writing document: ", error);
     });
@@ -2581,9 +2632,9 @@ window.addEventListener("orientationchange", (event) => {
     alert('orientationchange');
     get_dimensions();
 
-    state.events.motion.orientation_string = orientation;
-    console.log('orientation');
-    console.log(orientation);
+    state.events.motion.orientation_string = state.ux.screen.orientation;
+    console.log('state.ux.screen.orientation');
+    console.log(state.ux.screen.orientation);
 });
 
 window.addEventListener("beforeunload", (event) => {
