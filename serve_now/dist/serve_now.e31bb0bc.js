@@ -1015,13 +1015,30 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
             handle_if_AUTH_checked_CLICK_SCENE_1 (clickable)
 
     Still has to:
+        correct looping animation assets so no player_1 overlapping
+        - refreash after sign in/out/register exc.
+        - routes?!
+        - easy asset change
         - after post/user made
         - Events
         - Modals
         - Guis
         - Game shots
         - sorts
+        - filter types
+        - card views
+            - is_Mobile vs isDesktop
+        - home page/route vs post vs users
+        - image upload
         - signed in/out ui
+
+        - animation of assets on 24fps loop handle_if_AUTH_checked_ANIMATION_BEGIN
+            player_1
+            gui_stage_tv
+            gui_stage_lights
+            mark
+            facer
+            logo
 
 5. Scene (interval controlled transition)
 
@@ -2014,22 +2031,14 @@ var handle_time = function handle_time() {
 };
 
 var handle_if_AUTH_checked_CLICK_SCENE_1 = function handle_if_AUTH_checked_CLICK_SCENE_1() {
-  // 24/fps loop
+  alert('handle_if_AUTH_checked_CLICK_SCENE_1'); // 24/fps loop
+
   (function () {
     var interval = 0;
     var play = setInterval(function () {
       if (interval == 0) {
         if (document.getElementById('shots') != null) {
-          var shots = document.getElementById('shots');
-          shots.innerHTML = "";
-          var element = document.createElement('div');
-          element.setAttribute("id", "shot_1");
-          element.classList = "width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute";
-          element.innerHTML = "\n                            <div class=\"width_100 height_100 top_0 right_0 bottom_0 left_0 margin_auto position_absolute\">\n                                <div class=\"width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n                                <div class=\"width_50 height_50 gui_logo_type_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n                            </div>\n                        ";
-          element.addEventListener("click", function (event) {
-            alert('shot_1 yup');
-          });
-          document.getElementById('shots').appendChild(element);
+          shot_start_of_authing();
         }
 
         ;
@@ -2038,23 +2047,9 @@ var handle_if_AUTH_checked_CLICK_SCENE_1 = function handle_if_AUTH_checked_CLICK
       ;
 
       if (interval == 24 * 1) {
+        // the final shot of opening scene
         if (document.getElementById('shots') != null) {
-          var _shots = document.getElementById('shots');
-
-          _shots.innerHTML = "";
-
-          var _element = document.createElement('div');
-
-          _element.setAttribute("id", "shot_1");
-
-          _element.classList = "width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute";
-          _element.innerHTML = "\n                            <div id=\"facer\" class=\"width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute\"></div>\n                            <div class=\"width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute\"></div>\n                            <div class=\"width_100 height_50 bottom_0 left_0 margin_auto position_absolute\">\n                                <div class=\"width_50 height_50 gui_buttons top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n                            </div>\n                        ";
-
-          _element.addEventListener("click", function (event) {
-            handle_if_AUTH_checked_CLICK_SCENE_1();
-          });
-
-          document.getElementById('shots').appendChild(_element);
+          shot_end_of_authing();
         }
 
         ;
@@ -2069,23 +2064,92 @@ var handle_if_AUTH_checked_CLICK_SCENE_1 = function handle_if_AUTH_checked_CLICK
   })();
 };
 
+var shot_at_animation_begin = function shot_at_animation_begin() {
+  var shots = document.getElementById('shots');
+  shots.innerHTML = "";
+  var element = document.createElement('div');
+  element.setAttribute("id", "shot_1");
+  element.classList = "width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute";
+  element.innerHTML = "\n        <div class=\"width_50 height_50 gui_logo_type_1 top_0 right_0 margin_auto position_absolute\"></div>\n        <div class=\"width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute\"></div>\n        <div class=\"width_100 height_50 bottom_0 left_0 margin_auto position_absolute\">\n            <div class=\"width_50 height_50 top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n        </div>\n    ";
+  document.getElementById('shots').appendChild(element);
+};
+
+var shot_to_scene_1 = function shot_to_scene_1() {
+  var shots = document.getElementById('shots');
+  shots.innerHTML = "";
+  var element = document.createElement('div');
+  element.setAttribute("id", "shot_1");
+  element.classList = "width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute";
+  element.innerHTML = "\n        <div id=\"shot_1_character_1\" class=\"width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute\"></div>\n        <div id=\"shot_1_character_2\" class=\"width_50 height_50 gui_character_face_left_shadow_1 top_0 left_0 margin_auto position_absolute\"></div>\n        <div class=\"width_100 height_50 bottom_0 left_0 margin_auto position_absolute\">\n            <div class=\"width_50 height_50 top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n        </div>\n    ";
+  element.addEventListener("click", function (event) {
+    handle_if_AUTH_checked_CLICK_SCENE_1();
+  });
+  document.getElementById('shots').appendChild(element);
+};
+
+var shot_start_of_authing = function shot_start_of_authing() {
+  var shots = document.getElementById('shots');
+  shots.innerHTML = "";
+  var element = document.createElement('div');
+  element.setAttribute("id", "shot_1");
+  element.classList = "width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute";
+  element.innerHTML = "\n        <div class=\"width_100 height_100 top_0 right_0 bottom_0 left_0 margin_auto position_absolute\">\n            <div class=\"width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n            <div class=\"width_50 height_50 gui_logo_type_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n        </div>\n    ";
+  document.getElementById('shots').appendChild(element);
+};
+
+var shot_end_of_authing = function shot_end_of_authing() {
+  var shots = document.getElementById('shots');
+  shots.innerHTML = "";
+  var element = document.createElement('div');
+  element.setAttribute("id", "shot_1");
+  element.classList = "width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute";
+  element.innerHTML = "\n        <div id=\"facer_1\" class=\"width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute\"></div>\n        <div id=\"facer_2\" class=\"width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute\"></div>\n        <div class=\"width_100 height_50 bottom_0 left_0 margin_auto position_absolute\">\n            <div id=\"facer_buttons\" class=\"width_50 height_50 gui_buttons top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n        </div>\n    ";
+  document.getElementById('shots').appendChild(element); // facer_buttons
+
+  if (document.getElementById('facer_buttons') != null) {
+    document.getElementById('facer_buttons').addEventListener("click", function (event) {
+      alert('yup facer_buttons');
+    });
+  }
+};
+
+var shot_loading = function shot_loading() {
+  var shots = document.getElementById('shots');
+  shots.innerHTML = "";
+  var element = document.createElement('div');
+  element.setAttribute("id", "shot_1");
+  element.classList = "width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute";
+  element.innerHTML = "\n        <div class=\"width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute\"></div>\n        <div class=\"width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute\"></div>\n        <div class=\"width_100 height_50 bottom_0 left_0 margin_auto position_absolute\">\n            <div class=\"width_50 height_50 gui_text_loading top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n        </div>\n    ";
+  element.addEventListener("click", function (event) {
+    alert('shot_1 yup');
+  });
+  document.getElementById('shots').appendChild(element);
+};
+
+var shot_loaded = function shot_loaded() {
+  var shots = document.getElementById('shots');
+  shots.innerHTML = "";
+  var element = document.createElement('div');
+  element.setAttribute("id", "shot_1");
+  element.classList = "width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute";
+  element.innerHTML = "\n        \n        <div class=\"width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute\"></div>\n        <div class=\"width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute\"></div>\n        <div class=\"width_100 height_50 bottom_0 left_0 margin_auto position_absolute\">\n            <div class=\"width_50 height_50 gui_text_loaded top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n        </div>\n\n    ";
+  element.addEventListener("click", function (event) {
+    alert('shot_1 yup');
+  });
+  document.getElementById('shots').appendChild(element);
+};
+
 var handle_play_DOMContentLoaded = function handle_play_DOMContentLoaded() {
   // 24/fps loop
+  var fps = 24;
+  var loading_buffer = .5;
+
   (function () {
     var interval = 0;
     var play = setInterval(function () {
-      if (interval < 24) {
+      if (interval < fps) {
         if (document.getElementById('shots') != null) {
-          var shots = document.getElementById('shots');
-          shots.innerHTML = "";
-          var element = document.createElement('div');
-          element.setAttribute("id", "shot_1");
-          element.classList = "width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute";
-          element.innerHTML = "\n                            <div class=\"width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute\"></div>\n                            <div class=\"width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute\"></div>\n                            <div class=\"width_100 height_50 bottom_0 left_0 margin_auto position_absolute\">\n                                <div class=\"width_50 height_50 gui_text_loading top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n                            </div>\n                        ";
-          element.addEventListener("click", function (event) {
-            alert('shot_1 yup');
-          });
-          document.getElementById('shots').appendChild(element);
+          shot_loading();
         }
 
         ;
@@ -2114,24 +2178,9 @@ var handle_play_DOMContentLoaded = function handle_play_DOMContentLoaded() {
 
       ;
 
-      if (interval == 24 * .5) {
+      if (interval == fps * loading_buffer) {
         if (document.getElementById('shots') != null) {
-          var _shots2 = document.getElementById('shots');
-
-          _shots2.innerHTML = "";
-
-          var _element2 = document.createElement('div');
-
-          _element2.setAttribute("id", "shot_1");
-
-          _element2.classList = "width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute";
-          _element2.innerHTML = "\n                            \n                            <div class=\"width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute\"></div>\n                            <div class=\"width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute\"></div>\n                            <div class=\"width_100 height_50 bottom_0 left_0 margin_auto position_absolute\">\n                                <div class=\"width_50 height_50 gui_text_loaded top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n                            </div>\n\n                        ";
-
-          _element2.addEventListener("click", function (event) {
-            alert('shot_1 yup');
-          });
-
-          document.getElementById('shots').appendChild(_element2);
+          shot_loaded();
         }
 
         ;
@@ -2345,16 +2394,140 @@ var handle_if_AUTH_checked_ANIMATION_BEGIN = function handle_if_AUTH_checked_ANI
 
       ;
 
-      if (document.getElementById('facer') != null) {
+      if (document.getElementById('shot_1_character_1') != null) {
         if (state.interaction.player_1.stance == 0) {
           if (state.interaction.player_1.angle == 0) {
-            document.getElementById('facer').classList = ' width_50 height_50 top_0 right_0 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
+            document.getElementById('shot_1_character_1').classList = ' width_100 height_100 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
           }
 
           ;
 
           if (state.interaction.player_1.angle == 1) {
-            document.getElementById('facer').classList = ' width_50 height_50 top_0 right_0 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
+            document.getElementById('shot_1_character_1').classList = ' width_100 height_100 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
+          }
+
+          ;
+        }
+
+        ;
+
+        if (state.interaction.player_1.frame == 4) {
+          state.interaction.player_1.frame = 0;
+        }
+
+        ;
+        state.interaction.player_1.frame += 1;
+        /*
+        let shot_1_character_1 = document.getElementById('shot_1_character_1');
+        shot_1_character_1.style =
+            'height: ' + (state.interaction.player_1.height * (tiny_height / 8)) + 'px;' +
+            'width: ' + (state.interaction.player_1.width * (tiny_width / 8)) + 'px;' +
+            'bottom: ' + (state.interaction.player_1.clientY * (tiny_height / 8)) + 'px;' +
+            'left: ' + (state.interaction.player_1.clientX * (tiny_width / 8)) + 'px;';
+            */
+      }
+
+      ;
+
+      if (document.getElementById('shot_1_character_2') != null) {
+        if (state.interaction.player_1.stance == 0) {
+          if (state.interaction.player_1.angle == 0) {
+            document.getElementById('shot_1_character_2').classList = ' width_100 height_100 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
+          }
+
+          ;
+
+          if (state.interaction.player_1.angle == 1) {
+            document.getElementById('shot_1_character_2').classList = ' width_100 height_100 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
+          }
+
+          ;
+        }
+
+        ;
+
+        if (state.interaction.player_1.frame == 4) {
+          state.interaction.player_1.frame = 0;
+        }
+
+        ;
+        state.interaction.player_1.frame += 1;
+        /*
+        let shot_1_character_2 = document.getElementById('shot_1_character_2');
+        shot_1_character_2.style =
+            'height: ' + (state.interaction.player_1.height * (tiny_height / 8)) + 'px;' +
+            'width: ' + (state.interaction.player_1.width * (tiny_width / 8)) + 'px;' +
+            'bottom: ' + (state.interaction.player_1.clientY * (tiny_height / 8)) + 'px;' +
+            'left: ' + (state.interaction.player_1.clientX * (tiny_width / 8)) + 'px;';
+        */
+      }
+
+      ;
+
+      if (document.getElementById('facer_buttons') != null) {
+        if (state.interaction.player_1.stance == 0) {
+          if (state.interaction.player_1.angle == 0) {
+            document.getElementById('facer_buttons').classList = ' width_50 height_50 top_0 right_0 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
+          }
+
+          ;
+
+          if (state.interaction.player_1.angle == 1) {
+            document.getElementById('facer_buttons').classList = ' width_50 height_50 top_0 right_0 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
+          }
+
+          ;
+        }
+
+        ;
+
+        if (state.interaction.player_1.frame == 4) {
+          state.interaction.player_1.frame = 0;
+        }
+
+        ;
+        state.interaction.player_1.frame += 1;
+      }
+
+      ;
+
+      if (document.getElementById('facer_1') != null) {
+        if (state.interaction.player_1.stance == 0) {
+          if (state.interaction.player_1.angle == 0) {
+            document.getElementById('facer_1').classList = ' width_50 height_50 top_0 right_0 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
+          }
+
+          ;
+
+          if (state.interaction.player_1.angle == 1) {
+            document.getElementById('facer_1').classList = ' width_50 height_50 top_0 right_0 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
+          }
+
+          ;
+        }
+
+        ;
+
+        if (state.interaction.player_1.frame == 4) {
+          state.interaction.player_1.frame = 0;
+        }
+
+        ;
+        state.interaction.player_1.frame += 1;
+      }
+
+      ;
+
+      if (document.getElementById('facer_2') != null) {
+        if (state.interaction.player_1.stance == 0) {
+          if (state.interaction.player_1.angle == 0) {
+            document.getElementById('facer_2').classList = ' width_50 height_50 top_0 left_0 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
+          }
+
+          ;
+
+          if (state.interaction.player_1.angle == 1) {
+            document.getElementById('facer_2').classList = ' width_50 height_50 top_0 left_0 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
           }
 
           ;
@@ -2413,16 +2586,8 @@ var handle_if_AUTH = function handle_if_AUTH() {
     var play = setInterval(function () {
       if (interval == 0) {
         if (document.getElementById('shots') != null) {
-          var shots = document.getElementById('shots');
-          shots.innerHTML = "";
-          var element = document.createElement('div');
-          element.setAttribute("id", "shot_1");
-          element.classList = "width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute";
-          element.innerHTML = "\n                            <div class=\"width_50 height_50 gui_logo_type_1 top_0 right_0 margin_auto position_absolute\"></div>\n                            <div class=\"width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute\"></div>\n                            <div class=\"width_100 height_50 bottom_0 left_0 margin_auto position_absolute\">\n                                <div class=\"width_50 height_50 top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n                            </div>\n                        ";
-          element.addEventListener("click", function (event) {
-            alert('yup auth 1');
-          });
-          document.getElementById('shots').appendChild(element);
+          alert('shot_at_animation_begin');
+          shot_at_animation_begin();
         }
 
         ;
@@ -2432,22 +2597,8 @@ var handle_if_AUTH = function handle_if_AUTH() {
 
       if (interval == 24 * 1) {
         if (document.getElementById('shots') != null) {
-          var _shots3 = document.getElementById('shots');
-
-          _shots3.innerHTML = "";
-
-          var _element3 = document.createElement('div');
-
-          _element3.setAttribute("id", "shot_1");
-
-          _element3.classList = "width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute";
-          _element3.innerHTML = "\n                            <div class=\"width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute\"></div>\n                            <div class=\"width_50 height_50 gui_character_face_left_shadow_1 top_0 left_0 margin_auto position_absolute\"></div>\n                            <div class=\"width_100 height_50 bottom_0 left_0 margin_auto position_absolute\">\n                                <div class=\"width_50 height_50 top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n                            </div>\n                        ";
-
-          _element3.addEventListener("click", function (event) {
-            handle_if_AUTH_checked_CLICK_SCENE_1();
-          });
-
-          document.getElementById('shots').appendChild(_element3);
+          alert('click to go onto: handle_if_AUTH_checked_CLICK_SCENE_1');
+          shot_to_scene_1();
         }
 
         ;
@@ -3597,7 +3748,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53043" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54416" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

@@ -28,6 +28,10 @@
             handle_if_AUTH_checked_CLICK_SCENE_1 (clickable)
 
     Still has to:
+        correct looping animation assets so no player_1 overlapping
+        - refreash after sign in/out/register exc.
+        - routes?!
+        - easy asset change
         - after post/user made
         - Events
         - Modals
@@ -36,8 +40,18 @@
         - sorts
         - filter types
         - card views
+            - is_Mobile vs isDesktop
+        - home page/route vs post vs users
         - image upload
         - signed in/out ui
+
+        - animation of assets on 24fps loop handle_if_AUTH_checked_ANIMATION_BEGIN
+            player_1
+            gui_stage_tv
+            gui_stage_lights
+            mark
+            facer
+            logo
 
 5. Scene (interval controlled transition)
 
@@ -1120,35 +1134,16 @@ let handle_time = () => {
 };
 
 let handle_if_AUTH_checked_CLICK_SCENE_1 = () => {
-
+    alert('handle_if_AUTH_checked_CLICK_SCENE_1');
     // 24/fps loop
     (() => {
         let interval = 0;
         let play = setInterval(
             () => {
                 if ( interval == 0) {
-                
+                    
                     if (document.getElementById('shots') != null) {
-                        let shots = document.getElementById('shots');
-                        shots.innerHTML = ``
-
-                        let element = document.createElement('div');
-
-                        element.setAttribute("id", `shot_1`);
-                        element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-                        element.innerHTML = `
-                            <div class="width_100 height_100 top_0 right_0 bottom_0 left_0 margin_auto position_absolute">
-                                <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-                                <div class="width_50 height_50 gui_logo_type_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-                            </div>
-                        `
-                        element.addEventListener("click", function(event) {
-                            alert('shot_1 yup');
-                        });
-
-                        document.getElementById('shots').appendChild(
-                            element
-                        );
+                        shot_start_of_authing();
 
                     };
 
@@ -1156,30 +1151,11 @@ let handle_if_AUTH_checked_CLICK_SCENE_1 = () => {
                 
                 if (interval == 24 * 1) {
 
+                    // the final shot of opening scene
                     if (document.getElementById('shots') != null) {
-                        let shots = document.getElementById('shots');
-                        shots.innerHTML = ``
-
-                        let element = document.createElement('div');
-
-                        element.setAttribute("id", `shot_1`);
-                        element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-                        element.innerHTML = `
-                            <div id="facer" class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute"></div>
-                            <div class="width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute"></div>
-                            <div class="width_100 height_50 bottom_0 left_0 margin_auto position_absolute">
-                                <div class="width_50 height_50 gui_buttons top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-                            </div>
-                        `
-                        element.addEventListener("click", function(event) {
-                            handle_if_AUTH_checked_CLICK_SCENE_1();
-                        });
-
-                        document.getElementById('shots').appendChild(
-                            element
-                        );
-
+                        shot_end_of_authing();
                     };
+
                     clearInterval(play)
                 };
 
@@ -1192,37 +1168,170 @@ let handle_if_AUTH_checked_CLICK_SCENE_1 = () => {
     })();
 };
 
+
+let shot_at_animation_begin = () => {
+    
+    let shots = document.getElementById('shots');
+    shots.innerHTML = ``
+
+    let element = document.createElement('div');
+
+    element.setAttribute("id", `shot_1`);
+    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
+    element.innerHTML = `
+        <div class="width_50 height_50 gui_logo_type_1 top_0 right_0 margin_auto position_absolute"></div>
+        <div class="width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute"></div>
+        <div class="width_100 height_50 bottom_0 left_0 margin_auto position_absolute">
+            <div class="width_50 height_50 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
+        </div>
+    `
+
+    document.getElementById('shots').appendChild(
+        element
+    );
+}
+
+let shot_to_scene_1 = () => {
+
+    let shots = document.getElementById('shots');
+    shots.innerHTML = ``
+
+    let element = document.createElement('div');
+
+    element.setAttribute("id", `shot_1`);
+    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
+    element.innerHTML = `
+        <div id="shot_1_character_1" class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute"></div>
+        <div id="shot_1_character_2" class="width_50 height_50 gui_character_face_left_shadow_1 top_0 left_0 margin_auto position_absolute"></div>
+        <div class="width_100 height_50 bottom_0 left_0 margin_auto position_absolute">
+            <div class="width_50 height_50 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
+        </div>
+    `
+    element.addEventListener("click", function(event) {
+        handle_if_AUTH_checked_CLICK_SCENE_1();
+    });
+
+    document.getElementById('shots').appendChild(
+        element
+    );
+}
+
+let shot_start_of_authing = () => {
+
+    let shots = document.getElementById('shots');
+    shots.innerHTML = ``
+
+    let element = document.createElement('div');
+
+    element.setAttribute("id", `shot_1`);
+    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
+    element.innerHTML = `
+        <div class="width_100 height_100 top_0 right_0 bottom_0 left_0 margin_auto position_absolute">
+            <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
+            <div class="width_50 height_50 gui_logo_type_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
+        </div>
+    `
+
+    document.getElementById('shots').appendChild(
+        element
+    );
+}
+
+let shot_end_of_authing = () => {
+    
+    let shots = document.getElementById('shots');
+    shots.innerHTML = ``
+
+    let element = document.createElement('div');
+
+    element.setAttribute("id", `shot_1`);
+    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
+    element.innerHTML = `
+        <div id="facer_1" class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute"></div>
+        <div id="facer_2" class="width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute"></div>
+        <div class="width_100 height_50 bottom_0 left_0 margin_auto position_absolute">
+            <div id="facer_buttons" class="width_50 height_50 gui_buttons top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
+        </div>
+    `
+
+
+    document.getElementById('shots').appendChild(
+        element
+    );
+
+
+    // facer_buttons
+    
+    if (document.getElementById('facer_buttons') != null) {
+        document.getElementById('facer_buttons').addEventListener("click", function(event) {
+            alert('yup facer_buttons');
+        });
+    }
+}
+
+let shot_loading = () => {
+    let shots = document.getElementById('shots');
+    shots.innerHTML = ``
+
+    let element = document.createElement('div');
+
+    element.setAttribute("id", `shot_1`);
+    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
+    element.innerHTML = `
+        <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute"></div>
+        <div class="width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute"></div>
+        <div class="width_100 height_50 bottom_0 left_0 margin_auto position_absolute">
+            <div class="width_50 height_50 gui_text_loading top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
+        </div>
+    `
+    element.addEventListener("click", function(event) {
+        alert('shot_1 yup');
+    });
+
+    document.getElementById('shots').appendChild(
+        element
+    );
+}
+
+let shot_loaded = () => {
+    let shots = document.getElementById('shots');
+    shots.innerHTML = ``
+
+    let element = document.createElement('div');
+
+    element.setAttribute("id", `shot_1`);
+    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
+    element.innerHTML = `
+        
+        <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute"></div>
+        <div class="width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute"></div>
+        <div class="width_100 height_50 bottom_0 left_0 margin_auto position_absolute">
+            <div class="width_50 height_50 gui_text_loaded top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
+        </div>
+
+    `
+    element.addEventListener("click", function(event) {
+        alert('shot_1 yup');
+    });
+
+    document.getElementById('shots').appendChild(
+        element
+    );
+}
+
 let handle_play_DOMContentLoaded = () => {
 
     // 24/fps loop
+    let fps = 24;
+    let loading_buffer = .5;
     (() => {
         let interval = 0;
         let play = setInterval(
             () => {
-                if ( interval < 24) {
+                if ( interval < (fps)) {
                 
                     if (document.getElementById('shots') != null) {
-                        let shots = document.getElementById('shots');
-                        shots.innerHTML = ``
-
-                        let element = document.createElement('div');
-
-                        element.setAttribute("id", `shot_1`);
-                        element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-                        element.innerHTML = `
-                            <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute"></div>
-                            <div class="width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute"></div>
-                            <div class="width_100 height_50 bottom_0 left_0 margin_auto position_absolute">
-                                <div class="width_50 height_50 gui_text_loading top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-                            </div>
-                        `
-                        element.addEventListener("click", function(event) {
-                            alert('shot_1 yup');
-                        });
-
-                        document.getElementById('shots').appendChild(
-                            element
-                        );
+                        shot_loading();
 
                     };
 
@@ -1255,32 +1364,10 @@ let handle_play_DOMContentLoaded = () => {
 
                 };
                 
-                if ( interval == (24*.5) ) {
+                if ( interval == ((fps)*(loading_buffer)) ) {
                 
                     if (document.getElementById('shots') != null) {
-                        let shots = document.getElementById('shots');
-                        shots.innerHTML = ``
-
-                        let element = document.createElement('div');
-
-                        element.setAttribute("id", `shot_1`);
-                        element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-                        element.innerHTML = `
-                            
-                            <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute"></div>
-                            <div class="width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute"></div>
-                            <div class="width_100 height_50 bottom_0 left_0 margin_auto position_absolute">
-                                <div class="width_50 height_50 gui_text_loaded top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-                            </div>
-
-                        `
-                        element.addEventListener("click", function(event) {
-                            alert('shot_1 yup');
-                        });
-
-                        document.getElementById('shots').appendChild(
-                            element
-                        );
+                        shot_loaded();
 
                     };
                     clearInterval(play)
@@ -1487,16 +1574,120 @@ let handle_if_AUTH_checked_ANIMATION_BEGIN = () => {
                         'left: ' + (state.interaction.player_1.clientX * (tiny_width / 8)) + 'px;';
                 };
 
-                if (document.getElementById('facer') != null) {
+                if (document.getElementById('shot_1_character_1') != null) {
 
                     if (state.interaction.player_1.stance == 0) {
                         if (state.interaction.player_1.angle == 0) {
-                        document.getElementById('facer').classList = (' width_50 height_50 top_0 right_0 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+                        document.getElementById('shot_1_character_1').classList = (' width_100 height_100 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
                         
                         };
                    
                         if (state.interaction.player_1.angle == 1) {
-                        document.getElementById('facer').classList = (' width_50 height_50 top_0 right_0 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+                        document.getElementById('shot_1_character_1').classList = (' width_100 height_100 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+                        
+                        };
+                    };
+    
+                    if (state.interaction.player_1.frame == 4) {
+                        state.interaction.player_1.frame = 0;
+                    };
+                
+                    state.interaction.player_1.frame += 1;
+
+                    /*
+                    let shot_1_character_1 = document.getElementById('shot_1_character_1');
+                    shot_1_character_1.style =
+                        'height: ' + (state.interaction.player_1.height * (tiny_height / 8)) + 'px;' +
+                        'width: ' + (state.interaction.player_1.width * (tiny_width / 8)) + 'px;' +
+                        'bottom: ' + (state.interaction.player_1.clientY * (tiny_height / 8)) + 'px;' +
+                        'left: ' + (state.interaction.player_1.clientX * (tiny_width / 8)) + 'px;';
+                        */
+                };
+
+                if (document.getElementById('shot_1_character_2') != null) {
+
+                    if (state.interaction.player_1.stance == 0) {
+                        if (state.interaction.player_1.angle == 0) {
+                        document.getElementById('shot_1_character_2').classList = (' width_100 height_100 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+                        
+                        };
+                   
+                        if (state.interaction.player_1.angle == 1) {
+                        document.getElementById('shot_1_character_2').classList = (' width_100 height_100 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+                        
+                        };
+                    };
+    
+                    if (state.interaction.player_1.frame == 4) {
+                        state.interaction.player_1.frame = 0;
+                    };
+                
+                    state.interaction.player_1.frame += 1;
+
+                    /*
+                    let shot_1_character_2 = document.getElementById('shot_1_character_2');
+                    shot_1_character_2.style =
+                        'height: ' + (state.interaction.player_1.height * (tiny_height / 8)) + 'px;' +
+                        'width: ' + (state.interaction.player_1.width * (tiny_width / 8)) + 'px;' +
+                        'bottom: ' + (state.interaction.player_1.clientY * (tiny_height / 8)) + 'px;' +
+                        'left: ' + (state.interaction.player_1.clientX * (tiny_width / 8)) + 'px;';
+                    */
+                };
+
+                if (document.getElementById('facer_buttons') != null) {
+
+                    if (state.interaction.player_1.stance == 0) {
+                        if (state.interaction.player_1.angle == 0) {
+                        document.getElementById('facer_buttons').classList = (' width_50 height_50 top_0 right_0 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+                        
+                        };
+                   
+                        if (state.interaction.player_1.angle == 1) {
+                        document.getElementById('facer_buttons').classList = (' width_50 height_50 top_0 right_0 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+                        
+                        };
+                    };
+    
+                    if (state.interaction.player_1.frame == 4) {
+                        state.interaction.player_1.frame = 0;
+                    };
+                
+                    state.interaction.player_1.frame += 1;
+
+                };
+
+                if (document.getElementById('facer_1') != null) {
+
+                    if (state.interaction.player_1.stance == 0) {
+                        if (state.interaction.player_1.angle == 0) {
+                        document.getElementById('facer_1').classList = (' width_50 height_50 top_0 right_0 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+                        
+                        };
+                   
+                        if (state.interaction.player_1.angle == 1) {
+                        document.getElementById('facer_1').classList = (' width_50 height_50 top_0 right_0 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+                        
+                        };
+                    };
+    
+                    if (state.interaction.player_1.frame == 4) {
+                        state.interaction.player_1.frame = 0;
+                    };
+                
+                    state.interaction.player_1.frame += 1;
+
+                };
+
+                if (document.getElementById('facer_2') != null) {
+
+                    if (state.interaction.player_1.stance == 0) {
+                        if (state.interaction.player_1.angle == 0) {
+                        document.getElementById('facer_2').classList = (' width_50 height_50 top_0 left_0 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+                        
+                        };
+                   
+                        if (state.interaction.player_1.angle == 1) {
+                        document.getElementById('facer_2').classList = (' width_50 height_50 top_0 left_0 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
                         
                         };
                     };
@@ -1556,56 +1747,16 @@ let handle_if_AUTH = () => {
                 if ( interval == 0) {
                 
                     if (document.getElementById('shots') != null) {
-                        let shots = document.getElementById('shots');
-                        shots.innerHTML = ``
-
-                        let element = document.createElement('div');
-
-                        element.setAttribute("id", `shot_1`);
-                        element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-                        element.innerHTML = `
-                            <div class="width_50 height_50 gui_logo_type_1 top_0 right_0 margin_auto position_absolute"></div>
-                            <div class="width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute"></div>
-                            <div class="width_100 height_50 bottom_0 left_0 margin_auto position_absolute">
-                                <div class="width_50 height_50 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-                            </div>
-                        `
-                        element.addEventListener("click", function(event) {
-                            alert('yup auth 1');
-                        });
-
-                        document.getElementById('shots').appendChild(
-                            element
-                        );
-
+                        alert('shot_at_animation_begin')
+                        shot_at_animation_begin();
                     };
 
                 };
                 
                 if (interval == 24 * 1) {
-
                     if (document.getElementById('shots') != null) {
-                        let shots = document.getElementById('shots');
-                        shots.innerHTML = ``
-
-                        let element = document.createElement('div');
-
-                        element.setAttribute("id", `shot_1`);
-                        element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-                        element.innerHTML = `
-                            <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute"></div>
-                            <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 left_0 margin_auto position_absolute"></div>
-                            <div class="width_100 height_50 bottom_0 left_0 margin_auto position_absolute">
-                                <div class="width_50 height_50 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-                            </div>
-                        `
-                        element.addEventListener("click", function(event) {
-                            handle_if_AUTH_checked_CLICK_SCENE_1();
-                        });
-
-                        document.getElementById('shots').appendChild(
-                            element
-                        );
+                        alert('click to go onto: handle_if_AUTH_checked_CLICK_SCENE_1')
+                        shot_to_scene_1();
 
                     };
                     clearInterval(play)
