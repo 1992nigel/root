@@ -116,17 +116,17 @@ auth.onAuthStateChanged(logged_auth_user => {
 });
 
 let state = {
-	
-	data: {
+    
+    data: {
         onload_url: '',
         scene: 0,
         route: 0,
         game: 0,
-		time: 0,
-		onload_time: 0,
-		dark_mode: 0
-	},
-	
+        time: 0,
+        onload_time: 0,
+        dark_mode: 0
+    },
+    
     interaction: {
 
         root: {
@@ -232,6 +232,62 @@ let state = {
                 growth: false,
                 shrink: false,
                 walking: false,
+                running: false,
+                stunned: false,
+            }
+        },
+
+        coming_soon: {
+            frame: 0,
+            stance: 0,
+            angle: 0,
+            transform: false,
+            opacity: false,
+            display: false,
+            clientX: 6,
+            clientY: 0,
+            height: 4,
+            width: 1,
+            idle: {
+                floating: false,
+                sneak: false,
+                standing: true,
+                lean: false,
+                deep_lean: false,
+                squat: false,
+                sitting: false,
+                bend: false,
+                deep_squat: false,
+                crawl: false,
+                prone: false,
+                dead: false,
+            },
+            action: {
+                jumping: false,
+                punching: false,
+                kicking: false,
+                shooting: false,
+                grabing: false,
+                blocking: false,
+            },
+            status: {
+                jumped: false,
+                punched: false,
+                kicked: false,
+                shot: false,
+                grabbed: false,
+                blocked: false,
+            },
+            weapon: {
+                hands: false,
+                paint: false,
+                shoes: true,
+                gun: true
+            },
+            cycles: {
+                growth: false,
+                shrink: false,
+                walking: true,
                 running: false,
                 stunned: false,
             }
@@ -623,7 +679,7 @@ let state = {
         },
     },
 
-	ux: {
+    ux: {
         platform: {
             is_Desktop: (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent))),
             is_Mobile: ((/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)))
@@ -666,81 +722,81 @@ let state = {
 
     modal: {
 
-	    gui: {
+        gui: {
 
-	        top: {
-	            transform: false,
-	            opacity:false,
-	            display: false,
-	            xaxis: 0,
-	            yaxis: 0,
-	            height: 0,
-	            width: 0
-	        },
-	        top_left: {
-	            transform: false,
-	            opacity:false,
-	            display: false,
-	            xaxis: 0,
-	            yaxis: 0,
-	            height: 0,
-	            width: 0
-	        },
-	        top_right: {
-	            transform: false,
-	            opacity:false,
-	            display: false,
-	            xaxis: 0,
-	            yaxis: 0,
-	            height: 0,
-	            width: 0
-	        },
-	        bottom: {
-	            transform: false,
-	            opacity: false,
-	            display: false,
-	            xaxis: 0,
-	            yaxis: 0,
-	            height: 0,
-	            width: 0
-	        },
-	        bottom_left: {
-	            transform: false,
-	            opacity: false,
-	            display: false,
-	            xaxis: 0,
-	            yaxis: 0,
-	            height: 0,
-	            width: 0
-	        },
-	        bottom_right: {
-	            transform: false,
-	            opacity: false,
-	            display: false,
-	            xaxis: 0,
-	            yaxis: 0,
-	            height: 0,
-	            width: 0
-	        },
-	        left: {
-	            transform: false,
-	            opacity:false,
-	            display: false,
-	            xaxis: 0,
-	            yaxis: 0,
-	            height: 0,
-	            width: 0
-	        },
-	        right: {
-	            transform: false,
-	            opacity:false,
-	            display: false,
-	            xaxis: 0,
-	            yaxis: 0,
-	            height: 0,
-	            width: 0
-	        }
-	    },
+            top: {
+                transform: false,
+                opacity:false,
+                display: false,
+                xaxis: 0,
+                yaxis: 0,
+                height: 0,
+                width: 0
+            },
+            top_left: {
+                transform: false,
+                opacity:false,
+                display: false,
+                xaxis: 0,
+                yaxis: 0,
+                height: 0,
+                width: 0
+            },
+            top_right: {
+                transform: false,
+                opacity:false,
+                display: false,
+                xaxis: 0,
+                yaxis: 0,
+                height: 0,
+                width: 0
+            },
+            bottom: {
+                transform: false,
+                opacity: false,
+                display: false,
+                xaxis: 0,
+                yaxis: 0,
+                height: 0,
+                width: 0
+            },
+            bottom_left: {
+                transform: false,
+                opacity: false,
+                display: false,
+                xaxis: 0,
+                yaxis: 0,
+                height: 0,
+                width: 0
+            },
+            bottom_right: {
+                transform: false,
+                opacity: false,
+                display: false,
+                xaxis: 0,
+                yaxis: 0,
+                height: 0,
+                width: 0
+            },
+            left: {
+                transform: false,
+                opacity:false,
+                display: false,
+                xaxis: 0,
+                yaxis: 0,
+                height: 0,
+                width: 0
+            },
+            right: {
+                transform: false,
+                opacity:false,
+                display: false,
+                xaxis: 0,
+                yaxis: 0,
+                height: 0,
+                width: 0
+            }
+        },
         pip: {
             top: {
 
@@ -1175,12 +1231,12 @@ let shot_at_animation_begin = () => {
     shots.innerHTML = ``
 
     let element = document.createElement('div');
-
+    // the double scene
     element.setAttribute("id", `shot_1`);
     element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
     element.innerHTML = `
-        <div class="width_50 height_50 gui_logo_type_1 top_0 right_0 margin_auto position_absolute"></div>
-        <div class="width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute"></div>
+        <div class="width_50 height_50 gui_logo_coming_soon_type_1 top_0 left_0 right_0 bottom_0 margin_auto position_absolute"></div>
+        
         <div class="width_100 height_50 bottom_0 left_0 margin_auto position_absolute">
             <div class="width_50 height_50 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
         </div>
@@ -1201,11 +1257,7 @@ let shot_to_scene_1 = () => {
     element.setAttribute("id", `shot_1`);
     element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
     element.innerHTML = `
-        <div id="shot_1_character_1" class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute"></div>
-        <div id="shot_1_character_2" class="width_50 height_50 gui_character_face_left_shadow_1 top_0 left_0 margin_auto position_absolute"></div>
-        <div class="width_100 height_50 bottom_0 left_0 margin_auto position_absolute">
-            <div class="width_50 height_50 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-        </div>
+        <div id="shot_1_character_1" class="width_100 height_100 top_0 right_0 margin_auto position_absolute"></div>
     `
     element.addEventListener("click", function(event) {
         handle_if_AUTH_checked_CLICK_SCENE_1();
@@ -1227,8 +1279,6 @@ let shot_start_of_authing = () => {
     element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
     element.innerHTML = `
         <div class="width_100 height_100 top_0 right_0 bottom_0 left_0 margin_auto position_absolute">
-            <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-            <div class="width_50 height_50 gui_logo_type_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
         </div>
     `
 
@@ -1278,8 +1328,6 @@ let shot_loading = () => {
     element.setAttribute("id", `shot_1`);
     element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
     element.innerHTML = `
-        <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute"></div>
-        <div class="width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute"></div>
         <div class="width_100 height_50 bottom_0 left_0 margin_auto position_absolute">
             <div class="width_50 height_50 gui_text_loading top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
         </div>
@@ -1302,9 +1350,6 @@ let shot_loaded = () => {
     element.setAttribute("id", `shot_1`);
     element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
     element.innerHTML = `
-        
-        <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute"></div>
-        <div class="width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute"></div>
         <div class="width_100 height_50 bottom_0 left_0 margin_auto position_absolute">
             <div class="width_50 height_50 gui_text_loaded top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
         </div>
@@ -1352,6 +1397,7 @@ let handle_play_DOMContentLoaded = () => {
                         `
                     };
 
+                    /*
                     if (document.getElementById('interactions') != null) {
                         let interactions = document.getElementById('interactions');
                         interactions.innerHTML = `
@@ -1361,7 +1407,7 @@ let handle_play_DOMContentLoaded = () => {
                             <div id="interactions_button_4" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_interaction_text_press width_100 height_100 float_left"></div></div>
                         `
                     };
-
+                    */
                 };
                 
                 if ( interval == ((fps)*(loading_buffer)) ) {
@@ -1395,6 +1441,7 @@ let handle_if_AUTH_checked_ANIMATION_BEGIN = () => {
 
                 };
 
+                /*
                 // start loops
                 if (document.getElementById('player_1') != null) {
 
@@ -1574,25 +1621,19 @@ let handle_if_AUTH_checked_ANIMATION_BEGIN = () => {
                         'left: ' + (state.interaction.player_1.clientX * (tiny_width / 8)) + 'px;';
                 };
 
+                */
+
                 if (document.getElementById('shot_1_character_1') != null) {
 
-                    if (state.interaction.player_1.stance == 0) {
-                        if (state.interaction.player_1.angle == 0) {
-                        document.getElementById('shot_1_character_1').classList = (' width_100 height_100 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
-                        
-                        };
-                   
-                        if (state.interaction.player_1.angle == 1) {
-                        document.getElementById('shot_1_character_1').classList = (' width_100 height_100 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
-                        
-                        };
+                    if (state.interaction.coming_soon.stance == 0) {
+                        document.getElementById('shot_1_character_1').classList = (' width_50 height_50 gui_logo_type_1 top_0 left_0 right_0 bottom_0 position_absolute margin_auto ');
                     };
     
-                    if (state.interaction.player_1.frame == 4) {
-                        state.interaction.player_1.frame = 0;
+                    if (state.interaction.coming_soon.frame == 4) {
+                        state.interaction.coming_soon.frame = 0;
                     };
                 
-                    state.interaction.player_1.frame += 1;
+                    state.interaction.coming_soon.frame += 1;
 
                     /*
                     let shot_1_character_1 = document.getElementById('shot_1_character_1');
@@ -1700,6 +1741,7 @@ let handle_if_AUTH_checked_ANIMATION_BEGIN = () => {
 
                 };
 
+                /*
                 if (document.getElementById('logo') != null) {
 
                     if (state.interaction.player_1.stance == 0) {
@@ -1727,6 +1769,7 @@ let handle_if_AUTH_checked_ANIMATION_BEGIN = () => {
                         'bottom: ' + (state.interaction.player_1.clientY * (tiny_height / 8)) + 'px;' +
                         'left: ' + (state.interaction.player_1.clientX * (tiny_width / 8)) + 'px;';
                 };
+                */
 
                 state.motion.frame += 1;
                 //console.log('state.motion.frame: ' + state.motion.frame)
@@ -1747,7 +1790,7 @@ let handle_if_AUTH = () => {
                 if ( interval == 0) {
                 
                     if (document.getElementById('shots') != null) {
-                        alert('shot_at_animation_begin')
+                        //alert('shot_at_animation_begin')
                         shot_at_animation_begin();
                     };
 
@@ -1755,7 +1798,7 @@ let handle_if_AUTH = () => {
                 
                 if (interval == 24 * 1) {
                     if (document.getElementById('shots') != null) {
-                        alert('click to go onto: handle_if_AUTH_checked_CLICK_SCENE_1')
+                        //alert('click to go onto: handle_if_AUTH_checked_CLICK_SCENE_1')
                         shot_to_scene_1();
 
                     };
@@ -1877,116 +1920,118 @@ let handle_firebase_events = () => {
         });
     };
 
-    // sign up / auth / create user
-    let signup_form = document.getElementById('signup-form');
-    let signup_email = document.getElementById('signup-email');
-    let signup_password = document.getElementById('signup-password');
-    let signup_submit = document.getElementById('signup_submit');
+    if (document.getElementById('element_input_filter') != null) {
+        // sign up / auth / create user
+        let signup_form = document.getElementById('signup-form');
+        let signup_email = document.getElementById('signup-email');
+        let signup_password = document.getElementById('signup-password');
+        let signup_submit = document.getElementById('signup_submit');
 
-    signup_submit.addEventListener('click', (event) => {
-        event.preventDefault();
-        auth.createUserWithEmailAndPassword(signup_email.value, signup_password.value).then(cred => {
-            db_create_user(cred);        
+        signup_submit.addEventListener('click', (event) => {
+            event.preventDefault();
+            auth.createUserWithEmailAndPassword(signup_email.value, signup_password.value).then(cred => {
+                db_create_user(cred);        
+            });
         });
-    });
 
-    // sign in / auth
-    let signin_form = document.getElementById('signin-form');
-    let signin_email = document.getElementById('signin-email');
-    let signin_password = document.getElementById('signin-password');
-    let signin = document.getElementById('signin');
+        // sign in / auth
+        let signin_form = document.getElementById('signin-form');
+        let signin_email = document.getElementById('signin-email');
+        let signin_password = document.getElementById('signin-password');
+        let signin = document.getElementById('signin');
 
-    signin.addEventListener('click', (event) => {
-        event.preventDefault();
-        auth.signInWithEmailAndPassword(signin_email.value, signin_password.value).then(cred => {
-            signin_email.value = ``;
-            signin_password.value = ``;
+        signin.addEventListener('click', (event) => {
+            event.preventDefault();
+            auth.signInWithEmailAndPassword(signin_email.value, signin_password.value).then(cred => {
+                signin_email.value = ``;
+                signin_password.value = ``;
+            });
         });
-    });
 
-    // upload
-    let uploader = document.getElementById('uploader');
-    let upload_progress = document.getElementById('upload_progress');
-    let fileButton = document.getElementById('fileButton');
-    fileButton.addEventListener('change', (event) => {
+        // upload
+        let uploader = document.getElementById('uploader');
+        let upload_progress = document.getElementById('upload_progress');
+        let fileButton = document.getElementById('fileButton');
+        fileButton.addEventListener('change', (event) => {
 
-            // assign metadata
-            let metadata = {
-                   customMetadata: {
-                'location': 'Yosemite, CA, USA',
-                'activity': 'Hiking'
-                  }
-            };
+                // assign metadata
+                let metadata = {
+                       customMetadata: {
+                    'location': 'Yosemite, CA, USA',
+                    'activity': 'Hiking'
+                      }
+                };
 
-            // get file
-            let file = event.target.files[0];
+                // get file
+                let file = event.target.files[0];
 
-            // create a storage ref
-            let storageRef = firebase.storage().ref('sweet_gifs/' + file.name);
+                // create a storage ref
+                let storageRef = firebase.storage().ref('sweet_gifs/' + file.name);
 
-            // upload file
-            let task = storageRef.put(file, metadata);
+                // upload file
+                let task = storageRef.put(file, metadata);
 
-            // upload progress bar
-            task.on('state_changed',
-            function progress(snapshot){
-                let progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                console.log('Upload is ' + progress + '% done');
+                // upload progress bar
+                task.on('state_changed',
+                function progress(snapshot){
+                    let progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                    console.log('Upload is ' + progress + '% done');
 
-                uploader.value = progress;
-                upload_progress.innerHTML = progress;
-            },
-            
-            function error(err) {
+                    uploader.value = progress;
+                    upload_progress.innerHTML = progress;
+                },
+                
+                function error(err) {
 
-            },
-            
-            function complete(snapshot) {
+                },
+                
+                function complete(snapshot) {
 
-                setTimeout(function () {
-                    uploader.value = 0;
-                    upload_progress.innerHTML = ``;
-                }, 2000);
-                // Handle successful uploads on complete
-                  // For instance, get the download URL: https://firebasestorage.googleapis.com/...
-                  task.snapshot.ref.getDownloadURL().then(function(downloadURL) {
-                    console.log('File available at', downloadURL);
-                    upload_details = downloadURL;
-                    document.getElementById('upload_details').innerHTML = `upload complete, available at: ${upload_details}`;
-                    document.getElementById('upload_details').innerHTML += `
-                    <div id="uploaded_image" style="background-image: url(${(upload_details)})">
-                    </div>`;
-                  });
-            }
-        );
+                    setTimeout(function () {
+                        uploader.value = 0;
+                        upload_progress.innerHTML = ``;
+                    }, 2000);
+                    // Handle successful uploads on complete
+                      // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+                      task.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+                        console.log('File available at', downloadURL);
+                        upload_details = downloadURL;
+                        document.getElementById('upload_details').innerHTML = `upload complete, available at: ${upload_details}`;
+                        document.getElementById('upload_details').innerHTML += `
+                        <div id="uploaded_image" style="background-image: url(${(upload_details)})">
+                        </div>`;
+                      });
+                }
+            );
 
-    });
-
-    // signout / un-auth
-    let signout = document.getElementById('signout');
-
-    signout.addEventListener('click', (event) => {
-        event.preventDefault();
-        auth.signOut().then(() => {
-            console.log('logged out')
         });
-    });
 
-    document.getElementById('edit_button').addEventListener('click', (event) => {
-        event.preventDefault();
-        db_update_user("users", stored_auth_user_cred.uid);
-    });
+        // signout / un-auth
+        let signout = document.getElementById('signout');
 
-    document.getElementById('delete_button').addEventListener('click', (event) => {
-        event.preventDefault();
-        db_delete_user("users", stored_auth_user_cred.uid);
-    });
+        signout.addEventListener('click', (event) => {
+            event.preventDefault();
+            auth.signOut().then(() => {
+                console.log('logged out')
+            });
+        });
+
+        document.getElementById('edit_button').addEventListener('click', (event) => {
+            event.preventDefault();
+            db_update_user("users", stored_auth_user_cred.uid);
+        });
+
+        document.getElementById('delete_button').addEventListener('click', (event) => {
+            event.preventDefault();
+            db_delete_user("users", stored_auth_user_cred.uid);
+        });
 
 
-    document.getElementById('create_button').addEventListener('click', (event) => {
-        event.preventDefault();
-        db_create_post("users");
-    });
+        document.getElementById('create_button').addEventListener('click', (event) => {
+            event.preventDefault();
+            db_create_post("users");
+        });
+    };
 };
 
 let valid_user = {};

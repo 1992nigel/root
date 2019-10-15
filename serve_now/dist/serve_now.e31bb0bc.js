@@ -176,7 +176,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./assets/gui/gui_text_loaded.svg":[["gui_text_loaded.60900b05.svg","assets/gui/gui_text_loaded.svg"],"assets/gui/gui_text_loaded.svg"],"./assets/gui/gui_text_loading.svg":[["gui_text_loading.4b760cbc.svg","assets/gui/gui_text_loading.svg"],"assets/gui/gui_text_loading.svg"],"./assets/gui/logo/type/gui_logo_type.svg":[["gui_logo_type.dada253c.svg","assets/gui/logo/type/gui_logo_type.svg"],"assets/gui/logo/type/gui_logo_type.svg"],"./assets/gui/logo/type/gui_logo_type_1.svg":[["gui_logo_type_1.cb0590d0.svg","assets/gui/logo/type/gui_logo_type_1.svg"],"assets/gui/logo/type/gui_logo_type_1.svg"],"./assets/gui/logo/type/gui_logo_type_2.svg":[["gui_logo_type_2.2ab02c6a.svg","assets/gui/logo/type/gui_logo_type_2.svg"],"assets/gui/logo/type/gui_logo_type_2.svg"],"./assets/gui/logo/type/gui_logo_type_3.svg":[["gui_logo_type_3.1e559c99.svg","assets/gui/logo/type/gui_logo_type_3.svg"],"assets/gui/logo/type/gui_logo_type_3.svg"],"./assets/gui/logo/type/gui_logo_type_4.svg":[["gui_logo_type_4.9febe8f2.svg","assets/gui/logo/type/gui_logo_type_4.svg"],"assets/gui/logo/type/gui_logo_type_4.svg"],"./assets/gui/gui_buttons.svg":[["gui_buttons.e92ced32.svg","assets/gui/gui_buttons.svg"],"assets/gui/gui_buttons.svg"],"./assets/gui/gui_character_face_left.svg":[["gui_character_face_left.e013aa5a.svg","assets/gui/gui_character_face_left.svg"],"assets/gui/gui_character_face_left.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow.svg":[["gui_character_face_left_shadow.43a8ba68.svg","assets/gui/logo/mark/gui_character_face_left_shadow.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow_1.svg":[["gui_character_face_left_shadow_1.b0fb65d9.svg","assets/gui/logo/mark/gui_character_face_left_shadow_1.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow_1.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow_2.svg":[["gui_character_face_left_shadow_2.60859a62.svg","assets/gui/logo/mark/gui_character_face_left_shadow_2.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow_2.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow_3.svg":[["gui_character_face_left_shadow_3.5146f4f5.svg","assets/gui/logo/mark/gui_character_face_left_shadow_3.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow_3.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow_4.svg":[["gui_character_face_left_shadow_4.558674e1.svg","assets/gui/logo/mark/gui_character_face_left_shadow_4.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow_4.svg"],"./assets/gui/gui_interaction_text_press.svg":[["gui_interaction_text_press.63c56e34.svg","assets/gui/gui_interaction_text_press.svg"],"assets/gui/gui_interaction_text_press.svg"],"./assets/gui/gui_link_menu_white.svg":[["gui_link_menu_white.8b15c689.svg","assets/gui/gui_link_menu_white.svg"],"assets/gui/gui_link_menu_white.svg"],"./assets/gui/gui_link_grid_white.svg":[["gui_link_grid_white.58909d32.svg","assets/gui/gui_link_grid_white.svg"],"assets/gui/gui_link_grid_white.svg"],"./assets/gui/gui_link_sign_in_white.svg":[["gui_link_sign_in_white.fc375cc1.svg","assets/gui/gui_link_sign_in_white.svg"],"assets/gui/gui_link_sign_in_white.svg"],"./assets/gui/gui_stage_tv.svg":[["gui_stage_tv.82c915ba.svg","assets/gui/gui_stage_tv.svg"],"assets/gui/gui_stage_tv.svg"],"./assets/gui/gui_stage_lights.svg":[["gui_stage_lights.8ba7e55c.svg","assets/gui/gui_stage_lights.svg"],"assets/gui/gui_stage_lights.svg"],"./assets/gui/gui_character_body_right_8.svg":[["gui_character_body_right_8.6008b897.svg","assets/gui/gui_character_body_right_8.svg"],"assets/gui/gui_character_body_right_8.svg"],"./assets/gui/gui_character_body_right_7.svg":[["gui_character_body_right_7.e008fe94.svg","assets/gui/gui_character_body_right_7.svg"],"assets/gui/gui_character_body_right_7.svg"],"./assets/gui/gui_character_body_right_6.svg":[["gui_character_body_right_6.44953eae.svg","assets/gui/gui_character_body_right_6.svg"],"assets/gui/gui_character_body_right_6.svg"],"./assets/gui/gui_character_body_right_5.svg":[["gui_character_body_right_5.9dcd1061.svg","assets/gui/gui_character_body_right_5.svg"],"assets/gui/gui_character_body_right_5.svg"],"./assets/gui/gui_character_body_right_4.svg":[["gui_character_body_right_4.d8249778.svg","assets/gui/gui_character_body_right_4.svg"],"assets/gui/gui_character_body_right_4.svg"],"./assets/gui/gui_character_body_right_3.svg":[["gui_character_body_right_3.39393cf8.svg","assets/gui/gui_character_body_right_3.svg"],"assets/gui/gui_character_body_right_3.svg"],"./assets/gui/gui_character_body_right_2.svg":[["gui_character_body_right_2.3d940bbe.svg","assets/gui/gui_character_body_right_2.svg"],"assets/gui/gui_character_body_right_2.svg"],"./assets/gui/gui_character_body_right_1.svg":[["gui_character_body_right_1.fe23b40a.svg","assets/gui/gui_character_body_right_1.svg"],"assets/gui/gui_character_body_right_1.svg"],"./assets/fonts/Silkscreen.ttf.woff":[["Silkscreen.ttf.6dec167e.woff","assets/fonts/Silkscreen.ttf.woff"],"assets/fonts/Silkscreen.ttf.woff"],"./assets/fonts/Silkscreen.ttf.svg":[["Silkscreen.ttf.a45ae991.svg","assets/fonts/Silkscreen.ttf.svg"],"assets/fonts/Silkscreen.ttf.svg"],"./assets/fonts/Silkscreen.ttf.eot":[["Silkscreen.ttf.be6987ea.eot","assets/fonts/Silkscreen.ttf.eot"],"assets/fonts/Silkscreen.ttf.eot"],"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"imports/events.js":[function(require,module,exports) {
+},{"./assets/gui/gui_text_loaded.svg":[["gui_text_loaded.60900b05.svg","assets/gui/gui_text_loaded.svg"],"assets/gui/gui_text_loaded.svg"],"./assets/gui/gui_text_loading.svg":[["gui_text_loading.4b760cbc.svg","assets/gui/gui_text_loading.svg"],"assets/gui/gui_text_loading.svg"],"./assets/gui/logo/type/gui_logo_coming_soon_type_1.svg":[["gui_logo_coming_soon_type_1.7285b6c7.svg","assets/gui/logo/type/gui_logo_coming_soon_type_1.svg"],"assets/gui/logo/type/gui_logo_coming_soon_type_1.svg"],"./assets/gui/logo/type/gui_logo_type.svg":[["gui_logo_type.dada253c.svg","assets/gui/logo/type/gui_logo_type.svg"],"assets/gui/logo/type/gui_logo_type.svg"],"./assets/gui/logo/type/gui_logo_type_1.svg":[["gui_logo_type_1.cb0590d0.svg","assets/gui/logo/type/gui_logo_type_1.svg"],"assets/gui/logo/type/gui_logo_type_1.svg"],"./assets/gui/logo/type/gui_logo_type_2.svg":[["gui_logo_type_2.2ab02c6a.svg","assets/gui/logo/type/gui_logo_type_2.svg"],"assets/gui/logo/type/gui_logo_type_2.svg"],"./assets/gui/logo/type/gui_logo_type_3.svg":[["gui_logo_type_3.1e559c99.svg","assets/gui/logo/type/gui_logo_type_3.svg"],"assets/gui/logo/type/gui_logo_type_3.svg"],"./assets/gui/logo/type/gui_logo_type_4.svg":[["gui_logo_type_4.9febe8f2.svg","assets/gui/logo/type/gui_logo_type_4.svg"],"assets/gui/logo/type/gui_logo_type_4.svg"],"./assets/gui/gui_buttons.svg":[["gui_buttons.e92ced32.svg","assets/gui/gui_buttons.svg"],"assets/gui/gui_buttons.svg"],"./assets/gui/gui_character_face_left.svg":[["gui_character_face_left.e013aa5a.svg","assets/gui/gui_character_face_left.svg"],"assets/gui/gui_character_face_left.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow.svg":[["gui_character_face_left_shadow.43a8ba68.svg","assets/gui/logo/mark/gui_character_face_left_shadow.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow_1.svg":[["gui_character_face_left_shadow_1.b0fb65d9.svg","assets/gui/logo/mark/gui_character_face_left_shadow_1.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow_1.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow_2.svg":[["gui_character_face_left_shadow_2.60859a62.svg","assets/gui/logo/mark/gui_character_face_left_shadow_2.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow_2.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow_3.svg":[["gui_character_face_left_shadow_3.5146f4f5.svg","assets/gui/logo/mark/gui_character_face_left_shadow_3.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow_3.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow_4.svg":[["gui_character_face_left_shadow_4.558674e1.svg","assets/gui/logo/mark/gui_character_face_left_shadow_4.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow_4.svg"],"./assets/gui/gui_interaction_text_press.svg":[["gui_interaction_text_press.63c56e34.svg","assets/gui/gui_interaction_text_press.svg"],"assets/gui/gui_interaction_text_press.svg"],"./assets/gui/gui_link_menu_white.svg":[["gui_link_menu_white.8b15c689.svg","assets/gui/gui_link_menu_white.svg"],"assets/gui/gui_link_menu_white.svg"],"./assets/gui/gui_link_grid_white.svg":[["gui_link_grid_white.58909d32.svg","assets/gui/gui_link_grid_white.svg"],"assets/gui/gui_link_grid_white.svg"],"./assets/gui/gui_link_sign_in_white.svg":[["gui_link_sign_in_white.fc375cc1.svg","assets/gui/gui_link_sign_in_white.svg"],"assets/gui/gui_link_sign_in_white.svg"],"./assets/gui/gui_stage_tv.svg":[["gui_stage_tv.82c915ba.svg","assets/gui/gui_stage_tv.svg"],"assets/gui/gui_stage_tv.svg"],"./assets/gui/gui_stage_lights.svg":[["gui_stage_lights.8ba7e55c.svg","assets/gui/gui_stage_lights.svg"],"assets/gui/gui_stage_lights.svg"],"./assets/gui/gui_character_body_right_8.svg":[["gui_character_body_right_8.6008b897.svg","assets/gui/gui_character_body_right_8.svg"],"assets/gui/gui_character_body_right_8.svg"],"./assets/gui/gui_character_body_right_7.svg":[["gui_character_body_right_7.e008fe94.svg","assets/gui/gui_character_body_right_7.svg"],"assets/gui/gui_character_body_right_7.svg"],"./assets/gui/gui_character_body_right_6.svg":[["gui_character_body_right_6.44953eae.svg","assets/gui/gui_character_body_right_6.svg"],"assets/gui/gui_character_body_right_6.svg"],"./assets/gui/gui_character_body_right_5.svg":[["gui_character_body_right_5.9dcd1061.svg","assets/gui/gui_character_body_right_5.svg"],"assets/gui/gui_character_body_right_5.svg"],"./assets/gui/gui_character_body_right_4.svg":[["gui_character_body_right_4.d8249778.svg","assets/gui/gui_character_body_right_4.svg"],"assets/gui/gui_character_body_right_4.svg"],"./assets/gui/gui_character_body_right_3.svg":[["gui_character_body_right_3.39393cf8.svg","assets/gui/gui_character_body_right_3.svg"],"assets/gui/gui_character_body_right_3.svg"],"./assets/gui/gui_character_body_right_2.svg":[["gui_character_body_right_2.3d940bbe.svg","assets/gui/gui_character_body_right_2.svg"],"assets/gui/gui_character_body_right_2.svg"],"./assets/gui/gui_character_body_right_1.svg":[["gui_character_body_right_1.fe23b40a.svg","assets/gui/gui_character_body_right_1.svg"],"assets/gui/gui_character_body_right_1.svg"],"./assets/fonts/Silkscreen.ttf.woff":[["Silkscreen.ttf.6dec167e.woff","assets/fonts/Silkscreen.ttf.woff"],"assets/fonts/Silkscreen.ttf.woff"],"./assets/fonts/Silkscreen.ttf.svg":[["Silkscreen.ttf.a45ae991.svg","assets/fonts/Silkscreen.ttf.svg"],"assets/fonts/Silkscreen.ttf.svg"],"./assets/fonts/Silkscreen.ttf.eot":[["Silkscreen.ttf.be6987ea.eot","assets/fonts/Silkscreen.ttf.eot"],"assets/fonts/Silkscreen.ttf.eot"],"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"imports/events.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -949,6 +949,868 @@ var _index = _interopRequireDefault(require("../index.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Imports
+
+/* desmond says no
+
+
+          
+              <p class=" ">search</p>
+              <input id="element_input_filter" type="text" placeholder="element_input_filter" class="width_100 float_left" />
+              
+              <p class=" ">searched post</p>
+              <div id="posts_filtered_container">
+                <div id="posts_filtered"></div>
+              </div>
+
+              <p class=" ">all posts</p>
+              <div id="posts_all_container">
+                <div id="posts_all"></div>
+              </div>
+
+               <ul id="firebase">
+                  <div id="modal-signup">
+                     <form id="signup-form">
+                     <p>modal-signup</p>
+                        <input placeholder="email" type="email" id="signup-email" required />
+                        <input placeholder="password" type="password" id="signup-password" required />
+                        <div id="signup_submit" class="">sign up</div>
+                     </form>
+                  </div>
+
+                  <div id="modal-signin">
+                     <form id="signin-form">
+                        <p>modal-signin</p>
+                        <input placeholder="signin-email" type="signin-email" id="signin-email" required />
+                        <input placeholder="signin-password" type="signin-password" id="signin-password" required />
+                        <div id="signin" class="">sign in</div>
+                     </form>
+                  </div>
+
+                  <div id="modal-account">
+                     <form id="account-form">
+                       <p>modal-account</p>
+                       <div id="account-details" class="account-details"><p>account-details<p></div>
+                       <div id="upload_form"></div>
+                     </form>
+                  </div>
+
+                  <div id="modal-create">
+                     <form id="create-form">
+                        <p>modal-create</p>
+                        
+                        <input class="display_none" type="file" value="upload" id="fileButton" accept="image/*" title="&nbsp;"/>
+                        <input placeholder="title" type="text" id="create_title" required />
+                        <input placeholder="child" type="text" id="create_child" required />
+                        <input placeholder="content" type="text" id="create_content" required />
+                        <progress value="0" max="100" id="uploader">0%</progress>
+                        <p id="upload_progress">images only</p>
+                        <label for="fileButton">Select file</label>
+                        <div id="upload_details"></div>
+                        <div id="create_button" class="">create</div>
+                     </form>
+                  </div>
+
+                  <div id="modal-edit">
+                     <form id="edit-form">
+                        <p>edit profile</p>
+                        <input placeholder="title" type="text" id="title"/>
+                        <div id="edit_button" class="">edit</div>
+
+                        <div id="signout" alt="sign out">
+                           sign out
+                        </div>
+                        <div id="delete_button" alt="sign out">
+                           delete
+                        </div>
+
+                     </form>                      
+                  </div>
+
+
+               </ul>
+
+          <div class="info_scroll_x">
+               
+               <div class="position_relative float_left width_100 height_100 top_0 left_0 overflow_x scrollbarx scrollbarx-scrollbar-track-light-yellow-9 scrollbarx-scrollbar-light-yellow-9 scrollbarx-light-yellow-border-dark-yellow inline_flex">
+
+                   <div class="height_100 float_left position_relative display_webkit_box webkit_box_pack_center webkit_box_align">
+
+                      <div class="element_overflow_x_scene">
+
+                        <div class="info_scroll_y">
+                           <div class="container position_absolute bottom_0 left_0 overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow">
+
+                              <div id="menu_buffer" class="width_100 float_left"></div>
+
+
+                              <p class=" ">pages & post</p>
+                              <div class="width_100 position_relative margin_auto float_left  ">(json data recieved from wordpress app) Use this to create <a href="#">data sorts</a>, <a href="#">data from logged user</a> and <a href="#">data based on location</a> </div>
+                              <div id="signal">
+                                 site_routes: 
+                                 <div id="site_routes"></div>
+                              </div>
+                              <a class="a_big" href="#">loading</a>
+                              <a class="a_big" href="#">home</a>
+                              <a class="a_big" href="#">latest</a>
+                              <a class="a_big" href="#">start game</a>
+                              <a class="a_big" href="#">learn game</a>
+                              <a class="a_big" href="#">planner</a>
+                              <a class="a_big" href="#">contact</a>
+                              <a class="a_big" href="#">welcome</a>
+                              <a class="a_big" href="#">loading</a>
+                              <a class="a_big" href="#">home</a>
+                              <a class="a_big" href="#">latest</a>
+                              <a class="a_big" href="#">start game</a>
+                              <a class="a_big" href="#">learn game</a>
+                              <a class="a_big" href="#">planner</a>
+                              <a class="a_big" href="#">contact</a>
+                              <a class="a_big" href="#">welcome</a>
+                              <a class="a_big" href="#">loading</a>
+                              <a class="a_big" href="#">home</a>
+                              <a class="a_big" href="#">latest</a>
+                              <a class="a_big" href="#">start game</a>
+                              <a class="a_big" href="#">learn game</a>
+                              <a class="a_big" href="#">planner</a>
+                              <a class="a_big" href="#">contact</a>
+                              <a class="a_big" href="#">welcome</a>
+                              <div id="signal">
+                                 history_route: 
+                                 <div id="history_route"></div>
+                              </div>
+                              <div id="signal">
+                                 current_route: 
+                                 <div id="current_route"></div>
+                              </div>
+                              <div id="signal">
+                                 previous_route: 
+                                 <div id="previous_route"></div>
+                              </div>
+                              <div id="signal">
+                                 next_route: 
+                                 <div id="next_route"></div>
+                              </div>
+                              
+                           </div>
+                        </div>
+
+                      </div>
+
+                      <div class="element_overflow_x_scene">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
+                            <div class="width_50 float_left">
+                                 
+                               <h3>instructions</h3>
+                                <p>mouse</p>
+
+                                <div id="signal">mousemove while up: <div id="">pencil</div></div>
+                                <div id="signal">mousemove while down: <div id="">pen</div></div>
+                                <div id="signal">click to: <div id="">roll dice</div></div>
+
+                                <p>keys</p>
+
+                                <div id="signal">esc key: <div id="">ui reset</div></div>
+                                <div id="signal">q key: <div id="">model reset</div></div>
+
+                                <div id="signal">left arrow: <div id="">increases interaction_character_clientX</div></div>
+                                <div id="signal">right arrow: <div id="">decreases interaction_character_clientX</div></div>
+                                <div id="signal">up arrow: <div id="">increases interaction_character_clientY</div></div>
+                                <div id="signal">down arrow: <div id="">decreases interaction_character_clientY</div></div>
+                                
+                                <div id="signal">w key: <div id="">increases vr x-axis</div></div>
+                                <div id="signal">a key: <div id="">decreases vr x-axis</div></div>
+                                <div id="signal">s key: <div id="">increases vr y-axis</div></div>
+                                <div id="signal">d key: <div id="">decreases vr y-axis</div></div>
+                                
+                                            
+
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="element_overflow_x_scene">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
+                            <div class="width_50 float_left">
+                                      
+                                <h3>interaction</h3>
+                                 <div id="signal">dice_history: <div id="dice_history"></div></div>                                           
+                                 <div id="signal">snake_history: <div id="snake_history"></div></div>
+                                 <div id="signal">bounce_history: <div id="bounce_history"></div></div>
+                                 <div id="signal">pen_history: <div id="pen_history"></div></div>
+                                 <div id="signal">pencil_history: <div id="pencil_history"></div></div>
+
+
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="element_overflow_x_scene">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
+                            <div class="width_50 float_left">
+                                      
+                            <h3>game</h3>
+                             <div id="signal">screen level: <div id="level"></div></div>
+                             <div id="signal">screen pause: <div id="pause"></div></div>
+                             <div id="signal">screen timeout: <div id="timeout"></div></div>
+
+                             <div id="signal">stat HP: <div id="HP"></div></div>
+                             <div id="signal">stat Mana: <div id="Mana"></div></div>
+                             <div id="signal">stat points: <div id="points"></div></div>
+                             
+                             <div id="signal">character height: <div id="interaction_character_height"></div></div>
+                             <div id="signal">character width: <div id="interaction_character_width"></div></div>
+                             <div id="signal">character clientX: <div id="interaction_character_clientX"></div></div>
+                             <div id="signal">character clientY: <div id="interaction_character_clientY"></div></div>
+                               
+                             <div id="signal">vr clientX: <div id="state.interaction.vr.clientX"></div></div>
+                             <div id="signal">vr clientY: <div id="state.interaction.vr.clientY"></div></div>
+
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="element_overflow_x_scene">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
+                            <div class="width_50 float_left">
+                                      
+                               <h3>latest</h3>
+                               <div id="signal">latest_scroll: <div id="latest_scroll"></div></div>
+
+                              <div id="signal">scroll_clientHeight: <div id="scroll_clientHeight">0</div></div>
+                              <div id="signal">scroll_clientWidth: <div id="scroll_clientWidth">0</div></div>
+                              <div id="signal">scroll_scrollHeight: <div id="scroll_scrollHeight">0</div></div>
+                              <div id="signal">scroll_scrollWidth: <div id="scroll_scrollWidth">0</div></div>
+                              <div id="signal">scroll_scrollTop: <div id="scroll_scrollTop">0</div></div>
+                              <div id="signal">scroll_scrollLeft: <div id="scroll_scrollLeft">0</div></div>
+
+                               <div id="signal">latest_mouse: <div id="latest_mouse"></div></div>
+                               <div id="signal">latest_mouse_enter: <div id="latest_mouse_enter"></div></div>
+                               <div id="signal">latest_mouse_leave: <div id="latest_mouse_leave"></div></div>
+                               <div id="signal">latest_mouse_up: <div id="latest_mouse_up"></div></div>
+                               <div id="signal">latest_mouse_down: <div id="latest_mouse_down"></div></div>
+                               <div id="signal">latest_mouse_up_move: <div id="latest_mouse_up_move"></div></div>
+                               <div id="signal">latest_mouse_down_move: <div id="latest_mouse_down_move"></div></div>
+                               <div id="signal">latest_mouse_drag_drop: <div id="latest_mouse_drag_drop"></div></div>
+                               <div id="signal">latest_key: <div id="latest_key"></div></div>
+                               <div id="signal">latest_key_up: <div id="latest_key_up"></div></div>
+                               <div id="signal">latest_touch: <div id="latest_touch"></div></div>
+                               <div id="signal">latest_touch_start: <div id="latest_touch_start"></div></div>
+                               <div id="signal">latest_touch_end: <div id="latest_touch_end"></div></div>
+                               <div id="signal">latest_touch_drag_drop: <div id="latest_touch_drag_drop"></div></div>
+
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="element_overflow_x_scene">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
+                            <div class="width_50 float_left">
+                                      
+                               <h3>current</h3>
+                               <div id="signal">current_scroll: <div id="current_scroll"></div></div>
+
+                              <div id="signal">scroll_clientHeight: <div id="scroll_clientHeight">0</div></div>
+                              <div id="signal">scroll_clientWidth: <div id="scroll_clientWidth">0</div></div>
+                              <div id="signal">scroll_scrollHeight: <div id="scroll_scrollHeight">0</div></div>
+                              <div id="signal">scroll_scrollWidth: <div id="scroll_scrollWidth">0</div></div>
+                              <div id="signal">scroll_scrollTop: <div id="scroll_scrollTop">0</div></div>
+                              <div id="signal">scroll_scrollLeft: <div id="scroll_scrollLeft">0</div></div>
+
+                               <div id="signal">current_mouse: <div id="current_mouse"></div></div>
+                               <div id="signal">current_mouse_enter: <div id="current_mouse_enter"></div></div>
+                               <div id="signal">current_mouse_leave: <div id="current_mouse_leave"></div></div>
+                               <div id="signal">current_mouse_up: <div id="current_mouse_up"></div></div>
+                               <div id="signal">current_mouse_down: <div id="current_mouse_down"></div></div>
+                               <div id="signal">current_mouse_up_move: <div id="current_mouse_up_move"></div></div>
+                               <div id="signal">current_mouse_down_move: <div id="current_mouse_down_move"></div></div>
+                               <div id="signal">current_mouse_drag_drop: <div id="current_mouse_drag_drop"></div></div>
+                               <div id="signal">current_key: <div id="current_key"></div></div>
+                               <div id="signal">current_key_up: <div id="current_key_up"></div></div>
+                               <div id="signal">current_touch: <div id="current_touch"></div></div>
+                               <div id="signal">current_touch_start: <div id="current_touch_start"></div></div>
+                               <div id="signal">current_touch_end: <div id="current_touch_end"></div></div>
+                               <div id="signal">current_touch_drag_drop: <div id="current_touch_drag_drop"></div></div>
+
+                            </div>
+                        </div>
+                      </div>
+
+
+                      <div class="element_overflow_x_scene">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
+                            <div class="width_50 float_left">
+                                      
+                               <h3>history</h3>
+                               <div id="signal">history_scroll: <div id="history_scroll"></div></div>
+
+                              <div id="signal">scroll_clientHeight: <div id="scroll_clientHeight">0</div></div>
+                              <div id="signal">scroll_clientWidth: <div id="scroll_clientWidth">0</div></div>
+                              <div id="signal">scroll_scrollHeight: <div id="scroll_scrollHeight">0</div></div>
+                              <div id="signal">scroll_scrollWidth: <div id="scroll_scrollWidth">0</div></div>
+                              <div id="signal">scroll_scrollTop: <div id="scroll_scrollTop">0</div></div>
+                              <div id="signal">scroll_scrollLeft: <div id="scroll_scrollLeft">0</div></div>
+
+                               <div id="signal">history_mouse: <div id="history_mouse"></div></div>
+                               <div id="signal">history_mouse_enter: <div id="history_mouse_enter"></div></div>
+                               <div id="signal">history_mouse_leave: <div id="history_mouse_leave"></div></div>
+                               <div id="signal">history_mouse_up: <div id="history_mouse_up"></div></div>
+                               <div id="signal">history_mouse_down: <div id="history_mouse_down"></div></div>
+                               <div id="signal">history_mouse_up_move: <div id="history_mouse_up_move"></div></div>
+                               <div id="signal">history_mouse_down_move: <div id="history_mouse_down_move"></div></div>
+                               <div id="signal">history_mouse_drag_drop: <div id="history_mouse_drag_drop"></div></div>
+                               <div id="signal">history_key: <div id="history_key"></div></div>
+                               <div id="signal">history_key_up: <div id="history_key_up"></div></div>
+                               <div id="signal">history_touch: <div id="history_touch"></div></div>
+                               <div id="signal">history_touch_start: <div id="history_touch_start"></div></div>
+                               <div id="signal">history_touch_end: <div id="history_touch_end"></div></div>
+                               <div id="signal">history_touch_drag_drop: <div id="history_touch_drag_drop"></div></div>
+
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="element_overflow_x_scene">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
+                            <div class="width_50 float_left">
+                                                                     
+                               <h3>Time</h3>
+                              <div class="width_100 position_relative margin_auto float_left font_size_1vw line_height_1vw">(json data recieved from wordpress app) Use this to create <a href="#">data sorts</a>, <a href="#">data from logged user</a> and <a href="#">data based on location</a> </div>
+                                    
+                              <div id="signal">current_frame_motion: <div id="current_frame_motion"></div></div>
+                              <div id="signal">current_duration: <div id="current_duration"></div></div>
+                              <div id="signal">time_onload: <div id="time_onload"></div></div>
+                              <div id="signal">time: <div id="time"></div></div>
+
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="element_overflow_x_scene">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
+                            <div class="width_50 float_left">
+                                    
+                             <h3>Gravity</h3>
+                             <div id="signal">event_accelerationIncludingGravity_x: <div id="event_accelerationIncludingGravity_x"></div></div>
+                             <div id="signal">event_accelerationIncludingGravity_y: <div id="event_accelerationIncludingGravity_y"></div></div>
+                             <div id="signal">event_accelerationIncludingGravity_z: <div id="event_accelerationIncludingGravity_z"></div></div>
+
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="element_overflow_x_scene">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
+                            <div class="width_50 float_left">
+                                    
+                             <h3>Vr</h3>
+                             <div id="signal">last_action: <div id="last_action"></div></div>
+
+                            </div>
+                        </div>
+                      </div>
+                      
+
+                      <div class="element_overflow_x_scene">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
+                            <div class="width_50 float_left">
+                                    
+                             <h3>Positions</h3>
+                             <div id="signal">event_alpha: <div id="event_alpha"></div></div>
+                             <div id="signal">event_beta: <div id="event_beta"></div></div>
+                             <div id="signal">event_gamma: <div id="event_gamma"></div></div>
+
+                            </div>
+                        </div>
+                      </div>
+                      
+                      <div class="element_overflow_x_scene">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
+                            <div class="width_50 float_left">
+
+                             <h3>Orientation</h3>
+                             <div id="signal">event_portrait: <div id="event_portrait"></div></div>
+                             <div id="signal">event_landscape: <div id="event_landscape"></div></div>
+                             <div id="signal">event_orientation: <div id="event_orientation"></div></div>
+                            </div>
+
+                        </div>
+                      </div>
+
+                       <div id="bg-character" class="gui_character_right_face position_relative width_100vw height_100 margin_auto float_left">
+                           <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                       </div>
+                       <div id="bg-character" class="gui_character_left_face position_relative width_100vw height_100 margin_auto float_left">
+                           <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                       </div>
+                       <div id="bg-character" class="gui_character_right_face position_relative width_100vw height_100 margin_auto float_left">
+                           <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                       </div>
+                       <div id="bg-character" class="gui_character_left_face position_relative width_100vw height_100 margin_auto float_left">
+                           <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                       </div>
+                       <div id="bg-character" class="gui_character_right_face position_relative width_100vw height_100 margin_auto float_left">
+                           <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                       </div>
+                       <div id="bg-character" class="gui_character_left_face position_relative width_100vw height_100 margin_auto float_left">
+                           <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                       </div>
+                       <div id="bg-character" class="gui_character_right_face position_relative width_100vw height_100 margin_auto float_left">
+                           <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                       </div>
+                   </div>
+               </div>
+               
+          </div>
+
+          <div id="info_scroll_mix">
+
+            <div id="preview_info_scroll_x">
+
+                <div class="position_relative float_left calc_2vw border_1vw_grey">
+                    
+                    <div id="element_overflow_x"  class="position_absolute bottom_0 left_0 float_left width_100 height_100 display_flex_flow">
+                        <div class="position_relative float_left width_100 height_100 top_0 left_0 overflow_x scrollbarxhidden inline_flex">
+                            <div class="height_100 float_left position_relative display_webkit_box webkit_box_pack_center webkit_box_align">
+                            
+                            <div id="bg-character" class="gui_character_left_face position_relative width_100vw height_100 margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_right_face position_relative width_100vw height_100 margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_left_face position_relative width_100vw height_100 margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_right_face position_relative width_100vw height_100 margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_left_face position_relative width_100vw height_100 margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_right_face position_relative width_100vw height_100 margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_left_face position_relative width_100vw height_100 margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_right_face position_relative width_100vw height_100 margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="preview_info_scroll_y">
+
+                <div class="position_relative margin_auto float_left width_100 height_100 webkit_box_pack_center webkit_box_align display_webkit_box">
+                    
+                    
+                        <div class="position_relative float_left width_100 height_100 box_shadow_1vw_dark_inset overflow_y scrollbaryhidden">
+
+                            <div id="bg-character" class="gui_character_left_face position_relative width_100 height_1205vh margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_right_face position_relative width_100 height_1205vh margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_left_face position_relative width_100 height_1205vh margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_right_face position_relative width_100 height_1205vh margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_left_face position_relative width_100 height_1205vh margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_left_face position_relative width_100 height_1205vh margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_right_face position_relative width_100 height_1205vh margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_left_face position_relative width_100 height_1205vh margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_right_face position_relative width_100 height_1205vh margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_left_face position_relative width_100 height_1205vh margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                        </div>
+
+
+                </div>
+
+            </div>
+
+            <div id="preview_info_scroll_y_2">
+
+                <div class="position_relative margin_auto float_left width_100 height_100 webkit_box_pack_center webkit_box_align display_webkit_box">
+                    
+                    
+                        <div class="position_relative float_left width_100 height_100 box_shadow_1vw_dark_inset overflow_y scrollbaryhidden">
+
+                            <div id="bg-character" class="gui_character_left_face position_relative width_100 height_1205vw margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_right_face position_relative width_100 height_1205vw margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_left_face position_relative width_100 height_1205vw margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_right_face position_relative width_100 height_1205vw margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_left_face position_relative width_100 height_1205vw margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_left_face position_relative width_100 height_1205vw margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_right_face position_relative width_100 height_1205vw margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_left_face position_relative width_100 height_1205vw margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_right_face position_relative width_100 height_1205vw margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                            <div id="bg-character" class="gui_character_left_face position_relative width_100 height_1205vw margin_auto float_left">
+                                <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white"></div>
+                            </div>
+
+                        </div>
+
+
+                </div>
+
+            </div>
+          </div>
+          
+          <div id="info_scroll_y_text" class="">
+             <div class="container scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow">
+
+                <p class="p_big">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+                </p>
+
+             </div>
+          </div>
+
+          <div class="info_scroll_x">
+               <div class="position_relative float_left width_100 height_100 top_0 left_0 overflow_x scrollbarx scrollbarx-scrollbar-track-light-yellow-9 scrollbarx-scrollbar-light-yellow-9 scrollbarx-light-yellow-border-dark-yellow inline_flex">
+                   <div class="height_100 float_left position_relative display_webkit_box webkit_box_pack_center webkit_box_align">
+
+
+                      <div class="element_overflow_x_scene">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white display_webkit_box webkit_box_pack_center webkit_box_align">
+                            
+                            <div class="position_relative float_left border_1vw_grey bg_white padding_205vw">
+                              <p class="font_size_5vw line_height_5vw text_align_center float_left">Scene</p>
+                            </div>
+
+                        </div>
+                      </div>
+
+                      <div class="element_overflow_x_scene">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white display_webkit_box webkit_box_pack_center webkit_box_align">
+                            
+                            <div class="position_relative float_left border_1vw_grey bg_white padding_205vw">
+                              <p class="font_size_5vw line_height_5vw text_align_center float_left">Scene</p>
+                              <p class="font_size_5vw line_height_5vw text_align_center float_left">Another</p>
+
+                              
+                            </div>
+
+                        </div>
+                      </div>
+
+                      <div class="element_overflow_x_scene">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white display_webkit_box webkit_box_pack_center webkit_box_align">
+                            
+                            <div class="position_relative float_left">
+
+                               <h3>Title, Center</h3>
+                                <p>1: title</p>
+                                <p>2: level</p>
+                                <p>3: actions</p>
+                                <p>4: reactions</p>
+                                <p>5: relation</p>
+                                <p>6: game over</p>
+                              
+                            </div>
+
+                        </div>
+                      </div>
+
+                      <div class="element_overflow_x_scene">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white display_webkit_box webkit_box_pack_center webkit_box_align">
+                            
+                            <div class="position_relative float_left width_50 display_webkit_box webkit_box_pack_center webkit_box_align">
+
+                              <div class="position_relative float_left calc_2vw margin_1vw">
+
+                                <div class="position_relative float_left calc_2vw border_1vw_grey bg_white">
+
+                                   <h3>Title, Center</h3>
+                                    <p>1: title</p>
+                                    <p>2: level</p>
+                                    <p>3: actions</p>
+                                    <p>4: reactions</p>
+                                    <p>5: relation</p>
+                                    <p>6: game over</p>
+                                  
+                                </div>
+                                
+                              </div>
+                              
+                            </div>
+
+                            <div class="position_relative float_left width_50 display_webkit_box webkit_box_pack_center webkit_box_align">
+                               
+                              <div class="position_relative float_left calc_2vw margin_1vw">
+
+                                <div class="position_relative float_left calc_2vw border_1vw_grey bg_white">
+
+                                   <h3>Title, Center</h3>
+                                    <p>1: title</p>
+                                    <p>2: level</p>
+                                    <p>3: actions</p>
+                                    <p>4: reactions</p>
+                                    <p>5: relation</p>
+                                    <p>6: game over</p>
+                                  
+                                </div>
+
+                              </div>
+                              
+                            </div>
+
+                        </div>
+                      </div>
+
+                      <div class="element_overflow_x_scene">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white display_webkit_box webkit_box_pack_center webkit_box_align">
+                            
+                            <div class="position_relative float_left width_50 display_webkit_box webkit_box_pack_center webkit_box_align">
+
+                                <div class="position_relative float_left calc_2vw border_1vw_grey bg_white">
+
+                                   <h3>Title, Center</h3>
+                                    <p>1: title</p>
+                                    <p>2: level</p>
+                                    <p>3: actions</p>
+                                    <p>4: reactions</p>
+                                    <p>5: relation</p>
+                                    <p>6: game over</p>
+                                  
+                              </div>
+                              
+                            </div>
+
+                            <div class="position_relative float_left width_50 display_webkit_box webkit_box_pack_center webkit_box_align">
+                               
+                                <div class="position_relative float_left calc_2vw border_1vw_grey bg_white">
+
+                                   <h3>Title, Center</h3>
+                                    <p>1: title</p>
+                                    <p>2: level</p>
+                                    <p>3: actions</p>
+                                    <p>4: reactions</p>
+                                    <p>5: relation</p>
+                                    <p>6: game over</p>
+                                  
+                                </div>
+                              
+                            </div>
+
+                        </div>
+                      </div>
+
+                      <div class="element_overflow_x_scene">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white display_webkit_box webkit_box_pack_center webkit_box_align">
+                            
+                            <div class="position_relative float_left width_50">
+
+                               <h3>Title, Center</h3>
+                                <p>1: title</p>
+                                <p>2: level</p>
+                                <p>3: actions</p>
+                                <p>4: reactions</p>
+                                <p>5: relation</p>
+                                <p>6: game over</p>
+                              
+                            </div>
+
+                            <div class="position_relative float_left width_50">
+
+                               <h3>Title, Center</h3>
+                                <p>1: title</p>
+                                <p>2: level</p>
+                                <p>3: actions</p>
+                                <p>4: reactions</p>
+                                <p>5: relation</p>
+                                <p>6: game over</p>
+                              
+                            </div>
+
+                        </div>
+                      </div>
+
+                      <div class="element_overflow_x_scene">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
+                            <div class="position_relative width_50 height_100 overflow_y scrollbaryhidden float_left">
+
+                              <div class="position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow">
+
+                                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+                                </p>
+
+                              </div>
+                                            
+
+                            </div>
+                            <div class="position_relative width_50 height_100 overflow_y scrollbaryhidden float_left">
+                              
+                                <div class="position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow">
+
+                                  <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+                                  </p>
+
+                               </div>
+
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="element_overflow_x_scene">
+                        <div class="position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white">
+                            <div class="width_50 height_100 overflow_y scrollbaryhidden float_left">
+                                 
+                               <h3>Title, Left Scroll</h3>
+                                <p>1: title</p>
+                                <p>2: level</p>
+                                <p>3: actions</p>
+                                <p>4: reactions</p>
+                                <p>5: relation</p>
+                                <p>6: game over</p>
+                                <p>1: title</p>
+                                <p>2: level</p>
+                                <p>3: actions</p>
+                                <p>4: reactions</p>
+                                <p>5: relation</p>
+                                <p>6: game over</p>
+                                <p>1: title</p>
+                                <p>2: level</p>
+                                <p>3: actions</p>
+                                <p>4: reactions</p>
+                                <p>5: relation</p>
+                                <p>6: game over</p>
+                                <p>1: title</p>
+                                <p>2: level</p>
+                                <p>3: actions</p>
+                                <p>4: reactions</p>
+                                <p>5: relation</p>
+                                <p>6: game over</p>
+                                <p>1: title</p>
+                                <p>2: level</p>
+                                <p>3: actions</p>
+                                <p>4: reactions</p>
+                                <p>5: relation</p>
+                                <p>6: game over</p>
+                                <p>1: title</p>
+                                <p>2: level</p>
+                                <p>3: actions</p>
+                                <p>4: reactions</p>
+                                <p>5: relation</p>
+                                <p>6: game over</p>
+                                            
+
+                            </div>
+                            <div class="width_50 height_100 overflow_y scrollbaryhidden float_left">
+                                 
+                               <h3>Title, Left Scroll</h3>
+                                <p>1: title</p>
+                                <p>2: level</p>
+                                <p>3: actions</p>
+                                <p>4: reactions</p>
+                                <p>5: relation</p>
+                                <p>6: game over</p>
+                                <p>1: title</p>
+                                <p>2: level</p>
+                                <p>3: actions</p>
+                                <p>4: reactions</p>
+                                <p>5: relation</p>
+                                <p>6: game over</p>
+                                <p>1: title</p>
+                                <p>2: level</p>
+                                <p>3: actions</p>
+                                <p>4: reactions</p>
+                                <p>5: relation</p>
+                                <p>6: game over</p>
+                                <p>1: title</p>
+                                <p>2: level</p>
+                                <p>3: actions</p>
+                                <p>4: reactions</p>
+                                <p>5: relation</p>
+                                <p>6: game over</p>
+                                <p>1: title</p>
+                                <p>2: level</p>
+                                <p>3: actions</p>
+                                <p>4: reactions</p>
+                                <p>5: relation</p>
+                                <p>6: game over</p>
+                                <p>1: title</p>
+                                <p>2: level</p>
+                                <p>3: actions</p>
+                                <p>4: reactions</p>
+                                <p>5: relation</p>
+                                <p>6: game over</p>
+                                            
+
+                            </div>
+                        </div>
+                      </div>
+
+                   </div>
+               </div>
+          </div>
+
+
+          */
 var state;
 
 var gen = function gen(x) {
@@ -958,7 +1820,7 @@ var gen = function gen(x) {
     var identify = x;
     component.setAttribute("id", 'id_' + identify);
     component.classList = 'class_' + identify;
-    component.innerHTML = "\n      <div id=\"elements_".concat(identify, "\">\n          \n              <p class=\" \">search</p>\n              <input id=\"element_input_filter\" type=\"text\" placeholder=\"element_input_filter\" class=\"width_100 float_left\" />\n              \n              <p class=\" \">searched post</p>\n              <div id=\"posts_filtered_container\">\n                <div id=\"posts_filtered\"></div>\n              </div>\n\n              <p class=\" \">all posts</p>\n              <div id=\"posts_all_container\">\n                <div id=\"posts_all\"></div>\n              </div>\n\n               <ul id=\"firebase\">\n                  <div id=\"modal-signup\">\n                     <form id=\"signup-form\">\n                     <p>modal-signup</p>\n                        <input placeholder=\"email\" type=\"email\" id=\"signup-email\" required />\n                        <input placeholder=\"password\" type=\"password\" id=\"signup-password\" required />\n                        <div id=\"signup_submit\" class=\"\">sign up</div>\n                     </form>\n                  </div>\n\n                  <div id=\"modal-signin\">\n                     <form id=\"signin-form\">\n                        <p>modal-signin</p>\n                        <input placeholder=\"signin-email\" type=\"signin-email\" id=\"signin-email\" required />\n                        <input placeholder=\"signin-password\" type=\"signin-password\" id=\"signin-password\" required />\n                        <div id=\"signin\" class=\"\">sign in</div>\n                     </form>\n                  </div>\n\n                  <div id=\"modal-account\">\n                     <form id=\"account-form\">\n                       <p>modal-account</p>\n                       <div id=\"account-details\" class=\"account-details\"><p>account-details<p></div>\n                       <div id=\"upload_form\"></div>\n                     </form>\n                  </div>\n\n                  <div id=\"modal-create\">\n                     <form id=\"create-form\">\n                        <p>modal-create</p>\n                        \n                        <input class=\"display_none\" type=\"file\" value=\"upload\" id=\"fileButton\" accept=\"image/*\" title=\"&nbsp;\"/>\n                        <input placeholder=\"title\" type=\"text\" id=\"create_title\" required />\n                        <input placeholder=\"child\" type=\"text\" id=\"create_child\" required />\n                        <input placeholder=\"content\" type=\"text\" id=\"create_content\" required />\n                        <progress value=\"0\" max=\"100\" id=\"uploader\">0%</progress>\n                        <p id=\"upload_progress\">images only</p>\n                        <label for=\"fileButton\">Select file</label>\n                        <div id=\"upload_details\"></div>\n                        <div id=\"create_button\" class=\"\">create</div>\n                     </form>\n                  </div>\n\n                  <div id=\"modal-edit\">\n                     <form id=\"edit-form\">\n                        <p>edit profile</p>\n                        <input placeholder=\"title\" type=\"text\" id=\"title\"/>\n                        <div id=\"edit_button\" class=\"\">edit</div>\n\n                        <div id=\"signout\" alt=\"sign out\">\n                           sign out\n                        </div>\n                        <div id=\"delete_button\" alt=\"sign out\">\n                           delete\n                        </div>\n\n                     </form>                      \n                  </div>\n\n\n               </ul>\n\n          <div class=\"info_scroll_x\">\n               \n               <div class=\"position_relative float_left width_100 height_100 top_0 left_0 overflow_x scrollbarx scrollbarx-scrollbar-track-light-yellow-9 scrollbarx-scrollbar-light-yellow-9 scrollbarx-light-yellow-border-dark-yellow inline_flex\">\n\n                   <div class=\"height_100 float_left position_relative display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                      <div class=\"element_overflow_x_scene\">\n\n                        <div class=\"info_scroll_y\">\n                           <div class=\"container position_absolute bottom_0 left_0 overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow\">\n\n                              <div id=\"menu_buffer\" class=\"width_100 float_left\"></div>\n\n\n                              <p class=\" \">pages & post</p>\n                              <div class=\"width_100 position_relative margin_auto float_left  \">(json data recieved from wordpress app) Use this to create <a href=\"#\">data sorts</a>, <a href=\"#\">data from logged user</a> and <a href=\"#\">data based on location</a> </div>\n                              <div id=\"signal\">\n                                 site_routes: \n                                 <div id=\"site_routes\"></div>\n                              </div>\n                              <a class=\"a_big\" href=\"#\">loading</a>\n                              <a class=\"a_big\" href=\"#\">home</a>\n                              <a class=\"a_big\" href=\"#\">latest</a>\n                              <a class=\"a_big\" href=\"#\">start game</a>\n                              <a class=\"a_big\" href=\"#\">learn game</a>\n                              <a class=\"a_big\" href=\"#\">planner</a>\n                              <a class=\"a_big\" href=\"#\">contact</a>\n                              <a class=\"a_big\" href=\"#\">welcome</a>\n                              <a class=\"a_big\" href=\"#\">loading</a>\n                              <a class=\"a_big\" href=\"#\">home</a>\n                              <a class=\"a_big\" href=\"#\">latest</a>\n                              <a class=\"a_big\" href=\"#\">start game</a>\n                              <a class=\"a_big\" href=\"#\">learn game</a>\n                              <a class=\"a_big\" href=\"#\">planner</a>\n                              <a class=\"a_big\" href=\"#\">contact</a>\n                              <a class=\"a_big\" href=\"#\">welcome</a>\n                              <a class=\"a_big\" href=\"#\">loading</a>\n                              <a class=\"a_big\" href=\"#\">home</a>\n                              <a class=\"a_big\" href=\"#\">latest</a>\n                              <a class=\"a_big\" href=\"#\">start game</a>\n                              <a class=\"a_big\" href=\"#\">learn game</a>\n                              <a class=\"a_big\" href=\"#\">planner</a>\n                              <a class=\"a_big\" href=\"#\">contact</a>\n                              <a class=\"a_big\" href=\"#\">welcome</a>\n                              <div id=\"signal\">\n                                 history_route: \n                                 <div id=\"history_route\"></div>\n                              </div>\n                              <div id=\"signal\">\n                                 current_route: \n                                 <div id=\"current_route\"></div>\n                              </div>\n                              <div id=\"signal\">\n                                 previous_route: \n                                 <div id=\"previous_route\"></div>\n                              </div>\n                              <div id=\"signal\">\n                                 next_route: \n                                 <div id=\"next_route\"></div>\n                              </div>\n                              \n                           </div>\n                        </div>\n\n                      </div>\n\n                      <div class=\"element_overflow_x_scene\">\n                        <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\">\n                            <div class=\"width_50 float_left\">\n                                 \n                               <h3>instructions</h3>\n                                <p>mouse</p>\n\n                                <div id=\"signal\">mousemove while up: <div id=\"\">pencil</div></div>\n                                <div id=\"signal\">mousemove while down: <div id=\"\">pen</div></div>\n                                <div id=\"signal\">click to: <div id=\"\">roll dice</div></div>\n\n                                <p>keys</p>\n\n                                <div id=\"signal\">esc key: <div id=\"\">ui reset</div></div>\n                                <div id=\"signal\">q key: <div id=\"\">model reset</div></div>\n\n                                <div id=\"signal\">left arrow: <div id=\"\">increases interaction_character_clientX</div></div>\n                                <div id=\"signal\">right arrow: <div id=\"\">decreases interaction_character_clientX</div></div>\n                                <div id=\"signal\">up arrow: <div id=\"\">increases interaction_character_clientY</div></div>\n                                <div id=\"signal\">down arrow: <div id=\"\">decreases interaction_character_clientY</div></div>\n                                \n                                <div id=\"signal\">w key: <div id=\"\">increases vr x-axis</div></div>\n                                <div id=\"signal\">a key: <div id=\"\">decreases vr x-axis</div></div>\n                                <div id=\"signal\">s key: <div id=\"\">increases vr y-axis</div></div>\n                                <div id=\"signal\">d key: <div id=\"\">decreases vr y-axis</div></div>\n                                \n                                            \n\n                            </div>\n                        </div>\n                      </div>\n\n                      <div class=\"element_overflow_x_scene\">\n                        <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\">\n                            <div class=\"width_50 float_left\">\n                                      \n                                <h3>interaction</h3>\n                                 <div id=\"signal\">dice_history: <div id=\"dice_history\"></div></div>                                           \n                                 <div id=\"signal\">snake_history: <div id=\"snake_history\"></div></div>\n                                 <div id=\"signal\">bounce_history: <div id=\"bounce_history\"></div></div>\n                                 <div id=\"signal\">pen_history: <div id=\"pen_history\"></div></div>\n                                 <div id=\"signal\">pencil_history: <div id=\"pencil_history\"></div></div>\n\n\n                            </div>\n                        </div>\n                      </div>\n\n                      <div class=\"element_overflow_x_scene\">\n                        <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\">\n                            <div class=\"width_50 float_left\">\n                                      \n                            <h3>game</h3>\n                             <div id=\"signal\">screen level: <div id=\"level\"></div></div>\n                             <div id=\"signal\">screen pause: <div id=\"pause\"></div></div>\n                             <div id=\"signal\">screen timeout: <div id=\"timeout\"></div></div>\n\n                             <div id=\"signal\">stat HP: <div id=\"HP\"></div></div>\n                             <div id=\"signal\">stat Mana: <div id=\"Mana\"></div></div>\n                             <div id=\"signal\">stat points: <div id=\"points\"></div></div>\n                             \n                             <div id=\"signal\">character height: <div id=\"interaction_character_height\"></div></div>\n                             <div id=\"signal\">character width: <div id=\"interaction_character_width\"></div></div>\n                             <div id=\"signal\">character clientX: <div id=\"interaction_character_clientX\"></div></div>\n                             <div id=\"signal\">character clientY: <div id=\"interaction_character_clientY\"></div></div>\n                               \n                             <div id=\"signal\">vr clientX: <div id=\"state.interaction.vr.clientX\"></div></div>\n                             <div id=\"signal\">vr clientY: <div id=\"state.interaction.vr.clientY\"></div></div>\n\n                            </div>\n                        </div>\n                      </div>\n\n                      <div class=\"element_overflow_x_scene\">\n                        <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\">\n                            <div class=\"width_50 float_left\">\n                                      \n                               <h3>latest</h3>\n                               <div id=\"signal\">latest_scroll: <div id=\"latest_scroll\"></div></div>\n\n                              <div id=\"signal\">scroll_clientHeight: <div id=\"scroll_clientHeight\">0</div></div>\n                              <div id=\"signal\">scroll_clientWidth: <div id=\"scroll_clientWidth\">0</div></div>\n                              <div id=\"signal\">scroll_scrollHeight: <div id=\"scroll_scrollHeight\">0</div></div>\n                              <div id=\"signal\">scroll_scrollWidth: <div id=\"scroll_scrollWidth\">0</div></div>\n                              <div id=\"signal\">scroll_scrollTop: <div id=\"scroll_scrollTop\">0</div></div>\n                              <div id=\"signal\">scroll_scrollLeft: <div id=\"scroll_scrollLeft\">0</div></div>\n\n                               <div id=\"signal\">latest_mouse: <div id=\"latest_mouse\"></div></div>\n                               <div id=\"signal\">latest_mouse_enter: <div id=\"latest_mouse_enter\"></div></div>\n                               <div id=\"signal\">latest_mouse_leave: <div id=\"latest_mouse_leave\"></div></div>\n                               <div id=\"signal\">latest_mouse_up: <div id=\"latest_mouse_up\"></div></div>\n                               <div id=\"signal\">latest_mouse_down: <div id=\"latest_mouse_down\"></div></div>\n                               <div id=\"signal\">latest_mouse_up_move: <div id=\"latest_mouse_up_move\"></div></div>\n                               <div id=\"signal\">latest_mouse_down_move: <div id=\"latest_mouse_down_move\"></div></div>\n                               <div id=\"signal\">latest_mouse_drag_drop: <div id=\"latest_mouse_drag_drop\"></div></div>\n                               <div id=\"signal\">latest_key: <div id=\"latest_key\"></div></div>\n                               <div id=\"signal\">latest_key_up: <div id=\"latest_key_up\"></div></div>\n                               <div id=\"signal\">latest_touch: <div id=\"latest_touch\"></div></div>\n                               <div id=\"signal\">latest_touch_start: <div id=\"latest_touch_start\"></div></div>\n                               <div id=\"signal\">latest_touch_end: <div id=\"latest_touch_end\"></div></div>\n                               <div id=\"signal\">latest_touch_drag_drop: <div id=\"latest_touch_drag_drop\"></div></div>\n\n                            </div>\n                        </div>\n                      </div>\n\n                      <div class=\"element_overflow_x_scene\">\n                        <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\">\n                            <div class=\"width_50 float_left\">\n                                      \n                               <h3>current</h3>\n                               <div id=\"signal\">current_scroll: <div id=\"current_scroll\"></div></div>\n\n                              <div id=\"signal\">scroll_clientHeight: <div id=\"scroll_clientHeight\">0</div></div>\n                              <div id=\"signal\">scroll_clientWidth: <div id=\"scroll_clientWidth\">0</div></div>\n                              <div id=\"signal\">scroll_scrollHeight: <div id=\"scroll_scrollHeight\">0</div></div>\n                              <div id=\"signal\">scroll_scrollWidth: <div id=\"scroll_scrollWidth\">0</div></div>\n                              <div id=\"signal\">scroll_scrollTop: <div id=\"scroll_scrollTop\">0</div></div>\n                              <div id=\"signal\">scroll_scrollLeft: <div id=\"scroll_scrollLeft\">0</div></div>\n\n                               <div id=\"signal\">current_mouse: <div id=\"current_mouse\"></div></div>\n                               <div id=\"signal\">current_mouse_enter: <div id=\"current_mouse_enter\"></div></div>\n                               <div id=\"signal\">current_mouse_leave: <div id=\"current_mouse_leave\"></div></div>\n                               <div id=\"signal\">current_mouse_up: <div id=\"current_mouse_up\"></div></div>\n                               <div id=\"signal\">current_mouse_down: <div id=\"current_mouse_down\"></div></div>\n                               <div id=\"signal\">current_mouse_up_move: <div id=\"current_mouse_up_move\"></div></div>\n                               <div id=\"signal\">current_mouse_down_move: <div id=\"current_mouse_down_move\"></div></div>\n                               <div id=\"signal\">current_mouse_drag_drop: <div id=\"current_mouse_drag_drop\"></div></div>\n                               <div id=\"signal\">current_key: <div id=\"current_key\"></div></div>\n                               <div id=\"signal\">current_key_up: <div id=\"current_key_up\"></div></div>\n                               <div id=\"signal\">current_touch: <div id=\"current_touch\"></div></div>\n                               <div id=\"signal\">current_touch_start: <div id=\"current_touch_start\"></div></div>\n                               <div id=\"signal\">current_touch_end: <div id=\"current_touch_end\"></div></div>\n                               <div id=\"signal\">current_touch_drag_drop: <div id=\"current_touch_drag_drop\"></div></div>\n\n                            </div>\n                        </div>\n                      </div>\n\n\n                      <div class=\"element_overflow_x_scene\">\n                        <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\">\n                            <div class=\"width_50 float_left\">\n                                      \n                               <h3>history</h3>\n                               <div id=\"signal\">history_scroll: <div id=\"history_scroll\"></div></div>\n\n                              <div id=\"signal\">scroll_clientHeight: <div id=\"scroll_clientHeight\">0</div></div>\n                              <div id=\"signal\">scroll_clientWidth: <div id=\"scroll_clientWidth\">0</div></div>\n                              <div id=\"signal\">scroll_scrollHeight: <div id=\"scroll_scrollHeight\">0</div></div>\n                              <div id=\"signal\">scroll_scrollWidth: <div id=\"scroll_scrollWidth\">0</div></div>\n                              <div id=\"signal\">scroll_scrollTop: <div id=\"scroll_scrollTop\">0</div></div>\n                              <div id=\"signal\">scroll_scrollLeft: <div id=\"scroll_scrollLeft\">0</div></div>\n\n                               <div id=\"signal\">history_mouse: <div id=\"history_mouse\"></div></div>\n                               <div id=\"signal\">history_mouse_enter: <div id=\"history_mouse_enter\"></div></div>\n                               <div id=\"signal\">history_mouse_leave: <div id=\"history_mouse_leave\"></div></div>\n                               <div id=\"signal\">history_mouse_up: <div id=\"history_mouse_up\"></div></div>\n                               <div id=\"signal\">history_mouse_down: <div id=\"history_mouse_down\"></div></div>\n                               <div id=\"signal\">history_mouse_up_move: <div id=\"history_mouse_up_move\"></div></div>\n                               <div id=\"signal\">history_mouse_down_move: <div id=\"history_mouse_down_move\"></div></div>\n                               <div id=\"signal\">history_mouse_drag_drop: <div id=\"history_mouse_drag_drop\"></div></div>\n                               <div id=\"signal\">history_key: <div id=\"history_key\"></div></div>\n                               <div id=\"signal\">history_key_up: <div id=\"history_key_up\"></div></div>\n                               <div id=\"signal\">history_touch: <div id=\"history_touch\"></div></div>\n                               <div id=\"signal\">history_touch_start: <div id=\"history_touch_start\"></div></div>\n                               <div id=\"signal\">history_touch_end: <div id=\"history_touch_end\"></div></div>\n                               <div id=\"signal\">history_touch_drag_drop: <div id=\"history_touch_drag_drop\"></div></div>\n\n                            </div>\n                        </div>\n                      </div>\n\n                      <div class=\"element_overflow_x_scene\">\n                        <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\">\n                            <div class=\"width_50 float_left\">\n                                                                     \n                               <h3>Time</h3>\n                              <div class=\"width_100 position_relative margin_auto float_left font_size_1vw line_height_1vw\">(json data recieved from wordpress app) Use this to create <a href=\"#\">data sorts</a>, <a href=\"#\">data from logged user</a> and <a href=\"#\">data based on location</a> </div>\n                                    \n                              <div id=\"signal\">current_frame_motion: <div id=\"current_frame_motion\"></div></div>\n                              <div id=\"signal\">current_duration: <div id=\"current_duration\"></div></div>\n                              <div id=\"signal\">time_onload: <div id=\"time_onload\"></div></div>\n                              <div id=\"signal\">time: <div id=\"time\"></div></div>\n\n                            </div>\n                        </div>\n                      </div>\n\n                      <div class=\"element_overflow_x_scene\">\n                        <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\">\n                            <div class=\"width_50 float_left\">\n                                    \n                             <h3>Gravity</h3>\n                             <div id=\"signal\">event_accelerationIncludingGravity_x: <div id=\"event_accelerationIncludingGravity_x\"></div></div>\n                             <div id=\"signal\">event_accelerationIncludingGravity_y: <div id=\"event_accelerationIncludingGravity_y\"></div></div>\n                             <div id=\"signal\">event_accelerationIncludingGravity_z: <div id=\"event_accelerationIncludingGravity_z\"></div></div>\n\n                            </div>\n                        </div>\n                      </div>\n\n                      <div class=\"element_overflow_x_scene\">\n                        <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\">\n                            <div class=\"width_50 float_left\">\n                                    \n                             <h3>Vr</h3>\n                             <div id=\"signal\">last_action: <div id=\"last_action\"></div></div>\n\n                            </div>\n                        </div>\n                      </div>\n                      \n\n                      <div class=\"element_overflow_x_scene\">\n                        <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\">\n                            <div class=\"width_50 float_left\">\n                                    \n                             <h3>Positions</h3>\n                             <div id=\"signal\">event_alpha: <div id=\"event_alpha\"></div></div>\n                             <div id=\"signal\">event_beta: <div id=\"event_beta\"></div></div>\n                             <div id=\"signal\">event_gamma: <div id=\"event_gamma\"></div></div>\n\n                            </div>\n                        </div>\n                      </div>\n                      \n                      <div class=\"element_overflow_x_scene\">\n                        <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\">\n                            <div class=\"width_50 float_left\">\n\n                             <h3>Orientation</h3>\n                             <div id=\"signal\">event_portrait: <div id=\"event_portrait\"></div></div>\n                             <div id=\"signal\">event_landscape: <div id=\"event_landscape\"></div></div>\n                             <div id=\"signal\">event_orientation: <div id=\"event_orientation\"></div></div>\n                            </div>\n\n                        </div>\n                      </div>\n\n                       <div id=\"bg-character\" class=\"gui_character_right_face position_relative width_100vw height_100 margin_auto float_left\">\n                           <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                       </div>\n                       <div id=\"bg-character\" class=\"gui_character_left_face position_relative width_100vw height_100 margin_auto float_left\">\n                           <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                       </div>\n                       <div id=\"bg-character\" class=\"gui_character_right_face position_relative width_100vw height_100 margin_auto float_left\">\n                           <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                       </div>\n                       <div id=\"bg-character\" class=\"gui_character_left_face position_relative width_100vw height_100 margin_auto float_left\">\n                           <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                       </div>\n                       <div id=\"bg-character\" class=\"gui_character_right_face position_relative width_100vw height_100 margin_auto float_left\">\n                           <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                       </div>\n                       <div id=\"bg-character\" class=\"gui_character_left_face position_relative width_100vw height_100 margin_auto float_left\">\n                           <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                       </div>\n                       <div id=\"bg-character\" class=\"gui_character_right_face position_relative width_100vw height_100 margin_auto float_left\">\n                           <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                       </div>\n                   </div>\n               </div>\n               \n          </div>\n\n          <div id=\"info_scroll_mix\">\n\n            <div id=\"preview_info_scroll_x\">\n\n                <div class=\"position_relative float_left calc_2vw border_1vw_grey\">\n                    \n                    <div id=\"element_overflow_x\"  class=\"position_absolute bottom_0 left_0 float_left width_100 height_100 display_flex_flow\">\n                        <div class=\"position_relative float_left width_100 height_100 top_0 left_0 overflow_x scrollbarxhidden inline_flex\">\n                            <div class=\"height_100 float_left position_relative display_webkit_box webkit_box_pack_center webkit_box_align\">\n                            \n                            <div id=\"bg-character\" class=\"gui_character_left_face position_relative width_100vw height_100 margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_right_face position_relative width_100vw height_100 margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_left_face position_relative width_100vw height_100 margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_right_face position_relative width_100vw height_100 margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_left_face position_relative width_100vw height_100 margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_right_face position_relative width_100vw height_100 margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_left_face position_relative width_100vw height_100 margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_right_face position_relative width_100vw height_100 margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n\n                        </div>\n                        </div>\n                    </div>\n\n                </div>\n\n            </div>\n\n            <div id=\"preview_info_scroll_y\">\n\n                <div class=\"position_relative margin_auto float_left width_100 height_100 webkit_box_pack_center webkit_box_align display_webkit_box\">\n                    \n                    \n                        <div class=\"position_relative float_left width_100 height_100 box_shadow_1vw_dark_inset overflow_y scrollbaryhidden\">\n\n                            <div id=\"bg-character\" class=\"gui_character_left_face position_relative width_100 height_1205vh margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_right_face position_relative width_100 height_1205vh margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_left_face position_relative width_100 height_1205vh margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_right_face position_relative width_100 height_1205vh margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_left_face position_relative width_100 height_1205vh margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_left_face position_relative width_100 height_1205vh margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_right_face position_relative width_100 height_1205vh margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_left_face position_relative width_100 height_1205vh margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_right_face position_relative width_100 height_1205vh margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_left_face position_relative width_100 height_1205vh margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                        </div>\n\n\n                </div>\n\n            </div>\n\n            <div id=\"preview_info_scroll_y_2\">\n\n                <div class=\"position_relative margin_auto float_left width_100 height_100 webkit_box_pack_center webkit_box_align display_webkit_box\">\n                    \n                    \n                        <div class=\"position_relative float_left width_100 height_100 box_shadow_1vw_dark_inset overflow_y scrollbaryhidden\">\n\n                            <div id=\"bg-character\" class=\"gui_character_left_face position_relative width_100 height_1205vw margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_right_face position_relative width_100 height_1205vw margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_left_face position_relative width_100 height_1205vw margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_right_face position_relative width_100 height_1205vw margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_left_face position_relative width_100 height_1205vw margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_left_face position_relative width_100 height_1205vw margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_right_face position_relative width_100 height_1205vw margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_left_face position_relative width_100 height_1205vw margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_right_face position_relative width_100 height_1205vw margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                            <div id=\"bg-character\" class=\"gui_character_left_face position_relative width_100 height_1205vw margin_auto float_left\">\n                                <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\"></div>\n                            </div>\n\n                        </div>\n\n\n                </div>\n\n            </div>\n          </div>\n          \n          <div id=\"info_scroll_y_text\" class=\"\">\n             <div class=\"container scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow\">\n\n                <p class=\"p_big\">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?\n                </p>\n\n             </div>\n          </div>\n\n          <div class=\"info_scroll_x\">\n               <div class=\"position_relative float_left width_100 height_100 top_0 left_0 overflow_x scrollbarx scrollbarx-scrollbar-track-light-yellow-9 scrollbarx-scrollbar-light-yellow-9 scrollbarx-light-yellow-border-dark-yellow inline_flex\">\n                   <div class=\"height_100 float_left position_relative display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n\n                      <div class=\"element_overflow_x_scene\">\n                        <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white display_webkit_box webkit_box_pack_center webkit_box_align\">\n                            \n                            <div class=\"position_relative float_left border_1vw_grey bg_white padding_205vw\">\n                              <p class=\"font_size_5vw line_height_5vw text_align_center float_left\">Scene</p>\n                            </div>\n\n                        </div>\n                      </div>\n\n                      <div class=\"element_overflow_x_scene\">\n                        <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white display_webkit_box webkit_box_pack_center webkit_box_align\">\n                            \n                            <div class=\"position_relative float_left border_1vw_grey bg_white padding_205vw\">\n                              <p class=\"font_size_5vw line_height_5vw text_align_center float_left\">Scene</p>\n                              <p class=\"font_size_5vw line_height_5vw text_align_center float_left\">Another</p>\n\n                              \n                            </div>\n\n                        </div>\n                      </div>\n\n                      <div class=\"element_overflow_x_scene\">\n                        <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white display_webkit_box webkit_box_pack_center webkit_box_align\">\n                            \n                            <div class=\"position_relative float_left\">\n\n                               <h3>Title, Center</h3>\n                                <p>1: title</p>\n                                <p>2: level</p>\n                                <p>3: actions</p>\n                                <p>4: reactions</p>\n                                <p>5: relation</p>\n                                <p>6: game over</p>\n                              \n                            </div>\n\n                        </div>\n                      </div>\n\n                      <div class=\"element_overflow_x_scene\">\n                        <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white display_webkit_box webkit_box_pack_center webkit_box_align\">\n                            \n                            <div class=\"position_relative float_left width_50 display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                              <div class=\"position_relative float_left calc_2vw margin_1vw\">\n\n                                <div class=\"position_relative float_left calc_2vw border_1vw_grey bg_white\">\n\n                                   <h3>Title, Center</h3>\n                                    <p>1: title</p>\n                                    <p>2: level</p>\n                                    <p>3: actions</p>\n                                    <p>4: reactions</p>\n                                    <p>5: relation</p>\n                                    <p>6: game over</p>\n                                  \n                                </div>\n                                \n                              </div>\n                              \n                            </div>\n\n                            <div class=\"position_relative float_left width_50 display_webkit_box webkit_box_pack_center webkit_box_align\">\n                               \n                              <div class=\"position_relative float_left calc_2vw margin_1vw\">\n\n                                <div class=\"position_relative float_left calc_2vw border_1vw_grey bg_white\">\n\n                                   <h3>Title, Center</h3>\n                                    <p>1: title</p>\n                                    <p>2: level</p>\n                                    <p>3: actions</p>\n                                    <p>4: reactions</p>\n                                    <p>5: relation</p>\n                                    <p>6: game over</p>\n                                  \n                                </div>\n\n                              </div>\n                              \n                            </div>\n\n                        </div>\n                      </div>\n\n                      <div class=\"element_overflow_x_scene\">\n                        <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white display_webkit_box webkit_box_pack_center webkit_box_align\">\n                            \n                            <div class=\"position_relative float_left width_50 display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                                <div class=\"position_relative float_left calc_2vw border_1vw_grey bg_white\">\n\n                                   <h3>Title, Center</h3>\n                                    <p>1: title</p>\n                                    <p>2: level</p>\n                                    <p>3: actions</p>\n                                    <p>4: reactions</p>\n                                    <p>5: relation</p>\n                                    <p>6: game over</p>\n                                  \n                              </div>\n                              \n                            </div>\n\n                            <div class=\"position_relative float_left width_50 display_webkit_box webkit_box_pack_center webkit_box_align\">\n                               \n                                <div class=\"position_relative float_left calc_2vw border_1vw_grey bg_white\">\n\n                                   <h3>Title, Center</h3>\n                                    <p>1: title</p>\n                                    <p>2: level</p>\n                                    <p>3: actions</p>\n                                    <p>4: reactions</p>\n                                    <p>5: relation</p>\n                                    <p>6: game over</p>\n                                  \n                                </div>\n                              \n                            </div>\n\n                        </div>\n                      </div>\n\n                      <div class=\"element_overflow_x_scene\">\n                        <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white display_webkit_box webkit_box_pack_center webkit_box_align\">\n                            \n                            <div class=\"position_relative float_left width_50\">\n\n                               <h3>Title, Center</h3>\n                                <p>1: title</p>\n                                <p>2: level</p>\n                                <p>3: actions</p>\n                                <p>4: reactions</p>\n                                <p>5: relation</p>\n                                <p>6: game over</p>\n                              \n                            </div>\n\n                            <div class=\"position_relative float_left width_50\">\n\n                               <h3>Title, Center</h3>\n                                <p>1: title</p>\n                                <p>2: level</p>\n                                <p>3: actions</p>\n                                <p>4: reactions</p>\n                                <p>5: relation</p>\n                                <p>6: game over</p>\n                              \n                            </div>\n\n                        </div>\n                      </div>\n\n                      <div class=\"element_overflow_x_scene\">\n                        <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\">\n                            <div class=\"position_relative width_50 height_100 overflow_y scrollbaryhidden float_left\">\n\n                              <div class=\"position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow\">\n\n                                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?\n                                </p>\n\n                              </div>\n                                            \n\n                            </div>\n                            <div class=\"position_relative width_50 height_100 overflow_y scrollbaryhidden float_left\">\n                              \n                                <div class=\"position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow\">\n\n                                  <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?\n                                  </p>\n\n                               </div>\n\n                            </div>\n                        </div>\n                      </div>\n\n                      <div class=\"element_overflow_x_scene\">\n                        <div class=\"position_absolute bottom_0 left_0 calc_2vw border_1vw_grey bg_white\">\n                            <div class=\"width_50 height_100 overflow_y scrollbaryhidden float_left\">\n                                 \n                               <h3>Title, Left Scroll</h3>\n                                <p>1: title</p>\n                                <p>2: level</p>\n                                <p>3: actions</p>\n                                <p>4: reactions</p>\n                                <p>5: relation</p>\n                                <p>6: game over</p>\n                                <p>1: title</p>\n                                <p>2: level</p>\n                                <p>3: actions</p>\n                                <p>4: reactions</p>\n                                <p>5: relation</p>\n                                <p>6: game over</p>\n                                <p>1: title</p>\n                                <p>2: level</p>\n                                <p>3: actions</p>\n                                <p>4: reactions</p>\n                                <p>5: relation</p>\n                                <p>6: game over</p>\n                                <p>1: title</p>\n                                <p>2: level</p>\n                                <p>3: actions</p>\n                                <p>4: reactions</p>\n                                <p>5: relation</p>\n                                <p>6: game over</p>\n                                <p>1: title</p>\n                                <p>2: level</p>\n                                <p>3: actions</p>\n                                <p>4: reactions</p>\n                                <p>5: relation</p>\n                                <p>6: game over</p>\n                                <p>1: title</p>\n                                <p>2: level</p>\n                                <p>3: actions</p>\n                                <p>4: reactions</p>\n                                <p>5: relation</p>\n                                <p>6: game over</p>\n                                            \n\n                            </div>\n                            <div class=\"width_50 height_100 overflow_y scrollbaryhidden float_left\">\n                                 \n                               <h3>Title, Left Scroll</h3>\n                                <p>1: title</p>\n                                <p>2: level</p>\n                                <p>3: actions</p>\n                                <p>4: reactions</p>\n                                <p>5: relation</p>\n                                <p>6: game over</p>\n                                <p>1: title</p>\n                                <p>2: level</p>\n                                <p>3: actions</p>\n                                <p>4: reactions</p>\n                                <p>5: relation</p>\n                                <p>6: game over</p>\n                                <p>1: title</p>\n                                <p>2: level</p>\n                                <p>3: actions</p>\n                                <p>4: reactions</p>\n                                <p>5: relation</p>\n                                <p>6: game over</p>\n                                <p>1: title</p>\n                                <p>2: level</p>\n                                <p>3: actions</p>\n                                <p>4: reactions</p>\n                                <p>5: relation</p>\n                                <p>6: game over</p>\n                                <p>1: title</p>\n                                <p>2: level</p>\n                                <p>3: actions</p>\n                                <p>4: reactions</p>\n                                <p>5: relation</p>\n                                <p>6: game over</p>\n                                <p>1: title</p>\n                                <p>2: level</p>\n                                <p>3: actions</p>\n                                <p>4: reactions</p>\n                                <p>5: relation</p>\n                                <p>6: game over</p>\n                                            \n\n                            </div>\n                        </div>\n                      </div>\n\n                   </div>\n               </div>\n          </div>\n\n          <!-- socials \n\n\n        -->\n</div>\n    ");
+    component.innerHTML = "\n      <div id=\"elements_".concat(identify, "\">\n</div>\n    ");
   }
 
   ;
@@ -1203,6 +2065,61 @@ var state = {
         growth: false,
         shrink: false,
         walking: false,
+        running: false,
+        stunned: false
+      }
+    },
+    coming_soon: {
+      frame: 0,
+      stance: 0,
+      angle: 0,
+      transform: false,
+      opacity: false,
+      display: false,
+      clientX: 6,
+      clientY: 0,
+      height: 4,
+      width: 1,
+      idle: {
+        floating: false,
+        sneak: false,
+        standing: true,
+        lean: false,
+        deep_lean: false,
+        squat: false,
+        sitting: false,
+        bend: false,
+        deep_squat: false,
+        crawl: false,
+        prone: false,
+        dead: false
+      },
+      action: {
+        jumping: false,
+        punching: false,
+        kicking: false,
+        shooting: false,
+        grabing: false,
+        blocking: false
+      },
+      status: {
+        jumped: false,
+        punched: false,
+        kicked: false,
+        shot: false,
+        grabbed: false,
+        blocked: false
+      },
+      weapon: {
+        hands: false,
+        paint: false,
+        shoes: true,
+        gun: true
+      },
+      cycles: {
+        growth: false,
+        shrink: false,
+        walking: true,
         running: false,
         stunned: false
       }
@@ -2067,10 +2984,11 @@ var handle_if_AUTH_checked_CLICK_SCENE_1 = function handle_if_AUTH_checked_CLICK
 var shot_at_animation_begin = function shot_at_animation_begin() {
   var shots = document.getElementById('shots');
   shots.innerHTML = "";
-  var element = document.createElement('div');
+  var element = document.createElement('div'); // the double scene
+
   element.setAttribute("id", "shot_1");
   element.classList = "width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute";
-  element.innerHTML = "\n        <div class=\"width_50 height_50 gui_logo_type_1 top_0 right_0 margin_auto position_absolute\"></div>\n        <div class=\"width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute\"></div>\n        <div class=\"width_100 height_50 bottom_0 left_0 margin_auto position_absolute\">\n            <div class=\"width_50 height_50 top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n        </div>\n    ";
+  element.innerHTML = "\n        <div class=\"width_50 height_50 gui_logo_coming_soon_type_1 top_0 left_0 right_0 bottom_0 margin_auto position_absolute\"></div>\n        \n        <div class=\"width_100 height_50 bottom_0 left_0 margin_auto position_absolute\">\n            <div class=\"width_50 height_50 top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n        </div>\n    ";
   document.getElementById('shots').appendChild(element);
 };
 
@@ -2080,7 +2998,7 @@ var shot_to_scene_1 = function shot_to_scene_1() {
   var element = document.createElement('div');
   element.setAttribute("id", "shot_1");
   element.classList = "width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute";
-  element.innerHTML = "\n        <div id=\"shot_1_character_1\" class=\"width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute\"></div>\n        <div id=\"shot_1_character_2\" class=\"width_50 height_50 gui_character_face_left_shadow_1 top_0 left_0 margin_auto position_absolute\"></div>\n        <div class=\"width_100 height_50 bottom_0 left_0 margin_auto position_absolute\">\n            <div class=\"width_50 height_50 top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n        </div>\n    ";
+  element.innerHTML = "\n        <div id=\"shot_1_character_1\" class=\"width_100 height_100 top_0 right_0 margin_auto position_absolute\"></div>\n    ";
   element.addEventListener("click", function (event) {
     handle_if_AUTH_checked_CLICK_SCENE_1();
   });
@@ -2093,7 +3011,7 @@ var shot_start_of_authing = function shot_start_of_authing() {
   var element = document.createElement('div');
   element.setAttribute("id", "shot_1");
   element.classList = "width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute";
-  element.innerHTML = "\n        <div class=\"width_100 height_100 top_0 right_0 bottom_0 left_0 margin_auto position_absolute\">\n            <div class=\"width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n            <div class=\"width_50 height_50 gui_logo_type_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n        </div>\n    ";
+  element.innerHTML = "\n        <div class=\"width_100 height_100 top_0 right_0 bottom_0 left_0 margin_auto position_absolute\">\n        </div>\n    ";
   document.getElementById('shots').appendChild(element);
 };
 
@@ -2119,7 +3037,7 @@ var shot_loading = function shot_loading() {
   var element = document.createElement('div');
   element.setAttribute("id", "shot_1");
   element.classList = "width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute";
-  element.innerHTML = "\n        <div class=\"width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute\"></div>\n        <div class=\"width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute\"></div>\n        <div class=\"width_100 height_50 bottom_0 left_0 margin_auto position_absolute\">\n            <div class=\"width_50 height_50 gui_text_loading top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n        </div>\n    ";
+  element.innerHTML = "\n        <div class=\"width_100 height_50 bottom_0 left_0 margin_auto position_absolute\">\n            <div class=\"width_50 height_50 gui_text_loading top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n        </div>\n    ";
   element.addEventListener("click", function (event) {
     alert('shot_1 yup');
   });
@@ -2132,7 +3050,7 @@ var shot_loaded = function shot_loaded() {
   var element = document.createElement('div');
   element.setAttribute("id", "shot_1");
   element.classList = "width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute";
-  element.innerHTML = "\n        \n        <div class=\"width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 margin_auto position_absolute\"></div>\n        <div class=\"width_50 height_50 gui_logo_type_1 top_0 left_0 margin_auto position_absolute\"></div>\n        <div class=\"width_100 height_50 bottom_0 left_0 margin_auto position_absolute\">\n            <div class=\"width_50 height_50 gui_text_loaded top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n        </div>\n\n    ";
+  element.innerHTML = "\n        <div class=\"width_100 height_50 bottom_0 left_0 margin_auto position_absolute\">\n            <div class=\"width_50 height_50 gui_text_loaded top_0 right_0 bottom_0 left_0 margin_auto position_absolute\"></div>\n        </div>\n\n    ";
   element.addEventListener("click", function (event) {
     alert('shot_1 yup');
   });
@@ -2167,13 +3085,17 @@ var handle_play_DOMContentLoaded = function handle_play_DOMContentLoaded() {
         }
 
         ;
-
+        /*
         if (document.getElementById('interactions') != null) {
-          var interactions = document.getElementById('interactions');
-          interactions.innerHTML = "\n                            <div id=\"interactions_button_1\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_menu_white width_50 height_50 float_left\"></div></div>\n                            <div id=\"interactions_button_2\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_sign_in_white width_75 height_100 float_left\"></div></div>\n                            <div id=\"interactions_button_3\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_grid_white width_50 height_50 float_left\"></div></div>\n                            <div id=\"interactions_button_4\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_interaction_text_press width_100 height_100 float_left\"></div></div>\n                        ";
-        }
-
-        ;
+            let interactions = document.getElementById('interactions');
+            interactions.innerHTML = `
+                <div id="interactions_button_1" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_menu_white width_50 height_50 float_left"></div></div>
+                <div id="interactions_button_2" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_sign_in_white width_75 height_100 float_left"></div></div>
+                <div id="interactions_button_3" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_grid_white width_50 height_50 float_left"></div></div>
+                <div id="interactions_button_4" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_interaction_text_press width_100 height_100 float_left"></div></div>
+            `
+        };
+        */
       }
 
       ;
@@ -2202,221 +3124,175 @@ var handle_if_AUTH_checked_ANIMATION_BEGIN = function handle_if_AUTH_checked_ANI
     setInterval(function () {
       if (state.ux.platform.is_Desktop == true) {}
 
-      ; // start loops
-
+      ;
+      /*
+      // start loops
       if (document.getElementById('player_1') != null) {
-        // svg classlist
-        if (state.interaction.player_1.stance == 0) {
-          if (state.interaction.player_1.angle == 0) {
-            document.getElementById('player_1').classList = ' width_100 height_100 gui_character_body_right_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
-          }
-
-          ;
-
-          if (state.interaction.player_1.angle == 1) {
-            document.getElementById('player_1').classList = ' width_100 height_100 gui_character_body_right_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
-          }
-
-          ;
-        }
-
-        ; // frame reset
-
-        if (state.interaction.player_1.frame == 4) {
-          state.interaction.player_1.frame = 0;
-        }
-
-        ; // frame increase
-
-        state.interaction.player_1.frame += 1; // automated motion
-
-        if (state.interaction.player_1.cycles.walking == true) {
-          // stance: up
-          if (state.interaction.player_1.stance == 3) {
-            // player walking and pause
-            if (state.interaction.player_1.clientY < 3) {
-              state.interaction.player_1.clientY += 1 / 32;
-            }
-
-            ;
-          }
-
-          ; // stance: down
-
-          if (state.interaction.player_1.stance == 2) {
-            // player walking and pause
-            if (state.interaction.player_1.clientY > -4) {
-              state.interaction.player_1.clientY -= 1 / 32;
-            }
-
-            ;
-          }
-
-          ; // stance: right
-
-          if (state.interaction.player_1.stance == 1) {
-            // player walking and pause
-            if (state.interaction.player_1.clientX < 8) {
-              state.interaction.player_1.clientX += 1 / 32;
-            }
-
-            ;
-          }
-
-          ; // stance: left
-
+           // svg classlist
           if (state.interaction.player_1.stance == 0) {
-            // player walking and pause
-            if (state.interaction.player_1.clientX > 0) {
-              state.interaction.player_1.clientX -= 1 / 32;
-            }
-
-            ;
-          }
-
-          ;
-        }
-
-        ; // left
-
-        if (state.interaction.player_1.clientX <= 0 && state.interaction.player_1.cycles.walking == true) {
-          state.interaction.player_1.clientX = 0; //state.interaction.player_1.cycles.walking = false;
-          // reset face
-
-          state.interaction.player_1.stance = 1; // auto walk
-
-          state.interaction.player_1.clientX += 1 / 32;
-        }
-
-        ; // right
-
-        if (state.interaction.player_1.clientX >= 7 && state.interaction.player_1.cycles.walking == true) {
-          state.interaction.player_1.clientX = 7; //state.interaction.player_1.cycles.walking = false;
-          // reset face
-
-          state.interaction.player_1.stance = 0; // auto walk
-
-          state.interaction.player_1.clientX -= 1 / 32;
-        }
-
-        ; // size & position
-
-        var player_1 = document.getElementById('player_1');
-        player_1.style = 'height: ' + state.interaction.player_1.height * (tiny_height / 8) + 'px;' + 'width: ' + state.interaction.player_1.width * (tiny_width / 8) + 'px;' + 'bottom: ' + state.interaction.player_1.clientY * (tiny_height / 8) + 'px;' + 'left: ' + state.interaction.player_1.clientX * (tiny_width / 8) + 'px;';
-      }
-
-      ;
-
-      if (document.getElementById('gui_stage_tv') != null) {
-        if (state.interaction.player_1.stance == 0) {
-          if (state.interaction.player_1.angle == 0) {
-            document.getElementById('gui_stage_tv').classList = ' width_100 height_100 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
-          }
-
-          ;
-
-          if (state.interaction.player_1.angle == 1) {
-            document.getElementById('gui_stage_tv').classList = ' width_100 height_100 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
-          }
-
-          ;
-        }
-
-        ;
-
-        if (state.interaction.player_1.frame == 4) {
-          state.interaction.player_1.frame = 0;
-        }
-
-        ;
-        state.interaction.player_1.frame += 1;
-        var gui_stage_tv = document.getElementById('gui_stage_tv');
-        gui_stage_tv.style = 'height: ' + state.interaction.player_1.height * (tiny_height / 8) + 'px;' + 'width: ' + state.interaction.player_1.width * (tiny_width / 8) + 'px;' + 'bottom: ' + state.interaction.player_1.clientY * (tiny_height / 8) + 'px;' + 'left: ' + state.interaction.player_1.clientX * (tiny_width / 8) + 'px;';
-      }
-
-      ;
-
-      if (document.getElementById('gui_stage_lights') != null) {
-        if (state.interaction.player_1.stance == 0) {
-          if (state.interaction.player_1.angle == 0) {
-            document.getElementById('gui_stage_lights').classList = ' width_100 height_100 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
-          }
-
-          ;
-
-          if (state.interaction.player_1.angle == 1) {
-            document.getElementById('gui_stage_lights').classList = ' width_100 height_100 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
-          }
-
-          ;
-        }
-
-        ;
-
-        if (state.interaction.player_1.frame == 4) {
-          state.interaction.player_1.frame = 0;
-        }
-
-        ;
-        state.interaction.player_1.frame += 1;
-        var gui_stage_lights = document.getElementById('gui_stage_lights');
-        gui_stage_lights.style = 'height: ' + state.interaction.player_1.height * (tiny_height / 8) + 'px;' + 'width: ' + state.interaction.player_1.width * (tiny_width / 8) + 'px;' + 'bottom: ' + state.interaction.player_1.clientY * (tiny_height / 8) + 'px;' + 'left: ' + state.interaction.player_1.clientX * (tiny_width / 8) + 'px;';
-      }
-
-      ;
-
-      if (document.getElementById('mark') != null) {
-        if (state.interaction.player_1.stance == 0) {
-          if (state.interaction.player_1.angle == 0) {
-            document.getElementById('mark').classList = ' width_100 height_100 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
-          }
-
-          ;
-
-          if (state.interaction.player_1.angle == 1) {
-            document.getElementById('mark').classList = ' width_100 height_100 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
-          }
-
-          ;
-        }
-
-        ;
-
-        if (state.interaction.player_1.frame == 4) {
-          state.interaction.player_1.frame = 0;
-        }
-
-        ;
-        state.interaction.player_1.frame += 1;
-        var mark = document.getElementById('mark');
-        mark.style = 'height: ' + state.interaction.player_1.height * (tiny_height / 8) + 'px;' + 'width: ' + state.interaction.player_1.width * (tiny_width / 8) + 'px;' + 'bottom: ' + state.interaction.player_1.clientY * (tiny_height / 8) + 'px;' + 'left: ' + state.interaction.player_1.clientX * (tiny_width / 8) + 'px;';
-      }
-
-      ;
+              if (state.interaction.player_1.angle == 0) {
+              document.getElementById('player_1').classList = (' width_100 height_100 gui_character_body_right_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+              
+              };
+         
+              if (state.interaction.player_1.angle == 1) {
+              document.getElementById('player_1').classList = (' width_100 height_100 gui_character_body_right_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+              
+              };
+          };
+          
+          // frame reset
+          if (state.interaction.player_1.frame == 4) {
+              state.interaction.player_1.frame = 0;
+          };
+          
+          // frame increase
+          state.interaction.player_1.frame += 1;
+           // automated motion
+          if ( state.interaction.player_1.cycles.walking == true) {
+               // stance: up
+              if ( state.interaction.player_1.stance == 3 ) {
+                   
+                  // player walking and pause
+                  if (state.interaction.player_1.clientY < 3) {
+                      state.interaction.player_1.clientY += (1/32);
+                  };
+              };
+               // stance: down
+              if ( state.interaction.player_1.stance == 2 ) {
+                   // player walking and pause
+                  if (state.interaction.player_1.clientY > -4) {
+                      state.interaction.player_1.clientY -= (1/32);
+                  };
+              };
+               // stance: right
+              if ( state.interaction.player_1.stance == 1 ) {
+                  // player walking and pause
+                  if (state.interaction.player_1.clientX < 8) {
+                      state.interaction.player_1.clientX += (1/32);
+                  };
+              };
+               // stance: left
+              if ( state.interaction.player_1.stance == 0 ) {
+                   // player walking and pause
+                  if (state.interaction.player_1.clientX > 0) {
+                      state.interaction.player_1.clientX -= (1/32);
+                  };
+              };
+          };
+           // left
+          if ( state.interaction.player_1.clientX <= 0 && state.interaction.player_1.cycles.walking == true ) {
+              state.interaction.player_1.clientX = 0;
+              //state.interaction.player_1.cycles.walking = false;
+               // reset face
+              state.interaction.player_1.stance = 1;
+               // auto walk
+              state.interaction.player_1.clientX += (1/32);
+          };
+           // right
+          if ( state.interaction.player_1.clientX >= 7 && state.interaction.player_1.cycles.walking == true ) {
+              state.interaction.player_1.clientX = 7;
+              //state.interaction.player_1.cycles.walking = false;
+               // reset face
+              state.interaction.player_1.stance = 0;
+               // auto walk
+              state.interaction.player_1.clientX -= (1/32);
+          };
+           // size & position
+          let player_1 = document.getElementById('player_1');
+          player_1.style =
+              'height: ' + (state.interaction.player_1.height * (tiny_height / 8)) + 'px;' +
+              'width: ' + (state.interaction.player_1.width * (tiny_width / 8)) + 'px;' +
+              'bottom: ' + (state.interaction.player_1.clientY * (tiny_height / 8)) + 'px;' +
+              'left: ' + (state.interaction.player_1.clientX * (tiny_width / 8)) + 'px;';
+      };
+       if (document.getElementById('gui_stage_tv') != null) {
+           if (state.interaction.player_1.stance == 0) {
+              if (state.interaction.player_1.angle == 0) {
+              document.getElementById('gui_stage_tv').classList = (' width_100 height_100 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+              
+              };
+         
+              if (state.interaction.player_1.angle == 1) {
+              document.getElementById('gui_stage_tv').classList = (' width_100 height_100 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+              
+              };
+          };
+               if (state.interaction.player_1.frame == 4) {
+              state.interaction.player_1.frame = 0;
+          };
+      
+          state.interaction.player_1.frame += 1;
+          let gui_stage_tv = document.getElementById('gui_stage_tv');
+          gui_stage_tv.style =
+              'height: ' + (state.interaction.player_1.height * (tiny_height / 8)) + 'px;' +
+              'width: ' + (state.interaction.player_1.width * (tiny_width / 8)) + 'px;' +
+              'bottom: ' + (state.interaction.player_1.clientY * (tiny_height / 8)) + 'px;' +
+              'left: ' + (state.interaction.player_1.clientX * (tiny_width / 8)) + 'px;';
+      };
+       if (document.getElementById('gui_stage_lights') != null) {
+           if (state.interaction.player_1.stance == 0) {
+              if (state.interaction.player_1.angle == 0) {
+              document.getElementById('gui_stage_lights').classList = (' width_100 height_100 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+              
+              };
+         
+              if (state.interaction.player_1.angle == 1) {
+              document.getElementById('gui_stage_lights').classList = (' width_100 height_100 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+              
+              };
+          };
+               if (state.interaction.player_1.frame == 4) {
+              state.interaction.player_1.frame = 0;
+          };
+      
+          state.interaction.player_1.frame += 1;
+          let gui_stage_lights = document.getElementById('gui_stage_lights');
+          gui_stage_lights.style =
+              'height: ' + (state.interaction.player_1.height * (tiny_height / 8)) + 'px;' +
+              'width: ' + (state.interaction.player_1.width * (tiny_width / 8)) + 'px;' +
+              'bottom: ' + (state.interaction.player_1.clientY * (tiny_height / 8)) + 'px;' +
+              'left: ' + (state.interaction.player_1.clientX * (tiny_width / 8)) + 'px;';
+      };
+       if (document.getElementById('mark') != null) {
+           if (state.interaction.player_1.stance == 0) {
+              if (state.interaction.player_1.angle == 0) {
+              document.getElementById('mark').classList = (' width_100 height_100 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+              
+              };
+         
+              if (state.interaction.player_1.angle == 1) {
+              document.getElementById('mark').classList = (' width_100 height_100 gui_character_face_left_shadow_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+              
+              };
+          };
+               if (state.interaction.player_1.frame == 4) {
+              state.interaction.player_1.frame = 0;
+          };
+      
+          state.interaction.player_1.frame += 1;
+           let mark = document.getElementById('mark');
+          mark.style =
+              'height: ' + (state.interaction.player_1.height * (tiny_height / 8)) + 'px;' +
+              'width: ' + (state.interaction.player_1.width * (tiny_width / 8)) + 'px;' +
+              'bottom: ' + (state.interaction.player_1.clientY * (tiny_height / 8)) + 'px;' +
+              'left: ' + (state.interaction.player_1.clientX * (tiny_width / 8)) + 'px;';
+      };
+       */
 
       if (document.getElementById('shot_1_character_1') != null) {
-        if (state.interaction.player_1.stance == 0) {
-          if (state.interaction.player_1.angle == 0) {
-            document.getElementById('shot_1_character_1').classList = ' width_100 height_100 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
-          }
-
-          ;
-
-          if (state.interaction.player_1.angle == 1) {
-            document.getElementById('shot_1_character_1').classList = ' width_100 height_100 gui_character_face_left_shadow_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
-          }
-
-          ;
+        if (state.interaction.coming_soon.stance == 0) {
+          document.getElementById('shot_1_character_1').classList = ' width_50 height_50 gui_logo_type_1 top_0 left_0 right_0 bottom_0 position_absolute margin_auto ';
         }
 
         ;
 
-        if (state.interaction.player_1.frame == 4) {
-          state.interaction.player_1.frame = 0;
+        if (state.interaction.coming_soon.frame == 4) {
+          state.interaction.coming_soon.frame = 0;
         }
 
         ;
-        state.interaction.player_1.frame += 1;
+        state.interaction.coming_soon.frame += 1;
         /*
         let shot_1_character_1 = document.getElementById('shot_1_character_1');
         shot_1_character_1.style =
@@ -2544,35 +3420,33 @@ var handle_if_AUTH_checked_ANIMATION_BEGIN = function handle_if_AUTH_checked_ANI
       }
 
       ;
-
+      /*
       if (document.getElementById('logo') != null) {
-        if (state.interaction.player_1.stance == 0) {
-          if (state.interaction.player_1.angle == 0) {
-            document.getElementById('logo').classList = ' width_100 height_100 gui_logo_type_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
-          }
+           if (state.interaction.player_1.stance == 0) {
+              if (state.interaction.player_1.angle == 0) {
+              document.getElementById('logo').classList = (' width_100 height_100 gui_logo_type_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+              
+              };
+         
+              if (state.interaction.player_1.angle == 1) {
+              document.getElementById('logo').classList = (' width_100 height_100 gui_logo_type_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+              
+              };
+          };
+               if (state.interaction.player_1.frame == 4) {
+              state.interaction.player_1.frame = 0;
+          };
+      
+          state.interaction.player_1.frame += 1;
+           let logo = document.getElementById('logo');
+          logo.style =
+              'height: ' + (state.interaction.player_1.height * (tiny_height / 8)) + 'px;' +
+              'width: ' + (state.interaction.player_1.width * (tiny_width / 8)) + 'px;' +
+              'bottom: ' + (state.interaction.player_1.clientY * (tiny_height / 8)) + 'px;' +
+              'left: ' + (state.interaction.player_1.clientX * (tiny_width / 8)) + 'px;';
+      };
+      */
 
-          ;
-
-          if (state.interaction.player_1.angle == 1) {
-            document.getElementById('logo').classList = ' width_100 height_100 gui_logo_type_' + state.interaction.player_1.frame + ' position_absolute margin_auto ';
-          }
-
-          ;
-        }
-
-        ;
-
-        if (state.interaction.player_1.frame == 4) {
-          state.interaction.player_1.frame = 0;
-        }
-
-        ;
-        state.interaction.player_1.frame += 1;
-        var logo = document.getElementById('logo');
-        logo.style = 'height: ' + state.interaction.player_1.height * (tiny_height / 8) + 'px;' + 'width: ' + state.interaction.player_1.width * (tiny_width / 8) + 'px;' + 'bottom: ' + state.interaction.player_1.clientY * (tiny_height / 8) + 'px;' + 'left: ' + state.interaction.player_1.clientX * (tiny_width / 8) + 'px;';
-      }
-
-      ;
       state.motion.frame += 1; //console.log('state.motion.frame: ' + state.motion.frame)
     }, 1000 / state.motion.framerate);
   })();
@@ -2586,7 +3460,7 @@ var handle_if_AUTH = function handle_if_AUTH() {
     var play = setInterval(function () {
       if (interval == 0) {
         if (document.getElementById('shots') != null) {
-          alert('shot_at_animation_begin');
+          //alert('shot_at_animation_begin')
           shot_at_animation_begin();
         }
 
@@ -2597,7 +3471,7 @@ var handle_if_AUTH = function handle_if_AUTH() {
 
       if (interval == 24 * 1) {
         if (document.getElementById('shots') != null) {
-          alert('click to go onto: handle_if_AUTH_checked_CLICK_SCENE_1');
+          //alert('click to go onto: handle_if_AUTH_checked_CLICK_SCENE_1')
           shot_to_scene_1();
         }
 
@@ -2733,89 +3607,97 @@ var handle_firebase_events = function handle_firebase_events() {
     });
   }
 
-  ; // sign up / auth / create user
+  ;
 
-  var signup_form = document.getElementById('signup-form');
-  var signup_email = document.getElementById('signup-email');
-  var signup_password = document.getElementById('signup-password');
-  var signup_submit = document.getElementById('signup_submit');
-  signup_submit.addEventListener('click', function (event) {
-    event.preventDefault();
-    auth.createUserWithEmailAndPassword(signup_email.value, signup_password.value).then(function (cred) {
-      db_create_user(cred);
-    });
-  }); // sign in / auth
+  if (document.getElementById('element_input_filter') != null) {
+    // sign up / auth / create user
+    var signup_form = document.getElementById('signup-form');
 
-  var signin_form = document.getElementById('signin-form');
-  var signin_email = document.getElementById('signin-email');
-  var signin_password = document.getElementById('signin-password');
-  var signin = document.getElementById('signin');
-  signin.addEventListener('click', function (event) {
-    event.preventDefault();
-    auth.signInWithEmailAndPassword(signin_email.value, signin_password.value).then(function (cred) {
-      signin_email.value = "";
-      signin_password.value = "";
-    });
-  }); // upload
+    var _signup_email = document.getElementById('signup-email');
 
-  var uploader = document.getElementById('uploader');
-  var upload_progress = document.getElementById('upload_progress');
-  var fileButton = document.getElementById('fileButton');
-  fileButton.addEventListener('change', function (event) {
-    // assign metadata
-    var metadata = {
-      customMetadata: {
-        'location': 'Yosemite, CA, USA',
-        'activity': 'Hiking'
-      }
-    }; // get file
+    var _signup_password = document.getElementById('signup-password');
 
-    var file = event.target.files[0]; // create a storage ref
+    var signup_submit = document.getElementById('signup_submit');
+    signup_submit.addEventListener('click', function (event) {
+      event.preventDefault();
+      auth.createUserWithEmailAndPassword(_signup_email.value, _signup_password.value).then(function (cred) {
+        db_create_user(cred);
+      });
+    }); // sign in / auth
 
-    var storageRef = firebase.storage().ref('sweet_gifs/' + file.name); // upload file
+    var signin_form = document.getElementById('signin-form');
+    var signin_email = document.getElementById('signin-email');
+    var signin_password = document.getElementById('signin-password');
+    var signin = document.getElementById('signin');
+    signin.addEventListener('click', function (event) {
+      event.preventDefault();
+      auth.signInWithEmailAndPassword(signin_email.value, signin_password.value).then(function (cred) {
+        signin_email.value = "";
+        signin_password.value = "";
+      });
+    }); // upload
 
-    var task = storageRef.put(file, metadata); // upload progress bar
+    var uploader = document.getElementById('uploader');
+    var upload_progress = document.getElementById('upload_progress');
+    var fileButton = document.getElementById('fileButton');
+    fileButton.addEventListener('change', function (event) {
+      // assign metadata
+      var metadata = {
+        customMetadata: {
+          'location': 'Yosemite, CA, USA',
+          'activity': 'Hiking'
+        }
+      }; // get file
 
-    task.on('state_changed', function progress(snapshot) {
-      var progress = snapshot.bytesTransferred / snapshot.totalBytes * 100;
-      console.log('Upload is ' + progress + '% done');
-      uploader.value = progress;
-      upload_progress.innerHTML = progress;
-    }, function error(err) {}, function complete(snapshot) {
-      setTimeout(function () {
-        uploader.value = 0;
-        upload_progress.innerHTML = "";
-      }, 2000); // Handle successful uploads on complete
-      // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+      var file = event.target.files[0]; // create a storage ref
 
-      task.snapshot.ref.getDownloadURL().then(function (downloadURL) {
-        console.log('File available at', downloadURL);
-        upload_details = downloadURL;
-        document.getElementById('upload_details').innerHTML = "upload complete, available at: ".concat(upload_details);
-        document.getElementById('upload_details').innerHTML += "\n                    <div id=\"uploaded_image\" style=\"background-image: url(".concat(upload_details, ")\">\n                    </div>");
+      var storageRef = firebase.storage().ref('sweet_gifs/' + file.name); // upload file
+
+      var task = storageRef.put(file, metadata); // upload progress bar
+
+      task.on('state_changed', function progress(snapshot) {
+        var progress = snapshot.bytesTransferred / snapshot.totalBytes * 100;
+        console.log('Upload is ' + progress + '% done');
+        uploader.value = progress;
+        upload_progress.innerHTML = progress;
+      }, function error(err) {}, function complete(snapshot) {
+        setTimeout(function () {
+          uploader.value = 0;
+          upload_progress.innerHTML = "";
+        }, 2000); // Handle successful uploads on complete
+        // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+
+        task.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+          console.log('File available at', downloadURL);
+          upload_details = downloadURL;
+          document.getElementById('upload_details').innerHTML = "upload complete, available at: ".concat(upload_details);
+          document.getElementById('upload_details').innerHTML += "\n                        <div id=\"uploaded_image\" style=\"background-image: url(".concat(upload_details, ")\">\n                        </div>");
+        });
+      });
+    }); // signout / un-auth
+
+    var signout = document.getElementById('signout');
+    signout.addEventListener('click', function (event) {
+      event.preventDefault();
+      auth.signOut().then(function () {
+        console.log('logged out');
       });
     });
-  }); // signout / un-auth
-
-  var signout = document.getElementById('signout');
-  signout.addEventListener('click', function (event) {
-    event.preventDefault();
-    auth.signOut().then(function () {
-      console.log('logged out');
+    document.getElementById('edit_button').addEventListener('click', function (event) {
+      event.preventDefault();
+      db_update_user("users", stored_auth_user_cred.uid);
     });
-  });
-  document.getElementById('edit_button').addEventListener('click', function (event) {
-    event.preventDefault();
-    db_update_user("users", stored_auth_user_cred.uid);
-  });
-  document.getElementById('delete_button').addEventListener('click', function (event) {
-    event.preventDefault();
-    db_delete_user("users", stored_auth_user_cred.uid);
-  });
-  document.getElementById('create_button').addEventListener('click', function (event) {
-    event.preventDefault();
-    db_create_post("users");
-  });
+    document.getElementById('delete_button').addEventListener('click', function (event) {
+      event.preventDefault();
+      db_delete_user("users", stored_auth_user_cred.uid);
+    });
+    document.getElementById('create_button').addEventListener('click', function (event) {
+      event.preventDefault();
+      db_create_post("users");
+    });
+  }
+
+  ;
 };
 
 var valid_user = {};
@@ -3748,7 +4630,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54416" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58024" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
