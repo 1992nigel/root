@@ -3,6 +3,930 @@ import from_index from '../index.js';
 
 let state;
 
+//2
+let shot_action_logo_action_enter = () => {
+
+    let state = from_index.handle_ReturnState();
+
+    if (document.getElementById('shots') != null) {
+        let shots = document.getElementById('shots');
+        shots.innerHTML = `
+            <div id="still" class="width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
+                <div id="shot_2_character_logo_action_enter" class="width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_blink_1 position_absolute margin_auto"></div>
+                <div id="enter" class="animated1 enterBottom width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
+                    <div id="shot_action_single_enter_logo" class=""></div>
+                </div>
+            </div>
+        `
+    };
+
+    // shot_2_character_logo_action_enter single (blinking)
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('shot_2_character_logo_action_enter') != null) {
+
+                    document.getElementById('shot_2_character_logo_action_enter').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_blink_'+interval+ ' position_absolute margin_auto ');
+                            
+                    if (interval == 6) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+
+                };
+
+            }, (1000 / 12));
+
+            play;
+    })();
+
+    // shot_action_single_enter_logo
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('shot_action_single_enter_logo') != null) {
+
+                    document.getElementById('shot_action_single_enter_logo').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_logo_type_'+interval+ ' position_absolute margin_auto ');
+                            
+                    if (interval == 4) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+
+                };
+
+                if (interval == 4) {
+                    //clearInterval(play)
+                };
+
+            }, (1000 / 12));
+
+            play;
+    })();
+};
+
+//3
+let shot_action_logo_action_leave = () => {
+
+    let state = from_index.handle_ReturnState();
+
+    if (document.getElementById('shots') != null) {
+        let shots = document.getElementById('shots');
+        shots.innerHTML = `
+            <div id="still" class="width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
+                <div id="shot_2_character_logo_leave" class="width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_blink_1 position_absolute margin_auto"></div>
+                <div id="leave" class="animated1 leaveBottom width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
+                    <div id="shot_action_single_enter_logo" class=""></div>
+                </div>
+            </div>
+        `
+    };
+
+    // shot_2_character_logo_leave single (blinking)
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('shot_2_character_logo_leave') != null) {
+
+                    document.getElementById('shot_2_character_logo_leave').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_blink_'+interval+ ' position_absolute margin_auto ');
+                            
+                    if (interval == 6) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+
+                };
+
+            }, (1000 / 12));
+
+            play;
+    })();
+
+    // shot_action_single_enter_logo
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('shot_action_single_enter_logo') != null) {
+
+                    document.getElementById('shot_action_single_enter_logo').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_logo_type_'+interval+ ' position_absolute margin_auto ');
+                            
+                    if (interval == 4) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+
+                };
+
+                if (interval == 4) {
+                    //clearInterval(play)
+                };
+
+            }, (1000 / 12));
+
+            play;
+    })();
+};
+
+// 1
+let shot_action_logo_action_blinking_only_enter = () => {
+
+    let state = from_index.handle_ReturnState();
+
+    if (document.getElementById('shots') != null) {
+        let shots = document.getElementById('shots');
+        shots.innerHTML = `
+            <div id="still" class="width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
+                <div id="enter" class="animated1 enterBottom width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
+                    <div id="shot_2_character_blinking_only_enter" class="width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_blink_1 position_absolute margin_auto"></div>
+                </div>
+            </div>
+        `
+    };
+
+    // shot_2_character_blinking_only_enter single (blinking)
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('shot_2_character_blinking_only_enter') != null) {
+
+                    document.getElementById('shot_2_character_blinking_only_enter').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_blink_'+interval+ ' position_absolute margin_auto ');
+                            
+                    if (interval == 6) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+
+                };
+
+            }, (1000 / 12));
+
+            play;
+    })();
+};
+
+// 0
+let shot_action_single_vomit = () => {
+
+    let state = from_index.handle_ReturnState();
+
+    if (document.getElementById('shots') != null) {
+        let shots = document.getElementById('shots');
+        shots.innerHTML = `
+        <div id="still" class="width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
+            <div id="shot_2_character_vomit" class="width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_vomit_left_shadow_1 position_absolute margin_auto"></div>
+            <div id="shot_2_wall" class=""></div>
+        </div>
+        `
+    };
+
+    // shot_2_character_vomit single
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('shot_2_character_vomit') != null) {
+
+                    document.getElementById('shot_2_character_vomit').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_vomit_left_shadow_'+interval+ ' position_absolute margin_auto ');
+                            
+                    if (interval == 7) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+
+                };
+
+                if (interval == 7) {
+                    clearInterval(play)
+                };
+
+            }, (1000 / 12));
+
+            play;
+    })();
+};
+
+let shot_action_single_vomit_and_wall = () => {
+
+    let state = from_index.handle_ReturnState();
+
+    //alert('shot_action_single_wall');
+
+    if (document.getElementById('shots') != null) {
+        let shots = document.getElementById('shots');
+        shots.innerHTML = `
+            <div id="still" class="width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
+                <div id="shot_2_character_vomit_and_wall" class="width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_blink_1 position_absolute margin_auto"></div>
+                <div id="shot_2_wall_and_vomit" class=""></div>
+            </div>
+        `
+    };
+
+    // shot_2_character_vomit single
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('shot_2_character_vomit_and_wall') != null) {
+
+                    document.getElementById('shot_2_character_vomit_and_wall').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_vomit_left_shadow_1 position_absolute margin_auto ');
+                            
+                    if (interval == 7) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+
+                };
+
+                if (interval == 7) {
+                    clearInterval(play)
+                };
+
+            }, (1000 / 12));
+
+            play;
+    })();
+
+    // 24/fps loop
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('shot_2_wall_and_vomit') != null) {
+
+                    document.getElementById('shot_2_wall_and_vomit').classList = (' width_100 height_100 top_0 right_0 bottom_0 left_0 gui_wall_'+interval+ ' position_absolute margin_auto ');
+                    /* if loop
+                        if (interval == 5) {
+                            interval = 0;
+                        };
+                    */
+
+                    interval += 1;
+                };
+
+                if (interval == 6) {
+                    clearInterval(play)
+                };
+
+            }, (1000 / state.motion.framerate));
+
+            play;
+    })();
+}
+
+//6
+let shot_action_user_screen_4 = () => {
+
+    let state = from_index.handle_ReturnState();
+
+    if (document.getElementById('shots') != null) {
+        let shots = document.getElementById('shots');
+        shots.innerHTML = `
+        
+            <div id="still" class="animated1 enterTop width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
+                <div id="shot_action_user_screen_4_item_1" class="width_50 height_50 top_0 right_0 gui_logo_type_1 position_absolute margin_auto "></div>
+                <div id="shot_action_user_screen_4_item_2" class="width_50 height_50 top_0 left_0 gui_logo_type_1 position_absolute margin_auto"></div>
+                <div id="shot_action_user_screen_4_item_3" class="width_50 height_50 bottom left_0 gui_logo_type_1 position_absolute margin_auto"></div>
+                <div id="container" class="width_50 height_33 bottom_0 right_0 left_0 position_absolute margin_auto">
+                    <div id="shot_action_user_screen_4_item_4" class="width_33 height_100 bottom left_0 gui_logo_type_1 position_absolute margin_auto"></div>
+                    <div id="container" class="width_33 height_100 bottom_0 right_0 left_0 position_absolute margin_auto">
+                        <div id="shot_action_user_screen_4_item_5" class="width_33 height_100 bottom left_0 gui_logo_type_1 position_absolute margin_auto"></div>
+                    </div>
+                    <div id="shot_action_user_screen_4_item_6" class="width_33 height_100 bottom left_0 gui_logo_type_1 position_absolute margin_auto"></div>
+                </div>
+            </div>
+        `
+    };
+
+    // shot_action_user_screen_4_item_1
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('shot_action_user_screen_4_item_1') != null) {
+
+                    document.getElementById('shot_action_user_screen_4_item_1').classList = (' width_25 height_25 top_0 bottom_0 right_0 gui_logo_type_'+interval+ ' position_absolute margin_auto ');
+                            
+                    if (interval == 4) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+
+                };
+
+                if (interval == 4) {
+                    //clearInterval(play)
+                };
+
+            }, (1000 / 12));
+
+            play;
+    })();
+
+    // shot_action_user_screen_4_item_2
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('shot_action_user_screen_4_item_2') != null) {
+
+                    document.getElementById('shot_action_user_screen_4_item_2').classList = (' width_50 height_50 top_0 left_0 bottom_0 right_0 gui_logo_type_'+interval+ ' position_absolute margin_auto ');
+                            
+                    if (interval == 4) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+
+                };
+
+                if (interval == 4) {
+                    //clearInterval(play)
+                };
+
+            }, (1000 / 12));
+
+            play;
+    })();
+
+    // shot_action_user_screen_4_item_3
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('shot_action_user_screen_4_item_3') != null) {
+
+                    document.getElementById('shot_action_user_screen_4_item_3').classList = (' width_25 height_25 top_0 bottom_0 left_0  gui_logo_type_'+interval+ ' position_absolute margin_auto ');
+                            
+                    if (interval == 4) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+
+                };
+
+                if (interval == 4) {
+                    //clearInterval(play)
+                };
+
+            }, (1000 / 12));
+
+            play;
+    })();
+
+    // shot_action_user_screen_4_item_4
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('shot_action_user_screen_4_item_4') != null) {
+
+                    document.getElementById('shot_action_user_screen_4_item_4').classList = (' width_33 height_100 left_0 bottom_0 gui_buttons_start position_absolute margin_auto ');
+                            
+                    if (interval == 4) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+
+                };
+
+                if (interval == 4) {
+                    //clearInterval(play)
+                };
+
+            }, (1000 / 12));
+
+            play;
+    })();
+
+    // shot_action_user_screen_4_item_5
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('shot_action_user_screen_4_item_5') != null) {
+
+                    document.getElementById('shot_action_user_screen_4_item_5').classList = (' width_33 height_100 left_0 bottom_0 right_0 gui_buttons_or position_absolute margin_auto ');
+                            
+                    if (interval == 4) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+
+                };
+
+                if (interval == 4) {
+                    //clearInterval(play)
+                };
+
+            }, (1000 / 12));
+
+            play;
+    })();
+
+    // shot_action_user_screen_4_item_6
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('shot_action_user_screen_4_item_6') != null) {
+
+                    document.getElementById('shot_action_user_screen_4_item_6').classList = (' width_33 height_100 bottom_0 right_0 gui_buttons_learn position_absolute margin_auto ');
+                            
+                    if (interval == 4) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+
+                };
+
+                if (interval == 4) {
+                    //clearInterval(play)
+                };
+
+            }, (1000 / 12));
+
+            play;
+    })();
+
+};
+
+//6
+let scene_start_1 = () => {
+
+    let state = from_index.handle_ReturnState();
+
+    if (document.getElementById('shots') != null) {
+        let shots = document.getElementById('shots');
+        shots.innerHTML = `
+        
+            <div id="still" class="animated1 enterTop width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
+                
+                <div id="container" class="width_50 height_50 top_0 left_0 position_absolute margin_auto">
+                    <div id="container" class="width_100 height_50 top_0 right_0 left_0 position_absolute margin_auto">
+                        <div id="scene_start_1_item_1" class="width_33 height_100 gui_logo_type_1 position_relative margin_auto float_left"></div>
+                        <div id="scene_start_1_item_2" class="width_33 height_100 gui_logo_type_1 position_relative margin_auto float_left"></div>
+                        <div id="scene_start_1_item_3" class="width_33 height_100 gui_logo_type_1 position_relative margin_auto float_left"></div>
+                    </div>
+                    <div id="container" class="width_100 height_50 bottom_0 right_0 left_0 position_absolute margin_auto">
+                        <div id="scene_start_1_item_4" class="width_33 height_100 gui_logo_type_1 position_relative margin_auto float_left"></div>
+                        <div id="scene_start_1_item_5" class="width_33 height_100 gui_logo_type_1 position_relative margin_auto float_left"></div>
+                        <div id="scene_start_1_item_6" class="width_33 height_100 gui_logo_type_1 position_relative margin_auto float_left"></div>
+                    </div>
+                </div>
+
+                <div id="container" class="width_50 height_50 bottom_0 left_0 position_absolute margin_auto">
+                    <div id="scene_start_1_item_7" class="width_33 height_100 gui_logo_type_1 position_relative margin_auto float_left"></div>
+                    <div id="scene_start_1_item_8" class="width_33 height_100 gui_logo_type_1 position_relative margin_auto float_left"></div>
+                    <div id="scene_start_1_item_9" class="width_33 height_100 gui_logo_type_1 position_relative margin_auto float_left"></div>
+                </div>
+
+                <div id="scene_start_1_item_3" class="width_50 height_50 bottom_0 right_0 gui_logo_type_1 position_absolute margin_auto "></div>
+                
+                <div id="container" class="width_50 height_50 top_0 right_0 position_absolute margin_auto">
+                    <div id="scene_start_1_item_10" class="width_33 height_100 gui_logo_type_1 position_relative margin_auto float_left"></div>
+                    <div id="scene_start_1_item_11" class="width_33 height_100 gui_logo_type_1 position_relative margin_auto float_left"></div>
+                    <div id="scene_start_1_item_12" class="width_33 height_100 gui_logo_type_1 position_relative margin_auto float_left"></div>
+                </div>
+
+            </div>
+        `
+    };
+
+    // scene_start_1_item_1
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('scene_start_1_item_1') != null) {
+
+                    document.getElementById('scene_start_1_item_1').classList = (' width_25 height_25 top_0 bottom_0 right_0 gui_logo_type_'+interval+ ' position_absolute margin_auto ');
+                            
+                    if (interval == 4) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+
+                };
+
+                if (interval == 4) {
+                    //clearInterval(play)
+                };
+
+            }, (1000 / 12));
+
+            play;
+    })();
+
+    // scene_start_1_item_2
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('scene_start_1_item_2') != null) {
+
+                    document.getElementById('scene_start_1_item_2').classList = (' width_50 height_50 top_0 left_0 bottom_0 right_0 gui_logo_type_'+interval+ ' position_absolute margin_auto ');
+                            
+                    if (interval == 4) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+
+                };
+
+                if (interval == 4) {
+                    //clearInterval(play)
+                };
+
+            }, (1000 / 12));
+
+            play;
+    })();
+
+    // scene_start_1_item_3
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('scene_start_1_item_3') != null) {
+
+                    document.getElementById('scene_start_1_item_3').classList = (' width_25 height_25 top_0 bottom_0 left_0  gui_logo_type_'+interval+ ' position_absolute margin_auto ');
+                            
+                    if (interval == 4) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+
+                };
+
+                if (interval == 4) {
+                    //clearInterval(play)
+                };
+
+            }, (1000 / 12));
+
+            play;
+    })();
+
+    // scene_start_1_item_4
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('scene_start_1_item_4') != null) {
+
+                    document.getElementById('scene_start_1_item_4').classList = (' width_33 height_100 left_0 bottom_0 gui_buttons_start position_absolute margin_auto ');
+                            
+                    if (interval == 4) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+
+                };
+
+                if (interval == 4) {
+                    //clearInterval(play)
+                };
+
+            }, (1000 / 12));
+
+            play;
+    })();
+
+    // scene_start_1_item_5
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('scene_start_1_item_5') != null) {
+
+                    document.getElementById('scene_start_1_item_5').classList = (' width_33 height_100 left_0 bottom_0 right_0 gui_buttons_or position_absolute margin_auto ');
+                            
+                    if (interval == 4) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+
+                };
+
+                if (interval == 4) {
+                    //clearInterval(play)
+                };
+
+            }, (1000 / 12));
+
+            play;
+    })();
+
+    // scene_start_1_item_6
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('scene_start_1_item_6') != null) {
+
+                    document.getElementById('scene_start_1_item_6').classList = (' width_33 height_100 bottom_0 right_0 gui_buttons_learn position_absolute margin_auto ');
+                            
+                    if (interval == 4) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+
+                };
+
+                if (interval == 4) {
+                    //clearInterval(play)
+                };
+
+            }, (1000 / 12));
+
+            play;
+    })();
+
+};
+
+let set_stage_game = () => {
+
+    let state = from_index.handle_ReturnState();
+    /*
+    if (document.getElementById('shots') != null) {
+        let shots = document.getElementById('shots');
+        shots.innerHTML = ``
+    };
+    */
+
+    if (document.getElementById('set') != null) {
+        let set = document.getElementById('set');
+        set.innerHTML = `
+
+              <div id="vr_bg" class="opacity_005">
+                  <div id="row_accent_noise"></div>
+              </div>
+
+              <div id="vr_mg" class="transform_translate3d_top0  position_absolute top_0 left_0 right_0 width_100vw height_100vh webkit_box_pack_center webkit_box_align display_webkit_box easing_01">
+              
+                 <div id="column1" class="position_relative float_left width_100vw height_100vh ">
+                    <div class="width_100 height_100 float_left position_relative overflow_hidden webkit_box_pack_center webkit_box_align display_webkit_box">
+                       Left Top
+                    </div>
+                    <div class="width_100 height_100 float_left position_relative overflow_hidden webkit_box_pack_center webkit_box_align display_webkit_box">
+                       Left Center
+                    </div>
+                    <div class="width_100 height_100 float_left position_relative overflow_hidden webkit_box_pack_center webkit_box_align display_webkit_box">
+                       Left Bottom
+                    </div>
+                 </div>
+                 <div id="column1" class="position_relative float_left width_100vw height_100vh">
+                    <div class="width_100 height_100 float_left position_relative overflow_hidden webkit_box_pack_center webkit_box_align display_webkit_box">
+                       Center Top
+                    </div>
+                    <div id="vr_mg_center" class="width_100 height_100 float_left position_relative overflow_hidden webkit_box_pack_center webkit_box_align display_webkit_box">
+                       
+
+                        <div id="gui_stage_tv" class=""></div>
+                        <div id="gui_stage_lights" class=""></div>
+                        Center
+
+                    </div>
+                    <div class="width_100 height_100 float_left position_relative overflow_hidden webkit_box_pack_center webkit_box_align display_webkit_box">
+                       Center Bottom
+                    </div>
+                 </div>
+                 <div id="column1" class="position_relative float_left width_100vw height_100vh">
+                    <div class="width_100 height_100 float_left position_relative overflow_hidden webkit_box_pack_center webkit_box_align display_webkit_box">
+                       Right Top
+                    </div>
+                    <div class="width_100 height_100 float_left position_relative overflow_hidden webkit_box_pack_center webkit_box_align display_webkit_box">
+                       Right Center
+                    </div>
+                    <div class="width_100 height_100 float_left position_relative overflow_hidden webkit_box_pack_center webkit_box_align display_webkit_box">
+                       Right Bottom
+                    </div>
+                 </div>
+
+              </div>
+        `
+    };
+
+    if (document.getElementById('scene') != null) {
+        let scene = document.getElementById('scene');
+        scene.innerHTML = `
+
+              <div id="vr_fg" class="">
+                <div id="player_1" class=""></div>
+                <div id="mark" class=""></div>
+                <div id="logo" class=""></div>
+              </div>
+
+        `
+    };
+};
+
+let set_stage_game_end = () => {
+
+    let state = from_index.handle_ReturnState();
+
+    /*
+    if (document.getElementById('shots') != null) {
+        let shots = document.getElementById('shots');
+        shots.innerHTML = ``
+    };
+    */
+
+    if (document.getElementById('set') != null) {
+        let set = document.getElementById('set');
+        set.innerHTML = `
+            <div id="vr_bg" class="opacity_005">
+            </div>
+            <div id="vr_mg" class="transform_translate3d_top0  position_absolute top_0 left_0 right_0 width_100vw height_100vh webkit_box_pack_center webkit_box_align display_webkit_box easing_01">
+            </div>
+        `
+    };
+
+    if (document.getElementById('scene') != null) {
+        let scene = document.getElementById('scene');
+        scene.innerHTML = `
+
+              <div id="vr_fg" class="">
+              </div>
+
+        `
+    };
+};
+
+
+let shot_action_single_loading = () => {
+    
+    let state = from_index.handle_ReturnState();
+
+    let shots = document.getElementById('shots');
+    shots.innerHTML = ``
+
+    let element = document.createElement('div');
+
+    element.setAttribute("id", `shot_1`);
+    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
+    element.innerHTML = `
+        <div class=" width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
+            <div id="gui_text_loading" class="width_50 height_50 gui_text_loading_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
+        </div>
+    `
+    element.addEventListener("click", function(event) {
+        alert('shot_1 yup');
+    });
+
+    document.getElementById('shots').appendChild(
+        element
+    );
+
+    // shot_1_character_1 loop
+    (() => {
+        let interval = 0;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('gui_text_loading') != null) {
+
+                    document.getElementById('gui_text_loading').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_text_loading_'+interval+ ' position_absolute margin_auto ');
+                            
+                    if (interval == 4) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+                };
+
+                /*
+                if (interval == 4) {
+                    clearInterval(play)
+                };
+                */
+
+            }, (1000 / state.motion.framerate));
+
+            play;
+    })();
+}
+
+let shot_action_single_loaded = () => {
+
+    let state = from_index.handle_ReturnState();
+
+    let shots = document.getElementById('shots');
+    shots.innerHTML = ``
+
+    let element = document.createElement('div');
+
+    element.setAttribute("id", `shot_1`);
+    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
+    element.innerHTML = `
+        
+            <div class="width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
+                <div id="gui_text_loaded" class="width_50 height_50 gui_text_loaded_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
+            </div>
+
+    `
+    element.addEventListener("click", function(event) {
+        alert('shot_1 yup');
+    });
+
+    document.getElementById('shots').appendChild(
+        element
+    );
+
+    // shot_1_character_1 loop
+    (() => {
+        let interval = 0;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('gui_text_loaded') != null) {
+
+                    document.getElementById('gui_text_loaded').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_text_loaded_'+interval+ ' position_absolute margin_auto ');
+                            
+                    if (interval == 4) {
+                        interval = 0;
+                    };
+                
+                    interval += 1;
+                };
+
+                /*
+                if (interval == 4) {
+                    clearInterval(play)
+                };
+                */
+
+            }, (1000 / state.motion.framerate));
+
+            play;
+    })();
+}
+
 let gen = (x) => {
   
   let component = document.createElement('div');
@@ -30,8 +954,20 @@ let gen = (x) => {
 
               <p class=" ">user only posts</p>
 
-              <div id="posts_all_user_only_container">
+              <div id="posts_all_container">
                 <div id="posts_all_user_only"></div>
+              </div>
+
+              <p class=" ">posts only posts</p>
+
+              <div id="posts_all_container">
+                <div id="posts_all_posts_only"></div>
+              </div>
+
+              <p class=" ">posts only valid user posts</p>
+
+              <div id="posts_all_container">
+                <div id="posts_all_posts_only_valid_user"></div>
               </div>
 
                <ul id="firebase">
@@ -45,6 +981,10 @@ let gen = (x) => {
                      <form id="account-form">
                        <p>modal-account</p>
                        <div id="account-details" class="account-details"><p>account-details<p></div>
+                       
+                       <p id="account-details-id"></p>
+                       <p id="account-details-title"></p>
+                       <p id="account-details-email"></p>
                        <div id="upload_form"></div>
                      </form>
                   </div>
@@ -840,5 +1780,16 @@ width_100 height_100vh overflow_y scrollbary scrollbary-scrollbar-track-light-ye
 };
 
 export default {
-  gen
+  gen,
+  shot_action_single_loaded,
+  shot_action_single_loading,
+  set_stage_game_end,
+  set_stage_game,
+  scene_start_1,
+  shot_action_user_screen_4,
+  shot_action_single_vomit_and_wall,
+  shot_action_single_vomit,
+  shot_action_logo_action_blinking_only_enter,
+  shot_action_logo_action_enter,
+  shot_action_logo_action_leave
 };

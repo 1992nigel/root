@@ -3,6 +3,78 @@ body.dark {
     background: $grey;
 }
 
+.center_top #vr_mg{
+  transform: translate3d(-100%, 0, 0);
+};
+
+.top_left #vr_mg{
+  transform: translate3d(0%, 0, 0);
+};
+
+.top_right #vr_mg{
+  transform: translate3d(-200%, 0, 0);
+};
+
+.center #vr_mg{
+  transform: translate3d(-100%, -100%, 0);
+};
+
+.center_left #vr_mg{
+  transform: translate3d(0%, -100%, 0);
+};
+
+.center_right #vr_mg{
+  transform: translate3d(-200%, -100%, 0);
+};
+
+.center_bottom #vr_mg{
+  transform: translate3d(-100%, -200%, 0);
+};
+
+.bottom_left #vr_mg{
+  transform: translate3d(0%, -200%, 0);
+};
+
+.bottom_right #vr_mg{
+  transform: translate3d(-200%, -200%, 0);
+};
+
+
+#modal_nav_top {
+
+	position: fixed;
+	background: $grey;
+	float: left;
+	margin: auto;
+	width: 100vw;
+	height: 12.5vh;
+	right:0;
+	top:	-12.5vh;
+	left:0;
+	z-index: 1;
+
+-webkit-transition: all 100ms cubic-bezier(.100, .100, .100, .100); 
+   -moz-transition: all 100ms cubic-bezier(.100, .100, .100, .100); 
+     -o-transition: all 100ms cubic-bezier(.100, .100, .100, .100); 
+        transition: all 100ms cubic-bezier(.100, .100, .100, .100);
+
+-webkit-transition-timing-function: cubic-bezier(.100, .100, .100, .100); 
+   -moz-transition-timing-function: cubic-bezier(.100, .100, .100, .100); 
+     -o-transition-timing-function: cubic-bezier(.100, .100, .100, .100); 
+        transition-timing-function: cubic-bezier(.100, .100, .100, .100);
+
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+
+}
+
+.modal_nav_top #modal_nav_top {
+	right:0;
+	top:0%;
+	left:0;
+}
+
 #modal_pop_right {
 
 	position: fixed;
@@ -539,49 +611,49 @@ body.dark {
 	
 };
 
-.is_Desktop.card #post {
+.is_Desktop.card #posts_all_container #post {
 	position: relative;
 	float: left;
 	margin: auto;
 	width: 33%;
 };
 
-.is_Desktop.numbered #post {
+.is_Desktop.numbered #posts_all_container #post {
 	position: relative;
 	float: left;
 	margin: auto;
 	width: 100%;
 };
 
-.is_Desktop.list #post {
+.is_Desktop.list #posts_all_container #post {
 	position: relative;
 	float: left;
 	margin: auto;
 	width: 50%;
 };
 
-.is_Desktop.read #post {
+.is_Desktop.read #posts_all_container #post {
 	position: relative;
 	float: left;
 	margin: auto;
 	width: 25%;
 };
 
-.is_Desktop.fifth #post {
+.is_Desktop.fifth #posts_all_container #post {
 	position: relative;
 	float: left;
 	margin: auto;
 	width: 20%;
 };
 
-.is_Desktop.sixth #post {
+.is_Desktop.sixth #posts_all_container #post {
 	position: relative;
 	float: left;
 	margin: auto;
 	width: 16.666%;
 };
 
-.is_Desktop.eighth #post {
+.is_Desktop.eighth #posts_all_container #post {
 	position: relative;
 	float: left;
 	margin: auto;

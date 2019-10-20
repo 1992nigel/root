@@ -145,8 +145,22 @@
     background-size: contain;
 }
 
-.gui_buttons {
-    background: url("./assets/gui/gui_buttons.svg");
+.gui_buttons_start {
+    background: url("./assets/gui/gui_buttons_start.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.gui_buttons_or {
+    background: url("./assets/gui/gui_buttons_or.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.gui_buttons_learn {
+    background: url("./assets/gui/gui_buttons_learn.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -162,28 +176,28 @@
 .gui_wall_1 {
     background: url("./assets/gui/logo/mark/gui_wall_1.svg");
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: center top;
     background-size: cover;
 }
 
 .gui_wall_2 {
     background: url("./assets/gui/logo/mark/gui_wall_2.svg");
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: center top;
     background-size: cover;
 }
 
 .gui_wall_3 {
     background: url("./assets/gui/logo/mark/gui_wall_3.svg");
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: center top;
     background-size: cover;
 }
 
 .gui_wall_4 {
     background: url("./assets/gui/logo/mark/gui_wall_4.svg");
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: center top;
     background-size: cover;
 }
 

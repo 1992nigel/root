@@ -474,11 +474,20 @@ let handle_Function_Key_Down = (event) => {
         console.log(state.events.key.history);
 
 
+    if (event.keyCode == 81) {
+        //state.modal.pop.top.transform = !state.modal.pop.top.transform;
+        state.modal.nav.top.transform = !state.modal.nav.top.transform;
+    };
+
     if (event.keyCode == 27) {
         setTimeout(function () {
             //window.scrollTo(0, 0);
         }, 0);
         from_index.modal_reset();
+    };
+
+    if (event.keyCode == 32) {
+        state.interaction.player_1.cycles.walking = !state.interaction.player_1.cycles.walking;
     };
 
     if (event.keyCode == 13) {
@@ -495,6 +504,7 @@ let handle_Function_Key_Down = (event) => {
         //alert('shift');
         state.interaction.player_1.angle = 0;
         state.interaction.player_1.clientX -= (1/8);
+        state.interaction.cardboard.xaxis -= 1;
         event.preventDefault();
     };
 
@@ -502,6 +512,7 @@ let handle_Function_Key_Down = (event) => {
         //alert('shift');
         state.interaction.player_1.stance = 1;
         state.interaction.player_1.clientY -= (1/8);
+        state.interaction.cardboard.yaxis -= 1;
         event.preventDefault();
     };
 
@@ -509,6 +520,7 @@ let handle_Function_Key_Down = (event) => {
         //alert('shift');
         state.interaction.player_1.angle = 1;
         state.interaction.player_1.clientX += (1/8);
+        state.interaction.cardboard.xaxis += 1;
         event.preventDefault();
     };
 
@@ -516,7 +528,12 @@ let handle_Function_Key_Down = (event) => {
         //alert('shift');
         state.interaction.player_1.stance = 0;
         state.interaction.player_1.clientY += (1/8);
+        state.interaction.cardboard.yaxis += 1;
         event.preventDefault();
+    };
+
+    if (event.keyCode == 192) {
+        from_index.get_db_guides();
     };
 
     if (event.keyCode == 87) {

@@ -74,8 +74,11 @@
 
 // Imports
 import style from './style.scss';
+import default_state from './imports/state';
 import events from './imports/events';
 import elements from './imports/elements';
+
+let state = default_state.default_state;
 
 let dev_mode = false;
 let checkmark = 0;
@@ -85,9 +88,19 @@ let tiny_width = 0;
 let body = document.getElementById('body');
 let auth_has_been_checked = false;
 
+let on_post_page = false;
+let post_id;
+let post_views;
+let view_counted = false;
 let stored_auth_user_cred = {};
 let posts_guides = [];
 let upload_details = ``;
+let post_view = 'card';
+let dark_view = false;
+let filtered_posts_guides = [];
+let valid_user = {};
+let user_logged_in = false;
+let post_up = false;
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
@@ -132,1024 +145,7 @@ auth.onAuthStateChanged(logged_auth_user => {
 
 });
 
-let post_view = 'card';
-let dark_view = false;
-
-let state = {
-    
-    data: {
-        onload_url: '',
-        scene: 0,
-        route: 0,
-        game: 0,
-        time: 0,
-        onload_time: 0,
-        dark_mode: 0
-    },
-    
-    interaction: {
-
-        root: {
-            clientHeight: 0,
-            clientWidth: 0,
-            scrollHeight: 0,
-            scrollWidth: 0,
-            scrollTop: 0,
-            scrollLeft: 0,
-            component_app_gui_scroll_y_position: 0,
-                wheel: 'still',
-                wheels: 0,
-                isWheeling: false
-        },
-
-        key: {
-
-            transform: false,
-            opacity:false,
-            display: false,
-            xaxis: 1,
-            yaxis: 1,
-            height: 2,
-            width: 2,
-            action: {
-                breathing: false,
-                blinking: true,
-                standing: false,
-                walking: false,
-                sitting: false,
-                left: true,
-                right: false
-            }
-        },
-
-        keyhole: {
-
-            transform: false,
-            opacity:false,
-            display: false,
-            xaxis: 5,
-            yaxis: 4,
-            height: 2,
-            width: 2,
-            action: {
-                breathing: false,
-                blinking: true,
-                walking: false,
-                sitting: false,
-                left: true,
-                right: false
-            }
-        },
-
-        playable: {
-            frame: 0,
-            stance: 0,
-            angle: 0,
-            transform: false,
-            opacity: false,
-            display: false,
-            clientX: 6,
-            clientY: 0,
-            height: 4,
-            width: 1,
-            idle: {
-                floating: false,
-                sneak: false,
-                standing: true,
-                lean: false,
-                deep_lean: false,
-                squat: false,
-                sitting: false,
-                bend: false,
-                deep_squat: false,
-                crawl: false,
-                prone: false,
-                dead: false,
-            },
-            action: {
-                jumping: false,
-                punching: false,
-                kicking: false,
-                shooting: false,
-                grabing: false,
-                blocking: false,
-            },
-            status: {
-                jumped: false,
-                punched: false,
-                kicked: false,
-                shot: false,
-                grabbed: false,
-                blocked: false,
-            },
-            weapon: {
-                hands: false,
-                paint: false,
-                shoes: true,
-                gun: true
-            },
-            cycles: {
-                growth: false,
-                shrink: false,
-                walking: false,
-                running: false,
-                stunned: false,
-            }
-        },
-
-        player_1: {
-            frame: 0,
-            stance: 0,
-            angle: 0,
-            transform: false,
-            opacity: false,
-            display: false,
-            clientX: 0,
-            clientY: 0,
-            height: 4,
-            width: 1,
-            idle: {
-                floating: false,
-                sneak: false,
-                standing: true,
-                lean: false,
-                deep_lean: false,
-                squat: false,
-                sitting: false,
-                bend: false,
-                deep_squat: false,
-                crawl: false,
-                prone: false,
-                dead: false,
-            },
-            action: {
-                jumping: false,
-                punching: false,
-                kicking: false,
-                shooting: false,
-                grabing: false,
-                blocking: false,
-            },
-            status: {
-                jumped: false,
-                punched: false,
-                kicked: false,
-                shot: false,
-                grabbed: false,
-                blocked: false,
-            },
-            weapon: {
-                hands: false,
-                paint: false,
-                shoes: true,
-                gun: true
-            },
-            cycles: {
-                growth: false,
-                shrink: false,
-                walking: true,
-                running: false,
-                stunned: false,
-            }
-        },
-
-        player_2: {
-            frame: 0,
-            stance: 0,
-            angle: 0,
-            transform: false,
-            opacity: false,
-            display: false,
-            clientX: 6,
-            clientY: 0,
-            height: 4,
-            width: 1,
-            idle: {
-                floating: false,
-                sneak: false,
-                standing: true,
-                lean: false,
-                deep_lean: false,
-                squat: false,
-                sitting: false,
-                bend: false,
-                deep_squat: false,
-                crawl: false,
-                prone: false,
-                dead: false,
-            },
-            action: {
-                jumping: false,
-                punching: false,
-                kicking: false,
-                shooting: false,
-                grabing: false,
-                blocking: false,
-            },
-            status: {
-                jumped: false,
-                punched: false,
-                kicked: false,
-                shot: false,
-                grabbed: false,
-                blocked: false,
-            },
-            weapon: {
-                hands: false,
-                paint: false,
-                shoes: true,
-                gun: true
-            },
-            cycles: {
-                growth: false,
-                shrink: false,
-                walking: true,
-                running: false,
-                stunned: false,
-            }
-        },
-
-        enemy: {
-            frame: 0,
-            stance: 0,
-            angle: 0,
-            transform: false,
-            opacity: false,
-            display: false,
-            clientX: 6,
-            clientY: 0,
-            height: 4,
-            width: 1,
-            idle: {
-                floating: false,
-                sneak: false,
-                standing: true,
-                lean: false,
-                deep_lean: false,
-                squat: false,
-                sitting: false,
-                bend: false,
-                deep_squat: false,
-                crawl: false,
-                prone: false,
-                dead: false,
-            },
-            action: {
-                jumping: false,
-                punching: false,
-                kicking: false,
-                shooting: false,
-                grabing: false,
-                blocking: false,
-            },
-            status: {
-                jumped: false,
-                punched: false,
-                kicked: false,
-                shot: false,
-                grabbed: false,
-                blocked: false,
-            },
-            weapon: {
-                hands: false,
-                paint: false,
-                shoes: true,
-                gun: true
-            },
-            cycles: {
-                growth: false,
-                shrink: false,
-                walking: true,
-                running: false,
-                stunned: false,
-            }
-        },
-
-        vr: {
-
-            transform: false,
-            opacity: false,
-            display: false,
-            clientX: -1,
-            clientY: -1,
-            height: 4,
-            width: 1,
-            stance: 5,
-            clientX_increase: false,
-            clientY_increase: false,
-            clientX_auto: true,
-            clientY_auto: false,
-            idle: {
-                floating: false,
-                sneak: false,
-                standing: true,
-                lean: false,
-                deep_lean: false,
-                squat: false,
-                sitting: false,
-                bend: false,
-                deep_squat: false,
-                crawl: false,
-                prone: false,
-                dead: false,
-            },
-            action: {
-                jumping: false,
-                punching: false,
-                kicking: false,
-                shooting: false,
-                grabing: false,
-                blocking: false,
-            },
-            status: {
-                jumped: false,
-                punched: false,
-                kicked: false,
-                shot: false,
-                grabbed: false,
-                blocked: false,
-            },
-            weapon: {
-                hands: false,
-                paint: false,
-                shoes: true,
-                gun: true
-            },
-            cycles: {
-                growth: false,
-                shrink: false,
-                walking: false,
-                running: false,
-                stunned: false,
-            }
-        },
-
-        vomit: {
-            frame: 1,
-            stance: 0,
-            angle: 0,
-            transform: false,
-            opacity: false,
-            display: false,
-            clientX: 6,
-            clientY: 0,
-            height: 4,
-            width: 1,
-            idle: {
-                floating: false,
-                sneak: false,
-                standing: true,
-                lean: false,
-                deep_lean: false,
-                squat: false,
-                sitting: false,
-                bend: false,
-                deep_squat: false,
-                crawl: false,
-                prone: false,
-                dead: false,
-            },
-            action: {
-                jumping: false,
-                punching: false,
-                kicking: false,
-                shooting: false,
-                grabing: false,
-                blocking: false,
-            },
-            status: {
-                jumped: false,
-                punched: false,
-                kicked: false,
-                shot: false,
-                grabbed: false,
-                blocked: false,
-            },
-            weapon: {
-                hands: false,
-                paint: false,
-                shoes: true,
-                gun: true
-            },
-            cycles: {
-                growth: false,
-                shrink: false,
-                walking: true,
-                running: false,
-                stunned: false,
-            }
-        },
-
-        bridge_1: {
-            frame: 0,
-            stance: 0,
-            angle: 0,
-            transform: false,
-            opacity: false,
-            display: false,
-            clientX: 6,
-            clientY: 0,
-            height: 4,
-            width: 1,
-            idle: {
-                floating: false,
-                sneak: false,
-                standing: true,
-                lean: false,
-                deep_lean: false,
-                squat: false,
-                sitting: false,
-                bend: false,
-                deep_squat: false,
-                crawl: false,
-                prone: false,
-                dead: false,
-            },
-            action: {
-                jumping: false,
-                punching: false,
-                kicking: false,
-                shooting: false,
-                grabing: false,
-                blocking: false,
-            },
-            status: {
-                jumped: false,
-                punched: false,
-                kicked: false,
-                shot: false,
-                grabbed: false,
-                blocked: false,
-            },
-            weapon: {
-                hands: false,
-                paint: false,
-                shoes: true,
-                gun: true
-            },
-            cycles: {
-                growth: false,
-                shrink: false,
-                walking: true,
-                running: false,
-                stunned: false,
-            }
-        },
-
-        bridge_2: {
-            frame: 0,
-            stance: 0,
-            angle: 0,
-            transform: false,
-            opacity: false,
-            display: false,
-            clientX: 6,
-            clientY: 0,
-            height: 4,
-            width: 1,
-            idle: {
-                floating: false,
-                sneak: false,
-                standing: true,
-                lean: false,
-                deep_lean: false,
-                squat: false,
-                sitting: false,
-                bend: false,
-                deep_squat: false,
-                crawl: false,
-                prone: false,
-                dead: false,
-            },
-            action: {
-                jumping: false,
-                punching: false,
-                kicking: false,
-                shooting: false,
-                grabing: false,
-                blocking: false,
-            },
-            status: {
-                jumped: false,
-                punched: false,
-                kicked: false,
-                shot: false,
-                grabbed: false,
-                blocked: false,
-            },
-            weapon: {
-                hands: false,
-                paint: false,
-                shoes: true,
-                gun: true
-            },
-            cycles: {
-                growth: false,
-                shrink: false,
-                walking: true,
-                running: false,
-                stunned: false,
-            }
-        },
-
-        bridge_3: {
-            frame: 0,
-            stance: 0,
-            angle: 0,
-            transform: false,
-            opacity: false,
-            display: false,
-            clientX: 6,
-            clientY: 0,
-            height: 4,
-            width: 1,
-            idle: {
-                floating: false,
-                sneak: false,
-                standing: true,
-                lean: false,
-                deep_lean: false,
-                squat: false,
-                sitting: false,
-                bend: false,
-                deep_squat: false,
-                crawl: false,
-                prone: false,
-                dead: false,
-            },
-            action: {
-                jumping: false,
-                punching: false,
-                kicking: false,
-                shooting: false,
-                grabing: false,
-                blocking: false,
-            },
-            status: {
-                jumped: false,
-                punched: false,
-                kicked: false,
-                shot: false,
-                grabbed: false,
-                blocked: false,
-            },
-            weapon: {
-                hands: false,
-                paint: false,
-                shoes: true,
-                gun: true
-            },
-            cycles: {
-                growth: false,
-                shrink: false,
-                walking: true,
-                running: false,
-                stunned: false,
-            }
-        },
-
-        bridge_4: {
-            frame: 0,
-            stance: 0,
-            angle: 0,
-            transform: false,
-            opacity: false,
-            display: false,
-            clientX: 6,
-            clientY: 0,
-            height: 4,
-            width: 1,
-            idle: {
-                floating: false,
-                sneak: false,
-                standing: true,
-                lean: false,
-                deep_lean: false,
-                squat: false,
-                sitting: false,
-                bend: false,
-                deep_squat: false,
-                crawl: false,
-                prone: false,
-                dead: false,
-            },
-            action: {
-                jumping: false,
-                punching: false,
-                kicking: false,
-                shooting: false,
-                grabing: false,
-                blocking: false,
-            },
-            status: {
-                jumped: false,
-                punched: false,
-                kicked: false,
-                shot: false,
-                grabbed: false,
-                blocked: false,
-            },
-            weapon: {
-                hands: false,
-                paint: false,
-                shoes: true,
-                gun: true
-            },
-            cycles: {
-                growth: false,
-                shrink: false,
-                walking: true,
-                running: false,
-                stunned: false,
-            }
-        },
-
-        bridge_5: {
-            frame: 0,
-            stance: 0,
-            angle: 0,
-            transform: false,
-            opacity: false,
-            display: false,
-            clientX: 6,
-            clientY: 0,
-            height: 4,
-            width: 1,
-            idle: {
-                floating: false,
-                sneak: false,
-                standing: true,
-                lean: false,
-                deep_lean: false,
-                squat: false,
-                sitting: false,
-                bend: false,
-                deep_squat: false,
-                crawl: false,
-                prone: false,
-                dead: false,
-            },
-            action: {
-                jumping: false,
-                punching: false,
-                kicking: false,
-                shooting: false,
-                grabing: false,
-                blocking: false,
-            },
-            status: {
-                jumped: false,
-                punched: false,
-                kicked: false,
-                shot: false,
-                grabbed: false,
-                blocked: false,
-            },
-            weapon: {
-                hands: false,
-                paint: false,
-                shoes: true,
-                gun: true
-            },
-            cycles: {
-                growth: false,
-                shrink: false,
-                walking: true,
-                running: false,
-                stunned: false,
-            }
-        },
-
-        bridge_6: {
-            frame: 0,
-            stance: 0,
-            angle: 0,
-            transform: false,
-            opacity: false,
-            display: false,
-            clientX: 6,
-            clientY: 0,
-            height: 4,
-            width: 1,
-            idle: {
-                floating: false,
-                sneak: false,
-                standing: true,
-                lean: false,
-                deep_lean: false,
-                squat: false,
-                sitting: false,
-                bend: false,
-                deep_squat: false,
-                crawl: false,
-                prone: false,
-                dead: false,
-            },
-            action: {
-                jumping: false,
-                punching: false,
-                kicking: false,
-                shooting: false,
-                grabing: false,
-                blocking: false,
-            },
-            status: {
-                jumped: false,
-                punched: false,
-                kicked: false,
-                shot: false,
-                grabbed: false,
-                blocked: false,
-            },
-            weapon: {
-                hands: false,
-                paint: false,
-                shoes: true,
-                gun: true
-            },
-            cycles: {
-                growth: false,
-                shrink: false,
-                walking: true,
-                running: false,
-                stunned: false,
-            }
-        },
-
-        bridge_7: {
-            frame: 0,
-            stance: 0,
-            angle: 0,
-            transform: false,
-            opacity: false,
-            display: false,
-            clientX: 6,
-            clientY: 0,
-            height: 4,
-            width: 4,
-            idle: {
-                floating: false,
-                sneak: false,
-                standing: true,
-                lean: false,
-                deep_lean: false,
-                squat: false,
-                sitting: false,
-                bend: false,
-                deep_squat: false,
-                crawl: false,
-                prone: false,
-                dead: false,
-            },
-            action: {
-                jumping: false,
-                punching: false,
-                kicking: false,
-                shooting: false,
-                grabing: false,
-                blocking: false,
-            },
-            status: {
-                jumped: false,
-                punched: false,
-                kicked: false,
-                shot: false,
-                grabbed: false,
-                blocked: false,
-            },
-            weapon: {
-                hands: false,
-                paint: false,
-                shoes: true,
-                gun: true
-            },
-            cycles: {
-                growth: false,
-                shrink: false,
-                walking: true,
-                running: false,
-                stunned: false,
-            }
-        },
-
-        bridge_8: {
-            frame: 0,
-            stance: 0,
-            angle: 0,
-            transform: false,
-            opacity: false,
-            display: false,
-            clientX: 6,
-            clientY: 0,
-            height: 4,
-            width: 8,
-            idle: {
-                floating: false,
-                sneak: false,
-                standing: true,
-                lean: false,
-                deep_lean: false,
-                squat: false,
-                sitting: false,
-                bend: false,
-                deep_squat: false,
-                crawl: false,
-                prone: false,
-                dead: false,
-            },
-            action: {
-                jumping: false,
-                punching: false,
-                kicking: false,
-                shooting: false,
-                grabing: false,
-                blocking: false,
-            },
-            status: {
-                jumped: false,
-                punched: false,
-                kicked: false,
-                shot: false,
-                grabbed: false,
-                blocked: false,
-            },
-            weapon: {
-                hands: false,
-                paint: false,
-                shoes: true,
-                gun: true
-            },
-            cycles: {
-                growth: false,
-                shrink: false,
-                walking: true,
-                running: false,
-                stunned: false,
-            }
-        },
-
-        bridge_9: {
-            frame: 0,
-            stance: 0,
-            angle: 0,
-            transform: false,
-            opacity: false,
-            display: false,
-            clientX: 6,
-            clientY: 0,
-            height: 4,
-            width: 1,
-            idle: {
-                floating: false,
-                sneak: false,
-                standing: true,
-                lean: false,
-                deep_lean: false,
-                squat: false,
-                sitting: false,
-                bend: false,
-                deep_squat: false,
-                crawl: false,
-                prone: false,
-                dead: false,
-            },
-            action: {
-                jumping: false,
-                punching: false,
-                kicking: false,
-                shooting: false,
-                grabing: false,
-                blocking: false,
-            },
-            status: {
-                jumped: false,
-                punched: false,
-                kicked: false,
-                shot: false,
-                grabbed: false,
-                blocked: false,
-            },
-            weapon: {
-                hands: false,
-                paint: false,
-                shoes: true,
-                gun: true
-            },
-            cycles: {
-                growth: false,
-                shrink: false,
-                walking: true,
-                running: false,
-                stunned: false,
-            }
-        },
-
-        logo: {
-
-            transform: false,
-            opacity:false,
-            display: false,
-            xaxis: -1,
-            yaxis: -4,
-            height: 8,
-            width: 4,
-        },
-
-        helper: {
-
-            transform: false,
-            opacity:false,
-            display: false,
-            xaxis: -1,
-            yaxis: -4,
-            height: 8,
-            width: 4,
-        },
-
-        pen: [],
-        pencil: [],
-
-        dice: (Math.floor(Math.random() * 6) + 1),
-
-        random: (Math.floor(Math.random() * 100) + 1),
-
-        bullets: [
-        ],
-
-        hands: {
-            transform: false,
-            opacity:false,
-            display: false,
-            speed: 1,
-            xaxis: 3,
-            xaxisascending: true,
-            yaxis: 1,
-            yaxisascending: true,
-        },
-
-        track_x: {
-            transform: false,
-            opacity:false,
-            display: false,
-            speed: 1,
-            xaxis: 3,
-            xaxisascending: true,
-            yaxis: 1,
-            yaxisascending: true,
-        },
-
-        track_y: {
-            transform: false,
-            opacity:false,
-            display: false,
-            speed: 1,
-            xaxis: 3,
-            xaxisascending: true,
-            yaxis: 1,
-            yaxisascending: true,
-        },
-
-        ball: {
-            transform: false,
-            opacity:false,
-            display: false,
-            speed: 1,
-            xaxis: 3,
-            xaxisascending: true,
-            yaxis: 1,
-            yaxisascending: true,
-        },
-
-        bounce: {
-            transform: false,
-            opacity:false,
-            display: false,
-            speed: 1,
-            xaxis: 3,
-            xaxisascending: true,
-            yaxis: 1,
-            yaxisascending: true,
-        },
-
-        snake: {
-            create: false,
-            direction: 'up',
-            snakes: [{
-                clientX: 0,
-                clientY: 0,
-                clientXGrow:false,
-                clientYGrow:false
-            }
-            ],
-        },
-
-        parallax: {
-            xaxis: 0,
-            yaxis: 0,
-        },
-    },
-
-    ux: {
+state.ux = {
         platform: {
             is_Desktop: (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent))),
             is_Mobile: ((/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)))
@@ -1191,442 +187,10 @@ let state = {
             height256: window.innerHeight / 256,
             width256: window.innerWidth / 256,
         }
-    },
-
-    modal: {
-
-        gui: {
-
-            top: {
-                transform: false,
-                opacity:false,
-                display: false,
-                xaxis: 0,
-                yaxis: 0,
-                height: 0,
-                width: 0
-            },
-            top_left: {
-                transform: false,
-                opacity:false,
-                display: false,
-                xaxis: 0,
-                yaxis: 0,
-                height: 0,
-                width: 0
-            },
-            top_right: {
-                transform: false,
-                opacity:false,
-                display: false,
-                xaxis: 0,
-                yaxis: 0,
-                height: 0,
-                width: 0
-            },
-            bottom: {
-                transform: false,
-                opacity: false,
-                display: false,
-                xaxis: 0,
-                yaxis: 0,
-                height: 0,
-                width: 0
-            },
-            bottom_left: {
-                transform: false,
-                opacity: false,
-                display: false,
-                xaxis: 0,
-                yaxis: 0,
-                height: 0,
-                width: 0
-            },
-            bottom_right: {
-                transform: false,
-                opacity: false,
-                display: false,
-                xaxis: 0,
-                yaxis: 0,
-                height: 0,
-                width: 0
-            },
-            left: {
-                transform: false,
-                opacity:false,
-                display: false,
-                xaxis: 0,
-                yaxis: 0,
-                height: 0,
-                width: 0
-            },
-            right: {
-                transform: false,
-                opacity:false,
-                display: false,
-                xaxis: 0,
-                yaxis: 0,
-                height: 0,
-                width: 0
-            }
-        },
-        pip: {
-            top: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            bottom: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            left: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            right: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            }
-        },
-        pop: {
-            top: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            bottom: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            left: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            right: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            }
-        },
-        page: {
-            top: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            bottom: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            left: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            right: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            }
-        },
-        fade: {
-            top: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            bottom: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            left: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            right: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            }
-        },
-        gradient: {
-            top: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            bottom: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            left: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            right: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            }
-        },
-        morph: {
-            top: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            bottom: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            left: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            right: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            }
-        },
-        menu: {
-            top: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            bottom: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            left: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            right: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            }
-        },
-        overlay: {
-            top: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            bottom: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            left: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            right: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            }
-        },
-        nav: {
-            top: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            bottom: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            left: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            right: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            }
-        },
-        corner: {
-            top: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            bottom: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            left: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            },
-            right: {
-
-                transform: false,
-                opacity:false,
-                display: false
-            }
-        }
-    },
-
-    motion: {
-        duration: 0,
-        frame: 1,
-        framerate: 24,
-        rate: 1000,
-        sequence_game: 0
-    },
-
-    events: {
-        mouse: {
-            current: {
-                clientX: 0,
-                clientY: 0
-            },
-            status: {
-                enter: true,
-                leave: false,
-                up: true,
-                down: false
-            },
-            history: [],
-            timer: 0
-        },
-        mouse_enter: {
-            history: [],
-            timer: 0
-        },
-        mouse_leave: {
-            history: [],
-            timer: 0
-        },
-        mouse_up: {
-            history: [],
-            timer: 0
-        },
-        mouse_down: {
-            history: [],
-            timer: 0
-        },
-        mouse_up_move: {
-            history: [],
-            timer: 0
-        },
-        mouse_down_move: {
-            history: [],
-            timer: 0
-        },
-        mouse_drag_drop: {
-            history: [],
-            timer: 0
-        },
-        touch: {
-            history: [],
-            timer: 0
-        },
-        touch_start: {
-            history: [],
-            timer: 0
-        },
-        touch_end: {
-            history: [],
-            timer: 0
-        },
-        touch_drag_drop: {
-            history: [],
-            timer: 0
-        },
-        scroll: {
-            history: [],
-            timer: 0
-        },
-        key: {
-            history: [],
-            timer: 0
-        },
-        key_up: {
-            history: [],
-            timer: 0
-        },
-        keys_held: {
-            history: [],
-            timer: 0
-        },
-        motion: {
-            event_accelerationIncludingGravity_x: 0,
-            event_accelerationIncludingGravity_y: 0,
-            event_accelerationIncludingGravity_z: 0,
-            orientation_string: '',
-            event_alpha: '',
-            event_beta: '',
-            event_gamma: ''
-        }
-    },
-
 };
+
+state.ux.platform.is_Desktop = (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)));
+state.ux.platform.is_Mobile = ((/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)));
 
 if (tiny_height == 0 || tiny_height > state.ux.dimensions.height) {
     tiny_height = state.ux.dimensions.height;
@@ -1635,9 +199,6 @@ if (tiny_height == 0 || tiny_height > state.ux.dimensions.height) {
 if (tiny_width == 0 || tiny_width > state.ux.dimensions.width) {
     tiny_width = state.ux.dimensions.width;
 };
-
-state.ux.platform.is_Desktop = (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)));
-state.ux.platform.is_Mobile = ((/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)));
 
 console.log('index.js from nownigel');
 
@@ -1660,1651 +221,52 @@ let handle_time = () => {
 
             }, (1000));
     })();
-
 };
 
-let shot_action_single_vomit = () => {
-
-    if (document.getElementById('shot_1') != null) {
-        let shot_1 = document.getElementById('shot_1');
-        shot_1.innerHTML = `
-            <div id="shot_2_character_1" class=""></div>
-            <div id="shot_2_wall" class=""></div>
-        `
-    };
-
-    // shot_2_character_1 single
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('shot_2_character_1') != null) {
-
-                    document.getElementById('shot_2_character_1').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_vomit_left_shadow_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 7) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-
-                };
-
-                if (interval == 7) {
-                    clearInterval(play)
-                };
-
-            }, (1000 / 12));
-
-            play;
-    })();
-};
-
-/*
-
-let handle_if_AUTH_checked_CLICK_SCENE_1 = () => {
-    alert('handle_if_AUTH_checked_CLICK_SCENE_1');
-    // 24/fps loop
-    (() => {
-        let interval = 0;
-        let play = setInterval(
-            () => {
-                if ( interval == 0) {
-                    
-                    if (document.getElementById('shots') != null) {
-                        shot_start_of_authing();
-
-                    };
-
-                };
-
-                if (interval == 24 * 1) {
-                    
-                    if (document.getElementById('shots') != null) {
-                        shot_mid_of_authing();
-
-                    };
-
-                };
-               
-                if (interval == 24 * 2) {
-
-                    // the final shot of opening scene
-                    if (document.getElementById('shots') != null) {
-                        shot_end_of_authing();
-                    };
-
-                    clearInterval(play)
-                };
-
-                //console.log('handle_if_AUTH: ' + interval);
-                interval += 1;
-
-            }, (1000 / state.motion.framerate));
-
-            play;
-    })();
-};
-
-let handle_if_AUTH_checked_CLICK_SCENE_2 = () => {
-    alert('handle_if_AUTH_checked_CLICK_SCENE_2');
-    // 24/fps loop
-    (() => {
-        let interval = 0;
-        let play = setInterval(
-            () => {
-                if ( interval == 0) {
-                    
-                    if (document.getElementById('shots') != null) {
-                        shot_start_of_authing();
-
-                    };
-
-                };
-                
-                if (interval == 24 * 1) {
-
-                    // the final shot of opening scene
-                    if (document.getElementById('shots') != null) {
-                        shot_end_of_authing();
-                    };
-
-                    clearInterval(play)
-                };
-
-                //console.log('handle_if_AUTH: ' + interval);
-                interval += 1;
-
-            }, (1000 / state.motion.framerate));
-
-            play;
-    })();
-};
-
-let handle_if_AUTH_checked_CLICK_SCENE_3 = () => {
-    alert('handle_if_AUTH_checked_CLICK_SCENE_3');
-    // 24/fps loop
-    (() => {
-        let interval = 0;
-        let play = setInterval(
-            () => {
-                if ( interval == 0) {
-                    
-                    if (document.getElementById('shots') != null) {
-                        shot_start_of_authing();
-
-                    };
-
-                };
-                
-                if (interval == 24 * 1) {
-
-                    // the final shot of opening scene
-                    if (document.getElementById('shots') != null) {
-                        shot_end_of_authing();
-                    };
-
-                    clearInterval(play)
-                };
-
-                //console.log('handle_if_AUTH: ' + interval);
-                interval += 1;
-
-            }, (1000 / state.motion.framerate));
-
-            play;
-    })();
-};
-
-
-let shot_game_start = () => {
-    
-    if (document.getElementById('set') != null) {
-        let set = document.getElementById('set');
-        set.innerHTML = `
-            <div id="gui_stage_tv" class=""></div>
-            <div id="gui_stage_lights" class=""></div>
-        `
-    };
-
-    if (document.getElementById('scene') != null) {
-        let scene = document.getElementById('scene');
-        scene.innerHTML = `
-            <div id="player_1" class=""></div>
-            <div id="mark" class=""></div>
-            <div id="logo" class=""></div>
-        `
-    };
-}
-
-let shot_game_end = () => {
-    
-    if (document.getElementById('set') != null) {
-        let set = document.getElementById('set');
-        set.innerHTML = `
-        `
-    };
-
-    if (document.getElementById('scene') != null) {
-        let scene = document.getElementById('scene');
-        scene.innerHTML = `
-        `
-    };
-}
-
-
-let shot_action_single_wall = () => {
-
-    //alert('shot_action_single_wall');
-
-    if (document.getElementById('shot_1') != null) {
-    };
-
-    // 24/fps loop
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('shot_2_wall') != null) {
-
-                    document.getElementById('shot_2_wall').classList = (' width_100 height_100 top_0 right_0 bottom_0 left_0 gui_wall_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 6) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-                };
-
-                if (interval == 6) {
-                    clearInterval(play)
-                };
-
-            }, (1000 / state.motion.framerate));
-
-            play;
-    })();
-}
-
-let shot_action_single_vomit = () => {
-
-    if (document.getElementById('shot_1') != null) {
-        let shot_1 = document.getElementById('shot_1');
-        shot_1.innerHTML = `
-            <div id="shot_2_character_1" class=""></div>
-            <div id="shot_2_wall" class=""></div>
-        `
-    };
-
-    // shot_2_character_1 single
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('shot_2_character_1') != null) {
-
-                    document.getElementById('shot_2_character_1').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_vomit_left_shadow_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 7) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-
-                };
-
-                if (interval == 7) {
-                    clearInterval(play)
-                };
-
-            }, (1000 / 12));
-
-            play;
-    })();
-}
-
-let shot_action_single_enter = () => {
-
-    if (document.getElementById('shot_1') != null) {
-        let shot_1 = document.getElementById('shot_1');
-        shot_1.innerHTML = `
-        <div class="animated1 enterBottom width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
-            <div id="shot_action_single_enter_character" class=""></div>
-            <div id="shot_action_single_enter_logo" class=""></div>
-        </div>
-            
-        `
-    };
-
-    // shot_2_character_1 single
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('shot_action_single_enter_character') != null) {
-
-                    document.getElementById('shot_action_single_enter_character').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_shadow_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 4) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-
-                };
-
-                if (interval == 4) {
-                    //clearInterval(play)
-                };
-
-            }, (1000 / 12));
-
-            play;
-    })();
-
-
-    // shot_2_character_1 single
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('shot_action_single_enter_logo') != null) {
-
-                    document.getElementById('shot_action_single_enter_logo').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_logo_type_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 4) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-
-                };
-
-                if (interval == 4) {
-                    //clearInterval(play)
-                };
-
-            }, (1000 / 12));
-
-            play;
-    })();
-}
-
-let shot_action_single_idle = () => {
-
-    if (document.getElementById('shot_1') != null) {
-        let shot_1 = document.getElementById('shot_1');
-        shot_1.innerHTML = `
-        <div class="width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
-            <div id="shot_action_single_idle_character" class=""></div>
-            <div id="shot_action_single_idle_logo" class=""></div>
-        </div>
-        `
-    };
-
-    // shot_2_character_1 single
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('shot_action_single_idle_character') != null) {
-
-                    document.getElementById('shot_action_single_idle_character').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_shadow_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 4) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-
-                };
-
-                if (interval == 4) {
-                    //clearInterval(play)
-                };
-
-            }, (1000 / 12));
-
-            play;
-    })();
-
-
-    // shot_2_character_1 single
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('shot_action_single_idle_logo') != null) {
-
-                    document.getElementById('shot_action_single_idle_logo').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_logo_type_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 4) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-
-                };
-
-                if (interval == 4) {
-                    //clearInterval(play)
-                };
-
-            }, (1000 / 12));
-
-            play;
-    })();
-}
-
-let shot_action_single_leave = () => {
-
-    if (document.getElementById('shot_1') != null) {
-        let shot_1 = document.getElementById('shot_1');
-        shot_1.innerHTML = `
-        <div class="animated1 leaveBottom width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
-            <div id="shot_action_single_leave_character" class=""></div>
-            <div id="shot_action_single_leave_logo" class=""></div>
-        </div>
-            
-        `
-    };
-
-    // shot_2_character_1 single
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('shot_action_single_leave_character') != null) {
-
-                    document.getElementById('shot_action_single_leave_character').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_shadow_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 4) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-
-                };
-
-                if (interval == 4) {
-                    //clearInterval(play)
-                };
-
-            }, (1000 / 12));
-
-            play;
-    })();
-
-
-    // shot_2_character_1 single
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('shot_action_single_leave_logo') != null) {
-
-                    document.getElementById('shot_action_single_leave_logo').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_logo_type_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 4) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-
-                };
-
-                if (interval == 4) {
-                    //clearInterval(play)
-                };
-
-            }, (1000 / 12));
-
-            play;
-    })();
-}
-
-let shot_action_single_blank = () => {
-
-    if (document.getElementById('shots') != null) {
-        let shots = document.getElementById('shots');
-        shots.innerHTML = `
-        `
-
-        let element = document.createElement('div');
-
-        element.setAttribute("id", `shot_1`);
-        element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-        element.innerHTML = `
-            <div id="nigga_click"></div>
-        `
-        element.addEventListener("click", function(event) {
-            act_4();
+let add_events_after_shot_action_user_screen_4 = () => {
+
+    if (document.getElementById('shot_action_user_screen_4_item_1') != null) {
+        (document.getElementById('shot_action_user_screen_4_item_1')).addEventListener("click", function(event) {
+            alert('you doing it nigel!');
+            sequence_start();
         });
-
-        document.getElementById('shots').appendChild(
-            element
-        );
-
     };
 
-}
-
-let shot_action_single_blink = () => {
-
-    if (document.getElementById('shot_1') != null) {
-        let shot_1 = document.getElementById('shot_1');
-        shot_1.innerHTML = `
-            <div id="vomit_face" class="width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_blink_1 position_absolute margin_auto"></div>
-        `
-    };
-
-    // vomit_face single
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('vomit_face') != null) {
-
-                    document.getElementById('vomit_face').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_blink_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 7) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-
-                };
-
-                if (interval == 7) {
-                    clearInterval(play)
-                };
-
-            }, (1000 / 12));
-
-            play;
-    })();
-}
-
-
-let shot_at_animation_begin_1 = () => {
-    
-    let shots = document.getElementById('shots');
-    shots.innerHTML = ``
-
-    let element = document.createElement('div');
-
-    element.setAttribute("id", `shot_1`);
-    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-    element.innerHTML = `
-        <div id="begin_graphic" class="">
-            
-            <div class="animated1 enterTop width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
-                <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-            </div>
-
-        </div>
-    `
-
-    document.getElementById('shots').appendChild(
-        element
-    );
-}
-
-let shot_at_animation_begin_2 = () => {
-    
-    let shots = document.getElementById('shots');
-    shots.innerHTML = ``
-
-    let element = document.createElement('div');
-
-    element.setAttribute("id", `shot_1`);
-    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-    element.innerHTML = `
-        <div id="begin_graphic" class="">
-            
-            <div class="width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
-                <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-            </div>
-
-        </div>
-    `
-
-    document.getElementById('shots').appendChild(
-        element
-    );
-}
-
-let shot_at_animation_begin_3 = () => {
-    
-    let shots = document.getElementById('shots');
-    shots.innerHTML = ``
-
-    let element = document.createElement('div');
-
-    element.setAttribute("id", `shot_1`);
-    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-    element.innerHTML = `
-        <div id="begin_graphic" class="">
-            
-            <div class="width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
-                <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-            </div>
-
-        </div>
-    `
-
-    document.getElementById('shots').appendChild(
-        element
-    );
-}
-
-let shot_at_animation_begin_4 = () => {
-    
-    let shots = document.getElementById('shots');
-    shots.innerHTML = ``
-
-    let element = document.createElement('div');
-
-    element.setAttribute("id", `shot_1`);
-    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-    element.innerHTML = `
-        <div id="begin_graphic" class="">
-            
-            <div class="width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
-                <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-            </div>
-
-            <div class="animated1 enterBottom width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
-                <div class="width_50 height_50 gui_logo_type_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-            </div>
-
-        </div>
-    `
-
-    document.getElementById('shots').appendChild(
-        element
-    );
-}
-
-let shot_at_animation_begin_5 = () => {
-    
-    let shots = document.getElementById('shots');
-    shots.innerHTML = ``
-
-    let element = document.createElement('div');
-
-    element.setAttribute("id", `shot_1`);
-    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-    element.innerHTML = `
-        <div id="begin_graphic" class="">
-            
-            <div class="width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
-                <div class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-            </div>
-
-            <div class="width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
-                <div class="width_50 height_50 gui_logo_type_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-            </div>
-
-        </div>
-    `
-
-    document.getElementById('shots').appendChild(
-        element
-    );
-}
-
-let shot_at_animation_begin_6 = () => {
-    
-    let shots = document.getElementById('shots');
-    shots.innerHTML = ``
-
-    let element = document.createElement('div');
-
-    element.setAttribute("id", `shot_1`);
-    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-    element.innerHTML = `
-        
-        <div id="shot_facer_button_character_1"></div>
-        <div id="shot_facer_button_character_2"></div>
-    `
-
-    document.getElementById('shots').appendChild(
-        element
-    );
-}
-
-let shot_to_scene_facer_button = () => {
-
-    let shots = document.getElementById('shots');
-    shots.innerHTML = ``
-
-    let element = document.createElement('div');
-
-    element.setAttribute("id", `shot_1`);
-    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-    element.innerHTML = `
-        <div id="shot_facer_button_character_1"></div>
-        <div id="shot_facer_button_character_2"></div>
-        <div id="shot_facer_button_character_3"></div>
-    `
-    element.addEventListener("click", function(event) {
-        act_4();
-    });
-
-    document.getElementById('shots').appendChild(
-        element
-    );
-}
-
-let shot_to_scene_1 = () => {
-
-    let shots = document.getElementById('shots');
-    shots.innerHTML = ``
-
-    let element = document.createElement('div');
-
-    element.setAttribute("id", `shot_1`);
-    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-    element.innerHTML = `
-        <div id="shot_1_character_1"></div>
-        <div id="shot_1_character_2"></div>
-        <div id="shot_1_character_3"></div>
-        <div id="shot_1_character_4"></div>
-        <div id="shot_1_character_5"></div>
-        <div id="shot_1_character_6"></div>
-    `
-
-    document.getElementById('shots').appendChild(
-        element
-    );
-
-    document.getElementById('shot_1_character_3').addEventListener("click", function(event) {
-        handle_if_AUTH_checked_CLICK_SCENE_1();
-    });
-    document.getElementById('shot_1_character_4').addEventListener("click", function(event) {
-        handle_if_AUTH_checked_CLICK_SCENE_2();
-    });
-    document.getElementById('shot_1_character_5').addEventListener("click", function(event) {
-        handle_if_AUTH_checked_CLICK_SCENE_3();
-    });
-    document.getElementById('shot_1_character_6').addEventListener("click", function(event) {
-        handle_if_AUTH_checked_CLICK_SCENE_3();
-    });
-}
-
-let action_shot_single_1 = () => {
-
-    // 24/fps loop
-    (() => {
-        let interval = 0;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('shot_2_wall') != null) {
-
-                    document.getElementById('shot_2_wall').classList = (' width_100 height_100 top_0 right_0 bottom_0 left_0 gui_wall_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 6) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-                };
-
-                if (interval == 6) {
-                    clearInterval(play)
-                };
-
-            }, (1000 / state.motion.framerate));
-
-            play;
-    })();
-}
-
-let action_shot_mix = () => {
-
-    
-    // 24/fps loop
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('shot_2_character_1') != null) {
-
-                    document.getElementById('shot_2_character_1').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_vomit_left_shadow_'+state.interaction.vomit.frame+ ' position_absolute margin_auto ');
-                            
-                    if (state.interaction.vomit.frame == 6) {
-                        state.interaction.vomit.frame = 0;
-                        action_shot_single_1();
-                    };
-                
-                    state.interaction.vomit.frame += 1;
-                };
-
-                interval += 1;
-
-                if (interval == 12) {
-                    clearInterval(play)
-                };
-
-            }, (500));
-
-            play;
-    })();
-}
-
-let shot_to_scene_2 = () => {
-
-    let shots = document.getElementById('shots');
-    shots.innerHTML = ``
-
-    let element = document.createElement('div');
-
-    element.setAttribute("id", `shot_1`);
-    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-    element.innerHTML = `
-        <div id="shot_2_wall"></div>
-        <div id="shot_2_character_1"></div>
-        <div id="shot_2_character_2"></div>
-        <div id="shot_2_character_3"></div>
-        <div id="shot_2_character_4"></div>
-        <div id="shot_2_character_5"></div>
-    `
-
-    document.getElementById('shots').appendChild(
-        element
-    );
-
-    document.getElementById('shot_2_character_3').addEventListener("click", function(event) {
-        handle_if_AUTH_checked_CLICK_SCENE_1();
-    });
-    document.getElementById('shot_2_character_4').addEventListener("click", function(event) {
-        handle_if_AUTH_checked_CLICK_SCENE_2();
-    });
-    document.getElementById('shot_2_character_5').addEventListener("click", function(event) {
-        handle_if_AUTH_checked_CLICK_SCENE_3();
-    });
-
-    action_shot_mix();
-
-}
-
-let shot_start_of_authing = () => {
-
-    let shots = document.getElementById('shots');
-    shots.innerHTML = ``
-
-    let element = document.createElement('div');
-
-    element.setAttribute("id", `shot_1`);
-    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-    element.innerHTML = `
-        <div id="start_graphic_1" class="width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-        <div id="start_graphic_2" class="width_50 height_50 gui_logo_type_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-    `
-
-    document.getElementById('shots').appendChild(
-        element
-    );
-}
-
-let shot_mid_of_authing = () => {
-
-    let shots = document.getElementById('shots');
-    shots.innerHTML = ``
-
-    let element = document.createElement('div');
-
-    element.setAttribute("id", `shot_1`);
-    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-    element.innerHTML = `
-        <div id="start_graphic_1" class="animated1 leaveTop width_50 height_50 gui_character_face_left_shadow_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-        <div id="start_graphic_2" class="animated1 leaveTop width_50 height_50 gui_logo_type_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-    `
-
-    document.getElementById('shots').appendChild(
-        element
-    );
-}
-
-let shot_end_of_authing = () => {
-    
-    let shots = document.getElementById('shots');
-    shots.innerHTML = ``
-
-    let element = document.createElement('div');
-
-    element.setAttribute("id", `shot_1`);
-    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-    element.innerHTML = `
-        <div id="facer_1"></div>
-        <div id="facer_2"></div>
-        <div id="facer_buttons"></div>
-    `
-
-
-    document.getElementById('shots').appendChild(
-        element
-    );
-
-
-    // facer_buttons
-    
-    if (document.getElementById('facer_buttons') != null) {
-        document.getElementById('facer_buttons').addEventListener("click", function(event) {
-            alert('yup facer_buttons');
-
-            if (document.getElementById('set') != null) {
-                let set = document.getElementById('set');
-                set.innerHTML = `
-                    <div id="gui_stage_tv" class=""></div>
-                    <div id="gui_stage_lights" class=""></div>
-                `
-            };
-
-            if (document.getElementById('scene') != null) {
-                let scene = document.getElementById('scene');
-                scene.innerHTML = `
-                    <div id="player_1" class=""></div>
-                    <div id="mark" class=""></div>
-                    <div id="logo" class=""></div>
-                `
-            };
-
-            shot_to_scene_facer_button();
-        });
-    }
-}
-
-let act_4_shot_enter = () => {
-
-    
-    if (document.getElementById('shot_1') != null) {
-        let shot_1 = document.getElementById('shot_1');
-        shot_1.innerHTML = `
-        <div class="animated1 enterBottom width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
-            <div id="act_4_enter_character" class="width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_shadow_1 position_absolute margin_auto"></div>
-            <div id="act_4_enter_logo" class="width_50 height_50 top_0 right_0 bottom_0 left_0 gui_logo_type_1 position_absolute margin_auto"></div>
-        </div>
-            
-        `
-    };
-
-    // shot_2_character_1 single
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('act_4_enter_character') != null) {
-
-                    document.getElementById('act_4_enter_character').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_shadow_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 4) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-
-                };
-
-                if (interval == 4) {
-                    //clearInterval(play)
-                };
-
-            }, (1000 / 12));
-
-            play;
-    })();
-
-
-    // shot_2_character_1 single
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('act_4_enter_logo') != null) {
-
-                    document.getElementById('act_4_enter_logo').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_logo_type_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 4) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-
-                };
-
-                if (interval == 4) {
-                    //clearInterval(play)
-                };
-
-            }, (1000 / 12));
-
-            play;
-    })();
-}
-
-let act_4_shot_mid = () => {
-
-    
-    if (document.getElementById('shot_1') != null) {
-        let shot_1 = document.getElementById('shot_1');
-        shot_1.innerHTML = `
-        <div class="width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
-            <div id="act_4_shot_mid_character" class="width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_shadow_1 position_absolute margin_auto"></div>
-            <div id="act_4_shot_mid_logo" class="width_50 height_50 top_0 right_0 bottom_0 left_0 gui_logo_type_1 position_absolute margin_auto"></div>
-        </div>
-            
-        `
-    };
-
-    // shot_2_character_1 single
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('act_4_shot_mid_character') != null) {
-
-                    document.getElementById('act_4_shot_mid_character').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_shadow_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 4) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-
-                };
-
-                if (interval == 4) {
-                    //clearInterval(play)
-                };
-
-            }, (1000 / 12));
-
-            play;
-    })();
-
-
-    // shot_2_character_1 single
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('act_4_shot_mid_logo') != null) {
-
-                    document.getElementById('act_4_shot_mid_logo').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_logo_type_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 4) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-
-                };
-
-                if (interval == 4) {
-                    //clearInterval(play)
-                };
-
-            }, (1000 / 12));
-
-            play;
-    })();
-}
-
-let act_4_shot_ending = () => {
-
-    
-    if (document.getElementById('shot_1') != null) {
-        let shot_1 = document.getElementById('shot_1');
-        shot_1.innerHTML = `
-        <div class="animated1 leaveBottom width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
-            <div id="act_4_shot_ending_character" class="width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_shadow_1 position_absolute margin_auto"></div>
-            <div id="act_4_shot_ending_logo" class="width_50 height_50 top_0 right_0 bottom_0 left_0 gui_logo_type_1 position_absolute margin_auto"></div>
-        </div>
-            
-        `
-    };
-
-    // shot_2_character_1 single
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('act_4_shot_ending_character') != null) {
-
-                    document.getElementById('act_4_shot_ending_character').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_shadow_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 4) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-
-                };
-
-                if (interval == 4) {
-                    //clearInterval(play)
-                };
-
-            }, (1000 / 12));
-
-            play;
-    })();
-
-
-    // shot_2_character_1 single
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('act_4_shot_ending_logo') != null) {
-
-                    document.getElementById('act_4_shot_ending_logo').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_logo_type_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 4) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-
-                };
-
-                if (interval == 4) {
-                    //clearInterval(play)
-                };
-
-            }, (1000 / 12));
-
-            play;
-    })();
-}
-
-let act_4_shot_buttons = () => {
-
-    if (document.getElementById('shot_1') != null) {
-        let shot_1 = document.getElementById('shot_1');
-        shot_1.innerHTML = `
-        <div class="width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
-            <div id="act_4_shot_buttons_button_1" class=""></div>
-            <div id="act_4_shot_buttons_button_2" class=""></div>
-            <div id="act_4_shot_buttons_button_3" class=""></div>
-        </div>
-            
-        `
-    };
-
-    // shot_2_character_1 single
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('act_4_shot_buttons_button_1') != null) {
-
-                    document.getElementById('act_4_shot_buttons_button_1').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_text_continue '+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 4) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-
-                };
-
-                if (interval == 4) {
-                    //clearInterval(play)
-                };
-
-            }, (1000 / 12));
-
-            play;
-    })();
-    // shot_2_character_1 single
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('act_4_shot_buttons_button_2') != null) {
-
-                    document.getElementById('act_4_shot_buttons_button_2').classList = (' width_33 height_50 top_0 right_0 bottom_0 gui_text_continue '+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 4) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-
-                };
-
-                if (interval == 4) {
-                    //clearInterval(play)
-                };
-
-            }, (1000 / 12));
-
-            play;
-    })();
-    // shot_2_character_1 single
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('act_4_shot_buttons_button_3') != null) {
-
-                    document.getElementById('act_4_shot_buttons_button_3').classList = (' width_33 height_50 top_0 bottom_0 left_0 gui_text_continue '+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 4) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-
-                };
-
-                if (interval == 4) {
-                    //clearInterval(play)
-                };
-
-            }, (1000 / 12));
-
-            play;
-    })();
-}
-
-let act_4 = () => {
-    //alert('act_4');
-    // 24/fps loop
-    (() => {
-        let interval = 0;
-        let play = setInterval(
-            () => {
-                if ( interval == 0) {
-                    
-                    if (document.getElementById('shots') != null) {
-                        act_4_shot_enter();
-
-                    };
-
-                };
-                
-                if (interval == 24 * 1) {
-
-                    // the final shot of opening scene
-                    if (document.getElementById('shots') != null) {
-                        act_4_shot_mid();
-                    };
-                };
-
-                if (interval == 24 * 2) {
-
-                    // the final shot of opening scene
-                    if (document.getElementById('shots') != null) {
-                        act_4_shot_ending();
-                    };
-                };
-
-
-                if (interval == 24 * 3) {
-
-                    // the final shot of opening scene
-                    if (document.getElementById('shots') != null) {
-                        act_4_shot_buttons();
-                    };
-
-                    clearInterval(play)
-                };
-
-                //console.log('handle_if_AUTH: ' + interval);
-                interval += 1;
-
-            }, (1000 / state.motion.framerate));
-
-            play;
-    })();
 };
 
-*/
+let add_events_after_scene_start_1 = () => {
 
+    if (document.getElementById('scene_start_1_item_10') != null) {
+        (document.getElementById('scene_start_1_item_10')).addEventListener("click", function(event) {
+            alert('you doing it nigel!');
+            sequence_start();
+        });
+    };
 
-let shot_TEXT_load_ACTION_leaveBottom = () => {
-    
-    let shots = document.getElementById('shots');
-    shots.innerHTML = ``
+};
 
-    let element = document.createElement('div');
+let add_events_after_load = () => {
 
-    element.setAttribute("id", `shot_1`);
-    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-    element.innerHTML = `
-        <div id="" class="">
-
-            <div class="animated1 leaveBottom width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
-                <div id="shot_TEXT_load_ACTION_leaveBottom" class="width_50 height_50  top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-            </div>
-
-        </div>
-    `
-
-    document.getElementById('shots').appendChild(
-        element
-    );
-
-    // shot_TEXT_load_ACTION_leaveBottom loop
-    (() => {
-        let interval = 0;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('shot_TEXT_load_ACTION_leaveBottom') != null) {
-
-                    document.getElementById('shot_TEXT_load_ACTION_leaveBottom').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_text_loaded_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 4) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-                };
-
-                /*
-                if (interval == 4) {
-                    clearInterval(play)
-                };
-                */
-
-            }, (1000 / state.motion.framerate));
-
-            play;
-    })();
-}
-
-let shot_action_preloader = () => {
-    let preloader = document.getElementById('preloader');
-    preloader.innerHTML = ``
-
-    let element = document.createElement('div');
-
-    element.setAttribute("id", `preloader_1`);
-    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-    element.innerHTML = `
-        <div class=" width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
-            <div id="shot_action_preloader" class="width_50 height_50 gui_text_loading_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-        </div>
-    `
-    element.addEventListener("click", function(event) {
-        alert('shot_1 yup');
+    (document.getElementById('shot_action_user_screen_5_item_1')).addEventListener("click", function(event) {
+        //alert('shot_action_user_screen_5_item_1 yup');
+        sequence_shot_action_user_screen_5_leave();
     });
 
-    document.getElementById('preloader').appendChild(
-        element
-    );
-
-    // shot_1_character_1 loop
-    (() => {
-        let interval = 1;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('shot_action_preloader') != null) {
-
-                    // loading
-
-                    if (interval == 1) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_text_loading_1 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 2) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_text_loading_2 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 3) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_text_loading_3 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 4) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_text_loading_4 position_absolute margin_auto ');
-                    };
-
-                    // loaded
-
-                    if (interval == 5) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_text_loaded_1 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 6) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_text_loaded_2 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 7) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_text_loaded_3 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 8) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_text_loaded_4 position_absolute margin_auto ');
-                    };
-
-                    // face
-
-                    if (interval == 9) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_shadow_1 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 10) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_shadow_2 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 11) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_shadow_3 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 12) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_shadow_4 position_absolute margin_auto ');
-                    };
-
-                    // logo
-
-                    if (interval == 13) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_logo_type_1 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 14) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_logo_type_2 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 15) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_logo_type_3 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 16) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_logo_type_4 position_absolute margin_auto ');
-                    };
-
-                    // blink
-
-                    if (interval == 17) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_blink_1 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 18) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_blink_2 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 19) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_blink_3 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 20) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_left_blink_4 position_absolute margin_auto ');
-                    };
-
-                    // vomit
-
-                    if (interval == 21) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_vomit_left_shadow_1 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 22) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_vomit_left_shadow_2 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 23) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_vomit_left_shadow_3 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 24) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_vomit_left_shadow_4 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 25) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_vomit_left_shadow_5 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 26) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_character_face_vomit_left_shadow_6 position_absolute margin_auto ');
-                    };
-
-                    // wall
-
-                    if (interval == 27) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_wall_1 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 28) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_wall_2 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 29) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_wall_3 position_absolute margin_auto ');
-                    };
-
-                    if (interval == 30) {
-                        document.getElementById('shot_action_preloader').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_wall_4 position_absolute margin_auto ');
-                    };
-                
-                    interval += 1;
-                };
-
-                
-                if (interval == 31) {
-                    document.getElementById('shot_action_preloader').classList = (' ');
-                    has_loaded = true;
-                    clearInterval(play);
-                };
-                
-
-            }, (1000 / state.motion.framerate));
-
-            play;
-    })();
-}
-
-let shot_action_single_loading = () => {
-    let shots = document.getElementById('shots');
-    shots.innerHTML = ``
-
-    let element = document.createElement('div');
-
-    element.setAttribute("id", `shot_1`);
-    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-    element.innerHTML = `
-        <div class=" width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
-            <div id="gui_text_loading" class="width_50 height_50 gui_text_loading_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-        </div>
-    `
-    element.addEventListener("click", function(event) {
-        alert('shot_1 yup');
+    (document.getElementById('shot_action_user_screen_5_item_2')).addEventListener("click", function(event) {
+        //alert('shot_action_user_screen_5_item_2 yup');
+        sequence_shot_action_user_screen_5_leave();
     });
 
-    document.getElementById('shots').appendChild(
-        element
-    );
-
-    // shot_1_character_1 loop
-    (() => {
-        let interval = 0;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('gui_text_loading') != null) {
-
-                    document.getElementById('gui_text_loading').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_text_loading_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 4) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-                };
-
-                /*
-                if (interval == 4) {
-                    clearInterval(play)
-                };
-                */
-
-            }, (1000 / state.motion.framerate));
-
-            play;
-    })();
-}
-
-let shot_action_single_loaded = () => {
-    let shots = document.getElementById('shots');
-    shots.innerHTML = ``
-
-    let element = document.createElement('div');
-
-    element.setAttribute("id", `shot_1`);
-    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
-    element.innerHTML = `
-        
-            <div class="width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
-                <div id="gui_text_loaded" class="width_50 height_50 gui_text_loaded_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
-            </div>
-
-    `
-    element.addEventListener("click", function(event) {
-        alert('shot_1 yup');
+    (document.getElementById('shot_action_user_screen_5_item_3')).addEventListener("click", function(event) {
+        //alert('shot_action_user_screen_5_item_3 yup');
+        sequence_shot_action_user_screen_5_leave();
     });
 
-    document.getElementById('shots').appendChild(
-        element
-    );
-
-    // shot_1_character_1 loop
-    (() => {
-        let interval = 0;
-        let play = setInterval(
-            () => {
-
-                // shot 2
-                if (document.getElementById('gui_text_loaded') != null) {
-
-                    document.getElementById('gui_text_loaded').classList = (' width_50 height_50 top_0 right_0 bottom_0 left_0 gui_text_loaded_'+interval+ ' position_absolute margin_auto ');
-                            
-                    if (interval == 4) {
-                        interval = 0;
-                    };
-                
-                    interval += 1;
-                };
-
-                /*
-                if (interval == 4) {
-                    clearInterval(play)
-                };
-                */
-
-            }, (1000 / state.motion.framerate));
-
-            play;
-    })();
-}
+    (document.getElementById('shot_action_user_screen_5_item_4')).addEventListener("click", function(event) {
+        //alert('shot_action_user_screen_5_item_4 yup');
+        sequence_shot_action_user_screen_5_leave();
+    });
+};
 
 let handle_play_DOMContentLoaded = () => {
 
@@ -3333,7 +295,11 @@ let handle_play_DOMContentLoaded = () => {
                 if ( interval < (fps)) {
                 
                     if (document.getElementById('shots') != null) {
-                        shot_action_single_loading();
+                        //elements.shot_action_single_loading();
+
+
+                        elements.shot_action_logo_action_blinking_only_enter();
+                        // to sequence_after_loads
 
                     };
                 };
@@ -3341,7 +307,8 @@ let handle_play_DOMContentLoaded = () => {
                 if ( interval == ((fps)*(loading_buffer)) ) {
                 
                     if (document.getElementById('shots') != null) {
-                        shot_action_single_loaded();
+                        elements.shot_action_logo_action_enter();
+                        //elements.shot_action_single_loaded();
 
                     };
                     clearInterval(play)
@@ -3370,19 +337,52 @@ let handle_ANIMATION_AUTOMATION = () => {
                 if (state.ux.platform.is_Desktop == true) {
                 };
 
+
+                // start loops
+                if (document.getElementById('gui_stage_tv') != null) {
+
+                    // svg classlist
+                    document.getElementById('gui_stage_tv').classList = (' width_100 height_100 gui_stage_tv_'+state.interaction.gui_stage_tv.frame+ ' position_absolute margin_auto ');
+                        
+                    // automated moving
+                    // size & position
+                    let gui_stage_tv = document.getElementById('gui_stage_tv');
+                    gui_stage_tv.style =
+                        'height: ' + (state.interaction.gui_stage_tv.height * (tiny_height / 8)) + 'px;' +
+                        'width: ' + (state.interaction.gui_stage_tv.width * (tiny_width / 8)) + 'px;' +
+                        'bottom: ' + (state.interaction.gui_stage_tv.clientY * (tiny_height / 8)) + 'px;' +
+                        'left: ' + (state.interaction.gui_stage_tv.clientX * (tiny_width / 8)) + 'px;';
+                
+
+                    
+                    // frame reset
+                    if (state.interaction.gui_stage_tv.frame == 4) {
+                        state.interaction.gui_stage_tv.frame = 0;
+                    };
+                    
+                    // frame increase
+                    state.interaction.gui_stage_tv.frame += 1;
+                };
+
                 // start loops
                 if (document.getElementById('player_1') != null) {
 
                     // svg classlist
+                    // stance == standing
                     if (state.interaction.player_1.stance == 0) {
+
+                        // angle == left
                         if (state.interaction.player_1.angle == 0) {
-                        document.getElementById('player_1').classList = (' width_100 height_100 gui_character_body_right_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
-                        
+                            if ( state.interaction.player_1.cycles.walking == true) {
+                                document.getElementById('player_1').classList = (' width_100 height_100 gui_character_body_right_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+                            };
                         };
-                   
+                           
+                        // angle == right
                         if (state.interaction.player_1.angle == 1) {
-                        document.getElementById('player_1').classList = (' width_100 height_100 gui_character_body_right_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
-                        
+                            if ( state.interaction.player_1.cycles.walking == true) {
+                                document.getElementById('player_1').classList = (' width_100 height_100 gui_character_body_right_'+state.interaction.player_1.frame+ ' position_absolute margin_auto ');
+                            };
                         };
                     };
 
@@ -3458,8 +458,6 @@ let handle_ANIMATION_AUTOMATION = () => {
                         'width: ' + (state.interaction.player_1.width * (tiny_width / 8)) + 'px;' +
                         'bottom: ' + (state.interaction.player_1.clientY * (tiny_height / 8)) + 'px;' +
                         'left: ' + (state.interaction.player_1.clientX * (tiny_width / 8)) + 'px;';
-                };
-
                     
                     // frame reset
                     if (state.interaction.player_1.frame == 4) {
@@ -3468,11 +466,154 @@ let handle_ANIMATION_AUTOMATION = () => {
                     
                     // frame increase
                     state.interaction.player_1.frame += 1;
+                };
 
                 state.motion.frame += 1;
                 //console.log('state.motion.frame: ' + state.motion.frame)
 
             }, (1000 / state.motion.framerate));
+    })();
+};
+
+let post_data = () => {
+
+    // if on post page
+    if ((document.getElementById('post_id')) != null) {
+
+        post_id = document.getElementById('post_id').innerHTML;
+
+        if (view_counted == false) {
+            db_update_post_views("users", post_id);
+            view_counted = true;
+
+        };
+
+        let detail;
+
+        for (var i = 0; i < posts_guides.length; i++) {
+            console.log(posts_guides[i]);
+            if (posts_guides[i].id == post_id) {
+                   detail = posts_guides[i]
+            };
+        };
+
+        document.getElementById('all_comments').innerHTML = ``;
+        for (var i = 0; i < detail.comments.length; i++) {
+            console.log(posts_guides[i]);
+            document.getElementById('all_comments').innerHTML += `${detail.comments[i].content}`
+        };
+
+
+        document.getElementById('edit_post_title').value = post_id;
+        document.getElementById('edit_post_tagline').value = post_id;
+        document.getElementById('edit_post_views').value = post_views;
+        document.getElementById('edit_post_likes').value = post_id;
+        document.getElementById('edit_post_video').value = post_id;
+        document.getElementById('edit_post_content').value = post_id;
+
+        if ((document.getElementById('edit_button_post')) != null) {
+            document.getElementById('edit_button_post').addEventListener('click', (event) => {
+                //event.preventDefault();
+                db_update_post("users", post_id);
+            });
+        };
+
+        if ((document.getElementById('like_submit')) != null) {
+            document.getElementById('like_submit').addEventListener('click', (event) => {
+                //event.preventDefault();
+                db_update_post_likes("users", post_id);
+            });
+        };
+
+        if ((document.getElementById('comment_submit')) != null) {
+            document.getElementById('comment_submit').addEventListener('click', (event) => {
+                //event.preventDefault();
+                db_update_comments("users", post_id);
+            });
+        };
+
+        if ((document.getElementById('delete_button_post')) != null) {
+            document.getElementById('delete_button_post').addEventListener('click', (event) => {
+                event.preventDefault();
+                db_delete_user("users", post_id);
+            });
+        };
+
+    };
+
+};
+
+let sequence_after_loads = () => {
+    // 24/fps loop !! initial !!
+    (() => {
+        let interval = 0;
+        let play = setInterval(
+            () => {
+
+                // user specific
+                if ( interval == (24 * 0)) {
+
+                    post_data();
+
+                    elements.shot_action_logo_action_leave();
+                };
+
+                if ( interval == (24 * 1)) {
+                    elements.shot_action_single_vomit();
+                };
+
+                if ( interval == (24 * 2)) {
+                    elements.shot_action_single_vomit_and_wall();
+                };
+
+                if ( interval == (24 * 3)) {
+                    elements.shot_action_user_screen_4();
+                };
+
+                if ( interval == (24 * 4)) {
+                    add_events_after_shot_action_user_screen_4();
+                };
+
+                if ( interval == (24 * 5)) {
+                    elements.set_stage_game();
+                };
+
+                if ( interval == (24 * 6)) {
+                    elements.set_stage_game_end();
+                };
+
+                //console.log('handle_if_AUTH: ' + interval);
+                interval += 1;
+
+            }, (1000 / state.motion.framerate));
+
+            play;
+    })();
+};
+
+let sequence_start = () => {
+    // 24/fps loop !! initial !!
+    (() => {
+        let interval = 0;
+        let play = setInterval(
+            () => {
+
+                // user specific
+                if ( interval == (24 * 0)) {
+                    elements.scene_start_1();
+                };
+
+                // user specific
+                if ( interval == (24 * 1)) {
+                    add_events_after_scene_start_1();
+                };
+
+                //console.log('handle_if_AUTH: ' + interval);
+                interval += 1;
+
+            }, (1000 / state.motion.framerate));
+
+            play;
     })();
 };
 
@@ -3484,119 +625,8 @@ let act_3 = () => {
             () => {
 
                 if ( interval == (24 * 0)) {
-                    if (document.getElementById('shots') != null) {
-                        //alert('shot_TEXT_load_ACTION_leaveBottom');
-                        shot_TEXT_load_ACTION_leaveBottom();
-
-                        if (dev_mode) {
-                            checkmark += 1;
-                            alert(checkmark + '/6 (act_3.0)');
-                            shot_action_single_vomit();
-                        };
-                    };
+                    sequence_after_loads();
                 };
-
-
-                if ( interval == (24 * 1)) {
-                    if (document.getElementById('shots') != null) {                                            
-                        
-                        if (dev_mode) {
-                            checkmark += 1;
-                            alert(checkmark + '/6 (act_3.1?)');
-                            shot_action_single_vomit();
-                        };
-                    };
-                };
-
-                /*
-
-                if ( interval == (24 * 1)) {
-                    if (document.getElementById('shots') != null) {
-                        //alert('shot_game_start');
-                        shot_game_start();
-                    };
-                };
-
-                if ( interval == (24 * 4)) {
-                    if (document.getElementById('shots') != null) {
-                        //alert('shot_game_start');
-                        shot_game_end();
-                    };
-                };
-
-                if ( interval == (24 * 4)) {
-                    if (document.getElementById('shots') != null) {
-                        //alert('shot_TEXT_load_ACTION_leaveBottom');
-                        shot_action_single_blink()
-                        //shot_home();
-                    };
-                };
-
-                if ( interval == (24 * 6)) {
-                    if (document.getElementById('shots') != null) {
-                        //alert('shot_TEXT_load_ACTION_leaveBottom');
-                        shot_action_single_vomit()
-                        //shot_home();
-                    };
-                };
-
-                if ( interval == (24 * 8)) {
-                    if (document.getElementById('shots') != null) {
-                        //alert('shot_TEXT_load_ACTION_leaveBottom');
-                        shot_action_single_blink()
-                        //shot_home();
-                    };
-                };
-
-                if ( interval == (24 * 10)) {
-                    if (document.getElementById('shots') != null) {
-                        //alert('shot_TEXT_load_ACTION_leaveBottom');
-                        shot_action_single_vomit()
-                        //shot_home();
-                    };
-                };
-
-                if ( interval == (24 * 12)) {
-                    if (document.getElementById('shots') != null) {
-                        //alert('shot_TEXT_load_ACTION_leaveBottom');
-                        shot_action_single_wall();
-                        //shot_home();
-                    };
-                };
-
-                if ( interval == (24 * 14)) {
-                    if (document.getElementById('shots') != null) {
-                        //alert('shot_TEXT_load_ACTION_leaveBottom');
-                        shot_action_single_enter()
-                        //shot_home();
-                    };
-                };
-
-                if ( interval == (24 * 16)) {
-                    if (document.getElementById('shots') != null) {
-                        //alert('shot_TEXT_load_ACTION_leaveBottom');
-                        shot_action_single_idle()
-                        //shot_home();
-                    };
-                };
-
-                if ( interval == (24 * 18)) {
-                    if (document.getElementById('shots') != null) {
-                        //alert('shot_TEXT_load_ACTION_leaveBottom');
-                        shot_action_single_leave()
-                        //shot_home();
-                    };
-                };
-
-                if ( interval == (24 * 20)) {
-                    if (document.getElementById('shots') != null) {
-                        //alert('shot_TEXT_load_ACTION_leaveBottom');
-                        shot_action_single_blank()
-                        //shot_home();
-                    };
-                };
-
-                */
 
                 //console.log('handle_if_AUTH: ' + interval);
                 interval += 1;
@@ -3733,8 +763,6 @@ let find_sort = (mode) => {
 
 let fb_sorted_library = (the_arr, x) => {  return (the_arr).sort(find_sort(x)) };
 
-let filtered_posts_guides = [];
-
 let handle_firebase_events = () => {
 
     // filter by title
@@ -3748,6 +776,59 @@ let handle_firebase_events = () => {
     };
 
     // post view controls
+    if (document.getElementById('modal_nav_top') != null) {
+        document.getElementById('modal_nav_top').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.pop.top.transform = !state.modal.pop.top.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+
+
+    // nav
+    if (document.getElementById('nav_bottom') != null) {
+        document.getElementById('nav_bottom').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.nav.bottom.transform = !state.modal.nav.bottom.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+
+    if (document.getElementById('nav_top') != null) {
+        document.getElementById('nav_top').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.nav.top.transform = !state.modal.nav.top.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+
+    if (document.getElementById('nav_left') != null) {
+        document.getElementById('nav_left').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.nav.left.transform = !state.modal.nav.left.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+
+    if (document.getElementById('nav_right') != null) {
+        document.getElementById('nav_right').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.nav.right.transform = !state.modal.nav.right.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+
+    // pop
     if (document.getElementById('pop_bottom') != null) {
         document.getElementById('pop_bottom').addEventListener('click', (event) => {
             // filter library
@@ -3758,7 +839,6 @@ let handle_firebase_events = () => {
         });
     };
 
-    // post view controls
     if (document.getElementById('pop_top') != null) {
         document.getElementById('pop_top').addEventListener('click', (event) => {
             // filter library
@@ -3769,7 +849,6 @@ let handle_firebase_events = () => {
         });
     };
 
-    // post view controls
     if (document.getElementById('pop_left') != null) {
         document.getElementById('pop_left').addEventListener('click', (event) => {
             // filter library
@@ -3780,7 +859,6 @@ let handle_firebase_events = () => {
         });
     };
 
-    // post view controls
     if (document.getElementById('pop_right') != null) {
         document.getElementById('pop_right').addEventListener('click', (event) => {
             // filter library
@@ -3995,13 +1073,11 @@ let handle_firebase_events = () => {
             }, 0);
         });
     };
-
 };
 
-let valid_user = {};
-let user_logged_in = false;
-
 let check_ui_after_auth = () => {
+
+    //alert('user_logged_in: ' + user_logged_in)
 
     // if logged
     if (user_logged_in == true) {
@@ -4016,18 +1092,49 @@ let check_ui_after_auth = () => {
             email: ${valid_user.email}
         `;
 
+        document.getElementById('account-details-id').innerHTML = `
+            id: ${valid_user.id}
+        `;
+
+        document.getElementById('account-details-title').innerHTML = `
+            title: ${valid_user.title}
+        `;
+
+        document.getElementById('account-details-email').innerHTML = `
+            email: ${valid_user.title}
+        `;
+
         document.getElementById('modal-edit').innerHTML = `
             
                      <form id="edit-form">
+                        <p>edit post</p>
+                        <input id="edit_post_title" placeholder="edit_post_title" type="text"/>
+                        <input id="edit_post_tagline" placeholder="edit_post_tagline" type="text"/>
+                        <input id="edit_post_views" placeholder="edit_post_views" type="text"/>
+                        <input id="edit_post_likes" placeholder="edit_post_likes" type="text"/>
+                        <input id="edit_post_video" placeholder="edit_post_video" type="text"/>
+                        <input id="edit_post_content" placeholder="edit_post_content" type="text"/>
+                        
                         <p>edit profile</p>
-                        <input placeholder="title" type="text" id="title"/>
+                        <input placeholder="user_title" type="text" id="user_title"/>
+                        <input placeholder="user_youtube" type="text" id="user_youtube"/>
+                        <input placeholder="user_twitch" type="text" id="user_twitch"/>
+                        <input placeholder="user_spotify" type="text" id="user_spotify"/>
+                        <input placeholder="user_instagram" type="text" id="user_instagram"/>
+                        <input placeholder="user_twitter" type="text" id="user_twitter"/>
+                        <input placeholder="user_vimeo" type="text" id="user_vimeo"/>
+                        
                         <div id="edit_button" class="">edit</div>
+                        <div id="edit_button_post" class="">edit post</div>
 
                         <div id="signout" alt="sign out">
                            sign out
                         </div>
                         <div id="delete_button" alt="sign out">
                            delete
+                        </div>
+                        <div id="delete_button_post" alt="sign out">
+                           delete post
                         </div>
 
                      </form> 
@@ -4039,8 +1146,14 @@ let check_ui_after_auth = () => {
                 
                 <input class="display_none" type="file" value="upload" id="fileButton" accept="image/*" title="&nbsp;"/>
                 <input placeholder="title" type="text" id="create_title" required />
-                <input placeholder="child" type="text" id="create_child" required />
+                <input placeholder="tagline" type="text" id="create_tagline" required />
                 <input placeholder="content" type="text" id="create_content" required />
+                <input placeholder="youtube" type="text" id="create_youtube" required />
+                <input placeholder="instagram" type="text" id="create_instagram" required />
+                <input placeholder="twitter" type="text" id="create_twitter" required />
+                <input placeholder="twitch" type="text" id="create_twitch" required />
+                <input placeholder="spotify" type="text" id="create_spotify" required />
+                <input placeholder="vimeo" type="text" id="create_vimeo" required />
                 <progress value="0" max="100" id="uploader">0%</progress>
                 <p id="upload_progress">images only</p>
                 <label for="fileButton">Select file</label>
@@ -4057,19 +1170,36 @@ let check_ui_after_auth = () => {
     if (user_logged_in == false) {
         //alert('user_logged_in == false');
 
+
+        localStorage.setItem("user", "unlogged_user");
+        localStorage.setItem("user_id", valid_user.id);
+
         document.getElementById('account-details').innerHTML = `please log in`;
+
+        document.getElementById('account-details-id').innerHTML = `
+            id: please log in
+        `;
+
+        document.getElementById('account-details-title').innerHTML = `
+            title: please log in
+        `;
+
+        document.getElementById('account-details-email').innerHTML = `
+            email: please log in
+        `;
 
         document.getElementById('modal-edit').innerHTML = ``;
         document.getElementById('modal-create').innerHTML = ``;
 
         document.getElementById('modal-signup').innerHTML = `
-            
-                     <form id="signup-form">
-                     <p>modal-signup</p>
-                        <input placeholder="email" type="email" id="signup-email" required />
-                        <input placeholder="password" type="password" id="signup-password" required />
-                        <div id="signup_submit" class="">sign up</div>
-                     </form>
+
+         <form id="signup-form">
+         <p>modal-signup</p>
+            <input placeholder="email" type="email" id="signup-email" required />
+            <input placeholder="password" type="password" id="signup-password" required />
+            <div id="signup_submit" class="">sign up</div>
+         </form>
+
         `
 
         document.getElementById('modal-signin').innerHTML = `
@@ -4183,15 +1313,18 @@ let check_ui_after_auth = () => {
         let signout = document.getElementById('signout');
 
         signout.addEventListener('click', (event) => {
+                user_logged_in = false;
+                stored_auth_user_cred = {};
+                //get_db_guides();
             event.preventDefault();
             auth.signOut().then(() => {
-                alert('signout');
+                //alert('signout');
                 console.log('logged out');
-                user_logged_in = false;
-                localStorage.setItem("user", "unlogged_user");
-                localStorage.setItem("user_id", localStorage.user);
-                get_db_guides();
             });
+
+            user_logged_in = false;
+                //stored_auth_user_cred.uid =
+                //get_db_guides();
         });
     };
 
@@ -4207,7 +1340,6 @@ let check_ui_after_auth = () => {
             db_delete_user("users", stored_auth_user_cred.uid);
         });
 
-
         document.getElementById('create_button').addEventListener('click', (event) => {
             event.preventDefault();
             db_create_post("users");
@@ -4218,11 +1350,12 @@ let check_ui_after_auth = () => {
         checkmark += 1;
         alert(checkmark + '/6 (check_ui_after_auth -> FB CRUD, AUTH, AUTO SIGNED, DATA RENDERED)');
     };
-
 };
 
 // retrieve
 let get_db_guides = () => {
+    //alert('get_db_guides');
+
     //db.settings({timestampsInSnapshots: true});
     db.collection('users').get().then(snapshot => {
         
@@ -4238,7 +1371,7 @@ let get_db_guides = () => {
             posts_guides.push(items)
         });
 
-        if ((stored_auth_user_cred.uid) != null) {
+        if ((stored_auth_user_cred.uid) != null && (stored_auth_user_cred.uid) != 'xxx') {
 
             console.log('stored_auth_user_cred.uid');
             console.log(stored_auth_user_cred.uid);
@@ -4246,9 +1379,7 @@ let get_db_guides = () => {
             console.log(posts_guides);
 
             // match auth user with database collection: users
-            valid_user = {};
-            //valid_user_post = [];
-            user_logged_in = false;
+
             console.log('check match from posts_guides[i]');
             for (var i = 0; i < posts_guides.length; i++) {
                console.log(posts_guides[i]);
@@ -4300,7 +1431,6 @@ let get_db_guides = () => {
         fb_sorted_library(posts_guides, 'titleup').forEach(post => {
             console.log(post);
             let element = document.createElement('div');
-
             element.setAttribute("id", `post`);
             element.classList = `width_100 margin_auto position_relative float_left`
             element.innerHTML = `
@@ -4314,11 +1444,17 @@ let get_db_guides = () => {
                     post id: ${post.id}
                 </p>
                 <a href="https://antenuh.com/p/${post.id}">see post</a>
+                <div id="like">like</div>
             `
-            element.addEventListener("click", function(event) {
-                alert('post');
+            element.children[3].addEventListener("click", function(event) {
+                alert('see');
                 post_up = !post_up;
                 get_classes();
+            });
+
+            element.children[4].addEventListener("click", function(event) {
+                alert('like');
+                db_update_post_likes("users", post.id);
             });
 
             document.getElementById('posts_all').appendChild(
@@ -4383,7 +1519,50 @@ let get_db_guides = () => {
         };
 
 
-        // render SORTED post to view 
+        //  FILTERED BY TITLE *USER ONLY*
+        let filtered_posts_guides_posts_only = [];
+        if ((filtered_posts_guides_posts_only) != null) {
+            for (var i = 0; i < posts_guides.length; i++) {
+                if (
+                    // title filter
+                    (posts_guides[i].title.toString().toLowerCase().includes(document.getElementById('element_input_filter').value))
+                    &&
+                    // if filter
+                    (posts_guides[i].child == 'post')
+
+                    ) {
+                    filtered_posts_guides_posts_only.push(posts_guides[i]);
+                };
+                console.log('filtered_posts_guides_posts_only[i]');
+                console.log(filtered_posts_guides_posts_only[i]);
+            };
+        };
+
+
+        //  FILTERED BY TITLE *USER ONLY*
+        let filtered_posts_guides_posts_only_valid_user = [];
+        if ((filtered_posts_guides_posts_only_valid_user) != null && valid_user.id != null) {
+            for (var i = 0; i < posts_guides.length; i++) {
+                if (
+                    // title filter
+                    (posts_guides[i].title.toString().toLowerCase().includes(document.getElementById('element_input_filter').value))
+                    &&
+                    // if filter
+                    (posts_guides[i].child == 'post')
+                    &&
+                    // if from valid user
+                    (posts_guides[i].author_id == valid_user.id)
+
+                    ) {
+                    filtered_posts_guides_posts_only_valid_user.push(posts_guides[i]);
+                };
+                console.log('filtered_posts_guides_posts_only_valid_user[i]');
+                console.log(filtered_posts_guides_posts_only_valid_user[i]);
+            };
+        };
+
+
+        // render SORTED post "user" to view 
         document.getElementById('posts_all_user_only').innerHTML = ``;
         fb_sorted_library(filtered_posts_guides_user_only, 'titleup').forEach(post => {
             console.log(post);
@@ -4404,7 +1583,7 @@ let get_db_guides = () => {
                 <a href="https://antenuh.com/p/${post.id}">see post</a>
             `
             element.addEventListener("click", function(event) {
-                alert('post');
+                //alert('view post');
                 post_up = !post_up;
                 get_classes();
             });
@@ -4413,6 +1592,71 @@ let get_db_guides = () => {
                 element
             );
         });
+
+
+        // render SORTED post "post" to view 
+        document.getElementById('posts_all_posts_only').innerHTML = ``;
+        fb_sorted_library(filtered_posts_guides_posts_only, 'titleup').forEach(post => {
+            console.log(post);
+            let element = document.createElement('div');
+
+            element.setAttribute("id", `post`);
+            element.classList = `width_100 margin_auto position_relative float_left`
+            element.innerHTML = `
+                <div class="feat_img">
+                    <div class="container"></div>
+                </div>
+                <h2>
+                    posts title: ${post.title}
+                </h2>
+                <p>
+                    posts id: ${post.id}
+                </p>
+                <a href="https://antenuh.com/p/${post.id}">see post</a>
+            `
+            element.addEventListener("click", function(event) {
+                //alert('view post');
+                post_up = !post_up;
+                get_classes();
+            });
+
+            document.getElementById('posts_all_posts_only').appendChild(
+                element
+            );
+        });
+
+
+        // render SORTED post "post" to view 
+        document.getElementById('posts_all_posts_only_valid_user').innerHTML = ``;
+        fb_sorted_library(filtered_posts_guides_posts_only_valid_user, 'titleup').forEach(post => {
+            console.log(post);
+            let element = document.createElement('div');
+
+            element.setAttribute("id", `post`);
+            element.classList = `width_100 margin_auto position_relative float_left`
+            element.innerHTML = `
+                <div class="feat_img">
+                    <div class="container"></div>
+                </div>
+                <h2>
+                    posts title: ${post.title}
+                </h2>
+                <p>
+                    posts id: ${post.id}
+                </p>
+                <a href="https://antenuh.com/p/${post.id}">see post</a>
+            `
+            element.addEventListener("click", function(event) {
+                //alert('view post');
+                post_up = !post_up;
+                get_classes();
+            });
+
+            document.getElementById('posts_all_posts_only_valid_user').appendChild(
+                element
+            );
+        });
+
 
         console.log('posts_guides');
         console.log(posts_guides);
@@ -4425,21 +1669,35 @@ let db_create_post = () => {
     let date = new Date();
     const ref = db.collection('users').doc();
     const id = ref.id;
-    let featured_image;
     if (upload_details == ``) {
-        featured_image = `https://firebasestorage.googleapis.com/v0/b/nownigel-67004.appspot.com/o/sweet_gifs%2FE813A0D5-E695-4AA8-B761-6D340C271F5D.jpeg?alt=media&token=0b501f8f-8fd4-43bd-a2ee-6ddeac61b78c`
+        upload_details = `
+            https://firebasestorage.googleapis.com/v0/b/antenuh-9d2ca.appspot.com/o/sweet_gifs%2Fdownload.jpg?alt=media&token=4af1439e-7b46-4c97-8fae-3b10f6c0a8e1
+        `
     };
 
-            let create_title = document.getElementById('create_title');
-            let create_child = document.getElementById('create_child');
-            let create_content = document.getElementById('create_content');
+    let create_title = document.getElementById('create_title');
+    let create_tagline = document.getElementById('create_tagline');
+    let create_content = document.getElementById('create_content');
+    let create_youtube = document.getElementById('create_youtube');
+    let create_twitch = document.getElementById('create_twitch');
+    let create_twitter = document.getElementById('create_twitter');
+    let create_spotify = document.getElementById('create_spotify');
+    let create_instagram = document.getElementById('create_instagram');
+    let create_vimeo = document.getElementById('create_vimeo');
 
     db.collection('users').doc(ref.id).set({
         title: create_title.value,
-        child: create_child.value,
+        tagline: create_tagline.value,
+        child: 'post',
         content: create_content.value,
-        image: featured_image,
-        video: create_content.value,
+        photo: upload_details,
+        youtube: create_youtube.value,
+        twitch: create_twitch.value,
+        twitter: create_twitter.value,
+        spotify: create_spotify.value,
+        instagram: create_instagram.value,
+        vimeo: create_vimeo.value,
+        comments: [],
         likes: 0,
         views: 0,
         time: date.getTime(),
@@ -4449,8 +1707,14 @@ let db_create_post = () => {
     }).then(()=> {
         console.log('guide made');
         create_title.value = ``;
-        create_child.value = ``;
+        create_tagline.value = ``;
         create_content.value = ``;
+        create_youtube.value = ``;
+        create_vimeo.value = ``;
+        create_twitch.value = ``;
+        create_twitter.value = ``;
+        create_instagram.value = ``;
+        create_spotify.value = ``;
         get_db_guides();
     }).catch(err => {
         console.log(err.message)
@@ -4483,22 +1747,175 @@ let db_create_user = (cred) => {
 
 // update user
 let db_update_user = (collection, deletable_id) => {
+    
     console.log(deletable_id);
+
+    if (upload_details == ``) {
+        upload_details = `
+            https://firebasestorage.googleapis.com/v0/b/antenuh-9d2ca.appspot.com/o/sweet_gifs%2Fdownload.jpg?alt=media&token=4af1439e-7b46-4c97-8fae-3b10f6c0a8e1
+        `
+    };
 
     let date = new Date();
 
     db.collection(collection).doc(deletable_id).set({
         id: deletable_id,
         email: stored_auth_user_cred.email,
-        title: document.getElementById('title').value
+        photo: upload_details,
+        title: document.getElementById('user_title').value,
+        youtube: document.getElementById('user_youtube').value,
+        twitch: document.getElementById('user_twitch').value,
+        twitter: document.getElementById('user_twitter').value,
+        spotify: document.getElementById('user_spotify').value,
+        instagram: document.getElementById('user_instagram').value,
+        vimeo: document.getElementById('user_vimeo').value
     }).then(function() {
-        document.getElementById('title').value = ``,
+        document.getElementById('user_title').value = ``,
+        document.getElementById('user_youtube').value = ``,
+        document.getElementById('user_twitch').value = ``,
+        document.getElementById('user_twitter').value = ``,
+        document.getElementById('user_spotify').value = ``,
+        document.getElementById('user_instagram').value = ``,
+        document.getElementById('user_vimeo').value = ``,
         alert("Document successfully written!");
         get_db_guides();
     }).catch(function(error) {
         console.error("Error writing document: ", error);
     });
 };
+
+let db_update_post = (collection, deletable_id) => {
+    
+    //alert(db.collection(collection).doc(deletable_id).email);
+    //alert(deletable_id);
+
+    if (upload_details == ``) {
+        upload_details = `
+            https://firebasestorage.googleapis.com/v0/b/antenuh-9d2ca.appspot.com/o/sweet_gifs%2Fdownload.jpg?alt=media&token=4af1439e-7b46-4c97-8fae-3b10f6c0a8e1
+        `
+    };
+
+    let date = new Date();
+    let new_title = document.getElementById('edit_post_title').value;
+    let new_tagline = document.getElementById('edit_post_tagline').value;
+    let new_content = document.getElementById('edit_post_content').value;
+    let new_video = document.getElementById('edit_post_video').value;
+    let new_likes = document.getElementById('edit_post_likes').value;
+    let new_views = document.getElementById('edit_post_views').value;
+    
+    //alert('post: ' + detail.id);
+    //alert('new_title: ' + new_title);
+    //alert('new_tagline: ' + new_tagline);
+
+    db.collection(collection).doc(deletable_id).set({
+        id: deletable_id,
+        email: valid_user.email,
+        title: new_title,
+        tagline: new_tagline,
+        child: 'post',
+        content: new_content,
+        photo: upload_details,
+        video: new_video,
+        likes: new_likes,
+        views: new_views,
+        time: date.getTime(),
+        author_id: valid_user.id,
+
+    }).then(function() {
+        document.getElementById('edit_post_title').value = ``,
+        document.getElementById('edit_post_tagline').value = ``,
+        document.getElementById('edit_post_content').value = ``,
+        document.getElementById('edit_post_likes').value = ``,
+        document.getElementById('edit_post_views').value = ``,
+        document.getElementById('edit_post_video').value = ``,
+        //alert("db_update_post Document successfully written!, post");
+        get_db_guides();
+    }).catch(function(error) {
+        console.error("Error writing document: ", error);
+    });
+};
+
+let db_update_post_views = (collection, deletable_id) => {
+
+    let detail;
+    for (var i = 0; i < posts_guides.length; i++) {
+       
+       console.log(posts_guides[i]);
+
+        if (posts_guides[i].id == deletable_id) {
+               detail = posts_guides[i]
+        };
+
+    };
+
+    let increaseThis = detail.views;
+    //parseInt(post_views);
+    increaseThis += 1;
+
+    db.collection("users").doc(deletable_id).update({views: increaseThis}).then(function() {
+        //alert("db_update_post_views Document successfully written!, post");
+
+        get_db_guides();
+        document.getElementById('post_views').innerHTML = increaseThis;
+    }).catch(function(error) {
+        console.error("Error writing document: ", error);
+    });
+};
+
+let db_update_post_likes = (collection, deletable_id) => {
+
+    let detail;
+    for (var i = 0; i < posts_guides.length; i++) {
+       
+       console.log(posts_guides[i]);
+
+        if (posts_guides[i].id == deletable_id) {
+               detail = posts_guides[i]
+        };
+
+    };
+
+    let increaseThis = detail.likes;
+    //parseInt(post_views);
+    increaseThis += 1;
+
+    db.collection("users").doc(deletable_id).update({likes: increaseThis}).then(function() {
+        //alert("increaseThis");
+        get_db_guides();
+        document.getElementById('post_likes').innerHTML = increaseThis;
+    }).catch(function(error) {
+        console.error("Error writing document: ", error);
+    });
+};
+
+
+let db_update_comments = (collection, deletable_id) => {
+
+    let detail;
+
+    for (var i = 0; i < posts_guides.length; i++) {
+        console.log(posts_guides[i]);
+        if (posts_guides[i].id == deletable_id) {
+               detail = posts_guides[i]
+        };
+    };
+
+    let comments = detail.comments;
+    let new_comment = {
+        content: document.getElementById('comment_input').value
+    };
+
+    comments.push(new_comment);
+
+    db.collection("users").doc(deletable_id).update({comments: comments}).then(function() {
+        document.getElementById('comment_input').value = '';
+        get_db_guides();
+
+    }).catch(function(error) {
+        console.error("Error writing document: ", error);
+    });
+};
+
 
 // delete user
 let db_delete_user = (collection, deletable_id) => {
@@ -4517,35 +1934,35 @@ let handle_ReturnState = () => {
 };
 
 let handle_update = () => {
-        if (document.getElementById("scroll_clientHeight") != null) {
-          document.getElementById("scroll_clientHeight").innerHTML =
-            state.interaction.root.clientHeight;
-        }
+    if (document.getElementById("scroll_clientHeight") != null) {
+      document.getElementById("scroll_clientHeight").innerHTML =
+        state.interaction.root.clientHeight;
+    }
 
-        if (document.getElementById("scroll_clientWidth") != null) {
-          document.getElementById("scroll_clientWidth").innerHTML =
-            state.interaction.root.clientWidth;
-        }
+    if (document.getElementById("scroll_clientWidth") != null) {
+      document.getElementById("scroll_clientWidth").innerHTML =
+        state.interaction.root.clientWidth;
+    }
 
-        if (document.getElementById("scroll_scrollHeight") != null) {
-          document.getElementById("scroll_scrollHeight").innerHTML =
-            state.interaction.root.scrollHeight;
-        }
+    if (document.getElementById("scroll_scrollHeight") != null) {
+      document.getElementById("scroll_scrollHeight").innerHTML =
+        state.interaction.root.scrollHeight;
+    }
 
-        if (document.getElementById("scroll_scrollWidth") != null) {
-          document.getElementById("scroll_scrollWidth").innerHTML =
-            state.interaction.root.scrollWidth;
-        }
+    if (document.getElementById("scroll_scrollWidth") != null) {
+      document.getElementById("scroll_scrollWidth").innerHTML =
+        state.interaction.root.scrollWidth;
+    }
 
-        if (document.getElementById("scroll_scrollTop") != null) {
-          document.getElementById("scroll_scrollTop").innerHTML =
-            state.interaction.root.scrollTop;
-        }
+    if (document.getElementById("scroll_scrollTop") != null) {
+      document.getElementById("scroll_scrollTop").innerHTML =
+        state.interaction.root.scrollTop;
+    }
 
-        if (document.getElementById("scroll_scrollLeft") != null) {
-          document.getElementById("scroll_scrollLeft").innerHTML =
-            state.interaction.root.scrollLeft;
-        }
+    if (document.getElementById("scroll_scrollLeft") != null) {
+      document.getElementById("scroll_scrollLeft").innerHTML =
+        state.interaction.root.scrollLeft;
+    }
 
     // gui
     if ((document.getElementById('component_app_status_transform_gui_top')) != null ) {
@@ -4734,10 +2151,7 @@ let handle_update = () => {
             document.getElementById('event_landscape').innerHTML = `'this is not landscape.'`;
         };
     };
-
 };
-
-let post_up = false;
 
 let get_classes = () => {
     let class_this = document.getElementById('root');
@@ -4751,6 +2165,7 @@ let get_classes = () => {
 };
 
 let ui_check = () => {
+
     if (state.ux.platform.is_Desktop) {
         state.interaction.player_1.width = 1;
         state.interaction.player_1.height = 4;
@@ -4769,6 +2184,43 @@ let ui_check = () => {
         body.classList += " is_Portrait"
     };
 
+    if (state.interaction.cardboard.xaxis == 0 && state.interaction.cardboard.yaxis == 0) {
+        body.classList += " center"
+    };
+
+    if (state.interaction.cardboard.xaxis == 0 && state.interaction.cardboard.yaxis == 1) {
+        body.classList += " center_bottom"
+    };
+
+    if (state.interaction.cardboard.xaxis == 0 && state.interaction.cardboard.yaxis == -1) {
+        body.classList += " center_top"
+    };
+
+    if (state.interaction.cardboard.xaxis == 1 && state.interaction.cardboard.yaxis == 0) {
+        body.classList += " center_right"
+    };
+
+    if (state.interaction.cardboard.xaxis == -1 && state.interaction.cardboard.yaxis == 1) {
+        body.classList += " bottom_left"
+    };
+
+    if (state.interaction.cardboard.xaxis == -1 && state.interaction.cardboard.yaxis == -1) {
+        body.classList += " top_left"
+    };
+
+    if (state.interaction.cardboard.xaxis == -1 && state.interaction.cardboard.yaxis == 0) {
+        body.classList += " center_left"
+    };
+
+    if (state.interaction.cardboard.xaxis == 1 && state.interaction.cardboard.yaxis == 1) {
+        body.classList += " bottom_right"
+    };
+
+    if (state.interaction.cardboard.xaxis == 1 && state.interaction.cardboard.yaxis == -1) {
+        body.classList += " top_right"
+    };
+
+
     if (state.modal.pop.left.transform == true) {
         body.classList += " modal_pop_left"
     };
@@ -4783,6 +2235,10 @@ let ui_check = () => {
 
     if (state.modal.pop.top.transform == true) {
         body.classList += " modal_pop_top"
+    };
+
+    if (state.modal.nav.top.transform == true) {
+        body.classList += " modal_nav_top"
     };
 
     if (state.ux.orientation.post_view == 'card') {
@@ -4820,11 +2276,8 @@ let ui_check = () => {
     if (state.ux.orientation.dark_view == false) {
         body.classList += " light"
     };
-
-
     console.log('resize');
     console.log(state.ux);
-
 };
 
 let get_dimensions = () => {
@@ -4979,6 +2432,202 @@ let get_dimensions = () => {
     ui_check();
 };
 
+let shot_action_preloader = () => {
+
+    let preloader = document.getElementById('preloader');
+    preloader.innerHTML = ``
+
+    let element = document.createElement('div');
+
+    element.setAttribute("id", `preloader_1`);
+    element.classList = `width_100 height_100 top_0 bottom_0 left_0 right_0 margin_auto position_absolute`
+    element.innerHTML = `
+        <div class=" width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
+            <div id="shot_action_preloader" class="width_0 height_0 gui_text_loading_1 top_0 right_0 bottom_0 left_0 margin_auto position_absolute"></div>
+        </div>
+    `
+    element.addEventListener("click", function(event) {
+        alert('shots yup');
+    });
+
+    document.getElementById('preloader').appendChild(
+        element
+    );
+
+    // shots_character_1 loop
+    (() => {
+        let interval = 1;
+        let play = setInterval(
+            () => {
+
+                // shot 2
+                if (document.getElementById('shot_action_preloader') != null) {
+
+                    // loading
+
+                    if (interval == 1) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_text_loading_1 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 2) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_text_loading_2 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 3) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_text_loading_3 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 4) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_text_loading_4 position_absolute margin_auto ');
+                    };
+
+                    // loaded
+
+                    if (interval == 5) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_text_loaded_1 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 6) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_text_loaded_2 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 7) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_text_loaded_3 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 8) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_text_loaded_4 position_absolute margin_auto ');
+                    };
+
+                    // face
+
+                    if (interval == 9) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_character_face_left_shadow_1 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 10) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_character_face_left_shadow_2 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 11) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_character_face_left_shadow_3 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 12) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_character_face_left_shadow_4 position_absolute margin_auto ');
+                    };
+
+                    // logo
+
+                    if (interval == 13) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_logo_type_1 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 14) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_logo_type_2 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 15) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_logo_type_3 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 16) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_logo_type_4 position_absolute margin_auto ');
+                    };
+
+                    // blink
+
+                    if (interval == 17) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_character_face_left_blink_1 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 18) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_character_face_left_blink_2 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 19) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_character_face_left_blink_3 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 20) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_character_face_left_blink_4 position_absolute margin_auto ');
+                    };
+
+                    // vomit
+
+                    if (interval == 21) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_character_face_vomit_left_shadow_1 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 22) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_character_face_vomit_left_shadow_2 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 23) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_character_face_vomit_left_shadow_3 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 24) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_character_face_vomit_left_shadow_4 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 25) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_character_face_vomit_left_shadow_5 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 26) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_character_face_vomit_left_shadow_6 position_absolute margin_auto ');
+                    };
+
+                    // wall
+
+                    if (interval == 27) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_wall_1 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 28) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_wall_2 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 29) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_wall_3 position_absolute margin_auto ');
+                    };
+
+                    if (interval == 30) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_wall_4 position_absolute margin_auto ');
+                    };
+                
+                    // buttons
+
+                    if (interval == 31) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_buttons_start position_absolute margin_auto ');
+                    };
+
+                    if (interval == 32) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_buttons_or position_absolute margin_auto ');
+                    };
+
+                    if (interval == 33) {
+                        document.getElementById('shot_action_preloader').classList = (' width_0 height_0 top_0 right_0 bottom_0 left_0 gui_buttons_learn position_absolute margin_auto ');
+                    };
+
+                    interval += 1;
+                };
+
+                
+                if (interval == 34) {
+                    document.getElementById('shot_action_preloader').classList = (' ');
+                    state.data.has_loaded = true;
+                    clearInterval(play);
+                };
+                
+
+            }, (1000 / 12));
+
+            play;
+    })();
+};
+
 let handle_ReturnedState_fromEvents = () => {
     state = events.handle_ReturnState_fromEvents();
     get_dimensions();
@@ -4988,7 +2637,7 @@ let handle_ReturnedState_fromEvents = () => {
 let check_for_auth_after_load = () => {
 
     console.log('load');
-    //has_loaded = true;
+    //state.data.has_loaded = true;
 
     let auth_buffer = .5;
     setTimeout(function () {
@@ -5004,8 +2653,8 @@ let check_for_auth_after_load = () => {
                 
                 if (interval > (24 * auth_buffer) ) {
 
-                    // proceed after firebase auth check && has_loaded
-                    if ((auth_has_been_checked == true) && (has_loaded == true)) {
+                    // proceed after firebase auth check && state.data.has_loaded
+                    if ((auth_has_been_checked == true) && (state.data.has_loaded == true)) {
                         handle_if_AUTH_ACT_2();
                         clearInterval(play)
                     };
@@ -5025,8 +2674,13 @@ let modal_reset = () => {
     state.modal.pop.left.transform = false;
     state.modal.pop.right.transform = false;
     state.modal.pop.bottom.transform = false;
+        
+        set.innerHTML = `
+        `
+        scene.innerHTML = `
+        `
 
-    shot_to_scene_2();
+    act_3();
 };
 
 let check_local_user = () => {
@@ -5090,10 +2744,7 @@ let check_local_user = () => {
 
 
     state.data.onload_time = state.data.time;
-
 };
-
-let has_loaded = false;
 
 // inital
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -5104,7 +2755,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         checkmark += 1;
         alert(checkmark + '/6 (handle_play_DOMContentLoaded)');
     };
-
 });
 
 window.addEventListener("load", (event) => {
@@ -5114,12 +2764,10 @@ window.addEventListener("load", (event) => {
         checkmark += 1;
         alert(checkmark + '/6 (window.addEventListener("load")');
     };
-
 });
 
 window.addEventListener("resize", (event) => {
     get_dimensions();
-
 });
 
 // scroll
@@ -5210,8 +2858,9 @@ window.addEventListener("orientationchange", (event) => {
 window.addEventListener("beforeunload", (event) => {
 });
 
-
 export default {
     handle_ReturnState,
-    modal_reset
+    modal_reset,
+    check_ui_after_auth,
+    get_db_guides
 }

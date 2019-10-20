@@ -145,8 +145,50 @@
     background-size: contain;
 }
 
-.gui_buttons {
-    background: url("./assets/gui/gui_buttons.svg");
+.gui_stage_tv_1 {
+    background: url("./assets/gui/gui_stage_tv_1.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+}
+
+.gui_stage_tv_2 {
+    background: url("./assets/gui/gui_stage_tv_2.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+}
+
+.gui_stage_tv_3 {
+    background: url("./assets/gui/gui_stage_tv_3.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+}
+
+.gui_stage_tv_4 {
+    background: url("./assets/gui/gui_stage_tv_4.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+}
+
+.gui_buttons_start {
+    background: url("./assets/gui/gui_buttons_start.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.gui_buttons_or {
+    background: url("./assets/gui/gui_buttons_or.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.gui_buttons_learn {
+    background: url("./assets/gui/gui_buttons_learn.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -297,7 +339,7 @@
 }
 
 .gui_stage_tv {
-    background: url("./assets/gui/gui_stage_tv.svg");
+    background: url("./assets/gui/gui_stage_tv_1.svg");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain;
