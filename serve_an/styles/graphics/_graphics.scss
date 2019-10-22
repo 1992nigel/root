@@ -1,3 +1,46 @@
+
+.gui_icon_hearts {
+    background: url("./assets/gui/gui_icon_hearts.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.gui_icon_hearts_dark {
+    background: url("./assets/gui/gui_icon_hearts_dark.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.gui_arrow_left {
+    background: url("./assets/gui/gui_arrow_left.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.gui_arrow_left_dark {
+    background: url("./assets/gui/gui_arrow_left_dark.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.gui_arrow_right {
+    background: url("./assets/gui/gui_arrow_right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.gui_arrow_right_dark {
+    background: url("./assets/gui/gui_arrow_right_dark.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 .gui_character_face_left_blink_1 {
     background: url("./assets/gui/gui_character_face_left_blink_1.svg");
     background-repeat: no-repeat;
@@ -34,6 +77,14 @@
     background-position: center;
     background-size: contain;
 }
+
+.gui_text_home {
+    background: url("./assets/gui/gui_text_home.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 .gui_text_continue {
     background: url("./assets/gui/gui_text_continue.svg");
     background-repeat: no-repeat;
@@ -170,6 +221,25 @@
     background: url("./assets/gui/gui_stage_tv_4.svg");
     background-repeat: no-repeat;
     background-position: center bottom;
+    background-size: contain;
+}
+
+.gui_buttons_1 {
+    background: url("./assets/gui/gui_buttons_1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.gui_buttons_2 {
+    background: url("./assets/gui/gui_buttons_2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.gui_buttons_3 {
+    background: url("./assets/gui/gui_buttons_3.svg");
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: contain;
 }
 
@@ -310,8 +380,36 @@
     background-size: contain;
 }
 
+.gui_interaction_text_help {
+    background: url("./assets/gui/gui_interaction_text_help.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.gui_interaction_text_for_more {
+    background: url("./assets/gui/gui_interaction_text_for_more.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 .gui_interaction_text_press {
     background: url("./assets/gui/gui_interaction_text_press.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.gui_link_settings_white {
+    background: url("./assets/gui/gui_link_settings_white.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.gui_link_add_white {
+    background: url("./assets/gui/gui_link_add_white.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

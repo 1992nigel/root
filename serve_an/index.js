@@ -102,6 +102,14 @@ let valid_user = {};
 let user_logged_in = false;
 let post_up = false;
 
+let game_start = () => {
+    elements.set_stage_game();
+};
+
+let game_end = () => {
+    elements.set_stage_game_end();
+};
+
 // Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyDE41kN8BeObYTbfb1Ymp9HrZAXD5OZqFQ",
@@ -225,10 +233,38 @@ let handle_time = () => {
 
 let add_events_after_shot_action_user_screen_4 = () => {
 
-    if (document.getElementById('shot_action_user_screen_4_item_1') != null) {
-        (document.getElementById('shot_action_user_screen_4_item_1')).addEventListener("click", function(event) {
-            alert('you doing it nigel!');
-            sequence_start();
+    if (document.getElementById('shot_action_user_screen_4_item_12') != null) {
+        (document.getElementById('shot_action_user_screen_4_item_12')).addEventListener("click", function(event) {
+            alert('you doing it nigel!: start, sequence_start_1');
+            sequence_start_1();
+        });
+    };
+
+    if (document.getElementById('shot_action_user_screen_4_item_13') != null) {
+        (document.getElementById('shot_action_user_screen_4_item_13')).addEventListener("click", function(event) {
+            alert('you doing it nigel!: start, sequence_start_1');
+            sequence_start_1();
+        });
+    };
+
+    if (document.getElementById('shot_action_user_screen_4_item_4') != null) {
+        (document.getElementById('shot_action_user_screen_4_item_4')).addEventListener("click", function(event) {
+            alert('you doing it nigel!: start, sequence_start_1');
+            sequence_start_1();
+        });
+    };
+
+    if (document.getElementById('shot_action_user_screen_4_item_6') != null) {
+        (document.getElementById('shot_action_user_screen_4_item_6')).addEventListener("click", function(event) {
+            alert('you doing it nigel!: learn, sequence_start_0');
+            sequence_start_0();
+        });
+    };
+
+    if (document.getElementById('scene_start_4_item_11') != null) {
+        (document.getElementById('scene_start_4_item_11')).addEventListener("click", function(event) {
+            alert('you doing it nigel!: learn, sequence_start_0');
+            sequence_start_0();
         });
     };
 
@@ -238,40 +274,58 @@ let add_events_after_scene_start_1 = () => {
 
     if (document.getElementById('scene_start_1_item_10') != null) {
         (document.getElementById('scene_start_1_item_10')).addEventListener("click", function(event) {
-            alert('you doing it nigel!');
-            sequence_start();
+            alert('you doing it nigel!: scene_start_1_item_10 - sequence_start_2');
+            sequence_start_2();
+        });
+        (document.getElementById('scene_start_1_item_11')).addEventListener("click", function(event) {
+            alert('you doing it nigel!: scene_start_1_item_11 - sequence_start_3');
+            sequence_start_3();
+        });
+        (document.getElementById('scene_start_1_item_12')).addEventListener("click", function(event) {
+            alert('you doing it nigel!: scene_start_1_item_12 - sequence_start_4');
+            sequence_start_4();
+        });
+        (document.getElementById('scene_start_1_item_13')).addEventListener("click", function(event) {
+            alert('you doing it nigel!: scene_start_1_item_13 - sequence_start_5');
+            sequence_start_5();
+        });
+        (document.getElementById('scene_start_1_item_9')).addEventListener("click", function(event) {
+            alert('you doing it nigel!: scene_start_1_item_9 - sequence_start_6');
+            sequence_start_6();
+        });
+        (document.getElementById('scene_start_1_item_8')).addEventListener("click", function(event) {
+            alert('you doing it nigel!: scene_start_1_item_8 - sequence_start_7');
+            sequence_start_7();
         });
     };
 
-};
-
-let add_events_after_load = () => {
-
-    (document.getElementById('shot_action_user_screen_5_item_1')).addEventListener("click", function(event) {
-        //alert('shot_action_user_screen_5_item_1 yup');
-        sequence_shot_action_user_screen_5_leave();
-    });
-
-    (document.getElementById('shot_action_user_screen_5_item_2')).addEventListener("click", function(event) {
-        //alert('shot_action_user_screen_5_item_2 yup');
-        sequence_shot_action_user_screen_5_leave();
-    });
-
-    (document.getElementById('shot_action_user_screen_5_item_3')).addEventListener("click", function(event) {
-        //alert('shot_action_user_screen_5_item_3 yup');
-        sequence_shot_action_user_screen_5_leave();
-    });
-
-    (document.getElementById('shot_action_user_screen_5_item_4')).addEventListener("click", function(event) {
-        //alert('shot_action_user_screen_5_item_4 yup');
-        sequence_shot_action_user_screen_5_leave();
-    });
 };
 
 let handle_play_DOMContentLoaded = () => {
 
     document.getElementById('opening').appendChild(
         elements.gen('basics')
+    );
+
+
+    document.getElementById('interactions').appendChild(
+        elements.gen('interactions')
+    );
+
+    document.getElementById('modal_pop_top').appendChild(
+        elements.gen('pop_top')
+    );
+
+    document.getElementById('modal_pop_right').appendChild(
+        elements.gen('pop_right')
+    );
+
+    document.getElementById('modal_pop_left').appendChild(
+        elements.gen('pop_left')
+    );
+
+    document.getElementById('modal_menu_top').appendChild(
+        elements.gen('menu_top')
     );
 
     get_dimensions();
@@ -497,6 +551,34 @@ let post_data = () => {
             };
         };
 
+        //check if you are owner of post
+        if (detail.author_id == valid_user.id) {
+            alert('hello owner of post')
+
+
+        document.getElementById('modal-edit-post').innerHTML = `
+            
+                     <form id="edit-form">
+                        <p>edit post</p>
+                        <input id="edit_post_title" placeholder="edit_post_title" type="text"/>
+                        <input id="edit_post_tagline" placeholder="edit_post_tagline" type="text"/>
+                        <input id="edit_post_views" placeholder="edit_post_views" type="text"/>
+                        <input id="edit_post_likes" placeholder="edit_post_likes" type="text"/>
+                        <input id="edit_post_video" placeholder="edit_post_video" type="text"/>
+                        <input id="edit_post_content" placeholder="edit_post_content" type="text"/>
+                        
+                        
+                        <div id="edit_button_post" class="">edit post</div>
+
+                        <div id="delete_button_post" alt="sign out">
+                           delete post
+                        </div>
+
+                     </form> 
+        `
+
+        }
+
         document.getElementById('all_comments').innerHTML = ``;
         for (var i = 0; i < detail.comments.length; i++) {
             console.log(posts_guides[i]);
@@ -575,11 +657,11 @@ let sequence_after_loads = () => {
                 };
 
                 if ( interval == (24 * 5)) {
-                    elements.set_stage_game();
+                    game_start();
                 };
 
                 if ( interval == (24 * 6)) {
-                    elements.set_stage_game_end();
+                    game_end();
                 };
 
                 //console.log('handle_if_AUTH: ' + interval);
@@ -591,7 +673,57 @@ let sequence_after_loads = () => {
     })();
 };
 
-let sequence_start = () => {
+let sequence_back_home = () => {
+    // 24/fps loop !! initial !!
+    (() => {
+        let interval = 0;
+        let play = setInterval(
+            () => {
+
+                if ( interval == (24 * 0)) {
+                    elements.shot_action_user_screen_4();
+                    add_events_after_shot_action_user_screen_4();
+                };
+
+                if ( interval == (24 * 1)) {
+                    game_start();
+                };
+
+                if ( interval == (24 * 2)) {
+                    game_end();
+                };
+
+                //console.log('handle_if_AUTH: ' + interval);
+                interval += 1;
+
+            }, (1000 / state.motion.framerate));
+
+            play;
+    })();
+};
+
+let sequence_start_0 = () => {
+    // 24/fps loop !! initial !!
+    (() => {
+        let interval = 0;
+        let play = setInterval(
+            () => {
+
+                // user specific
+                if ( interval == (24 * 0)) {
+                    elements.scene_start_0();
+                };
+
+                //console.log('handle_if_AUTH: ' + interval);
+                interval += 1;
+
+            }, (1000 / state.motion.framerate));
+
+            play;
+    })();
+};
+
+let sequence_start_1 = () => {
     // 24/fps loop !! initial !!
     (() => {
         let interval = 0;
@@ -606,6 +738,132 @@ let sequence_start = () => {
                 // user specific
                 if ( interval == (24 * 1)) {
                     add_events_after_scene_start_1();
+                };
+
+                //console.log('handle_if_AUTH: ' + interval);
+                interval += 1;
+
+            }, (1000 / state.motion.framerate));
+
+            play;
+    })();
+};
+
+let sequence_start_2 = () => {
+    // 24/fps loop !! initial !!
+    (() => {
+        let interval = 0;
+        let play = setInterval(
+            () => {
+
+                // user specific
+                if ( interval == (24 * 0)) {
+                    elements.scene_start_2();
+                };
+
+                //console.log('handle_if_AUTH: ' + interval);
+                interval += 1;
+
+            }, (1000 / state.motion.framerate));
+
+            play;
+    })();
+};
+
+let sequence_start_3 = () => {
+    // 24/fps loop !! initial !!
+    (() => {
+        let interval = 0;
+        let play = setInterval(
+            () => {
+
+                // user specific
+                if ( interval == (24 * 0)) {
+                    elements.scene_start_3();
+                };
+
+                //console.log('handle_if_AUTH: ' + interval);
+                interval += 1;
+
+            }, (1000 / state.motion.framerate));
+
+            play;
+    })();
+};
+
+let sequence_start_4 = () => {
+    // 24/fps loop !! initial !!
+    (() => {
+        let interval = 0;
+        let play = setInterval(
+            () => {
+
+                // user specific
+                if ( interval == (24 * 0)) {
+                    elements.scene_start_4();
+                };
+
+                //console.log('handle_if_AUTH: ' + interval);
+                interval += 1;
+
+            }, (1000 / state.motion.framerate));
+
+            play;
+    })();
+};
+
+let sequence_start_5 = () => {
+    // 24/fps loop !! initial !!
+    (() => {
+        let interval = 0;
+        let play = setInterval(
+            () => {
+
+                // user specific
+                if ( interval == (24 * 0)) {
+                    elements.scene_start_5();
+                };
+
+                //console.log('handle_if_AUTH: ' + interval);
+                interval += 1;
+
+            }, (1000 / state.motion.framerate));
+
+            play;
+    })();
+};
+
+let sequence_start_6 = () => {
+    // 24/fps loop !! initial !!
+    (() => {
+        let interval = 0;
+        let play = setInterval(
+            () => {
+
+                // user specific
+                if ( interval == (24 * 0)) {
+                    elements.scene_start_6();
+                };
+
+                //console.log('handle_if_AUTH: ' + interval);
+                interval += 1;
+
+            }, (1000 / state.motion.framerate));
+
+            play;
+    })();
+};
+
+let sequence_start_7 = () => {
+    // 24/fps loop !! initial !!
+    (() => {
+        let interval = 0;
+        let play = setInterval(
+            () => {
+
+                // user specific
+                if ( interval == (24 * 0)) {
+                    elements.scene_start_7();
                 };
 
                 //console.log('handle_if_AUTH: ' + interval);
@@ -775,6 +1033,44 @@ let handle_firebase_events = () => {
         });
     };
 
+    // nav controls
+    if (document.getElementById('nav_button_1') != null) {
+        document.getElementById('nav_button_1').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.nav.top.transform = !state.modal.nav.top.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+    if (document.getElementById('nav_button_2') != null) {
+        document.getElementById('nav_button_2').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.pop.top.transform = !state.modal.pop.top.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+    if (document.getElementById('nav_button_3') != null) {
+        document.getElementById('nav_button_3').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.pop.top.transform = !state.modal.pop.top.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+    if (document.getElementById('nav_button_4') != null) {
+        document.getElementById('nav_button_4').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.pop.top.transform = !state.modal.pop.top.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+
     // post view controls
     if (document.getElementById('modal_nav_top') != null) {
         document.getElementById('modal_nav_top').addEventListener('click', (event) => {
@@ -785,7 +1081,6 @@ let handle_firebase_events = () => {
             }, 0);
         });
     };
-
 
     // nav
     if (document.getElementById('nav_bottom') != null) {
@@ -827,6 +1122,90 @@ let handle_firebase_events = () => {
             }, 0);
         });
     };
+    
+
+    // menu
+    if (document.getElementById('menu_bottom') != null) {
+        document.getElementById('menu_bottom').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.menu.bottom.transform = !state.modal.menu.bottom.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+
+    if (document.getElementById('menu_top') != null) {
+        document.getElementById('menu_top').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.menu.top.transform = !state.modal.menu.top.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+
+    if (document.getElementById('menu_left') != null) {
+        document.getElementById('menu_left').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.menu.left.transform = !state.modal.menu.left.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+
+    if (document.getElementById('menu_right') != null) {
+        document.getElementById('menu_right').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.menu.right.transform = !state.modal.menu.right.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+
+    // page
+    if (document.getElementById('page_bottom') != null) {
+        document.getElementById('page_bottom').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.page.bottom.transform = !state.modal.page.bottom.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+
+    if (document.getElementById('page_top') != null) {
+        document.getElementById('page_top').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.page.top.transform = !state.modal.page.top.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+
+    if (document.getElementById('page_left') != null) {
+        document.getElementById('page_left').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.page.left.transform = !state.modal.page.left.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+
+    if (document.getElementById('page_right') != null) {
+        document.getElementById('page_right').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.page.right.transform = !state.modal.page.right.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+
 
     // pop
     if (document.getElementById('pop_bottom') != null) {
@@ -1104,17 +1483,15 @@ let check_ui_after_auth = () => {
             email: ${valid_user.title}
         `;
 
+        document.getElementById('nav_button_2').innerHTML = `
+        <div class="position_relative gui_link_settings_white
+                width_50 height_50 float_left"></div>
+        `;
+
         document.getElementById('modal-edit').innerHTML = `
             
                      <form id="edit-form">
-                        <p>edit post</p>
-                        <input id="edit_post_title" placeholder="edit_post_title" type="text"/>
-                        <input id="edit_post_tagline" placeholder="edit_post_tagline" type="text"/>
-                        <input id="edit_post_views" placeholder="edit_post_views" type="text"/>
-                        <input id="edit_post_likes" placeholder="edit_post_likes" type="text"/>
-                        <input id="edit_post_video" placeholder="edit_post_video" type="text"/>
-                        <input id="edit_post_content" placeholder="edit_post_content" type="text"/>
-                        
+
                         <p>edit profile</p>
                         <input placeholder="user_title" type="text" id="user_title"/>
                         <input placeholder="user_youtube" type="text" id="user_youtube"/>
@@ -1123,18 +1500,14 @@ let check_ui_after_auth = () => {
                         <input placeholder="user_instagram" type="text" id="user_instagram"/>
                         <input placeholder="user_twitter" type="text" id="user_twitter"/>
                         <input placeholder="user_vimeo" type="text" id="user_vimeo"/>
-                        
+
                         <div id="edit_button" class="">edit</div>
-                        <div id="edit_button_post" class="">edit post</div>
 
                         <div id="signout" alt="sign out">
                            sign out
                         </div>
                         <div id="delete_button" alt="sign out">
                            delete
-                        </div>
-                        <div id="delete_button_post" alt="sign out">
-                           delete post
                         </div>
 
                      </form> 
@@ -1188,7 +1561,14 @@ let check_ui_after_auth = () => {
             email: please log in
         `;
 
+
+        document.getElementById('nav_button_2').innerHTML = `
+        <div class="position_relative gui_link_add_white
+                width_50 height_50 float_left"></div>
+        `;
+
         document.getElementById('modal-edit').innerHTML = ``;
+        document.getElementById('modal-edit-post').innerHTML = ``;
         document.getElementById('modal-create').innerHTML = ``;
 
         document.getElementById('modal-signup').innerHTML = `
@@ -1363,7 +1743,9 @@ let get_db_guides = () => {
         console.log(snapshot.docs);
         posts_guides = [];
         filtered_posts_guides = [];
+        sorted_filtered_posts_guides = [];
         document.getElementById('posts_all').innerHTML = ``;
+        document.getElementById('posts_filtered_sorted').innerHTML = ``;
         document.getElementById('posts_filtered').innerHTML = ``;
 
         snapshot.docs.forEach(doc => {
@@ -1444,7 +1826,16 @@ let get_db_guides = () => {
                     post id: ${post.id}
                 </p>
                 <a href="https://antenuh.com/p/${post.id}">see post</a>
-                <div id="like">like</div>
+                
+                <div id="like"class="width_100 height_6025vw position_relative margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                        
+                    <div class="hover_show width_100 height_100 position_relative margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                        <div class="width_100 height_100 bottom_0 right_0 gui_icon_hearts_dark position_absolute margin_auto"></div>
+                    </div>
+                    <div class="hover_hide width_100 height_100 position_relative margin_auto float_left display_webkit_box webkit_box_pack_center webkit_box_align">
+                        <div class="width_100 height_100 bottom_0 right_0 gui_icon_hearts position_absolute margin_auto"></div>
+                    </div>
+                </div>
             `
             element.children[3].addEventListener("click", function(event) {
                 alert('see');
@@ -1495,6 +1886,44 @@ let get_db_guides = () => {
             });
 
             document.getElementById('posts_filtered').appendChild(
+                element
+            );
+        });
+
+
+        //  FILTERED BY TITLE *sorted*
+        if ((sorted_filtered_posts_guides) != null) {
+            for (var i = 0; i < posts_guides.length; i++) {
+                if (
+                    // title filter
+                    (posts_guides[i].title.toString().toLowerCase().includes(document.getElementById('element_input_filter').value))
+                    ||
+                    // if filter
+                    (posts_guides[i].id.toString().includes(document.getElementById('element_input_filter').value))
+
+                    ) {
+                    sorted_filtered_posts_guides.push(posts_guides[i]);
+                };
+                console.log('sorted_filtered_posts_guides[i]');
+                console.log(sorted_filtered_posts_guides[i]);
+            };
+        };
+
+        // render SORTED && FILTERED BY TITLE *sorted* post to view 
+        fb_sorted_library(sorted_filtered_posts_guides, 'titleup').forEach(post => {
+            console.log(post);
+            let element = document.createElement('div');
+
+            element.setAttribute("id", `post`);
+            element.classList = `width_100 margin_auto position_relative float_left`
+            element.innerHTML = `${post.id}
+            `
+            element.addEventListener("click", function(event) {
+                alert('delete post');
+                db_delete_user("users", post.id);
+            });
+
+            document.getElementById('posts_filtered_sorted').appendChild(
                 element
             );
         });
@@ -1579,6 +2008,9 @@ let get_db_guides = () => {
                 </h2>
                 <p>
                     user id: ${post.id}
+                </p>
+                <p>
+                    author_id: ${post.author_id}
                 </p>
                 <a href="https://antenuh.com/p/${post.id}">see post</a>
             `
@@ -2237,8 +2669,52 @@ let ui_check = () => {
         body.classList += " modal_pop_top"
     };
 
+    if (state.modal.page.top.transform == true) {
+        body.classList += " modal_page_top"
+    };
+
+    if (state.modal.page.bottom.transform == true) {
+        body.classList += " modal_page_bottom"
+    };
+
+    if (state.modal.page.left.transform == true) {
+        body.classList += " modal_page_left"
+    };
+
+    if (state.modal.page.right.transform == true) {
+        body.classList += " modal_page_right"
+    };
+
+    if (state.modal.menu.top.transform == true) {
+        body.classList += " modal_menu_top"
+    };
+
+    if (state.modal.menu.bottom.transform == true) {
+        body.classList += " modal_menu_bottom"
+    };
+
+    if (state.modal.menu.left.transform == true) {
+        body.classList += " modal_menu_left"
+    };
+
+    if (state.modal.menu.right.transform == true) {
+        body.classList += " modal_menu_right"
+    };
+
     if (state.modal.nav.top.transform == true) {
         body.classList += " modal_nav_top"
+    };
+
+    if (state.modal.nav.bottom.transform == true) {
+        body.classList += " modal_nav_bottom"
+    };
+
+    if (state.modal.nav.left.transform == true) {
+        body.classList += " modal_nav_left"
+    };
+
+    if (state.modal.nav.right.transform == true) {
+        body.classList += " modal_nav_right"
     };
 
     if (state.ux.orientation.post_view == 'card') {
@@ -2675,12 +3151,12 @@ let modal_reset = () => {
     state.modal.pop.right.transform = false;
     state.modal.pop.bottom.transform = false;
         
-        set.innerHTML = `
-        `
-        scene.innerHTML = `
-        `
+    set.innerHTML = `
+    `
+    scene.innerHTML = `
+    `
 
-    act_3();
+    sequence_back_home();
 };
 
 let check_local_user = () => {
@@ -2862,5 +3338,7 @@ export default {
     handle_ReturnState,
     modal_reset,
     check_ui_after_auth,
-    get_db_guides
+    get_db_guides,
+    game_start,
+    game_end
 }

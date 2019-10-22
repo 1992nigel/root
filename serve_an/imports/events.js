@@ -477,6 +477,7 @@ let handle_Function_Key_Down = (event) => {
     if (event.keyCode == 81) {
         //state.modal.pop.top.transform = !state.modal.pop.top.transform;
         state.modal.nav.top.transform = !state.modal.nav.top.transform;
+        from_index.game_start();
     };
 
     if (event.keyCode == 27) {
@@ -498,6 +499,7 @@ let handle_Function_Key_Down = (event) => {
         state.modal.gui.top_right.transform = !state.modal.gui.top_right.transform;
         state.modal.nav.top.transform = !state.modal.nav.top.transform;
         state.modal.menu.right.transform = !state.modal.menu.right.transform;
+        from_index.game_end();
     };
 
     if (event.keyCode == 37) {

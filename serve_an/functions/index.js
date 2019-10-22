@@ -325,22 +325,12 @@ app.get('/', (req, res) => {
 
 
           <div id="set" class="">
-            <div id="gui_stage_tv" class=""></div>
-            <div id="gui_stage_lights" class=""></div>
           </div>
 
           <div id="scene" class="">
-            <div id="player_1" class=""></div>
-            <div id="mark" class=""></div>
-            <div id="logo" class=""></div>
           </div>
 
           <div id="interactions" class="">
-            <div id="nav_button" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_menu_white width_50 height_50 float_left"></div></div>
-            <div id="nav_button_2" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_sign_in_white width_75 height_100 float_left"></div></div>
-            <div id="nav_button_3" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_grid_white width_50 height_50 float_left"></div></div>
-            <div id="nav_button_4" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_interaction_text_press width_100 height_100 float_left"></div></div>
-
           </div>
                 
           <div id="modals" class="">
@@ -353,30 +343,18 @@ app.get('/', (req, res) => {
             <div id="modal_pop_bottom"></div>
             <div id="modal_pop_top"></div>
             <div id="modal_pop_right"></div>
-            <div id="modal_pop_top">
-              <div class="container">
-                
-                      <div id="dark_view_toggle">dark</div>
-                      <div id="pop_top">pop_top</div>
-                      <div id="pop_bottom">pop_bottom</div>
-                      <div id="pop_left">pop_left</div>
-                      <div id="pop_right">pop_right</div>
+            <div id="modal_pop_left"></div>
 
-                      <div id="nav_top">nav_top</div>
-                      <div id="nav_bottom">nav_bottom</div>
-                      <div id="nav_left">nav_left</div>
-                      <div id="nav_right">nav_right</div>
+            <div id="modal_menu_bottom"></div>
+            <div id="modal_menu_top"></div>
+            <div id="modal_menu_right"></div>
+            <div id="modal_menu_left"></div>
 
-                      <div id="view_card">card</div>
-                      <div id="view_list">list</div>
-                      <div id="view_numbered">numbered</div>
-                      <div id="view_read">read</div>
-                      <div id="view_fifth">fifth</div>
-                      <div id="view_sixth">sixth</div>
-                      <div id="view_eighth">eighth</div>
-                      
-              </div>
-            </div>
+            <div id="modal_page_bottom"></div>
+            <div id="modal_page_top"></div>
+            <div id="modal_page_right"></div>
+            <div id="modal_page_left"></div>
+      
           </div>
 
           <div id="assets">
@@ -520,8 +498,10 @@ app.get('/p/:id', function(req, res) {
                 
                 title:<div id="post_title">${detail.title}</div></br>
                 id:<div id="post_id">${detail.id}</div></br>
+                id:<div id="post_author_id">${detail.author_id}</div></br>
                 <div id="post_views">${detail.views}</div></br>
                 <div id="post_likes">${detail.likes}</div></br>
+                <div id="modal-edit-post"></div>
                 
                 <div id="twitter" class="display_webkit_box webkit_box_pack_center webkit_box_align">
                   ${detail.twitter}
@@ -812,22 +792,12 @@ app.get('/p/:id', function(req, res) {
 
 
               <div id="set" class="">
-                <div id="gui_stage_tv" class=""></div>
-                <div id="gui_stage_lights" class=""></div>
               </div>
 
               <div id="scene" class="">
-                <div id="player_1" class=""></div>
-                <div id="mark" class=""></div>
-                <div id="logo" class=""></div>
               </div>
 
               <div id="interactions" class="">
-                <div id="nav_button" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_menu_white width_50 height_50 float_left"></div></div>
-                <div id="nav_button_2" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_sign_in_white width_75 height_100 float_left"></div></div>
-                <div id="nav_button_3" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_grid_white width_50 height_50 float_left"></div></div>
-                <div id="nav_button_4" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_interaction_text_press width_100 height_100 float_left"></div></div>
-
               </div>
                 
           <div id="modals" class="">
@@ -837,33 +807,20 @@ app.get('/p/:id', function(req, res) {
             <div id="modal_nav_left">
             </div>
 
-            <div id="modal_pop_bottom"></div>
-            <div id="modal_pop_top"></div>
-            <div id="modal_pop_right"></div>
-            <div id="modal_pop_top">
-              <div class="container">
-                
-                      <div id="dark_view_toggle">dark</div>
-                      <div id="pop_top">pop_top</div>
-                      <div id="pop_bottom">pop_bottom</div>
-                      <div id="pop_left">pop_left</div>
-                      <div id="pop_right">pop_right</div>
+      <div id="modal_pop_bottom"></div>
+      <div id="modal_pop_top"></div>
+      <div id="modal_pop_right"></div>
+      <div id="modal_pop_left"></div>
 
-                      <div id="nav_top">nav_top</div>
-                      <div id="nav_bottom">nav_bottom</div>
-                      <div id="nav_left">nav_left</div>
-                      <div id="nav_right">nav_right</div>
+      <div id="modal_menu_bottom"></div>
+      <div id="modal_menu_top"></div>
+      <div id="modal_menu_right"></div>
+      <div id="modal_menu_left"></div>
 
-                      <div id="view_card">card</div>
-                      <div id="view_list">list</div>
-                      <div id="view_numbered">numbered</div>
-                      <div id="view_read">read</div>
-                      <div id="view_fifth">fifth</div>
-                      <div id="view_sixth">sixth</div>
-                      <div id="view_eighth">eighth</div>
-                      
-              </div>
-            </div>
+      <div id="modal_page_bottom"></div>
+      <div id="modal_page_top"></div>
+      <div id="modal_page_right"></div>
+      <div id="modal_page_left"></div>
           </div>
 
               <div id="assets">
@@ -1276,22 +1233,12 @@ app.get('/:id', function(req, res) {
 
 
               <div id="set" class="">
-                <div id="gui_stage_tv" class=""></div>
-                <div id="gui_stage_lights" class=""></div>
               </div>
 
               <div id="scene" class="">
-                <div id="player_1" class=""></div>
-                <div id="mark" class=""></div>
-                <div id="logo" class=""></div>
               </div>
 
               <div id="interactions" class="">
-                <div id="nav_button" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_menu_white width_50 height_50 float_left"></div></div>
-                <div id="nav_button_2" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_sign_in_white width_75 height_100 float_left"></div></div>
-                <div id="nav_button_3" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_grid_white width_50 height_50 float_left"></div></div>
-                <div id="nav_button_4" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_interaction_text_press width_100 height_100 float_left"></div></div>
-
               </div>
                 
           <div id="modals" class="">
@@ -1304,30 +1251,17 @@ app.get('/:id', function(req, res) {
             <div id="modal_pop_bottom"></div>
             <div id="modal_pop_top"></div>
             <div id="modal_pop_right"></div>
-            <div id="modal_pop_top">
-              <div class="container">
-                
-                      <div id="dark_view_toggle">dark</div>
-                      <div id="pop_top">pop_top</div>
-                      <div id="pop_bottom">pop_bottom</div>
-                      <div id="pop_left">pop_left</div>
-                      <div id="pop_right">pop_right</div>
+            <div id="modal_pop_left"></div>
 
-                      <div id="nav_top">nav_top</div>
-                      <div id="nav_bottom">nav_bottom</div>
-                      <div id="nav_left">nav_left</div>
-                      <div id="nav_right">nav_right</div>
+            <div id="modal_menu_bottom"></div>
+            <div id="modal_menu_top"></div>
+            <div id="modal_menu_right"></div>
+            <div id="modal_menu_left"></div>
 
-                      <div id="view_card">card</div>
-                      <div id="view_list">list</div>
-                      <div id="view_numbered">numbered</div>
-                      <div id="view_read">read</div>
-                      <div id="view_fifth">fifth</div>
-                      <div id="view_sixth">sixth</div>
-                      <div id="view_eighth">eighth</div>
-                      
-              </div>
-            </div>
+            <div id="modal_page_bottom"></div>
+            <div id="modal_page_top"></div>
+            <div id="modal_page_right"></div>
+            <div id="modal_page_left"></div>
           </div>
 
               <div id="assets">
