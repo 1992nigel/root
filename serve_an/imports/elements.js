@@ -2151,6 +2151,27 @@ let scene_start_7 = () => {
 
 };
 
+//6
+let scene_start_8 = () => {
+
+    let state = from_index.handle_ReturnState();
+
+    if (document.getElementById('shots') != null) {
+        let shots = document.getElementById('shots');
+        shots.innerHTML = `
+        
+            <div id="full" class="animated1 enterTop width_100 height_100 bottom_0 left_0 margin_auto position_absolute">
+
+                <div class="width_6025vw height_50 top_0 bottom_0 left_6025vw gui_icon_set_1 position_absolute margin_auto"></div>
+                <div class="width_50 height_6025vw right_0 left_0 bottom_6025vw gui_icon_set_2 position_absolute margin_auto"></div>
+                <div class="width_33 height_33 top_0 right_0 bottom_0 left_0 gui_icon_set_3 position_absolute margin_auto"></div>
+
+            </div>
+        `
+    };
+
+};
+
 let set_stage_game = () => {
 
     let state = from_index.handle_ReturnState();
@@ -2375,6 +2396,44 @@ let gen = (x) => {
   
   let component = document.createElement('div');
   
+  if (x == 'page_top') {
+    let identify = x;
+    component.setAttribute("id", 'id_' + identify);
+    component.classList = 'class_' + identify;
+    component.innerHTML = `
+    <h2>sequences</h2>
+    <p id="controls_sequence_back_home">controls_sequence_back_home</p>
+    <p id="controls_sequence_start_0">controls_sequence_start_0</p>
+    <br>
+    <h2>scene</h2>
+    <p id="scene_1">scene_1</p>
+    `
+  };
+
+  if (x == 'page_left') {
+    let identify = x;
+    component.setAttribute("id", 'id_' + identify);
+    component.classList = 'class_' + identify;
+    component.innerHTML = `page_left
+    `
+  };
+
+  if (x == 'page_bottom') {
+    let identify = x;
+    component.setAttribute("id", 'id_' + identify);
+    component.classList = 'class_' + identify;
+    component.innerHTML = `page_bottom
+    `
+  };
+
+  if (x == 'page_right') {
+    let identify = x;
+    component.setAttribute("id", 'id_' + identify);
+    component.classList = 'class_' + identify;
+    component.innerHTML = `page_right
+    `
+  };
+
 
   if (x == 'interactions') {
     let identify = x;
@@ -2382,36 +2441,44 @@ let gen = (x) => {
     component.classList = 'class_' + identify + ``;
     component.innerHTML = `
             <div id="nav_1" class="animated1 enterTop display_webkit_box webkit_box_pack_center webkit_box_align">
-                <div id="nav_button_1" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_add_white
+                <div id="nav_button_1_1" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_add_white
                 width_50 height_50 float_left"></div></div>
-                <div id="nav_button_1" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_menu_white
+                <div id="nav_button_1_2" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_menu_white
                 width_50 height_50 float_left"></div></div>
-                <div id="nav_button_1" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_settings_white
+                <div id="nav_button_1_3" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_settings_white
+                width_50 height_50 float_left"></div></div>
+                <div id="nav_button_1_4" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_settings_white
                 width_50 height_50 float_left"></div></div>
             </div>
             <div id="nav_2" class="animated1 enterTop display_webkit_box webkit_box_pack_center webkit_box_align">
-                <div id="nav_button_2" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_add_white
+                <div id="nav_button_2_1" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_add_white
                 width_50 height_50 float_left"></div></div>
-                <div id="nav_button_2" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_sign_in_white
+                <div id="nav_button_2_2" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_sign_in_white
                 width_50 height_50 float_left"></div></div>
-                <div id="nav_button_2" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_settings_white
+                <div id="nav_button_2_3" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_settings_white
+                width_50 height_50 float_left"></div></div>
+                <div id="nav_button_2_4" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_settings_white
                 width_50 height_50 float_left"></div></div>
             </div>
 
             <div id="nav_3" class="animated1 enterBottom display_webkit_box webkit_box_pack_center webkit_box_align">
-                <div id="nav_button_3" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_add_white
+                <div id="nav_button_3_1" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_add_white
                 width_50 height_50 float_left"></div></div>
-                <div id="nav_button_3" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_grid_white
+                <div id="nav_button_3_2" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_grid_white
                 width_50 height_50 float_left"></div></div>
-                <div id="nav_button_3" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_settings_white
+                <div id="nav_button_3_3" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_settings_white
+                width_50 height_50 float_left"></div></div>
+                <div id="nav_button_3_4" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_settings_white
                 width_50 height_50 float_left"></div></div>
            </div>
             <div id="nav_4" class="animated1 enterBottom display_webkit_box webkit_box_pack_center webkit_box_align">
-                <div id="nav_button_4" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_add_white
+                <div id="nav_button_4_1" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_add_white
                 width_50 height_50 float_left"></div></div>
-                <div id="nav_button_4" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_interaction_text_press
+                <div id="nav_button_4_2" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_interaction_text_press
                 width_50 height_50 float_left"></div></div>
-                <div id="nav_button_4" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_settings_white
+                <div id="nav_button_4_3" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_settings_white
+                width_50 height_50 float_left"></div></div>
+                <div id="nav_button_4_4" class="display_webkit_box webkit_box_pack_center webkit_box_align"><div class="position_relative gui_link_settings_white
                 width_50 height_50 float_left"></div></div>
              </div>
             
@@ -2437,7 +2504,7 @@ let gen = (x) => {
     component.classList = 'class_' + identify + ` position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow`;
     component.innerHTML = `
 
-
+            <div class="container">
                <ul id="firebase">
                   <div id="modal-signup">
                   </div>
@@ -2457,15 +2524,12 @@ let gen = (x) => {
                      </form>
                   </div>
 
-                  <div id="modal-create">
-
-                  </div>
-
                   <div id="modal-edit">                     
                   </div>
 
 
                </ul>
+            </div>
     `
   };
 
@@ -2475,6 +2539,7 @@ let gen = (x) => {
     component.classList = 'class_' + identify + ` position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow`;
     component.innerHTML = `
 
+            <div class="container">
               <p class=" ">searched posts_filtered</p>
               <div id="posts_filtered_container">
                 <div id="posts_filtered"></div>
@@ -2575,6 +2640,7 @@ let gen = (x) => {
               <div id="posts_all_container">
                 <div id="posts_all_posts_only_valid_user"></div>
               </div>
+            </div>
     `
   };
 
@@ -2618,6 +2684,21 @@ let gen = (x) => {
     `
   };
 
+
+  if (x == 'pop_bottom') {
+    let identify = x;
+    component.setAttribute("id", 'id_' + identify);
+    component.classList = 'class_' + identify + ` position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow`;
+    component.innerHTML = `
+
+            <div class="container">
+                  <div id="modal-create">
+
+                  </div>
+            </div>
+    `
+  };
+
   if (x == 'basics') {
     let identify = x;
     component.setAttribute("id", 'id_' + identify);
@@ -2633,9 +2714,27 @@ let gen = (x) => {
                 <div id="posts_filtered_sorted"></div>
               </div>
 
-                <div id="pagination" class=" width_6025vw height_6025vw position_relative margin_auto display_webkit_box webkit_box_pack_center webkit_box_align float_left">
+              <p class=" ">posts_sorted if post type ==</p>
 
-                    <div id="" class="hover_show width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align">
+              <div id="posts_sorted_container">
+                <div id="posts_filtered_sorted_type"></div>
+              </div>
+
+              <p class=" ">posts_sorted if post category ==</p>
+
+              <div id="posts_sorted_container">
+                <div id="posts_filtered_sorted_category"></div>
+              </div>
+
+              <p class=" ">posts_sorted if post hashtag ==</p>
+
+              <div id="posts_sorted_container">
+                <div id="posts_filtered_sorted_hashtag"></div>
+              </div>
+
+                <div id="pagination_left" class=" width_6025vw height_6025vw position_relative margin_auto display_webkit_box webkit_box_pack_center webkit_box_align float_left">
+
+                    <div class="hover_show width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align">
 
                         <div id="container" class="width_100 height_100 position_relative float_left margin_auto">
                         
@@ -2651,7 +2750,7 @@ let gen = (x) => {
 
                     </div>
 
-                    <div id="" class="hover_hide width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align">
+                    <div class="hover_hide width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align">
 
                         <div id="container" class="width_100 height_100 position_relative float_left margin_auto">
                         
@@ -2669,7 +2768,7 @@ let gen = (x) => {
 
                 </div>
 
-                <div id="pagination" class=" width_6025vw height_6025vw position_relative margin_auto display_webkit_box webkit_box_pack_center webkit_box_align float_right">
+                <div id="pagination_right" class=" width_6025vw height_6025vw position_relative margin_auto display_webkit_box webkit_box_pack_center webkit_box_align float_right">
 
                     <div id="" class="hover_show width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align">
 
@@ -2728,6 +2827,7 @@ export default {
   scene_start_5,
   scene_start_6,
   scene_start_7,
+  scene_start_8,
   shot_action_user_screen_4,
   shot_action_single_vomit_and_wall,
   shot_action_single_vomit,

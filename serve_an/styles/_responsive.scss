@@ -203,6 +203,30 @@ body.dark {
 	-moz-transition-timing-function: cubic-bezier(0.100, 0.100, 0.100, 0.100); 
 	-o-transition-timing-function: cubic-bezier(0.100, 0.100, 0.100, 0.100); 
 	transition-timing-function: cubic-bezier(0.100, 0.100, 0.100, 0.100);
+
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+
+	.class_pop_right {
+
+		position: relative;
+		background: $white;
+		float: left;
+		margin: auto;
+		width: calc(100vw - 25vw);
+		height: calc(100vh - 25vw);
+		z-index: 1;
+
+		.container {
+			width: calc(100% - 12.5vw);
+			height: calc(100% - 12.5vw);
+			padding: 6.25vw;
+
+		}
+
+	}
+
 }
 
 .modal_pop_right #modal_pop_right {
@@ -233,6 +257,30 @@ body.dark {
 	-moz-transition-timing-function: cubic-bezier(0.100, 0.100, 0.100, 0.100); 
 	-o-transition-timing-function: cubic-bezier(0.100, 0.100, 0.100, 0.100); 
 	transition-timing-function: cubic-bezier(0.100, 0.100, 0.100, 0.100);
+
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	
+	.class_pop_left {
+
+		position: relative;
+		background: $white;
+		float: left;
+		margin: auto;
+		width: calc(100vw - 25vw);
+		height: calc(100vh - 25vw);
+		z-index: 1;
+
+		.container {
+			width: calc(100% - 12.5vw);
+			height: calc(100% - 12.5vw);
+			padding: 6.25vw;
+
+		}
+
+	}
+
 }
 
 .modal_pop_left #modal_pop_left {
@@ -244,7 +292,6 @@ body.dark {
 #modal_pop_top {
 
 	position: fixed;
-	background: $white;
 	float: left;
 	margin: auto;
 	width: 100vw;
@@ -267,6 +314,25 @@ body.dark {
 	display: -webkit-box;
 	-webkit-box-pack: center;
 	-webkit-box-align: center;
+
+	.class_pop_top {
+
+		position: relative;
+		background: $white;
+		float: left;
+		margin: auto;
+		width: calc(100vw - 25vw);
+		height: calc(100vh - 25vw);
+		z-index: 1;
+
+		.container {
+			width: calc(100% - 12.5vw);
+			height: calc(100% - 12.5vw);
+			padding: 6.25vw;
+
+		}
+
+	}
 
 }
 
@@ -298,6 +364,29 @@ body.dark {
 	-moz-transition-timing-function: cubic-bezier(0.100, 0.100, 0.100, 0.100); 
 	-o-transition-timing-function: cubic-bezier(0.100, 0.100, 0.100, 0.100); 
 	transition-timing-function: cubic-bezier(0.100, 0.100, 0.100, 0.100);
+
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	
+	.class_pop_bottom {
+
+		position: relative;
+		background: $white;
+		float: left;
+		margin: auto;
+		width: calc(100vw - 25vw);
+		height: calc(100vh - 25vw);
+		z-index: 1;
+
+		.container {
+			width: calc(100% - 12.5vw);
+			height: calc(100% - 12.5vw);
+			padding: 6.25vw;
+
+		}
+
+	}
 }
 
 .modal_pop_bottom #modal_pop_bottom {
@@ -328,6 +417,10 @@ body.dark {
 	-moz-transition-timing-function: cubic-bezier(0.100, 0.100, 0.100, 0.100); 
 	-o-transition-timing-function: cubic-bezier(0.100, 0.100, 0.100, 0.100); 
 	transition-timing-function: cubic-bezier(0.100, 0.100, 0.100, 0.100);
+
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
 }
 
 .modal_page_right #modal_page_right {
@@ -1041,7 +1134,7 @@ body.dark {
 	z-index: 2;
 };
 
-#nav_button_1 {
+#nav_button_1_1, #nav_button_1_2, #nav_button_1_3, #nav_button_1_4 {
 	position: relative;
 	float: left;
 	margin: auto;
@@ -1059,7 +1152,7 @@ body.dark {
 	z-index: 2;
 };
 
-#nav_button_2 {
+#nav_button_2_1, #nav_button_2_2, #nav_button_2_3, #nav_button_2_4 {
 	position: relative;
 	float: left;
 	margin: auto;
@@ -1077,7 +1170,7 @@ body.dark {
 	z-index: 2;
 };
 
-#nav_button_3 {
+#nav_button_3_1, #nav_button_3_2, #nav_button_3_3, #nav_button_3_4 {
 	position: relative;
 	float: left;
 	margin: auto;
@@ -1095,7 +1188,7 @@ body.dark {
 	z-index: 2;
 };
 
-#nav_button_4 {
+#nav_button_4_1, #nav_button_4_2, #nav_button_4_3, #nav_button_4_4 {
 	position: relative;
 	float: left;
 	margin: auto;
@@ -1268,8 +1361,7 @@ body.dark {
 	}
 
 	#signup-form {
-		width: 50%;
-		margin: 25vw;
+		width: 100%;
 	}
 
 	#modal-signin {
@@ -1281,8 +1373,7 @@ body.dark {
 	}
 
 	#signin-form {
-		width: 50%;
-		margin: 25vw;
+		width: 100%;
 	}
 
 	#modal-account {
@@ -1294,8 +1385,7 @@ body.dark {
 	}
 
 	#account-form {
-		width: 50%;
-		margin: 25vw;
+		width: 100%;
 	}
 
 	#modal-create {
@@ -1307,8 +1397,7 @@ body.dark {
 	}
 
 	#create-form {
-		width: 50%;
-		margin: 25vw;
+		width: 100%;
 	}
 
 	#modal-edit {
@@ -1320,8 +1409,7 @@ body.dark {
 	}
 
 	#edit-form {
-		width: 50%;
-		margin: 25vw;
+		width: 100%;
 	}
 
 	#info_scroll_y {

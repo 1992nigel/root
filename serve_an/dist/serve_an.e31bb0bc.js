@@ -176,7 +176,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./assets/gui/gui_icon_hearts.svg":[["gui_icon_hearts.d20d2683.svg","assets/gui/gui_icon_hearts.svg"],"assets/gui/gui_icon_hearts.svg"],"./assets/gui/gui_icon_hearts_dark.svg":[["gui_icon_hearts_dark.d5a3f3d8.svg","assets/gui/gui_icon_hearts_dark.svg"],"assets/gui/gui_icon_hearts_dark.svg"],"./assets/gui/gui_arrow_left.svg":[["gui_arrow_left.859710f3.svg","assets/gui/gui_arrow_left.svg"],"assets/gui/gui_arrow_left.svg"],"./assets/gui/gui_arrow_left_dark.svg":[["gui_arrow_left_dark.eedb6a25.svg","assets/gui/gui_arrow_left_dark.svg"],"assets/gui/gui_arrow_left_dark.svg"],"./assets/gui/gui_arrow_right.svg":[["gui_arrow_right.91b7aa1a.svg","assets/gui/gui_arrow_right.svg"],"assets/gui/gui_arrow_right.svg"],"./assets/gui/gui_arrow_right_dark.svg":[["gui_arrow_right_dark.86add9ba.svg","assets/gui/gui_arrow_right_dark.svg"],"assets/gui/gui_arrow_right_dark.svg"],"./assets/gui/gui_character_face_left_blink_1.svg":[["gui_character_face_left_blink_1.e7521a02.svg","assets/gui/gui_character_face_left_blink_1.svg"],"assets/gui/gui_character_face_left_blink_1.svg"],"./assets/gui/gui_character_face_left_blink_2.svg":[["gui_character_face_left_blink_2.f5bedfe7.svg","assets/gui/gui_character_face_left_blink_2.svg"],"assets/gui/gui_character_face_left_blink_2.svg"],"./assets/gui/gui_character_face_left_blink_3.svg":[["gui_character_face_left_blink_3.ee9cbd44.svg","assets/gui/gui_character_face_left_blink_3.svg"],"assets/gui/gui_character_face_left_blink_3.svg"],"./assets/gui/gui_character_face_left_blink_4.svg":[["gui_character_face_left_blink_4.6af47493.svg","assets/gui/gui_character_face_left_blink_4.svg"],"assets/gui/gui_character_face_left_blink_4.svg"],"./assets/gui/gui_character_face_left_blink_5.svg":[["gui_character_face_left_blink_5.ddfc6b5a.svg","assets/gui/gui_character_face_left_blink_5.svg"],"assets/gui/gui_character_face_left_blink_5.svg"],"./assets/gui/gui_character_face_left_blink_6.svg":[["gui_character_face_left_blink_6.76e1ae24.svg","assets/gui/gui_character_face_left_blink_6.svg"],"assets/gui/gui_character_face_left_blink_6.svg"],"./assets/gui/gui_text_home.svg":[["gui_text_home.8495f549.svg","assets/gui/gui_text_home.svg"],"assets/gui/gui_text_home.svg"],"./assets/gui/gui_text_continue.svg":[["gui_text_continue.14bbfa95.svg","assets/gui/gui_text_continue.svg"],"assets/gui/gui_text_continue.svg"],"./assets/gui/gui_text_loaded.svg":[["gui_text_loaded.60900b05.svg","assets/gui/gui_text_loaded.svg"],"assets/gui/gui_text_loaded.svg"],"./assets/gui/gui_text_loaded_1.svg":[["gui_text_loaded_1.8b2f8cdf.svg","assets/gui/gui_text_loaded_1.svg"],"assets/gui/gui_text_loaded_1.svg"],"./assets/gui/gui_text_loaded_2.svg":[["gui_text_loaded_2.91531183.svg","assets/gui/gui_text_loaded_2.svg"],"assets/gui/gui_text_loaded_2.svg"],"./assets/gui/gui_text_loaded_3.svg":[["gui_text_loaded_3.991795c2.svg","assets/gui/gui_text_loaded_3.svg"],"assets/gui/gui_text_loaded_3.svg"],"./assets/gui/gui_text_loaded_4.svg":[["gui_text_loaded_4.8f14c048.svg","assets/gui/gui_text_loaded_4.svg"],"assets/gui/gui_text_loaded_4.svg"],"./assets/gui/gui_text_loading.svg":[["gui_text_loading.4b760cbc.svg","assets/gui/gui_text_loading.svg"],"assets/gui/gui_text_loading.svg"],"./assets/gui/gui_text_loading_1.svg":[["gui_text_loading_1.b761b4af.svg","assets/gui/gui_text_loading_1.svg"],"assets/gui/gui_text_loading_1.svg"],"./assets/gui/gui_text_loading_2.svg":[["gui_text_loading_2.0b494cde.svg","assets/gui/gui_text_loading_2.svg"],"assets/gui/gui_text_loading_2.svg"],"./assets/gui/gui_text_loading_3.svg":[["gui_text_loading_3.9e46e494.svg","assets/gui/gui_text_loading_3.svg"],"assets/gui/gui_text_loading_3.svg"],"./assets/gui/gui_text_loading_4.svg":[["gui_text_loading_4.30ac31ff.svg","assets/gui/gui_text_loading_4.svg"],"assets/gui/gui_text_loading_4.svg"],"./assets/gui/logo/type/gui_logo_type.svg":[["gui_logo_type.dada253c.svg","assets/gui/logo/type/gui_logo_type.svg"],"assets/gui/logo/type/gui_logo_type.svg"],"./assets/gui/logo/type/gui_logo_type_1.svg":[["gui_logo_type_1.cb0590d0.svg","assets/gui/logo/type/gui_logo_type_1.svg"],"assets/gui/logo/type/gui_logo_type_1.svg"],"./assets/gui/logo/type/gui_logo_type_2.svg":[["gui_logo_type_2.2ab02c6a.svg","assets/gui/logo/type/gui_logo_type_2.svg"],"assets/gui/logo/type/gui_logo_type_2.svg"],"./assets/gui/logo/type/gui_logo_type_3.svg":[["gui_logo_type_3.1e559c99.svg","assets/gui/logo/type/gui_logo_type_3.svg"],"assets/gui/logo/type/gui_logo_type_3.svg"],"./assets/gui/logo/type/gui_logo_type_4.svg":[["gui_logo_type_4.9febe8f2.svg","assets/gui/logo/type/gui_logo_type_4.svg"],"assets/gui/logo/type/gui_logo_type_4.svg"],"./assets/gui/gui_stage_tv_1.svg":[["gui_stage_tv_1.aa9b17f0.svg","assets/gui/gui_stage_tv_1.svg"],"assets/gui/gui_stage_tv_1.svg"],"./assets/gui/gui_stage_tv_2.svg":[["gui_stage_tv_2.8badfca8.svg","assets/gui/gui_stage_tv_2.svg"],"assets/gui/gui_stage_tv_2.svg"],"./assets/gui/gui_stage_tv_3.svg":[["gui_stage_tv_3.e5999342.svg","assets/gui/gui_stage_tv_3.svg"],"assets/gui/gui_stage_tv_3.svg"],"./assets/gui/gui_stage_tv_4.svg":[["gui_stage_tv_4.2e8f0e53.svg","assets/gui/gui_stage_tv_4.svg"],"assets/gui/gui_stage_tv_4.svg"],"./assets/gui/gui_buttons_1.svg":[["gui_buttons_1.e26c8f6c.svg","assets/gui/gui_buttons_1.svg"],"assets/gui/gui_buttons_1.svg"],"./assets/gui/gui_buttons_2.svg":[["gui_buttons_2.5e939658.svg","assets/gui/gui_buttons_2.svg"],"assets/gui/gui_buttons_2.svg"],"./assets/gui/gui_buttons_3.svg":[["gui_buttons_3.458f7c86.svg","assets/gui/gui_buttons_3.svg"],"assets/gui/gui_buttons_3.svg"],"./assets/gui/gui_buttons_start.svg":[["gui_buttons_start.ac669302.svg","assets/gui/gui_buttons_start.svg"],"assets/gui/gui_buttons_start.svg"],"./assets/gui/gui_buttons_or.svg":[["gui_buttons_or.fe50665c.svg","assets/gui/gui_buttons_or.svg"],"assets/gui/gui_buttons_or.svg"],"./assets/gui/gui_buttons_learn.svg":[["gui_buttons_learn.48ff04e5.svg","assets/gui/gui_buttons_learn.svg"],"assets/gui/gui_buttons_learn.svg"],"./assets/gui/gui_character_face_left.svg":[["gui_character_face_left.e013aa5a.svg","assets/gui/gui_character_face_left.svg"],"assets/gui/gui_character_face_left.svg"],"./assets/gui/logo/mark/gui_wall_1.svg":[["gui_wall_1.9835003a.svg","assets/gui/logo/mark/gui_wall_1.svg"],"assets/gui/logo/mark/gui_wall_1.svg"],"./assets/gui/logo/mark/gui_wall_2.svg":[["gui_wall_2.aec3ad79.svg","assets/gui/logo/mark/gui_wall_2.svg"],"assets/gui/logo/mark/gui_wall_2.svg"],"./assets/gui/logo/mark/gui_wall_3.svg":[["gui_wall_3.e15ff0b1.svg","assets/gui/logo/mark/gui_wall_3.svg"],"assets/gui/logo/mark/gui_wall_3.svg"],"./assets/gui/logo/mark/gui_wall_4.svg":[["gui_wall_4.6745d876.svg","assets/gui/logo/mark/gui_wall_4.svg"],"assets/gui/logo/mark/gui_wall_4.svg"],"./assets/gui/logo/mark/gui_character_face_vomit_left_shadow_1.svg":[["gui_character_face_vomit_left_shadow_1.4961d216.svg","assets/gui/logo/mark/gui_character_face_vomit_left_shadow_1.svg"],"assets/gui/logo/mark/gui_character_face_vomit_left_shadow_1.svg"],"./assets/gui/logo/mark/gui_character_face_vomit_left_shadow_2.svg":[["gui_character_face_vomit_left_shadow_2.96b02201.svg","assets/gui/logo/mark/gui_character_face_vomit_left_shadow_2.svg"],"assets/gui/logo/mark/gui_character_face_vomit_left_shadow_2.svg"],"./assets/gui/logo/mark/gui_character_face_vomit_left_shadow_3.svg":[["gui_character_face_vomit_left_shadow_3.f8b433ac.svg","assets/gui/logo/mark/gui_character_face_vomit_left_shadow_3.svg"],"assets/gui/logo/mark/gui_character_face_vomit_left_shadow_3.svg"],"./assets/gui/logo/mark/gui_character_face_vomit_left_shadow_4.svg":[["gui_character_face_vomit_left_shadow_4.801013c7.svg","assets/gui/logo/mark/gui_character_face_vomit_left_shadow_4.svg"],"assets/gui/logo/mark/gui_character_face_vomit_left_shadow_4.svg"],"./assets/gui/logo/mark/gui_character_face_vomit_left_shadow_5.svg":[["gui_character_face_vomit_left_shadow_5.3fcbea65.svg","assets/gui/logo/mark/gui_character_face_vomit_left_shadow_5.svg"],"assets/gui/logo/mark/gui_character_face_vomit_left_shadow_5.svg"],"./assets/gui/logo/mark/gui_character_face_vomit_left_shadow_6.svg":[["gui_character_face_vomit_left_shadow_6.754dfb70.svg","assets/gui/logo/mark/gui_character_face_vomit_left_shadow_6.svg"],"assets/gui/logo/mark/gui_character_face_vomit_left_shadow_6.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow.svg":[["gui_character_face_left_shadow.43a8ba68.svg","assets/gui/logo/mark/gui_character_face_left_shadow.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow_1.svg":[["gui_character_face_left_shadow_1.b0fb65d9.svg","assets/gui/logo/mark/gui_character_face_left_shadow_1.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow_1.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow_2.svg":[["gui_character_face_left_shadow_2.60859a62.svg","assets/gui/logo/mark/gui_character_face_left_shadow_2.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow_2.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow_3.svg":[["gui_character_face_left_shadow_3.5146f4f5.svg","assets/gui/logo/mark/gui_character_face_left_shadow_3.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow_3.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow_4.svg":[["gui_character_face_left_shadow_4.558674e1.svg","assets/gui/logo/mark/gui_character_face_left_shadow_4.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow_4.svg"],"./assets/gui/gui_interaction_text_help.svg":[["gui_interaction_text_help.6bd92134.svg","assets/gui/gui_interaction_text_help.svg"],"assets/gui/gui_interaction_text_help.svg"],"./assets/gui/gui_interaction_text_for_more.svg":[["gui_interaction_text_for_more.cdf9c2a9.svg","assets/gui/gui_interaction_text_for_more.svg"],"assets/gui/gui_interaction_text_for_more.svg"],"./assets/gui/gui_interaction_text_press.svg":[["gui_interaction_text_press.63c56e34.svg","assets/gui/gui_interaction_text_press.svg"],"assets/gui/gui_interaction_text_press.svg"],"./assets/gui/gui_link_settings_white.svg":[["gui_link_settings_white.c17d1d4c.svg","assets/gui/gui_link_settings_white.svg"],"assets/gui/gui_link_settings_white.svg"],"./assets/gui/gui_link_add_white.svg":[["gui_link_add_white.3dff2e17.svg","assets/gui/gui_link_add_white.svg"],"assets/gui/gui_link_add_white.svg"],"./assets/gui/gui_link_menu_white.svg":[["gui_link_menu_white.8b15c689.svg","assets/gui/gui_link_menu_white.svg"],"assets/gui/gui_link_menu_white.svg"],"./assets/gui/gui_link_grid_white.svg":[["gui_link_grid_white.58909d32.svg","assets/gui/gui_link_grid_white.svg"],"assets/gui/gui_link_grid_white.svg"],"./assets/gui/gui_link_sign_in_white.svg":[["gui_link_sign_in_white.fc375cc1.svg","assets/gui/gui_link_sign_in_white.svg"],"assets/gui/gui_link_sign_in_white.svg"],"./assets/gui/gui_stage_lights.svg":[["gui_stage_lights.8ba7e55c.svg","assets/gui/gui_stage_lights.svg"],"assets/gui/gui_stage_lights.svg"],"./assets/gui/gui_character_body_right_8.svg":[["gui_character_body_right_8.6008b897.svg","assets/gui/gui_character_body_right_8.svg"],"assets/gui/gui_character_body_right_8.svg"],"./assets/gui/gui_character_body_right_7.svg":[["gui_character_body_right_7.e008fe94.svg","assets/gui/gui_character_body_right_7.svg"],"assets/gui/gui_character_body_right_7.svg"],"./assets/gui/gui_character_body_right_6.svg":[["gui_character_body_right_6.44953eae.svg","assets/gui/gui_character_body_right_6.svg"],"assets/gui/gui_character_body_right_6.svg"],"./assets/gui/gui_character_body_right_5.svg":[["gui_character_body_right_5.9dcd1061.svg","assets/gui/gui_character_body_right_5.svg"],"assets/gui/gui_character_body_right_5.svg"],"./assets/gui/gui_character_body_right_4.svg":[["gui_character_body_right_4.d8249778.svg","assets/gui/gui_character_body_right_4.svg"],"assets/gui/gui_character_body_right_4.svg"],"./assets/gui/gui_character_body_right_3.svg":[["gui_character_body_right_3.39393cf8.svg","assets/gui/gui_character_body_right_3.svg"],"assets/gui/gui_character_body_right_3.svg"],"./assets/gui/gui_character_body_right_2.svg":[["gui_character_body_right_2.3d940bbe.svg","assets/gui/gui_character_body_right_2.svg"],"assets/gui/gui_character_body_right_2.svg"],"./assets/gui/gui_character_body_right_1.svg":[["gui_character_body_right_1.fe23b40a.svg","assets/gui/gui_character_body_right_1.svg"],"assets/gui/gui_character_body_right_1.svg"],"./assets/fonts/Silkscreen.ttf.woff":[["Silkscreen.ttf.6dec167e.woff","assets/fonts/Silkscreen.ttf.woff"],"assets/fonts/Silkscreen.ttf.woff"],"./assets/fonts/Silkscreen.ttf.svg":[["Silkscreen.ttf.a45ae991.svg","assets/fonts/Silkscreen.ttf.svg"],"assets/fonts/Silkscreen.ttf.svg"],"./assets/fonts/Silkscreen.ttf.eot":[["Silkscreen.ttf.be6987ea.eot","assets/fonts/Silkscreen.ttf.eot"],"assets/fonts/Silkscreen.ttf.eot"],"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"imports/state.js":[function(require,module,exports) {
+},{"./assets/gui/gui_icon_set_1.svg":[["gui_icon_set_1.6d03bc13.svg","assets/gui/gui_icon_set_1.svg"],"assets/gui/gui_icon_set_1.svg"],"./assets/gui/gui_icon_set_2.svg":[["gui_icon_set_2.7eece3af.svg","assets/gui/gui_icon_set_2.svg"],"assets/gui/gui_icon_set_2.svg"],"./assets/gui/gui_icon_set_3.svg":[["gui_icon_set_3.b1a27dfc.svg","assets/gui/gui_icon_set_3.svg"],"assets/gui/gui_icon_set_3.svg"],"./assets/gui/gui_icon_hearts.svg":[["gui_icon_hearts.d20d2683.svg","assets/gui/gui_icon_hearts.svg"],"assets/gui/gui_icon_hearts.svg"],"./assets/gui/gui_icon_hearts_dark.svg":[["gui_icon_hearts_dark.d5a3f3d8.svg","assets/gui/gui_icon_hearts_dark.svg"],"assets/gui/gui_icon_hearts_dark.svg"],"./assets/gui/gui_arrow_left.svg":[["gui_arrow_left.859710f3.svg","assets/gui/gui_arrow_left.svg"],"assets/gui/gui_arrow_left.svg"],"./assets/gui/gui_arrow_left_dark.svg":[["gui_arrow_left_dark.eedb6a25.svg","assets/gui/gui_arrow_left_dark.svg"],"assets/gui/gui_arrow_left_dark.svg"],"./assets/gui/gui_arrow_right.svg":[["gui_arrow_right.91b7aa1a.svg","assets/gui/gui_arrow_right.svg"],"assets/gui/gui_arrow_right.svg"],"./assets/gui/gui_arrow_right_dark.svg":[["gui_arrow_right_dark.86add9ba.svg","assets/gui/gui_arrow_right_dark.svg"],"assets/gui/gui_arrow_right_dark.svg"],"./assets/gui/gui_character_face_left_blink_1.svg":[["gui_character_face_left_blink_1.e7521a02.svg","assets/gui/gui_character_face_left_blink_1.svg"],"assets/gui/gui_character_face_left_blink_1.svg"],"./assets/gui/gui_character_face_left_blink_2.svg":[["gui_character_face_left_blink_2.f5bedfe7.svg","assets/gui/gui_character_face_left_blink_2.svg"],"assets/gui/gui_character_face_left_blink_2.svg"],"./assets/gui/gui_character_face_left_blink_3.svg":[["gui_character_face_left_blink_3.ee9cbd44.svg","assets/gui/gui_character_face_left_blink_3.svg"],"assets/gui/gui_character_face_left_blink_3.svg"],"./assets/gui/gui_character_face_left_blink_4.svg":[["gui_character_face_left_blink_4.6af47493.svg","assets/gui/gui_character_face_left_blink_4.svg"],"assets/gui/gui_character_face_left_blink_4.svg"],"./assets/gui/gui_character_face_left_blink_5.svg":[["gui_character_face_left_blink_5.ddfc6b5a.svg","assets/gui/gui_character_face_left_blink_5.svg"],"assets/gui/gui_character_face_left_blink_5.svg"],"./assets/gui/gui_character_face_left_blink_6.svg":[["gui_character_face_left_blink_6.76e1ae24.svg","assets/gui/gui_character_face_left_blink_6.svg"],"assets/gui/gui_character_face_left_blink_6.svg"],"./assets/gui/gui_text_home.svg":[["gui_text_home.8495f549.svg","assets/gui/gui_text_home.svg"],"assets/gui/gui_text_home.svg"],"./assets/gui/gui_text_continue.svg":[["gui_text_continue.14bbfa95.svg","assets/gui/gui_text_continue.svg"],"assets/gui/gui_text_continue.svg"],"./assets/gui/gui_text_loaded.svg":[["gui_text_loaded.60900b05.svg","assets/gui/gui_text_loaded.svg"],"assets/gui/gui_text_loaded.svg"],"./assets/gui/gui_text_loaded_1.svg":[["gui_text_loaded_1.8b2f8cdf.svg","assets/gui/gui_text_loaded_1.svg"],"assets/gui/gui_text_loaded_1.svg"],"./assets/gui/gui_text_loaded_2.svg":[["gui_text_loaded_2.91531183.svg","assets/gui/gui_text_loaded_2.svg"],"assets/gui/gui_text_loaded_2.svg"],"./assets/gui/gui_text_loaded_3.svg":[["gui_text_loaded_3.991795c2.svg","assets/gui/gui_text_loaded_3.svg"],"assets/gui/gui_text_loaded_3.svg"],"./assets/gui/gui_text_loaded_4.svg":[["gui_text_loaded_4.8f14c048.svg","assets/gui/gui_text_loaded_4.svg"],"assets/gui/gui_text_loaded_4.svg"],"./assets/gui/gui_text_loading.svg":[["gui_text_loading.4b760cbc.svg","assets/gui/gui_text_loading.svg"],"assets/gui/gui_text_loading.svg"],"./assets/gui/gui_text_loading_1.svg":[["gui_text_loading_1.b761b4af.svg","assets/gui/gui_text_loading_1.svg"],"assets/gui/gui_text_loading_1.svg"],"./assets/gui/gui_text_loading_2.svg":[["gui_text_loading_2.0b494cde.svg","assets/gui/gui_text_loading_2.svg"],"assets/gui/gui_text_loading_2.svg"],"./assets/gui/gui_text_loading_3.svg":[["gui_text_loading_3.9e46e494.svg","assets/gui/gui_text_loading_3.svg"],"assets/gui/gui_text_loading_3.svg"],"./assets/gui/gui_text_loading_4.svg":[["gui_text_loading_4.30ac31ff.svg","assets/gui/gui_text_loading_4.svg"],"assets/gui/gui_text_loading_4.svg"],"./assets/gui/logo/type/gui_logo_type.svg":[["gui_logo_type.dada253c.svg","assets/gui/logo/type/gui_logo_type.svg"],"assets/gui/logo/type/gui_logo_type.svg"],"./assets/gui/logo/type/gui_logo_type_1.svg":[["gui_logo_type_1.cb0590d0.svg","assets/gui/logo/type/gui_logo_type_1.svg"],"assets/gui/logo/type/gui_logo_type_1.svg"],"./assets/gui/logo/type/gui_logo_type_2.svg":[["gui_logo_type_2.2ab02c6a.svg","assets/gui/logo/type/gui_logo_type_2.svg"],"assets/gui/logo/type/gui_logo_type_2.svg"],"./assets/gui/logo/type/gui_logo_type_3.svg":[["gui_logo_type_3.1e559c99.svg","assets/gui/logo/type/gui_logo_type_3.svg"],"assets/gui/logo/type/gui_logo_type_3.svg"],"./assets/gui/logo/type/gui_logo_type_4.svg":[["gui_logo_type_4.9febe8f2.svg","assets/gui/logo/type/gui_logo_type_4.svg"],"assets/gui/logo/type/gui_logo_type_4.svg"],"./assets/gui/gui_stage_tv_1.svg":[["gui_stage_tv_1.aa9b17f0.svg","assets/gui/gui_stage_tv_1.svg"],"assets/gui/gui_stage_tv_1.svg"],"./assets/gui/gui_stage_tv_2.svg":[["gui_stage_tv_2.8badfca8.svg","assets/gui/gui_stage_tv_2.svg"],"assets/gui/gui_stage_tv_2.svg"],"./assets/gui/gui_stage_tv_3.svg":[["gui_stage_tv_3.e5999342.svg","assets/gui/gui_stage_tv_3.svg"],"assets/gui/gui_stage_tv_3.svg"],"./assets/gui/gui_stage_tv_4.svg":[["gui_stage_tv_4.2e8f0e53.svg","assets/gui/gui_stage_tv_4.svg"],"assets/gui/gui_stage_tv_4.svg"],"./assets/gui/gui_buttons_1.svg":[["gui_buttons_1.e26c8f6c.svg","assets/gui/gui_buttons_1.svg"],"assets/gui/gui_buttons_1.svg"],"./assets/gui/gui_buttons_2.svg":[["gui_buttons_2.5e939658.svg","assets/gui/gui_buttons_2.svg"],"assets/gui/gui_buttons_2.svg"],"./assets/gui/gui_buttons_3.svg":[["gui_buttons_3.458f7c86.svg","assets/gui/gui_buttons_3.svg"],"assets/gui/gui_buttons_3.svg"],"./assets/gui/gui_buttons_start.svg":[["gui_buttons_start.ac669302.svg","assets/gui/gui_buttons_start.svg"],"assets/gui/gui_buttons_start.svg"],"./assets/gui/gui_buttons_or.svg":[["gui_buttons_or.fe50665c.svg","assets/gui/gui_buttons_or.svg"],"assets/gui/gui_buttons_or.svg"],"./assets/gui/gui_buttons_learn.svg":[["gui_buttons_learn.48ff04e5.svg","assets/gui/gui_buttons_learn.svg"],"assets/gui/gui_buttons_learn.svg"],"./assets/gui/gui_character_face_left.svg":[["gui_character_face_left.e013aa5a.svg","assets/gui/gui_character_face_left.svg"],"assets/gui/gui_character_face_left.svg"],"./assets/gui/logo/mark/gui_wall_1.svg":[["gui_wall_1.9835003a.svg","assets/gui/logo/mark/gui_wall_1.svg"],"assets/gui/logo/mark/gui_wall_1.svg"],"./assets/gui/logo/mark/gui_wall_2.svg":[["gui_wall_2.aec3ad79.svg","assets/gui/logo/mark/gui_wall_2.svg"],"assets/gui/logo/mark/gui_wall_2.svg"],"./assets/gui/logo/mark/gui_wall_3.svg":[["gui_wall_3.e15ff0b1.svg","assets/gui/logo/mark/gui_wall_3.svg"],"assets/gui/logo/mark/gui_wall_3.svg"],"./assets/gui/logo/mark/gui_wall_4.svg":[["gui_wall_4.6745d876.svg","assets/gui/logo/mark/gui_wall_4.svg"],"assets/gui/logo/mark/gui_wall_4.svg"],"./assets/gui/logo/mark/gui_character_face_vomit_left_shadow_1.svg":[["gui_character_face_vomit_left_shadow_1.4961d216.svg","assets/gui/logo/mark/gui_character_face_vomit_left_shadow_1.svg"],"assets/gui/logo/mark/gui_character_face_vomit_left_shadow_1.svg"],"./assets/gui/logo/mark/gui_character_face_vomit_left_shadow_2.svg":[["gui_character_face_vomit_left_shadow_2.96b02201.svg","assets/gui/logo/mark/gui_character_face_vomit_left_shadow_2.svg"],"assets/gui/logo/mark/gui_character_face_vomit_left_shadow_2.svg"],"./assets/gui/logo/mark/gui_character_face_vomit_left_shadow_3.svg":[["gui_character_face_vomit_left_shadow_3.f8b433ac.svg","assets/gui/logo/mark/gui_character_face_vomit_left_shadow_3.svg"],"assets/gui/logo/mark/gui_character_face_vomit_left_shadow_3.svg"],"./assets/gui/logo/mark/gui_character_face_vomit_left_shadow_4.svg":[["gui_character_face_vomit_left_shadow_4.801013c7.svg","assets/gui/logo/mark/gui_character_face_vomit_left_shadow_4.svg"],"assets/gui/logo/mark/gui_character_face_vomit_left_shadow_4.svg"],"./assets/gui/logo/mark/gui_character_face_vomit_left_shadow_5.svg":[["gui_character_face_vomit_left_shadow_5.3fcbea65.svg","assets/gui/logo/mark/gui_character_face_vomit_left_shadow_5.svg"],"assets/gui/logo/mark/gui_character_face_vomit_left_shadow_5.svg"],"./assets/gui/logo/mark/gui_character_face_vomit_left_shadow_6.svg":[["gui_character_face_vomit_left_shadow_6.754dfb70.svg","assets/gui/logo/mark/gui_character_face_vomit_left_shadow_6.svg"],"assets/gui/logo/mark/gui_character_face_vomit_left_shadow_6.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow.svg":[["gui_character_face_left_shadow.43a8ba68.svg","assets/gui/logo/mark/gui_character_face_left_shadow.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow_1.svg":[["gui_character_face_left_shadow_1.b0fb65d9.svg","assets/gui/logo/mark/gui_character_face_left_shadow_1.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow_1.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow_2.svg":[["gui_character_face_left_shadow_2.60859a62.svg","assets/gui/logo/mark/gui_character_face_left_shadow_2.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow_2.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow_3.svg":[["gui_character_face_left_shadow_3.5146f4f5.svg","assets/gui/logo/mark/gui_character_face_left_shadow_3.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow_3.svg"],"./assets/gui/logo/mark/gui_character_face_left_shadow_4.svg":[["gui_character_face_left_shadow_4.558674e1.svg","assets/gui/logo/mark/gui_character_face_left_shadow_4.svg"],"assets/gui/logo/mark/gui_character_face_left_shadow_4.svg"],"./assets/gui/gui_interaction_text_help.svg":[["gui_interaction_text_help.6bd92134.svg","assets/gui/gui_interaction_text_help.svg"],"assets/gui/gui_interaction_text_help.svg"],"./assets/gui/gui_interaction_text_for_more.svg":[["gui_interaction_text_for_more.cdf9c2a9.svg","assets/gui/gui_interaction_text_for_more.svg"],"assets/gui/gui_interaction_text_for_more.svg"],"./assets/gui/gui_interaction_text_press.svg":[["gui_interaction_text_press.63c56e34.svg","assets/gui/gui_interaction_text_press.svg"],"assets/gui/gui_interaction_text_press.svg"],"./assets/gui/gui_link_settings_white.svg":[["gui_link_settings_white.c17d1d4c.svg","assets/gui/gui_link_settings_white.svg"],"assets/gui/gui_link_settings_white.svg"],"./assets/gui/gui_link_add_white.svg":[["gui_link_add_white.3dff2e17.svg","assets/gui/gui_link_add_white.svg"],"assets/gui/gui_link_add_white.svg"],"./assets/gui/gui_link_menu_white.svg":[["gui_link_menu_white.8b15c689.svg","assets/gui/gui_link_menu_white.svg"],"assets/gui/gui_link_menu_white.svg"],"./assets/gui/gui_link_grid_white.svg":[["gui_link_grid_white.58909d32.svg","assets/gui/gui_link_grid_white.svg"],"assets/gui/gui_link_grid_white.svg"],"./assets/gui/gui_link_sign_in_white.svg":[["gui_link_sign_in_white.fc375cc1.svg","assets/gui/gui_link_sign_in_white.svg"],"assets/gui/gui_link_sign_in_white.svg"],"./assets/gui/gui_stage_lights.svg":[["gui_stage_lights.8ba7e55c.svg","assets/gui/gui_stage_lights.svg"],"assets/gui/gui_stage_lights.svg"],"./assets/gui/gui_character_body_right_8.svg":[["gui_character_body_right_8.6008b897.svg","assets/gui/gui_character_body_right_8.svg"],"assets/gui/gui_character_body_right_8.svg"],"./assets/gui/gui_character_body_right_7.svg":[["gui_character_body_right_7.e008fe94.svg","assets/gui/gui_character_body_right_7.svg"],"assets/gui/gui_character_body_right_7.svg"],"./assets/gui/gui_character_body_right_6.svg":[["gui_character_body_right_6.44953eae.svg","assets/gui/gui_character_body_right_6.svg"],"assets/gui/gui_character_body_right_6.svg"],"./assets/gui/gui_character_body_right_5.svg":[["gui_character_body_right_5.9dcd1061.svg","assets/gui/gui_character_body_right_5.svg"],"assets/gui/gui_character_body_right_5.svg"],"./assets/gui/gui_character_body_right_4.svg":[["gui_character_body_right_4.d8249778.svg","assets/gui/gui_character_body_right_4.svg"],"assets/gui/gui_character_body_right_4.svg"],"./assets/gui/gui_character_body_right_3.svg":[["gui_character_body_right_3.39393cf8.svg","assets/gui/gui_character_body_right_3.svg"],"assets/gui/gui_character_body_right_3.svg"],"./assets/gui/gui_character_body_right_2.svg":[["gui_character_body_right_2.3d940bbe.svg","assets/gui/gui_character_body_right_2.svg"],"assets/gui/gui_character_body_right_2.svg"],"./assets/gui/gui_character_body_right_1.svg":[["gui_character_body_right_1.fe23b40a.svg","assets/gui/gui_character_body_right_1.svg"],"assets/gui/gui_character_body_right_1.svg"],"./assets/fonts/Silkscreen.ttf.woff":[["Silkscreen.ttf.6dec167e.woff","assets/fonts/Silkscreen.ttf.woff"],"assets/fonts/Silkscreen.ttf.woff"],"./assets/fonts/Silkscreen.ttf.svg":[["Silkscreen.ttf.a45ae991.svg","assets/fonts/Silkscreen.ttf.svg"],"assets/fonts/Silkscreen.ttf.svg"],"./assets/fonts/Silkscreen.ttf.eot":[["Silkscreen.ttf.be6987ea.eot","assets/fonts/Silkscreen.ttf.eot"],"assets/fonts/Silkscreen.ttf.eot"],"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"imports/state.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2706,6 +2706,18 @@ var scene_start_7 = function scene_start_7() {
   }
 
   ;
+}; //6
+
+
+var scene_start_8 = function scene_start_8() {
+  var state = _index.default.handle_ReturnState();
+
+  if (document.getElementById('shots') != null) {
+    var shots = document.getElementById('shots');
+    shots.innerHTML = "\n        \n            <div id=\"full\" class=\"animated1 enterTop width_100 height_100 bottom_0 left_0 margin_auto position_absolute\">\n\n                <div class=\"width_6025vw height_50 top_0 bottom_0 left_6025vw gui_icon_set_1 position_absolute margin_auto\"></div>\n                <div class=\"width_50 height_6025vw right_0 left_0 bottom_6025vw gui_icon_set_2 position_absolute margin_auto\"></div>\n                <div class=\"width_33 height_33 top_0 right_0 bottom_0 left_0 gui_icon_set_3 position_absolute margin_auto\"></div>\n\n            </div>\n        ";
+  }
+
+  ;
 };
 
 var set_stage_game = function set_stage_game() {
@@ -2841,56 +2853,101 @@ var shot_action_single_loaded = function shot_action_single_loaded() {
 var gen = function gen(x) {
   var component = document.createElement('div');
 
-  if (x == 'interactions') {
+  if (x == 'page_top') {
     var identify = x;
     component.setAttribute("id", 'id_' + identify);
-    component.classList = 'class_' + identify + "";
-    component.innerHTML = "\n            <div id=\"nav_1\" class=\"animated1 enterTop display_webkit_box webkit_box_pack_center webkit_box_align\">\n                <div id=\"nav_button_1\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_add_white\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_1\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_menu_white\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_1\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_settings_white\n                width_50 height_50 float_left\"></div></div>\n            </div>\n            <div id=\"nav_2\" class=\"animated1 enterTop display_webkit_box webkit_box_pack_center webkit_box_align\">\n                <div id=\"nav_button_2\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_add_white\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_2\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_sign_in_white\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_2\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_settings_white\n                width_50 height_50 float_left\"></div></div>\n            </div>\n\n            <div id=\"nav_3\" class=\"animated1 enterBottom display_webkit_box webkit_box_pack_center webkit_box_align\">\n                <div id=\"nav_button_3\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_add_white\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_3\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_grid_white\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_3\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_settings_white\n                width_50 height_50 float_left\"></div></div>\n           </div>\n            <div id=\"nav_4\" class=\"animated1 enterBottom display_webkit_box webkit_box_pack_center webkit_box_align\">\n                <div id=\"nav_button_4\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_add_white\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_4\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_interaction_text_press\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_4\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_settings_white\n                width_50 height_50 float_left\"></div></div>\n             </div>\n            \n    ";
+    component.classList = 'class_' + identify;
+    component.innerHTML = "\n    <h2>sequences</h2>\n    <p id=\"controls_sequence_back_home\">controls_sequence_back_home</p>\n    <p id=\"controls_sequence_start_0\">controls_sequence_start_0</p>\n    <br>\n    <h2>scene</h2>\n    <p id=\"scene_1\">scene_1</p>\n    ";
+  }
+
+  ;
+
+  if (x == 'page_left') {
+    var _identify = x;
+    component.setAttribute("id", 'id_' + _identify);
+    component.classList = 'class_' + _identify;
+    component.innerHTML = "page_left\n    ";
+  }
+
+  ;
+
+  if (x == 'page_bottom') {
+    var _identify2 = x;
+    component.setAttribute("id", 'id_' + _identify2);
+    component.classList = 'class_' + _identify2;
+    component.innerHTML = "page_bottom\n    ";
+  }
+
+  ;
+
+  if (x == 'page_right') {
+    var _identify3 = x;
+    component.setAttribute("id", 'id_' + _identify3);
+    component.classList = 'class_' + _identify3;
+    component.innerHTML = "page_right\n    ";
+  }
+
+  ;
+
+  if (x == 'interactions') {
+    var _identify4 = x;
+    component.setAttribute("id", 'id_' + _identify4);
+    component.classList = 'class_' + _identify4 + "";
+    component.innerHTML = "\n            <div id=\"nav_1\" class=\"animated1 enterTop display_webkit_box webkit_box_pack_center webkit_box_align\">\n                <div id=\"nav_button_1_1\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_add_white\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_1_2\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_menu_white\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_1_3\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_settings_white\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_1_4\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_settings_white\n                width_50 height_50 float_left\"></div></div>\n            </div>\n            <div id=\"nav_2\" class=\"animated1 enterTop display_webkit_box webkit_box_pack_center webkit_box_align\">\n                <div id=\"nav_button_2_1\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_add_white\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_2_2\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_sign_in_white\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_2_3\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_settings_white\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_2_4\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_settings_white\n                width_50 height_50 float_left\"></div></div>\n            </div>\n\n            <div id=\"nav_3\" class=\"animated1 enterBottom display_webkit_box webkit_box_pack_center webkit_box_align\">\n                <div id=\"nav_button_3_1\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_add_white\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_3_2\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_grid_white\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_3_3\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_settings_white\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_3_4\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_settings_white\n                width_50 height_50 float_left\"></div></div>\n           </div>\n            <div id=\"nav_4\" class=\"animated1 enterBottom display_webkit_box webkit_box_pack_center webkit_box_align\">\n                <div id=\"nav_button_4_1\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_add_white\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_4_2\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_interaction_text_press\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_4_3\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_settings_white\n                width_50 height_50 float_left\"></div></div>\n                <div id=\"nav_button_4_4\" class=\"display_webkit_box webkit_box_pack_center webkit_box_align\"><div class=\"position_relative gui_link_settings_white\n                width_50 height_50 float_left\"></div></div>\n             </div>\n            \n    ";
   }
 
   ;
 
   if (x == 'menu_top') {
-    var _identify = x;
-    component.setAttribute("id", 'id_' + _identify);
-    component.classList = 'class_' + _identify + " position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow";
+    var _identify5 = x;
+    component.setAttribute("id", 'id_' + _identify5);
+    component.classList = 'class_' + _identify5 + " position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow";
     component.innerHTML = "\n              \n              <input id=\"element_input_filter\" type=\"text\" placeholder=\"element_input_filter\" class=\"width_100 float_left\" />\n\n    ";
   }
 
   ;
 
   if (x == 'pop_left') {
-    var _identify2 = x;
-    component.setAttribute("id", 'id_' + _identify2);
-    component.classList = 'class_' + _identify2 + " position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow";
-    component.innerHTML = "\n\n\n               <ul id=\"firebase\">\n                  <div id=\"modal-signup\">\n                  </div>\n\n                  <div id=\"modal-signin\">\n                  </div>\n\n                  <div id=\"modal-account\">\n                     <form id=\"account-form\">\n                       <p>modal-account</p>\n                       <div id=\"account-details\" class=\"account-details\"><p>account-details<p></div>\n                       \n                       <p id=\"account-details-id\"></p>\n                       <p id=\"account-details-title\"></p>\n                       <p id=\"account-details-email\"></p>\n                       <div id=\"upload_form\"></div>\n                     </form>\n                  </div>\n\n                  <div id=\"modal-create\">\n\n                  </div>\n\n                  <div id=\"modal-edit\">                     \n                  </div>\n\n\n               </ul>\n    ";
+    var _identify6 = x;
+    component.setAttribute("id", 'id_' + _identify6);
+    component.classList = 'class_' + _identify6 + " position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow";
+    component.innerHTML = "\n\n            <div class=\"container\">\n               <ul id=\"firebase\">\n                  <div id=\"modal-signup\">\n                  </div>\n\n                  <div id=\"modal-signin\">\n                  </div>\n\n                  <div id=\"modal-account\">\n                     <form id=\"account-form\">\n                       <p>modal-account</p>\n                       <div id=\"account-details\" class=\"account-details\"><p>account-details<p></div>\n                       \n                       <p id=\"account-details-id\"></p>\n                       <p id=\"account-details-title\"></p>\n                       <p id=\"account-details-email\"></p>\n                       <div id=\"upload_form\"></div>\n                     </form>\n                  </div>\n\n                  <div id=\"modal-edit\">                     \n                  </div>\n\n\n               </ul>\n            </div>\n    ";
   }
 
   ;
 
   if (x == 'pop_right') {
-    var _identify3 = x;
-    component.setAttribute("id", 'id_' + _identify3);
-    component.classList = 'class_' + _identify3 + " position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow";
-    component.innerHTML = "\n\n              <p class=\" \">searched posts_filtered</p>\n              <div id=\"posts_filtered_container\">\n                <div id=\"posts_filtered\"></div>\n              </div>\n\n              <p class=\" \">posts_all</p>\n\n              <div id=\"posts_all_container\">\n                <div id=\"posts_all\"></div>\n              </div>\n\n                <div id=\"pagination\" class=\" width_6025vw height_6025vw position_relative margin_auto display_webkit_box webkit_box_pack_center webkit_box_align float_left\">\n\n                    <div id=\"\" class=\"hover_show width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                        <div id=\"container\" class=\"width_100 height_100 position_relative float_left margin_auto\">\n                        \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_interaction_text_press position_relative margin_auto float_left\"></div>\n                            </div>\n                            \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_arrow_left_dark position_relative margin_auto float_left\"></div>\n                            </div>\n\n                        </div>\n\n                    </div>\n\n                    <div id=\"\" class=\"hover_hide width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                        <div id=\"container\" class=\"width_100 height_100 position_relative float_left margin_auto\">\n                        \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_interaction_text_press position_relative margin_auto float_left\"></div>\n                            </div>\n                            \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_arrow_left position_relative margin_auto float_left\"></div>\n                            </div>\n\n                        </div>\n\n                    </div>\n\n                </div>\n\n                <div id=\"pagination\" class=\" width_6025vw height_6025vw position_relative margin_auto display_webkit_box webkit_box_pack_center webkit_box_align float_right\">\n\n                    <div id=\"\" class=\"hover_show width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                        <div id=\"container\" class=\"width_100 height_100 position_relative float_left margin_auto\">\n                        \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_interaction_text_press position_relative margin_auto float_left\"></div>\n                            </div>\n                            \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_arrow_right_dark position_relative margin_auto float_left\"></div>\n                            </div>\n\n                        </div>\n\n                    </div>\n\n                    <div id=\"\" class=\"hover_hide width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                        <div id=\"container\" class=\"width_100 height_100 position_relative float_left margin_auto\">\n                        \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_interaction_text_press position_relative margin_auto float_left\"></div>\n                            </div>\n                            \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_arrow_right position_relative margin_auto float_left\"></div>\n                            </div>\n\n                        </div>\n\n                    </div>\n\n                </div>\n\n              <p class=\" \">user only posts</p>\n\n              <div id=\"posts_all_container\">\n                <div id=\"posts_all_user_only\"></div>\n              </div>\n\n              <p class=\" \">posts only posts</p>\n\n              <div id=\"posts_all_container\">\n                <div id=\"posts_all_posts_only\"></div>\n              </div>\n\n              <p class=\" \">posts only valid user posts</p>\n\n              <div id=\"posts_all_container\">\n                <div id=\"posts_all_posts_only_valid_user\"></div>\n              </div>\n    ";
+    var _identify7 = x;
+    component.setAttribute("id", 'id_' + _identify7);
+    component.classList = 'class_' + _identify7 + " position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow";
+    component.innerHTML = "\n\n            <div class=\"container\">\n              <p class=\" \">searched posts_filtered</p>\n              <div id=\"posts_filtered_container\">\n                <div id=\"posts_filtered\"></div>\n              </div>\n\n              <p class=\" \">posts_all</p>\n\n              <div id=\"posts_all_container\">\n                <div id=\"posts_all\"></div>\n              </div>\n\n                <div id=\"pagination\" class=\" width_6025vw height_6025vw position_relative margin_auto display_webkit_box webkit_box_pack_center webkit_box_align float_left\">\n\n                    <div id=\"\" class=\"hover_show width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                        <div id=\"container\" class=\"width_100 height_100 position_relative float_left margin_auto\">\n                        \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_interaction_text_press position_relative margin_auto float_left\"></div>\n                            </div>\n                            \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_arrow_left_dark position_relative margin_auto float_left\"></div>\n                            </div>\n\n                        </div>\n\n                    </div>\n\n                    <div id=\"\" class=\"hover_hide width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                        <div id=\"container\" class=\"width_100 height_100 position_relative float_left margin_auto\">\n                        \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_interaction_text_press position_relative margin_auto float_left\"></div>\n                            </div>\n                            \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_arrow_left position_relative margin_auto float_left\"></div>\n                            </div>\n\n                        </div>\n\n                    </div>\n\n                </div>\n\n                <div id=\"pagination\" class=\" width_6025vw height_6025vw position_relative margin_auto display_webkit_box webkit_box_pack_center webkit_box_align float_right\">\n\n                    <div id=\"\" class=\"hover_show width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                        <div id=\"container\" class=\"width_100 height_100 position_relative float_left margin_auto\">\n                        \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_interaction_text_press position_relative margin_auto float_left\"></div>\n                            </div>\n                            \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_arrow_right_dark position_relative margin_auto float_left\"></div>\n                            </div>\n\n                        </div>\n\n                    </div>\n\n                    <div id=\"\" class=\"hover_hide width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                        <div id=\"container\" class=\"width_100 height_100 position_relative float_left margin_auto\">\n                        \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_interaction_text_press position_relative margin_auto float_left\"></div>\n                            </div>\n                            \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_arrow_right position_relative margin_auto float_left\"></div>\n                            </div>\n\n                        </div>\n\n                    </div>\n\n                </div>\n\n              <p class=\" \">user only posts</p>\n\n              <div id=\"posts_all_container\">\n                <div id=\"posts_all_user_only\"></div>\n              </div>\n\n              <p class=\" \">posts only posts</p>\n\n              <div id=\"posts_all_container\">\n                <div id=\"posts_all_posts_only\"></div>\n              </div>\n\n              <p class=\" \">posts only valid user posts</p>\n\n              <div id=\"posts_all_container\">\n                <div id=\"posts_all_posts_only_valid_user\"></div>\n              </div>\n            </div>\n    ";
   }
 
   ;
 
   if (x == 'pop_top') {
-    var _identify4 = x;
-    component.setAttribute("id", 'id_' + _identify4);
-    component.classList = 'class_' + _identify4;
+    var _identify8 = x;
+    component.setAttribute("id", 'id_' + _identify8);
+    component.classList = 'class_' + _identify8;
     component.innerHTML = "\n              <div class=\"container\">\n                \n                      <div id=\"dark_view_toggle\">dark</div>\n                      <div id=\"pop_top\">pop_top</div>\n                      <div id=\"pop_bottom\">pop_bottom</div>\n                      <div id=\"pop_left\">pop_left</div>\n                      <div id=\"pop_right\">pop_right</div>\n\n                      <div id=\"page_top\">page_top</div>\n                      <div id=\"page_bottom\">page_bottom</div>\n                      <div id=\"page_left\">page_left</div>\n                      <div id=\"page_right\">page_right</div>\n\n                      <div id=\"menu_top\">menu_top</div>\n                      <div id=\"menu_bottom\">menu_bottom</div>\n                      <div id=\"menu_left\">menu_left</div>\n                      <div id=\"menu_right\">menu_right</div>\n\n                      <div id=\"nav_top\">nav_top</div>\n                      <div id=\"nav_bottom\">nav_bottom</div>\n                      <div id=\"nav_left\">nav_left</div>\n                      <div id=\"nav_right\">nav_right</div>\n\n                      <div id=\"view_card\">card</div>\n                      <div id=\"view_list\">list</div>\n                      <div id=\"view_numbered\">numbered</div>\n                      <div id=\"view_read\">read</div>\n                      <div id=\"view_fifth\">fifth</div>\n                      <div id=\"view_sixth\">sixth</div>\n                      <div id=\"view_eighth\">eighth</div>\n                      \n              </div>\n    ";
   }
 
   ;
 
+  if (x == 'pop_bottom') {
+    var _identify9 = x;
+    component.setAttribute("id", 'id_' + _identify9);
+    component.classList = 'class_' + _identify9 + " position_absolute bottom_0 left_0 calc_6vw padding_2vw border_1vw_grey overflow_y scrollbary scrollbary-scrollbar-track-light-yellow-9 scrollbary-scrollbar-light-yellow-9 scrollbary-light-yellow";
+    component.innerHTML = "\n\n            <div class=\"container\">\n                  <div id=\"modal-create\">\n\n                  </div>\n            </div>\n    ";
+  }
+
+  ;
+
   if (x == 'basics') {
-    var _identify5 = x;
-    component.setAttribute("id", 'id_' + _identify5);
-    component.classList = 'class_' + _identify5;
-    component.innerHTML = "\n      <div id=\"elements_".concat(_identify5, "\">\n\n\n\n              <p class=\" \">posts_sorted</p>\n\n              <div id=\"posts_sorted_container\">\n                <div id=\"posts_filtered_sorted\"></div>\n              </div>\n\n                <div id=\"pagination\" class=\" width_6025vw height_6025vw position_relative margin_auto display_webkit_box webkit_box_pack_center webkit_box_align float_left\">\n\n                    <div id=\"\" class=\"hover_show width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                        <div id=\"container\" class=\"width_100 height_100 position_relative float_left margin_auto\">\n                        \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_interaction_text_press position_relative margin_auto float_left\"></div>\n                            </div>\n                            \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_arrow_left position_relative margin_auto float_left\"></div>\n                            </div>\n\n                        </div>\n\n                    </div>\n\n                    <div id=\"\" class=\"hover_hide width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                        <div id=\"container\" class=\"width_100 height_100 position_relative float_left margin_auto\">\n                        \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_interaction_text_press position_relative margin_auto float_left\"></div>\n                            </div>\n                            \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_arrow_left_dark position_relative margin_auto float_left\"></div>\n                            </div>\n\n                        </div>\n\n                    </div>\n\n                </div>\n\n                <div id=\"pagination\" class=\" width_6025vw height_6025vw position_relative margin_auto display_webkit_box webkit_box_pack_center webkit_box_align float_right\">\n\n                    <div id=\"\" class=\"hover_show width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                        <div id=\"container\" class=\"width_100 height_100 position_relative float_left margin_auto\">\n                        \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_interaction_text_press position_relative margin_auto float_left\"></div>\n                            </div>\n                            \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_arrow_right position_relative margin_auto float_left\"></div>\n                            </div>\n\n                        </div>\n\n                    </div>\n\n                    <div id=\"\" class=\"hover_hide width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                        <div id=\"container\" class=\"width_100 height_100 position_relative float_left margin_auto\">\n                        \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_interaction_text_press position_relative margin_auto float_left\"></div>\n                            </div>\n                            \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_arrow_right_dark position_relative margin_auto float_left\"></div>\n                            </div>\n\n                        </div>\n\n                    </div>\n\n                </div>\n          \n          <!-- socials -->\n</div>\n    ");
+    var _identify10 = x;
+    component.setAttribute("id", 'id_' + _identify10);
+    component.classList = 'class_' + _identify10;
+    component.innerHTML = "\n      <div id=\"elements_".concat(_identify10, "\">\n\n\n\n              <p class=\" \">posts_sorted</p>\n\n              <div id=\"posts_sorted_container\">\n                <div id=\"posts_filtered_sorted\"></div>\n              </div>\n\n              <p class=\" \">posts_sorted if post type ==</p>\n\n              <div id=\"posts_sorted_container\">\n                <div id=\"posts_filtered_sorted_type\"></div>\n              </div>\n\n              <p class=\" \">posts_sorted if post category ==</p>\n\n              <div id=\"posts_sorted_container\">\n                <div id=\"posts_filtered_sorted_category\"></div>\n              </div>\n\n              <p class=\" \">posts_sorted if post hashtag ==</p>\n\n              <div id=\"posts_sorted_container\">\n                <div id=\"posts_filtered_sorted_hashtag\"></div>\n              </div>\n\n                <div id=\"pagination_left\" class=\" width_6025vw height_6025vw position_relative margin_auto display_webkit_box webkit_box_pack_center webkit_box_align float_left\">\n\n                    <div class=\"hover_show width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                        <div id=\"container\" class=\"width_100 height_100 position_relative float_left margin_auto\">\n                        \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_interaction_text_press position_relative margin_auto float_left\"></div>\n                            </div>\n                            \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_arrow_left position_relative margin_auto float_left\"></div>\n                            </div>\n\n                        </div>\n\n                    </div>\n\n                    <div class=\"hover_hide width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                        <div id=\"container\" class=\"width_100 height_100 position_relative float_left margin_auto\">\n                        \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_interaction_text_press position_relative margin_auto float_left\"></div>\n                            </div>\n                            \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_arrow_left_dark position_relative margin_auto float_left\"></div>\n                            </div>\n\n                        </div>\n\n                    </div>\n\n                </div>\n\n                <div id=\"pagination_right\" class=\" width_6025vw height_6025vw position_relative margin_auto display_webkit_box webkit_box_pack_center webkit_box_align float_right\">\n\n                    <div id=\"\" class=\"hover_show width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                        <div id=\"container\" class=\"width_100 height_100 position_relative float_left margin_auto\">\n                        \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_interaction_text_press position_relative margin_auto float_left\"></div>\n                            </div>\n                            \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_arrow_right position_relative margin_auto float_left\"></div>\n                            </div>\n\n                        </div>\n\n                    </div>\n\n                    <div id=\"\" class=\"hover_hide width_100 height_100 top_0 left_0 bottom_0 position_absolute margin_auto display_webkit_box webkit_box_pack_center webkit_box_align\">\n\n                        <div id=\"container\" class=\"width_100 height_100 position_relative float_left margin_auto\">\n                        \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_interaction_text_press position_relative margin_auto float_left\"></div>\n                            </div>\n                            \n                            <div id=\"container\" class=\"width_100 height_50 position_relative float_left margin_auto\">\n                                <div id=\"\" class=\"width_100 height_100 gui_arrow_right_dark position_relative margin_auto float_left\"></div>\n                            </div>\n\n                        </div>\n\n                    </div>\n\n                </div>\n          \n          <!-- socials -->\n</div>\n    ");
   }
 
   ;
@@ -2911,6 +2968,7 @@ var _default = {
   scene_start_5: scene_start_5,
   scene_start_6: scene_start_6,
   scene_start_7: scene_start_7,
+  scene_start_8: scene_start_8,
   shot_action_user_screen_4: shot_action_user_screen_4,
   shot_action_single_vomit_and_wall: shot_action_single_vomit_and_wall,
   shot_action_single_vomit: shot_action_single_vomit,
@@ -3013,17 +3071,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var state = _state.default.default_state;
 var dev_mode = false;
 var checkmark = 0;
+var just_made = "";
 var tiny_height = 0;
 var tiny_width = 0;
 var body = document.getElementById('body');
 var auth_has_been_checked = false;
 var on_post_page = false;
+var paginate = 0;
+var paginate_limit = 1;
+var paginate_start = 0;
 var post_id;
 var post_views;
 var view_counted = false;
 var stored_auth_user_cred = {};
 var posts_guides = [];
 var upload_details = "";
+var upload_details_profile = "";
 var post_view = 'card';
 var dark_view = false;
 var filtered_posts_guides = [];
@@ -3154,6 +3217,24 @@ var handle_time = function handle_time() {
 };
 
 var add_events_after_shot_action_user_screen_4 = function add_events_after_shot_action_user_screen_4() {
+  if (document.getElementById('shot_action_user_screen_4_item_3') != null) {
+    document.getElementById('shot_action_user_screen_4_item_3').addEventListener("click", function (event) {
+      alert('you doing it nigel!: start, sequence_shot_action_user_screen_4_item_3');
+      sequence_start_1();
+    });
+  }
+
+  ;
+
+  if (document.getElementById('shot_action_user_screen_4_item_1') != null) {
+    document.getElementById('shot_action_user_screen_4_item_1').addEventListener("click", function (event) {
+      alert('you doing it nigel!: start, sequence_shot_action_user_screen_4_item_1');
+      sequence_start_1();
+    });
+  }
+
+  ;
+
   if (document.getElementById('shot_action_user_screen_4_item_12') != null) {
     document.getElementById('shot_action_user_screen_4_item_12').addEventListener("click", function (event) {
       alert('you doing it nigel!: start, sequence_start_1');
@@ -3226,6 +3307,10 @@ var add_events_after_scene_start_1 = function add_events_after_scene_start_1() {
       alert('you doing it nigel!: scene_start_1_item_8 - sequence_start_7');
       sequence_start_7();
     });
+    document.getElementById('scene_start_1_item_7').addEventListener("click", function (event) {
+      alert('you doing it nigel!: scene_start_1_item_7 - sequence_start_8');
+      sequence_start_8();
+    });
   }
 
   ;
@@ -3237,7 +3322,12 @@ var handle_play_DOMContentLoaded = function handle_play_DOMContentLoaded() {
   document.getElementById('modal_pop_top').appendChild(_elements.default.gen('pop_top'));
   document.getElementById('modal_pop_right').appendChild(_elements.default.gen('pop_right'));
   document.getElementById('modal_pop_left').appendChild(_elements.default.gen('pop_left'));
+  document.getElementById('modal_pop_bottom').appendChild(_elements.default.gen('pop_bottom'));
   document.getElementById('modal_menu_top').appendChild(_elements.default.gen('menu_top'));
+  document.getElementById('modal_page_top').appendChild(_elements.default.gen('page_top'));
+  document.getElementById('modal_page_right').appendChild(_elements.default.gen('page_right'));
+  document.getElementById('modal_page_left').appendChild(_elements.default.gen('page_left'));
+  document.getElementById('modal_page_bottom').appendChild(_elements.default.gen('page_bottom'));
   get_dimensions(); // 24/fps loop
 
   var fps = 24;
@@ -3545,25 +3635,7 @@ var sequence_after_loads = function sequence_after_loads() {
       ;
 
       if (interval == 24 * 3) {
-        _elements.default.shot_action_user_screen_4();
-      }
-
-      ;
-
-      if (interval == 24 * 4) {
-        add_events_after_shot_action_user_screen_4();
-      }
-
-      ;
-
-      if (interval == 24 * 5) {
-        game_start();
-      }
-
-      ;
-
-      if (interval == 24 * 6) {
-        game_end();
+        sequence_back_home();
       }
 
       ; //console.log('handle_if_AUTH: ' + interval);
@@ -3581,19 +3653,23 @@ var sequence_back_home = function sequence_back_home() {
     var play = setInterval(function () {
       if (interval == 24 * 0) {
         _elements.default.shot_action_user_screen_4();
-
-        add_events_after_shot_action_user_screen_4();
       }
 
       ;
 
       if (interval == 24 * 1) {
-        game_start();
+        add_events_after_shot_action_user_screen_4();
       }
 
       ;
 
       if (interval == 24 * 2) {
+        game_start();
+      }
+
+      ;
+
+      if (interval == 24 * 3) {
         game_end();
       }
 
@@ -3745,6 +3821,29 @@ var sequence_start_7 = function sequence_start_7() {
       // user specific
       if (interval == 24 * 0) {
         _elements.default.scene_start_7();
+      }
+
+      ; //console.log('handle_if_AUTH: ' + interval);
+
+      interval += 1;
+    }, 1000 / state.motion.framerate);
+    play;
+  })();
+};
+
+var sequence_start_8 = function sequence_start_8() {
+  // 24/fps loop !! initial !!
+  (function () {
+    var interval = 0;
+    var play = setInterval(function () {
+      // user specific
+      if (interval == 24 * 0) {
+        _elements.default.scene_start_8();
+      }
+
+      ; // user specific
+
+      if (interval == 24 * 1) {//add_events_after_scene_start_1();
       }
 
       ; //console.log('handle_if_AUTH: ' + interval);
@@ -3921,8 +4020,8 @@ var handle_firebase_events = function handle_firebase_events() {
 
   ; // nav controls
 
-  if (document.getElementById('nav_button_1') != null) {
-    document.getElementById('nav_button_1').addEventListener('click', function (event) {
+  if (document.getElementById('nav_button_1_1') != null) {
+    document.getElementById('nav_button_1_1').addEventListener('click', function (event) {
       // filter library
       setTimeout(function () {
         state.modal.nav.top.transform = !state.modal.nav.top.transform;
@@ -3933,8 +4032,44 @@ var handle_firebase_events = function handle_firebase_events() {
 
   ;
 
-  if (document.getElementById('nav_button_2') != null) {
-    document.getElementById('nav_button_2').addEventListener('click', function (event) {
+  if (document.getElementById('nav_button_1_2') != null) {
+    document.getElementById('nav_button_1_2').addEventListener('click', function (event) {
+      // filter library
+      setTimeout(function () {
+        state.modal.nav.left.transform = !state.modal.nav.left.transform;
+        get_dimensions();
+      }, 0);
+    });
+  }
+
+  ;
+
+  if (document.getElementById('nav_button_1_3') != null) {
+    document.getElementById('nav_button_1_3').addEventListener('click', function (event) {
+      // filter library
+      setTimeout(function () {
+        state.modal.nav.right.transform = !state.modal.nav.right.transform;
+        get_dimensions();
+      }, 0);
+    });
+  }
+
+  ;
+
+  if (document.getElementById('nav_button_1_4') != null) {
+    document.getElementById('nav_button_1_4').addEventListener('click', function (event) {
+      // filter library
+      setTimeout(function () {
+        state.modal.nav.bottom.transform = !state.modal.nav.bottom.transform;
+        get_dimensions();
+      }, 0);
+    });
+  }
+
+  ; // pop controls
+
+  if (document.getElementById('nav_button_2_1') != null) {
+    document.getElementById('nav_button_2_1').addEventListener('click', function (event) {
       // filter library
       setTimeout(function () {
         state.modal.pop.top.transform = !state.modal.pop.top.transform;
@@ -3945,11 +4080,11 @@ var handle_firebase_events = function handle_firebase_events() {
 
   ;
 
-  if (document.getElementById('nav_button_3') != null) {
-    document.getElementById('nav_button_3').addEventListener('click', function (event) {
+  if (document.getElementById('nav_button_2_2') != null) {
+    document.getElementById('nav_button_2_2').addEventListener('click', function (event) {
       // filter library
       setTimeout(function () {
-        state.modal.pop.top.transform = !state.modal.pop.top.transform;
+        state.modal.pop.right.transform = !state.modal.pop.right.transform;
         get_dimensions();
       }, 0);
     });
@@ -3957,11 +4092,149 @@ var handle_firebase_events = function handle_firebase_events() {
 
   ;
 
-  if (document.getElementById('nav_button_4') != null) {
-    document.getElementById('nav_button_4').addEventListener('click', function (event) {
+  if (document.getElementById('nav_button_2_3') != null) {
+    document.getElementById('nav_button_2_3').addEventListener('click', function (event) {
       // filter library
       setTimeout(function () {
-        state.modal.pop.top.transform = !state.modal.pop.top.transform;
+        state.modal.pop.left.transform = !state.modal.pop.left.transform;
+        get_dimensions();
+      }, 0);
+    });
+  }
+
+  ;
+
+  if (document.getElementById('nav_button_2_4') != null) {
+    document.getElementById('nav_button_2_4').addEventListener('click', function (event) {
+      // filter library
+      setTimeout(function () {
+        state.modal.pop.bottom.transform = !state.modal.pop.bottom.transform;
+        get_dimensions();
+      }, 0);
+    });
+  }
+
+  ; // pages controls
+
+  if (document.getElementById('nav_button_3_1') != null) {
+    document.getElementById('nav_button_3_1').addEventListener('click', function (event) {
+      // filter library
+      setTimeout(function () {
+        state.modal.page.top.transform = !state.modal.page.top.transform;
+        get_dimensions();
+      }, 0);
+    });
+  }
+
+  ;
+
+  if (document.getElementById('nav_button_3_2') != null) {
+    document.getElementById('nav_button_3_2').addEventListener('click', function (event) {
+      // filter library
+      setTimeout(function () {
+        state.modal.page.left.transform = !state.modal.page.left.transform;
+        get_dimensions();
+      }, 0);
+    });
+  }
+
+  ;
+
+  if (document.getElementById('nav_button_3_3') != null) {
+    document.getElementById('nav_button_3_3').addEventListener('click', function (event) {
+      // filter library
+      setTimeout(function () {
+        state.modal.page.right.transform = !state.modal.page.right.transform;
+        get_dimensions();
+      }, 0);
+    });
+  }
+
+  ;
+
+  if (document.getElementById('nav_button_3_4') != null) {
+    document.getElementById('nav_button_3_4').addEventListener('click', function (event) {
+      // filter library
+      setTimeout(function () {
+        state.modal.page.bottom.transform = !state.modal.page.bottom.transform;
+        get_dimensions();
+      }, 0);
+    });
+  }
+
+  ; // menu controls
+
+  if (document.getElementById('nav_button_4_1') != null) {
+    document.getElementById('nav_button_4_1').addEventListener('click', function (event) {
+      // filter library
+      setTimeout(function () {
+        state.modal.menu.top.transform = !state.modal.menu.top.transform;
+        get_dimensions();
+      }, 0);
+    });
+  }
+
+  ;
+
+  if (document.getElementById('nav_button_4_2') != null) {
+    document.getElementById('nav_button_4_2').addEventListener('click', function (event) {
+      // filter library
+      setTimeout(function () {
+        state.modal.menu.left.transform = !state.modal.menu.left.transform;
+        get_dimensions();
+      }, 0);
+    });
+  }
+
+  ;
+
+  if (document.getElementById('nav_button_4_3') != null) {
+    document.getElementById('nav_button_4_3').addEventListener('click', function (event) {
+      // filter library
+      setTimeout(function () {
+        state.modal.menu.right.transform = !state.modal.menu.right.transform;
+        get_dimensions();
+      }, 0);
+    });
+  }
+
+  ;
+
+  if (document.getElementById('nav_button_4_4') != null) {
+    document.getElementById('nav_button_4_4').addEventListener('click', function (event) {
+      // filter library
+      setTimeout(function () {
+        state.modal.menu.bottom.transform = !state.modal.menu.bottom.transform;
+        get_dimensions();
+      }, 0);
+    });
+  }
+
+  ; // post view controls
+
+  if (document.getElementById('pagination_left') != null) {
+    document.getElementById('pagination_left').addEventListener('click', function (event) {
+      // filter library
+      setTimeout(function () {
+        paginate_limit -= 1;
+        paginate_start -= 1;
+        alert('paginate_start: ' + paginate_start + ', paginate_limit: ' + paginate_limit);
+        get_db_guides();
+        get_dimensions();
+      }, 0);
+    });
+  }
+
+  ; // post view controls
+
+  if (document.getElementById('pagination_right') != null) {
+    document.getElementById('pagination_right').addEventListener('click', function (event) {
+      // filter library
+      setTimeout(function () {
+        paginate_limit += 1;
+        paginate_start += 1;
+        alert('paginate_start: ' + paginate_start + ', paginate_limit: ' + paginate_limit);
+        get_db_guides();
         get_dimensions();
       }, 0);
     });
@@ -4257,11 +4530,36 @@ var handle_firebase_events = function handle_firebase_events() {
 
   ;
 
+  if (document.getElementById('controls_sequence_back_home') != null) {
+    document.getElementById('controls_sequence_back_home').addEventListener('click', function (event) {
+      // filter library
+      setTimeout(function () {
+        sequence_back_home();
+        get_dimensions();
+      }, 0);
+    });
+  }
+
+  ;
+
+  if (document.getElementById('controls_sequence_start_0') != null) {
+    document.getElementById('controls_sequence_start_0').addEventListener('click', function (event) {
+      // filter library
+      setTimeout(function () {
+        sequence_start_0();
+        get_dimensions();
+      }, 0);
+    });
+  }
+
+  ;
+
   if (document.getElementById('dark_view_toggle') != null) {
     document.getElementById('dark_view_toggle').addEventListener('click', function (event) {
       // filter library
       setTimeout(function () {
-        dark_view = !dark_view;
+        state.ux.orientation.dark_view = !state.ux.orientation.dark_view;
+        db_update_dark_mode("users", valid_user.id);
         get_dimensions();
       }, 0);
     });
@@ -4425,13 +4723,27 @@ var check_ui_after_auth = function check_ui_after_auth() {
     //alert('user_logged_in == true, : ' + valid_user.id);
     localStorage.setItem("user", "logged_user");
     localStorage.setItem("user_id", valid_user.id);
+
+    if (valid_user.setting.dark == false) {
+      dark_view = false;
+    }
+
+    ;
+
+    if (valid_user.setting.dark == true) {
+      dark_view = true;
+    }
+
+    ;
+    alert('state.ux.orientation.dark_view: ' + state.ux.orientation.dark_view + 'valid_user.setting.dark: ' + valid_user.setting.dark);
+    get_dimensions();
     document.getElementById('account-details').innerHTML = "\n            id: ".concat(valid_user.id, "\n            title: ").concat(valid_user.title, "\n            email: ").concat(valid_user.email, "\n        ");
     document.getElementById('account-details-id').innerHTML = "\n            id: ".concat(valid_user.id, "\n        ");
     document.getElementById('account-details-title').innerHTML = "\n            title: ".concat(valid_user.title, "\n        ");
     document.getElementById('account-details-email').innerHTML = "\n            email: ".concat(valid_user.title, "\n        ");
-    document.getElementById('nav_button_2').innerHTML = "\n        <div class=\"position_relative gui_link_settings_white\n                width_50 height_50 float_left\"></div>\n        ";
-    document.getElementById('modal-edit').innerHTML = "\n            \n                     <form id=\"edit-form\">\n\n                        <p>edit profile</p>\n                        <input placeholder=\"user_title\" type=\"text\" id=\"user_title\"/>\n                        <input placeholder=\"user_youtube\" type=\"text\" id=\"user_youtube\"/>\n                        <input placeholder=\"user_twitch\" type=\"text\" id=\"user_twitch\"/>\n                        <input placeholder=\"user_spotify\" type=\"text\" id=\"user_spotify\"/>\n                        <input placeholder=\"user_instagram\" type=\"text\" id=\"user_instagram\"/>\n                        <input placeholder=\"user_twitter\" type=\"text\" id=\"user_twitter\"/>\n                        <input placeholder=\"user_vimeo\" type=\"text\" id=\"user_vimeo\"/>\n\n                        <div id=\"edit_button\" class=\"\">edit</div>\n\n                        <div id=\"signout\" alt=\"sign out\">\n                           sign out\n                        </div>\n                        <div id=\"delete_button\" alt=\"sign out\">\n                           delete\n                        </div>\n\n                     </form> \n        ";
-    document.getElementById('modal-create').innerHTML = "\n            <form id=\"create-form\">\n                <p>modal-create</p>\n                \n                <input class=\"display_none\" type=\"file\" value=\"upload\" id=\"fileButton\" accept=\"image/*\" title=\"&nbsp;\"/>\n                <input placeholder=\"title\" type=\"text\" id=\"create_title\" required />\n                <input placeholder=\"tagline\" type=\"text\" id=\"create_tagline\" required />\n                <input placeholder=\"content\" type=\"text\" id=\"create_content\" required />\n                <input placeholder=\"youtube\" type=\"text\" id=\"create_youtube\" required />\n                <input placeholder=\"instagram\" type=\"text\" id=\"create_instagram\" required />\n                <input placeholder=\"twitter\" type=\"text\" id=\"create_twitter\" required />\n                <input placeholder=\"twitch\" type=\"text\" id=\"create_twitch\" required />\n                <input placeholder=\"spotify\" type=\"text\" id=\"create_spotify\" required />\n                <input placeholder=\"vimeo\" type=\"text\" id=\"create_vimeo\" required />\n                <progress value=\"0\" max=\"100\" id=\"uploader\">0%</progress>\n                <p id=\"upload_progress\">images only</p>\n                <label for=\"fileButton\">Select file</label>\n                <div id=\"upload_details\"></div>\n                <div id=\"create_button\" class=\"\">create</div>\n             </form>\n        ";
+    document.getElementById('nav_button_2_1').innerHTML = "\n        <div class=\"position_relative gui_link_settings_white\n                width_50 height_50 float_left\"></div>\n        ";
+    document.getElementById('modal-edit').innerHTML = "\n            \n                     <form id=\"edit-form\">\n\n                        <p>edit profile</p>\n                        <input placeholder=\"user_title\" type=\"text\" id=\"user_title\"/>\n                        <input placeholder=\"user_youtube\" type=\"text\" id=\"user_youtube\"/>\n                        <input placeholder=\"user_twitch\" type=\"text\" id=\"user_twitch\"/>\n                        <input placeholder=\"user_spotify\" type=\"text\" id=\"user_spotify\"/>\n                        <input placeholder=\"user_instagram\" type=\"text\" id=\"user_instagram\"/>\n                        <input placeholder=\"user_twitter\" type=\"text\" id=\"user_twitter\"/>\n                        <input placeholder=\"user_vimeo\" type=\"text\" id=\"user_vimeo\"/>\n                        \n                        <input class=\"display_none\" type=\"file\" value=\"upload\" id=\"fileButton_profile\" accept=\"image/*\" title=\"&nbsp;\"/>\n                        <progress value=\"0\" max=\"100\" id=\"uploader_profile\">0%</progress>\n                        <p id=\"upload_progress_profile\">images only</p>\n                        <label for=\"fileButton_profile\">Select file</label>\n                        <div id=\"upload_details_profile\"></div>\n\n                        <div id=\"edit_button\" class=\"\">edit</div>\n\n                        <div id=\"signout\" alt=\"sign out\">\n                           sign out\n                        </div>\n                        <div id=\"delete_button\" alt=\"sign out\">\n                           delete\n                        </div>\n\n                     </form> \n        ";
+    document.getElementById('modal-create').innerHTML = "\n            <form id=\"create-form\">\n                <p>modal-create</p>\n                \n                <input class=\"display_none\" type=\"file\" value=\"upload\" id=\"fileButton\" accept=\"image/*\" title=\"&nbsp;\"/>\n                <input placeholder=\"title\" type=\"text\" id=\"create_title\" required />\n                <input placeholder=\"sticky\" type=\"text\" id=\"create_sticky\" required />\n                <input placeholder=\"tagline\" type=\"text\" id=\"create_tagline\" required />\n                <input placeholder=\"hashtag\" type=\"text\" id=\"create_hashtag\" required />\n                <input placeholder=\"type\" type=\"text\" id=\"create_type\" required />\n                <input placeholder=\"category\" type=\"text\" id=\"create_category\" required />\n                <input placeholder=\"content\" type=\"text\" id=\"create_content\" required />\n                <input placeholder=\"youtube\" type=\"text\" id=\"create_youtube\" required />\n                <input placeholder=\"instagram\" type=\"text\" id=\"create_instagram\" required />\n                <input placeholder=\"twitter\" type=\"text\" id=\"create_twitter\" required />\n                <input placeholder=\"twitch\" type=\"text\" id=\"create_twitch\" required />\n                <input placeholder=\"spotify\" type=\"text\" id=\"create_spotify\" required />\n                <input placeholder=\"vimeo\" type=\"text\" id=\"create_vimeo\" required />\n\n                <progress value=\"0\" max=\"100\" id=\"uploader\">0%</progress>\n                <p id=\"upload_progress\">images only</p>\n                <label for=\"fileButton\">Select file</label>\n                <div id=\"upload_details\"></div>\n                <div id=\"create_button\" class=\"\">create</div>\n             </form>\n        ";
     document.getElementById('modal-signup').innerHTML = "";
     document.getElementById('modal-signin').innerHTML = "";
   }
@@ -4446,11 +4758,16 @@ var check_ui_after_auth = function check_ui_after_auth() {
     document.getElementById('account-details-id').innerHTML = "\n            id: please log in\n        ";
     document.getElementById('account-details-title').innerHTML = "\n            title: please log in\n        ";
     document.getElementById('account-details-email').innerHTML = "\n            email: please log in\n        ";
-    document.getElementById('nav_button_2').innerHTML = "\n        <div class=\"position_relative gui_link_add_white\n                width_50 height_50 float_left\"></div>\n        ";
+    document.getElementById('nav_button_2_1').innerHTML = "\n        <div class=\"position_relative gui_link_add_white\n                width_50 height_50 float_left\"></div>\n        ";
     document.getElementById('modal-edit').innerHTML = "";
-    document.getElementById('modal-edit-post').innerHTML = "";
+
+    if (document.getElementById('modal-edit-post') != null) {
+      document.getElementById('modal-edit-post').innerHTML = "";
+    }
+
+    ;
     document.getElementById('modal-create').innerHTML = "";
-    document.getElementById('modal-signup').innerHTML = "\n\n         <form id=\"signup-form\">\n         <p>modal-signup</p>\n            <input placeholder=\"email\" type=\"email\" id=\"signup-email\" required />\n            <input placeholder=\"password\" type=\"password\" id=\"signup-password\" required />\n            <div id=\"signup_submit\" class=\"\">sign up</div>\n         </form>\n\n        ";
+    document.getElementById('modal-signup').innerHTML = "\n\n         <form id=\"signup-form\">\n         <p>modal-signup</p>\n            <input placeholder=\"username\" type=\"type\" id=\"user_username\" required />\n            <input placeholder=\"email\" type=\"email\" id=\"signup-email\" required />\n            <input placeholder=\"password\" type=\"password\" id=\"signup-password\" required />\n            <div id=\"signup_submit\" class=\"\">sign up</div>\n         </form>\n\n        ";
     document.getElementById('modal-signin').innerHTML = "\n            \n            <form id=\"signin-form\">\n                <p>modal-signin</p>\n                <input placeholder=\"signin-email\" type=\"signin-email\" id=\"signin-email\" required />\n                <input placeholder=\"signin-password\" type=\"signin-password\" id=\"signin-password\" required />\n                <div id=\"signin\" class=\"\">sign in</div>\n            </form>\n        ";
   }
 
@@ -4536,6 +4853,50 @@ var check_ui_after_auth = function check_ui_after_auth() {
 
   ;
 
+  if (document.getElementById('uploader_profile') != null) {
+    // upload
+    var uploader_profile = document.getElementById('uploader_profile');
+    var upload_progress_profile = document.getElementById('upload_progress_profile');
+    var fileButton_profile = document.getElementById('fileButton_profile');
+    fileButton_profile.addEventListener('change', function (event) {
+      // assign metadata
+      var metadata = {
+        customMetadata: {
+          'location': 'Yosemite, CA, USA',
+          'activity': 'Hiking'
+        }
+      }; // get file
+
+      var file = event.target.files[0]; // create a storage ref
+
+      var storageRef = firebase.storage().ref('sweet_gifs/' + file.name); // upload file
+
+      var task = storageRef.put(file, metadata); // upload progress bar
+
+      task.on('state_changed', function progress(snapshot) {
+        var progress = snapshot.bytesTransferred / snapshot.totalBytes * 100;
+        console.log('Upload is ' + progress + '% done');
+        uploader_profile.value = progress;
+        upload_progress_profile.innerHTML = progress;
+      }, function error(err) {}, function complete(snapshot) {
+        setTimeout(function () {
+          uploader_profile.value = 0;
+          upload_progress_profile.innerHTML = "";
+        }, 2000); // Handle successful uploads on complete
+        // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+
+        task.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+          console.log('File available at', downloadURL);
+          upload_details_profile = downloadURL;
+          document.getElementById('upload_details_profile').innerHTML = "upload complete, available at: ".concat(upload_details_profile);
+          document.getElementById('upload_details_profile').innerHTML += "\n                        <div id=\"uploaded_image_profile\" style=\"background-image: url(".concat(upload_details_profile, ")\">\n                        </div>");
+        });
+      });
+    });
+  }
+
+  ;
+
   if (document.getElementById('signout') != null) {
     // signout / un-auth
     var signout = document.getElementById('signout');
@@ -4589,9 +4950,11 @@ var get_db_guides = function get_db_guides() {
     console.log(snapshot.docs);
     posts_guides = [];
     filtered_posts_guides = [];
-    sorted_filtered_posts_guides = [];
     document.getElementById('posts_all').innerHTML = "";
     document.getElementById('posts_filtered_sorted').innerHTML = "";
+    document.getElementById('posts_filtered_sorted_type').innerHTML = "";
+    document.getElementById('posts_filtered_sorted_category').innerHTML = "";
+    document.getElementById('posts_filtered_sorted_hashtag').innerHTML = "";
     document.getElementById('posts_filtered').innerHTML = "";
     snapshot.docs.forEach(function (doc) {
       var items = doc.data();
@@ -4700,12 +5063,18 @@ var get_db_guides = function get_db_guides() {
       document.getElementById('posts_filtered').appendChild(element);
     }); //  FILTERED BY TITLE *sorted*
 
+    var sorted_filtered_posts_guides = [];
+
     if (sorted_filtered_posts_guides != null) {
       for (var i = 0; i < posts_guides.length; i++) {
-        if ( // title filter
-        posts_guides[i].title.toString().toLowerCase().includes(document.getElementById('element_input_filter').value) || // if filter
-        posts_guides[i].id.toString().includes(document.getElementById('element_input_filter').value)) {
-          sorted_filtered_posts_guides.push(posts_guides[i]);
+        if (i >= 0 && i <= 3) {
+          if ( // title filter
+          posts_guides[i].title.toString().toLowerCase().includes(document.getElementById('element_input_filter').value) || // if filter
+          posts_guides[i].id.toString().includes(document.getElementById('element_input_filter').value)) {
+            sorted_filtered_posts_guides.push(posts_guides[i]);
+          }
+
+          ;
         }
 
         ;
@@ -4716,9 +5085,91 @@ var get_db_guides = function get_db_guides() {
       ;
     }
 
+    ; //  FILTERED BY TITLE *sorted*
+
+    var sorted_filtered_posts_guides_type = [];
+    paginate = 0;
+
+    if (sorted_filtered_posts_guides_type != null) {
+      for (var i = 0; i < posts_guides.length; i++) {
+        if (paginate < paginate_limit) {
+          //if ( i >= 0 && i <= 3) {
+          if (posts_guides[i].type != null) {
+            if ( // title filter
+            posts_guides[i].title.toString().toLowerCase().includes(document.getElementById('element_input_filter').value) || // if filter
+            posts_guides[i].id.toString().includes(document.getElementById('element_input_filter').value) && // if filter
+            posts_guides[i].type.toString() == 'type') {
+              sorted_filtered_posts_guides_type.push(posts_guides[i]);
+              paginate += 1;
+            }
+
+            ;
+          }
+
+          ; //};
+        }
+
+        ;
+        console.log('sorted_filtered_posts_guides_type[i]');
+        console.log(sorted_filtered_posts_guides_type[i]);
+      }
+
+      ;
+    }
+
+    ; //  FILTERED BY TITLE *sorted*
+
+    var sorted_filtered_posts_guides_category = [];
+
+    if (sorted_filtered_posts_guides_category != null) {
+      for (var i = 0; i < posts_guides.length; i++) {
+        if (i >= 0 && i <= 3) {
+          if ( // title filter
+          posts_guides[i].title.toString().toLowerCase().includes(document.getElementById('element_input_filter').value) || // if filter
+          posts_guides[i].id.toString().includes(document.getElementById('element_input_filter').value) && // if filter
+          posts_guides[i].category.toString().includes('category')) {
+            sorted_filtered_posts_guides_category.push(posts_guides[i]);
+          }
+
+          ;
+        }
+
+        ;
+        console.log('sorted_filtered_posts_guides_category[i]');
+        console.log(sorted_filtered_posts_guides_category[i]);
+      }
+
+      ;
+    }
+
+    ; //  FILTERED BY TITLE *sorted*
+
+    var sorted_filtered_posts_guides_hashtag = [];
+
+    if (sorted_filtered_posts_guides_hashtag != null) {
+      for (var i = 0; i < posts_guides.length; i++) {
+        if (i >= 0 && i <= 3) {
+          if ( // title filter
+          posts_guides[i].title.toString().toLowerCase().includes(document.getElementById('element_input_filter').value) || // if filter
+          posts_guides[i].id.toString().includes(document.getElementById('element_input_filter').value) && // if filter
+          posts_guides[i].hashtag.toString().includes('hashtag')) {
+            sorted_filtered_posts_guides_hashtag.push(posts_guides[i]);
+          }
+
+          ;
+        }
+
+        ;
+        console.log('sorted_filtered_posts_guides_hashtag[i]');
+        console.log(sorted_filtered_posts_guides_hashtag[i]);
+      }
+
+      ;
+    }
+
     ; // render SORTED && FILTERED BY TITLE *sorted* post to view 
 
-    fb_sorted_library(sorted_filtered_posts_guides, 'titleup').forEach(function (post) {
+    fb_sorted_library(sorted_filtered_posts_guides, 'titledown').forEach(function (post) {
       console.log(post);
       var element = document.createElement('div');
       element.setAttribute("id", "post");
@@ -4729,6 +5180,44 @@ var get_db_guides = function get_db_guides() {
         db_delete_user("users", post.id);
       });
       document.getElementById('posts_filtered_sorted').appendChild(element);
+    }); // render SORTED && FILTERED BY TITLE *sorted* post to view 
+
+    fb_sorted_library(sorted_filtered_posts_guides_type, 'titledown').forEach(function (post) {
+      console.log(post);
+      var element = document.createElement('div');
+      element.setAttribute("id", "post");
+      element.classList = "width_100 margin_auto position_relative float_left ".concat(post.sticky);
+      element.innerHTML = "".concat(post.id).concat(post.type, "\n            ");
+      element.addEventListener("click", function (event) {
+        alert('sorted_filtered_posts_guides_type'); //db_delete_user("users", post.id);
+      });
+      document.getElementById('posts_filtered_sorted_type').appendChild(element);
+    }); // render SORTED && FILTERED BY TITLE *sorted* post to view 
+
+    fb_sorted_library(sorted_filtered_posts_guides_category, 'titledown').forEach(function (post) {
+      console.log(post);
+      var element = document.createElement('div');
+      element.setAttribute("id", "post");
+      element.classList = "width_100 margin_auto position_relative float_left";
+      element.innerHTML = "".concat(post.id, "\n            ");
+      element.addEventListener("click", function (event) {
+        alert('delete post');
+        db_delete_user("users", post.id);
+      });
+      document.getElementById('posts_filtered_sorted_category').appendChild(element);
+    }); // render SORTED && FILTERED BY TITLE *sorted* post to view 
+
+    fb_sorted_library(sorted_filtered_posts_guides_hashtag, 'titledown').forEach(function (post) {
+      console.log(post);
+      var element = document.createElement('div');
+      element.setAttribute("id", "post");
+      element.classList = "width_100 margin_auto position_relative float_left ".concat(post.sticky);
+      element.innerHTML = "".concat(post.id, "\n            ");
+      element.addEventListener("click", function (event) {
+        alert('delete post');
+        db_delete_user("users", post.id);
+      });
+      document.getElementById('posts_filtered_sorted_hashtag').appendChild(element);
     }); //  FILTERED BY TITLE *USER ONLY*
 
     var filtered_posts_guides_user_only = [];
@@ -4864,6 +5353,10 @@ var db_create_post = function db_create_post() {
   db.collection('users').doc(ref.id).set({
     title: create_title.value,
     tagline: create_tagline.value,
+    type: create_type.value,
+    category: create_category.value,
+    sticky: create_sticky.value,
+    hashtag: create_hashtag.value,
     child: 'post',
     content: create_content.value,
     photo: upload_details,
@@ -4884,6 +5377,10 @@ var db_create_post = function db_create_post() {
     console.log('guide made');
     create_title.value = "";
     create_tagline.value = "";
+    create_hashtag.value = "";
+    create_type.value = "";
+    create_category.value = "";
+    create_sticky.value = "";
     create_content.value = "";
     create_youtube.value = "";
     create_vimeo.value = "";
@@ -4891,6 +5388,8 @@ var db_create_post = function db_create_post() {
     create_twitter.value = "";
     create_instagram.value = "";
     create_spotify.value = "";
+    just_made = "http://antenuh.com/p/".concat(ref.id);
+    alert(just_made);
     get_db_guides();
   }).catch(function (err) {
     console.log(err.message);
@@ -4899,11 +5398,15 @@ var db_create_post = function db_create_post() {
 
 
 var db_create_user = function db_create_user(cred) {
-  // create user after auth
+  var username = document.getElementById('user_username').value; // create user after auth
+
   db.collection('users').doc(cred.user.uid).set({
     id: cred.user.uid,
     email: cred.user.email,
-    title: cred.user.email,
+    title: username,
+    setting: {
+      dark: state.ux.orientation.dark_view
+    },
     child: 'user'
   }).then(function () {
     console.log(cred);
@@ -4916,6 +5419,8 @@ var db_create_user = function db_create_user(cred) {
     signup_email.value = "";
     signup_password.value = "";
     get_db_guides();
+    just_made = "http://antenuh.com/".concat(username);
+    alert(just_made);
   }).catch(function (err) {
     console.log(err.message);
   });
@@ -4925,8 +5430,8 @@ var db_create_user = function db_create_user(cred) {
 var db_update_user = function db_update_user(collection, deletable_id) {
   console.log(deletable_id);
 
-  if (upload_details == "") {
-    upload_details = "\n            https://firebasestorage.googleapis.com/v0/b/antenuh-9d2ca.appspot.com/o/sweet_gifs%2Fdownload.jpg?alt=media&token=4af1439e-7b46-4c97-8fae-3b10f6c0a8e1\n        ";
+  if (upload_details_profile == "") {
+    upload_details_profile = "\n            https://firebasestorage.googleapis.com/v0/b/antenuh-9d2ca.appspot.com/o/sweet_gifs%2Fdownload.jpg?alt=media&token=4af1439e-7b46-4c97-8fae-3b10f6c0a8e1\n        ";
   }
 
   ;
@@ -4934,7 +5439,7 @@ var db_update_user = function db_update_user(collection, deletable_id) {
   db.collection(collection).doc(deletable_id).set({
     id: deletable_id,
     email: stored_auth_user_cred.email,
-    photo: upload_details,
+    photo: upload_details_profile,
     title: document.getElementById('user_title').value,
     youtube: document.getElementById('user_youtube').value,
     twitch: document.getElementById('user_twitch').value,
@@ -4983,6 +5488,19 @@ var db_update_post = function db_update_post(collection, deletable_id) {
     author_id: valid_user.id
   }).then(function () {
     document.getElementById('edit_post_title').value = "", document.getElementById('edit_post_tagline').value = "", document.getElementById('edit_post_content').value = "", document.getElementById('edit_post_likes').value = "", document.getElementById('edit_post_views').value = "", document.getElementById('edit_post_video').value = "", //alert("db_update_post Document successfully written!, post");
+    get_db_guides();
+  }).catch(function (error) {
+    console.error("Error writing document: ", error);
+  });
+};
+
+var db_update_dark_mode = function db_update_dark_mode(collection, deletable_id) {
+  db.collection("users").doc(deletable_id).update({
+    setting: {
+      dark: state.ux.orientation.dark_view
+    }
+  }).then(function () {
+    //alert("db_update_post_views Document successfully written!, post");
     get_db_guides();
   }).catch(function (error) {
     console.error("Error writing document: ", error);
@@ -6326,7 +6844,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50745" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55205" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

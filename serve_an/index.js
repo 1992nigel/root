@@ -82,6 +82,7 @@ let state = default_state.default_state;
 
 let dev_mode = false;
 let checkmark = 0;
+let just_made = ``;
 
 let tiny_height = 0;
 let tiny_width = 0;
@@ -89,12 +90,17 @@ let body = document.getElementById('body');
 let auth_has_been_checked = false;
 
 let on_post_page = false;
+let paginate = 0;
+let paginate_limit = 1;
+let paginate_start = 0
+
 let post_id;
 let post_views;
 let view_counted = false;
 let stored_auth_user_cred = {};
 let posts_guides = [];
 let upload_details = ``;
+let upload_details_profile = ``;
 let post_view = 'card';
 let dark_view = false;
 let filtered_posts_guides = [];
@@ -233,6 +239,20 @@ let handle_time = () => {
 
 let add_events_after_shot_action_user_screen_4 = () => {
 
+    if (document.getElementById('shot_action_user_screen_4_item_3') != null) {
+        (document.getElementById('shot_action_user_screen_4_item_3')).addEventListener("click", function(event) {
+            alert('you doing it nigel!: start, sequence_shot_action_user_screen_4_item_3');
+            sequence_start_1();
+        });
+    };
+
+    if (document.getElementById('shot_action_user_screen_4_item_1') != null) {
+        (document.getElementById('shot_action_user_screen_4_item_1')).addEventListener("click", function(event) {
+            alert('you doing it nigel!: start, sequence_shot_action_user_screen_4_item_1');
+            sequence_start_1();
+        });
+    };
+
     if (document.getElementById('shot_action_user_screen_4_item_12') != null) {
         (document.getElementById('shot_action_user_screen_4_item_12')).addEventListener("click", function(event) {
             alert('you doing it nigel!: start, sequence_start_1');
@@ -297,6 +317,10 @@ let add_events_after_scene_start_1 = () => {
             alert('you doing it nigel!: scene_start_1_item_8 - sequence_start_7');
             sequence_start_7();
         });
+        (document.getElementById('scene_start_1_item_7')).addEventListener("click", function(event) {
+            alert('you doing it nigel!: scene_start_1_item_7 - sequence_start_8');
+            sequence_start_8();
+        });
     };
 
 };
@@ -324,8 +348,29 @@ let handle_play_DOMContentLoaded = () => {
         elements.gen('pop_left')
     );
 
+    document.getElementById('modal_pop_bottom').appendChild(
+        elements.gen('pop_bottom')
+    );
+
     document.getElementById('modal_menu_top').appendChild(
         elements.gen('menu_top')
+    );
+
+
+    document.getElementById('modal_page_top').appendChild(
+        elements.gen('page_top')
+    );
+
+    document.getElementById('modal_page_right').appendChild(
+        elements.gen('page_right')
+    );
+
+    document.getElementById('modal_page_left').appendChild(
+        elements.gen('page_left')
+    );
+
+    document.getElementById('modal_page_bottom').appendChild(
+        elements.gen('page_bottom')
     );
 
     get_dimensions();
@@ -649,19 +694,7 @@ let sequence_after_loads = () => {
                 };
 
                 if ( interval == (24 * 3)) {
-                    elements.shot_action_user_screen_4();
-                };
-
-                if ( interval == (24 * 4)) {
-                    add_events_after_shot_action_user_screen_4();
-                };
-
-                if ( interval == (24 * 5)) {
-                    game_start();
-                };
-
-                if ( interval == (24 * 6)) {
-                    game_end();
+                    sequence_back_home();
                 };
 
                 //console.log('handle_if_AUTH: ' + interval);
@@ -682,14 +715,17 @@ let sequence_back_home = () => {
 
                 if ( interval == (24 * 0)) {
                     elements.shot_action_user_screen_4();
-                    add_events_after_shot_action_user_screen_4();
                 };
 
                 if ( interval == (24 * 1)) {
-                    game_start();
+                    add_events_after_shot_action_user_screen_4();
                 };
 
                 if ( interval == (24 * 2)) {
+                    game_start();
+                };
+
+                if ( interval == (24 * 3)) {
                     game_end();
                 };
 
@@ -875,6 +911,32 @@ let sequence_start_7 = () => {
     })();
 };
 
+let sequence_start_8 = () => {
+    // 24/fps loop !! initial !!
+    (() => {
+        let interval = 0;
+        let play = setInterval(
+            () => {
+
+                // user specific
+                if ( interval == (24 * 0)) {
+                    elements.scene_start_8();
+                };
+
+                // user specific
+                if ( interval == (24 * 1)) {
+                    //add_events_after_scene_start_1();
+                };
+
+                //console.log('handle_if_AUTH: ' + interval);
+                interval += 1;
+
+            }, (1000 / state.motion.framerate));
+
+            play;
+    })();
+};
+
 let act_3 = () => {
     // 24/fps loop !! initial !!
     (() => {
@@ -1034,8 +1096,8 @@ let handle_firebase_events = () => {
     };
 
     // nav controls
-    if (document.getElementById('nav_button_1') != null) {
-        document.getElementById('nav_button_1').addEventListener('click', (event) => {
+    if (document.getElementById('nav_button_1_1') != null) {
+        document.getElementById('nav_button_1_1').addEventListener('click', (event) => {
             // filter library
             setTimeout(function() {
                 state.modal.nav.top.transform = !state.modal.nav.top.transform;
@@ -1043,8 +1105,37 @@ let handle_firebase_events = () => {
             }, 0);
         });
     };
-    if (document.getElementById('nav_button_2') != null) {
-        document.getElementById('nav_button_2').addEventListener('click', (event) => {
+    if (document.getElementById('nav_button_1_2') != null) {
+        document.getElementById('nav_button_1_2').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.nav.left.transform = !state.modal.nav.left.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+    if (document.getElementById('nav_button_1_3') != null) {
+        document.getElementById('nav_button_1_3').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.nav.right.transform = !state.modal.nav.right.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+    if (document.getElementById('nav_button_1_4') != null) {
+        document.getElementById('nav_button_1_4').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.nav.bottom.transform = !state.modal.nav.bottom.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+
+    // pop controls
+    if (document.getElementById('nav_button_2_1') != null) {
+        document.getElementById('nav_button_2_1').addEventListener('click', (event) => {
             // filter library
             setTimeout(function() {
                 state.modal.pop.top.transform = !state.modal.pop.top.transform;
@@ -1052,20 +1143,138 @@ let handle_firebase_events = () => {
             }, 0);
         });
     };
-    if (document.getElementById('nav_button_3') != null) {
-        document.getElementById('nav_button_3').addEventListener('click', (event) => {
+
+    if (document.getElementById('nav_button_2_2') != null) {
+        document.getElementById('nav_button_2_2').addEventListener('click', (event) => {
             // filter library
             setTimeout(function() {
-                state.modal.pop.top.transform = !state.modal.pop.top.transform;
+                state.modal.pop.right.transform = !state.modal.pop.right.transform;
                 get_dimensions();
             }, 0);
         });
     };
-    if (document.getElementById('nav_button_4') != null) {
-        document.getElementById('nav_button_4').addEventListener('click', (event) => {
+
+    if (document.getElementById('nav_button_2_3') != null) {
+        document.getElementById('nav_button_2_3').addEventListener('click', (event) => {
             // filter library
             setTimeout(function() {
-                state.modal.pop.top.transform = !state.modal.pop.top.transform;
+                state.modal.pop.left.transform = !state.modal.pop.left.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+
+    if (document.getElementById('nav_button_2_4') != null) {
+        document.getElementById('nav_button_2_4').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.pop.bottom.transform = !state.modal.pop.bottom.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+
+    // pages controls
+    if (document.getElementById('nav_button_3_1') != null) {
+        document.getElementById('nav_button_3_1').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.page.top.transform = !state.modal.page.top.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+    if (document.getElementById('nav_button_3_2') != null) {
+        document.getElementById('nav_button_3_2').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.page.left.transform = !state.modal.page.left.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+    if (document.getElementById('nav_button_3_3') != null) {
+        document.getElementById('nav_button_3_3').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.page.right.transform = !state.modal.page.right.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+    if (document.getElementById('nav_button_3_4') != null) {
+        document.getElementById('nav_button_3_4').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.page.bottom.transform = !state.modal.page.bottom.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+
+    // menu controls
+    if (document.getElementById('nav_button_4_1') != null) {
+        document.getElementById('nav_button_4_1').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.menu.top.transform = !state.modal.menu.top.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+    if (document.getElementById('nav_button_4_2') != null) {
+        document.getElementById('nav_button_4_2').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.menu.left.transform = !state.modal.menu.left.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+    if (document.getElementById('nav_button_4_3') != null) {
+        document.getElementById('nav_button_4_3').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.menu.right.transform = !state.modal.menu.right.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+    if (document.getElementById('nav_button_4_4') != null) {
+        document.getElementById('nav_button_4_4').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                state.modal.menu.bottom.transform = !state.modal.menu.bottom.transform;
+                get_dimensions();
+            }, 0);
+        });
+    };
+
+
+    // post view controls
+    if (document.getElementById('pagination_left') != null) {
+        document.getElementById('pagination_left').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                paginate_limit -= 1;
+                paginate_start -= 1;
+                alert('paginate_start: ' + paginate_start + ', paginate_limit: ' + paginate_limit);
+                get_db_guides();
+                get_dimensions();
+            }, 0);
+        });
+    };
+
+    
+    // post view controls
+    if (document.getElementById('pagination_right') != null) {
+        document.getElementById('pagination_right').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                paginate_limit += 1;
+                paginate_start += 1;
+                alert('paginate_start: ' + paginate_start + ', paginate_limit: ' + paginate_limit);
+                get_db_guides();
                 get_dimensions();
             }, 0);
         });
@@ -1319,11 +1528,33 @@ let handle_firebase_events = () => {
         });
     };
     
+    if (document.getElementById('controls_sequence_back_home') != null) {
+        document.getElementById('controls_sequence_back_home').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                sequence_back_home();
+                get_dimensions();
+            }, 0);
+        });
+    };
+    
+    if (document.getElementById('controls_sequence_start_0') != null) {
+        document.getElementById('controls_sequence_start_0').addEventListener('click', (event) => {
+            // filter library
+            setTimeout(function() {
+                sequence_start_0();
+                get_dimensions();
+            }, 0);
+        });
+    };
+    
     if (document.getElementById('dark_view_toggle') != null) {
         document.getElementById('dark_view_toggle').addEventListener('click', (event) => {
             // filter library
             setTimeout(function() {
-                dark_view = !dark_view;
+                state.ux.orientation.dark_view = !state.ux.orientation.dark_view;
+
+                db_update_dark_mode("users", valid_user.id);
                 get_dimensions();
             }, 0);
         });
@@ -1465,6 +1696,17 @@ let check_ui_after_auth = () => {
         localStorage.setItem("user", "logged_user");
         localStorage.setItem("user_id", valid_user.id);
 
+        if (valid_user.setting.dark == false) {
+            dark_view = false;
+        };
+
+        if (valid_user.setting.dark == true) {
+            dark_view = true;
+        };
+
+        alert('state.ux.orientation.dark_view: ' + state.ux.orientation.dark_view + 'valid_user.setting.dark: ' +valid_user.setting.dark);
+        get_dimensions();
+
         document.getElementById('account-details').innerHTML = `
             id: ${valid_user.id}
             title: ${valid_user.title}
@@ -1483,7 +1725,7 @@ let check_ui_after_auth = () => {
             email: ${valid_user.title}
         `;
 
-        document.getElementById('nav_button_2').innerHTML = `
+        document.getElementById('nav_button_2_1').innerHTML = `
         <div class="position_relative gui_link_settings_white
                 width_50 height_50 float_left"></div>
         `;
@@ -1500,6 +1742,12 @@ let check_ui_after_auth = () => {
                         <input placeholder="user_instagram" type="text" id="user_instagram"/>
                         <input placeholder="user_twitter" type="text" id="user_twitter"/>
                         <input placeholder="user_vimeo" type="text" id="user_vimeo"/>
+                        
+                        <input class="display_none" type="file" value="upload" id="fileButton_profile" accept="image/*" title="&nbsp;"/>
+                        <progress value="0" max="100" id="uploader_profile">0%</progress>
+                        <p id="upload_progress_profile">images only</p>
+                        <label for="fileButton_profile">Select file</label>
+                        <div id="upload_details_profile"></div>
 
                         <div id="edit_button" class="">edit</div>
 
@@ -1519,7 +1767,11 @@ let check_ui_after_auth = () => {
                 
                 <input class="display_none" type="file" value="upload" id="fileButton" accept="image/*" title="&nbsp;"/>
                 <input placeholder="title" type="text" id="create_title" required />
+                <input placeholder="sticky" type="text" id="create_sticky" required />
                 <input placeholder="tagline" type="text" id="create_tagline" required />
+                <input placeholder="hashtag" type="text" id="create_hashtag" required />
+                <input placeholder="type" type="text" id="create_type" required />
+                <input placeholder="category" type="text" id="create_category" required />
                 <input placeholder="content" type="text" id="create_content" required />
                 <input placeholder="youtube" type="text" id="create_youtube" required />
                 <input placeholder="instagram" type="text" id="create_instagram" required />
@@ -1527,6 +1779,7 @@ let check_ui_after_auth = () => {
                 <input placeholder="twitch" type="text" id="create_twitch" required />
                 <input placeholder="spotify" type="text" id="create_spotify" required />
                 <input placeholder="vimeo" type="text" id="create_vimeo" required />
+
                 <progress value="0" max="100" id="uploader">0%</progress>
                 <p id="upload_progress">images only</p>
                 <label for="fileButton">Select file</label>
@@ -1562,19 +1815,23 @@ let check_ui_after_auth = () => {
         `;
 
 
-        document.getElementById('nav_button_2').innerHTML = `
+        document.getElementById('nav_button_2_1').innerHTML = `
         <div class="position_relative gui_link_add_white
                 width_50 height_50 float_left"></div>
         `;
 
         document.getElementById('modal-edit').innerHTML = ``;
-        document.getElementById('modal-edit-post').innerHTML = ``;
+
+        if (document.getElementById('modal-edit-post') != null) {
+            document.getElementById('modal-edit-post').innerHTML = ``;
+        };
         document.getElementById('modal-create').innerHTML = ``;
 
         document.getElementById('modal-signup').innerHTML = `
 
          <form id="signup-form">
          <p>modal-signup</p>
+            <input placeholder="username" type="type" id="user_username" required />
             <input placeholder="email" type="email" id="signup-email" required />
             <input placeholder="password" type="password" id="signup-password" required />
             <div id="signup_submit" class="">sign up</div>
@@ -1687,6 +1944,67 @@ let check_ui_after_auth = () => {
         });
     };
 
+
+    if ((document.getElementById('uploader_profile')) != null) {
+        // upload
+        let uploader_profile = document.getElementById('uploader_profile');
+        let upload_progress_profile = document.getElementById('upload_progress_profile');
+        let fileButton_profile = document.getElementById('fileButton_profile');
+        fileButton_profile.addEventListener('change', (event) => {
+
+                // assign metadata
+                let metadata = {
+                       customMetadata: {
+                    'location': 'Yosemite, CA, USA',
+                    'activity': 'Hiking'
+                      }
+                };
+
+                // get file
+                let file = event.target.files[0];
+
+                // create a storage ref
+                let storageRef = firebase.storage().ref('sweet_gifs/' + file.name);
+
+                // upload file
+                let task = storageRef.put(file, metadata);
+
+                // upload progress bar
+                task.on('state_changed',
+                function progress(snapshot){
+                    let progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                    console.log('Upload is ' + progress + '% done');
+
+                    uploader_profile.value = progress;
+                    upload_progress_profile.innerHTML = progress;
+                },
+                
+                function error(err) {
+
+                },
+                
+                function complete(snapshot) {
+
+                    setTimeout(function () {
+                        uploader_profile.value = 0;
+                        upload_progress_profile.innerHTML = ``;
+                    }, 2000);
+                    // Handle successful uploads on complete
+                      // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+                      task.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+                        console.log('File available at', downloadURL);
+                        upload_details_profile = downloadURL;
+                        document.getElementById('upload_details_profile').innerHTML = `upload complete, available at: ${upload_details_profile}`;
+                        document.getElementById('upload_details_profile').innerHTML += `
+                        <div id="uploaded_image_profile" style="background-image: url(${(upload_details_profile)})">
+                        </div>`;
+                      });
+                }
+            );
+
+        });
+    };
+
     if ((document.getElementById('signout')) != null) {
 
         // signout / un-auth
@@ -1743,9 +2061,11 @@ let get_db_guides = () => {
         console.log(snapshot.docs);
         posts_guides = [];
         filtered_posts_guides = [];
-        sorted_filtered_posts_guides = [];
         document.getElementById('posts_all').innerHTML = ``;
         document.getElementById('posts_filtered_sorted').innerHTML = ``;
+        document.getElementById('posts_filtered_sorted_type').innerHTML = ``;
+        document.getElementById('posts_filtered_sorted_category').innerHTML = ``;
+        document.getElementById('posts_filtered_sorted_hashtag').innerHTML = ``;
         document.getElementById('posts_filtered').innerHTML = ``;
 
         snapshot.docs.forEach(doc => {
@@ -1890,27 +2210,117 @@ let get_db_guides = () => {
             );
         });
 
-
         //  FILTERED BY TITLE *sorted*
+        let sorted_filtered_posts_guides = [];
         if ((sorted_filtered_posts_guides) != null) {
             for (var i = 0; i < posts_guides.length; i++) {
-                if (
-                    // title filter
-                    (posts_guides[i].title.toString().toLowerCase().includes(document.getElementById('element_input_filter').value))
-                    ||
-                    // if filter
-                    (posts_guides[i].id.toString().includes(document.getElementById('element_input_filter').value))
 
-                    ) {
-                    sorted_filtered_posts_guides.push(posts_guides[i]);
+                if ( i >= 0 && i <= 3) {
+                    if (
+                        // title filter
+                        (posts_guides[i].title.toString().toLowerCase().includes(document.getElementById('element_input_filter').value))
+                        ||
+                        // if filter
+                        (posts_guides[i].id.toString().includes(document.getElementById('element_input_filter').value))
+
+                        ) {
+                        sorted_filtered_posts_guides.push(posts_guides[i]);
+                    };
                 };
+
                 console.log('sorted_filtered_posts_guides[i]');
                 console.log(sorted_filtered_posts_guides[i]);
             };
         };
 
+        //  FILTERED BY TITLE *sorted*
+        let sorted_filtered_posts_guides_type = [];
+        paginate = 0;
+        if ((sorted_filtered_posts_guides_type) != null) {
+            for (var i = 0; i < posts_guides.length; i++) {
+                if (
+                    (paginate < (paginate_limit)
+                        )
+                    ) {
+                    //if ( i >= 0 && i <= 3) {
+                        if ((posts_guides[i].type) != null) {
+                            if (
+                                // title filter
+                                (posts_guides[i].title.toString().toLowerCase().includes(document.getElementById('element_input_filter').value))
+                                ||
+                                // if filter
+                                (posts_guides[i].id.toString().includes(document.getElementById('element_input_filter').value))
+                                &&
+                                // if filter
+                                (posts_guides[i].type.toString() == 'type')
+
+                                ) {
+                                sorted_filtered_posts_guides_type.push(posts_guides[i]);
+                                paginate += 1;
+                            };
+                        };
+                    //};
+                };
+
+                console.log('sorted_filtered_posts_guides_type[i]');
+                console.log(sorted_filtered_posts_guides_type[i]);
+            };
+        };
+
+        //  FILTERED BY TITLE *sorted*
+        let sorted_filtered_posts_guides_category = [];
+        if ((sorted_filtered_posts_guides_category) != null) {
+            for (var i = 0; i < posts_guides.length; i++) {
+
+                if ( i >= 0 && i <= 3) {
+                    if (
+                        // title filter
+                        (posts_guides[i].title.toString().toLowerCase().includes(document.getElementById('element_input_filter').value))
+                        ||
+                        // if filter
+                        (posts_guides[i].id.toString().includes(document.getElementById('element_input_filter').value))
+                        &&
+                        // if filter
+                        (posts_guides[i].category.toString().includes('category'))
+
+                        ) {
+                        sorted_filtered_posts_guides_category.push(posts_guides[i]);
+                    };
+                };
+
+                console.log('sorted_filtered_posts_guides_category[i]');
+                console.log(sorted_filtered_posts_guides_category[i]);
+            };
+        };
+
+        //  FILTERED BY TITLE *sorted*
+        let sorted_filtered_posts_guides_hashtag = [];
+        if ((sorted_filtered_posts_guides_hashtag) != null) {
+            for (var i = 0; i < posts_guides.length; i++) {
+
+                if ( i >= 0 && i <= 3) {
+                    if (
+                        // title filter
+                        (posts_guides[i].title.toString().toLowerCase().includes(document.getElementById('element_input_filter').value))
+                        ||
+                        // if filter
+                        (posts_guides[i].id.toString().includes(document.getElementById('element_input_filter').value))
+                        &&
+                        // if filter
+                        (posts_guides[i].hashtag.toString().includes('hashtag'))
+
+                        ) {
+                        sorted_filtered_posts_guides_hashtag.push(posts_guides[i]);
+                    };
+                };
+
+                console.log('sorted_filtered_posts_guides_hashtag[i]');
+                console.log(sorted_filtered_posts_guides_hashtag[i]);
+            };
+        };
+
         // render SORTED && FILTERED BY TITLE *sorted* post to view 
-        fb_sorted_library(sorted_filtered_posts_guides, 'titleup').forEach(post => {
+        fb_sorted_library(sorted_filtered_posts_guides, 'titledown').forEach(post => {
             console.log(post);
             let element = document.createElement('div');
 
@@ -1924,6 +2334,63 @@ let get_db_guides = () => {
             });
 
             document.getElementById('posts_filtered_sorted').appendChild(
+                element
+            );
+        });
+
+        // render SORTED && FILTERED BY TITLE *sorted* post to view 
+        fb_sorted_library(sorted_filtered_posts_guides_type, 'titledown').forEach(post => {
+            console.log(post);
+            let element = document.createElement('div');
+
+            element.setAttribute("id", `post`);
+            element.classList = `width_100 margin_auto position_relative float_left ${post.sticky}`
+            element.innerHTML = `${post.id}${post.type}
+            `
+            element.addEventListener("click", function(event) {
+                alert('sorted_filtered_posts_guides_type');
+                //db_delete_user("users", post.id);
+            });
+
+            document.getElementById('posts_filtered_sorted_type').appendChild(
+                element
+            );
+        });
+
+        // render SORTED && FILTERED BY TITLE *sorted* post to view 
+        fb_sorted_library(sorted_filtered_posts_guides_category, 'titledown').forEach(post => {
+            console.log(post);
+            let element = document.createElement('div');
+
+            element.setAttribute("id", `post`);
+            element.classList = `width_100 margin_auto position_relative float_left`
+            element.innerHTML = `${post.id}
+            `
+            element.addEventListener("click", function(event) {
+                alert('delete post');
+                db_delete_user("users", post.id);
+            });
+
+            document.getElementById('posts_filtered_sorted_category').appendChild(
+                element
+            );
+        });
+
+        // render SORTED && FILTERED BY TITLE *sorted* post to view 
+        fb_sorted_library(sorted_filtered_posts_guides_hashtag, 'titledown').forEach(post => {
+            console.log(post);
+            let element = document.createElement('div');
+
+            element.setAttribute("id", `post`);
+            element.classList = `width_100 margin_auto position_relative float_left ${post.sticky}`
+            element.innerHTML = `${post.id}
+            `
+            element.addEventListener("click", function(event) {
+                alert('delete post');
+                db_delete_user("users", post.id);
+            });
+
+            document.getElementById('posts_filtered_sorted_hashtag').appendChild(
                 element
             );
         });
@@ -2120,6 +2587,10 @@ let db_create_post = () => {
     db.collection('users').doc(ref.id).set({
         title: create_title.value,
         tagline: create_tagline.value,
+        type: create_type.value,
+        category: create_category.value,
+        sticky: create_sticky.value,
+        hashtag: create_hashtag.value,
         child: 'post',
         content: create_content.value,
         photo: upload_details,
@@ -2140,6 +2611,10 @@ let db_create_post = () => {
         console.log('guide made');
         create_title.value = ``;
         create_tagline.value = ``;
+        create_hashtag.value = ``;
+        create_type.value = ``;
+        create_category.value = ``;
+        create_sticky.value = ``;
         create_content.value = ``;
         create_youtube.value = ``;
         create_vimeo.value = ``;
@@ -2147,6 +2622,10 @@ let db_create_post = () => {
         create_twitter.value = ``;
         create_instagram.value = ``;
         create_spotify.value = ``;
+
+        just_made = `http://antenuh.com/p/${ref.id}`
+        alert(just_made);
+
         get_db_guides();
     }).catch(err => {
         console.log(err.message)
@@ -2155,11 +2634,14 @@ let db_create_post = () => {
 
 // create user
 let db_create_user = (cred) => {
+
+    let username = document.getElementById('user_username').value;
     // create user after auth
     db.collection('users').doc(cred.user.uid).set({
         id: cred.user.uid,
         email: cred.user.email,
-        title: cred.user.email,
+        title: username,
+        setting: {dark: state.ux.orientation.dark_view},
         child: 'user'
     }).then(()=> {
         console.log(cred);
@@ -2172,6 +2654,9 @@ let db_create_user = (cred) => {
         signup_email.value = ``;
         signup_password.value = ``;
         get_db_guides();
+
+        just_made = `http://antenuh.com/${username}`
+        alert(just_made);
     }).catch(err => {
         console.log(err.message)
     });
@@ -2182,8 +2667,8 @@ let db_update_user = (collection, deletable_id) => {
     
     console.log(deletable_id);
 
-    if (upload_details == ``) {
-        upload_details = `
+    if (upload_details_profile == ``) {
+        upload_details_profile = `
             https://firebasestorage.googleapis.com/v0/b/antenuh-9d2ca.appspot.com/o/sweet_gifs%2Fdownload.jpg?alt=media&token=4af1439e-7b46-4c97-8fae-3b10f6c0a8e1
         `
     };
@@ -2193,7 +2678,7 @@ let db_update_user = (collection, deletable_id) => {
     db.collection(collection).doc(deletable_id).set({
         id: deletable_id,
         email: stored_auth_user_cred.email,
-        photo: upload_details,
+        photo: upload_details_profile,
         title: document.getElementById('user_title').value,
         youtube: document.getElementById('user_youtube').value,
         twitch: document.getElementById('user_twitch').value,
@@ -2267,6 +2752,17 @@ let db_update_post = (collection, deletable_id) => {
     });
 };
 
+let db_update_dark_mode = (collection, deletable_id) => {
+
+    db.collection("users").doc(deletable_id).update({setting: {dark:state.ux.orientation.dark_view} }).then(function() {
+        //alert("db_update_post_views Document successfully written!, post");
+
+        get_db_guides();
+    }).catch(function(error) {
+        console.error("Error writing document: ", error);
+    });
+};
+
 let db_update_post_views = (collection, deletable_id) => {
 
     let detail;
@@ -2319,7 +2815,6 @@ let db_update_post_likes = (collection, deletable_id) => {
         console.error("Error writing document: ", error);
     });
 };
-
 
 let db_update_comments = (collection, deletable_id) => {
 
