@@ -1,15 +1,12 @@
 // Imports
 import from_index from '../index.js';
-import elements from './elements';
 
 let state = '';
 let drag_from = {};
 let drop_to = {};
 
 let handle_Function_Scroll = (event) => {
-
     state = from_index.handle_ReturnState();
-    
     if (event) {
         
         let scroll = {
@@ -169,9 +166,6 @@ let handle_Function_Scroll = (event) => {
           state.interaction.root.scrollTop;
 
     };
-
-
-    from_index.handle_ReturnedState(state);
 };
 
 let handle_Function_Device_Orientation_Change = (event) => {
@@ -182,8 +176,6 @@ let handle_Function_Device_Orientation_Change = (event) => {
     console.log('state.events.motion.orientation_string_history');
     console.log(state.events.motion.orientation_string_history);
     console.log('handle_Function_Device_Orientation_Change');
-
-    from_index.handle_ReturnedState(state);
 };
 
 let handle_Function_Device_DOMContentLoaded = (event) => {
@@ -264,7 +256,6 @@ let handle_Function_Device_DOMContentLoaded = (event) => {
 
     from_index.act_after_check_url();
     console.log('handle_Function_Device_DOMContentLoaded');
-    from_index.handle_ReturnedState(state);
 };
 
 let handle_Function_Device_Resize = (event) => {
@@ -348,7 +339,6 @@ let handle_Function_Device_Resize = (event) => {
     };
 
     console.log('handle_Function_Device_Resize');
-    from_index.handle_ReturnedState(state);
 };
 
 let handle_Function_Device_Orientation = (event) => {
@@ -360,16 +350,12 @@ let handle_Function_Device_Orientation = (event) => {
     state.events.motion.orientation_history.push({event});
     console.log('state.events.motion.orientation_history');
     console.log(state.events.motion.orientation_history);
-
     console.log('handle_Function_Device_Orientation');
-    from_index.handle_ReturnedState(state);
 };
 
 let handle_Function_Device_Load = (event) => {
     state = from_index.handle_ReturnState();
-    
     console.log('handle_Function_Device_Load');
-    from_index.handle_ReturnedState(state);
 };
 
 let handle_Function_Mouse_Move = (event) => {
@@ -395,9 +381,7 @@ let handle_Function_Mouse_Move = (event) => {
         console.log('state.events.mouse.history');
         console.log(state.events.mouse.history);
     };
-
     console.log('handle_Function_Mouse_Move');
-    from_index.handle_ReturnedState(state);
 };
 
 let handle_Function_Mouse_Enter = (event) => {
@@ -409,9 +393,7 @@ let handle_Function_Mouse_Enter = (event) => {
         console.log('state.events.mouse_enter.history');
         console.log(state.events.mouse_enter.history);
     };
-
     console.log('handle_Function_Mouse_Enter');
-    from_index.handle_ReturnedState(state);
 };
 
 let handle_Function_Mouse_Leave = (event) => {
@@ -423,9 +405,7 @@ let handle_Function_Mouse_Leave = (event) => {
         console.log('state.events.mouse_leave.history');
         console.log(state.events.mouse_leave.history);
     };
-
     console.log('handle_Function_Mouse_Leave');
-    from_index.handle_ReturnedState(state);
 };
 
 let handle_Function_Mouse_Up = (event) => {
@@ -448,9 +428,7 @@ let handle_Function_Mouse_Up = (event) => {
         console.log('state.events.mouse_drag_drop.history');
         console.log(state.events.mouse_drag_drop.history);
     };
-
     console.log('handle_Function_Mouse_Up');
-    from_index.handle_ReturnedState(state);
 };
 
 let handle_Function_Mouse_Down = (event) => {
@@ -465,9 +443,7 @@ let handle_Function_Mouse_Down = (event) => {
         console.log('state.events.mouse_down.history');
         console.log(state.events.mouse_down.history);
     };
-
     console.log('handle_Function_Mouse_Down');
-    from_index.handle_ReturnedState(state);
 };
 
 let handle_Function_Key_Down = (event) => {
@@ -512,11 +488,7 @@ let handle_Function_Key_Down = (event) => {
     };
 
     if (event.keyCode == 32) {
-
         state.interaction.player_1.cycles.walking = !state.interaction.player_1.cycles.walking;
-
-        
-
     };
 
     if (event.keyCode == 13) {
@@ -562,11 +534,6 @@ let handle_Function_Key_Down = (event) => {
         event.preventDefault();
     };
 
-    if (event.keyCode == 49) {
-        state.modal.nav.top.transform = !state.modal.nav.top.transform;
-        elements.shot_action_single_vomit();        
-    };
-
     if (event.keyCode == 192) {
         from_index.get_db_guides();
     };
@@ -592,7 +559,6 @@ let handle_Function_Key_Down = (event) => {
     };
 
     console.log('handle_Function_Key_Down');
-    from_index.handle_ReturnedState(state);
 };
 
 let handle_Function_Key_Up = (event) => {
@@ -620,8 +586,6 @@ let handle_Function_Key_Up = (event) => {
             
         };
     };
-
-    from_index.handle_ReturnedState(state);
 };
 
 let handle_Function_Touch_Move = (event) => {
@@ -632,8 +596,6 @@ let handle_Function_Touch_Move = (event) => {
         console.log('state.events.touch.history');
         console.log(state.events.touch.history);
     };
-
-    from_index.handle_ReturnedState(state);
 };
 
 let handle_Function_Touch_Start = (event) => {
@@ -645,8 +607,6 @@ let handle_Function_Touch_Start = (event) => {
         console.log('state.events.touch_start.history');
         console.log(state.events.touch_start.history);
     };
-
-    from_index.handle_ReturnedState(state);
 };
 
 let handle_Function_Touch_End = (event) => {
@@ -664,9 +624,7 @@ let handle_Function_Touch_End = (event) => {
 
         console.log('state.events.touch_end.history');
         console.log(state.events.touch_end.history);
-    };
-
-    from_index.handle_ReturnedState(state);
+       };
 };
 
 let handle_Function_Device_Motion = (event) => {
@@ -756,7 +714,6 @@ let handle_Function_Device_Motion = (event) => {
     state.events.motion.event_accelerationIncludingGravity_z = event.accelerationIncludingGravity.z;
 
     console.log('handle_Function_Device_Motion');
-    from_index.handle_ReturnedState(state);
 };
 
 let handle_ReturnState_fromEvents = () => {
