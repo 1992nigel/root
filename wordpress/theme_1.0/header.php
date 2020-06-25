@@ -3,6 +3,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="Description" content="digital art, hardware tips, front-end development, back-end engineering, ui/ux design + tutorials">
 
 
 	<?php if ( is_front_page() && is_home() ) : ?>
@@ -42,7 +43,7 @@
 		</a>
 	<?php endif; ?>
 
-	<p class="site-tagline"><a href="#">digital art, </a> <a href="#">hardware, </a><a href="#"> front-end,</a><a href="#">backend </a><a href="#"> ui/ux</a> <a href="#"> + tech "infotainment"</a></p>
+	<p class="site-tagline"><a href="#"> digital art </a><span> , </span><a href="#"> hardware </a><span> , </span><a href="#"> front-end </a><span> , </span><a href="#"> backend </a><span> , </span><a href="#"> ui/ux </a><span> + </span><a href="#"> other "infotainment" </a><span> . </span></p>
 
 	<div class="menu">
 		<?php get_search_form(); ?>

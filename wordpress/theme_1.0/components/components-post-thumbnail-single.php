@@ -21,7 +21,9 @@
 		if ( has_post_thumbnail() ) {
 			echo '
 			<div class="copy_Link">
-				<input type="text" value="'. $url.'">
+				
+				<label for="copy_Link">share gif</label>
+				<input name="copy_Link" type="text" value="'. $url.'">
 				<button onclick="copy_Link()">share</button>
 			</div>';
 		}

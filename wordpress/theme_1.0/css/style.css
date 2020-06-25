@@ -1,3 +1,17 @@
+
+body {
+	overflow-x: hidden;
+	width: 100vw;
+}
+
+.nav-next {
+	float: left;
+}
+
+.nav-previous {
+	float: right;
+}
+
 .flat {
 	width: 100%;
 }
@@ -41,11 +55,16 @@
 .site-name {
 	width: 100%;
 	text-align: center;
+	display: flex;
 }
 
 .site-tagline {
 	width: 100%;
 	text-align: center;
+}
+
+.menu {
+	padding: 10px;
 }
 
 /* title */
@@ -56,40 +75,61 @@ a.site-name, a.site-name {
 }
 
 a.site-name h1, a.site-name h2 {
+	position: relative;
 	font-size: 128px;
 	line-height: 128px;
-	letter-spacing: -12px;
+	letter-spacing: -18px;
 	-webkit-text-stroke: 1px #000000;
-	margin: auto;
+	margin: 32px auto;
 }
 
 a.site-name h1 span, a.site-name h2 span {
-	font-size: 64px;
-	line-height: 64px;
-	letter-spacing: -6px;
+	font-size: 32px;
+	line-height: 32px;
+	letter-spacing: -2px;
 	-webkit-text-stroke: 1px #000000;
 	text-decoration: none;
-	color: #ffffff;
+	color: #000000;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
 
 .site-tagline {
-	font-size: 48px;
-	line-height: 48px;
-	letter-spacing: -1px;
+	font-size: 32px;
+	line-height: 64px;
+	letter-spacing: -2px;
 	-webkit-text-stroke: 1px #000000;
 	text-decoration: none;
+}
+
+.site-tagline span {
+	margin: 0 5px;
 }
 
 .site-tagline a, .site-tagline a {
 	text-decoration: none;
 	color: #ffffff;
+	border-bottom: 1px solid #000000;
 }
 
 /* post */
 
+.post {
+	.margin-bottom: 48px;
+}
+
 .single .post {
 	min-height: 100vh;
 	clear: both;
+}
+
+.single a.site-name {
+	width: -webkit-fill-available;
+}
+
+.single .site-tagline {
+	width: -webkit-fill-available;
 }
 
 h1.entry-title {
@@ -132,6 +172,13 @@ h1.entry-title {
 	clear: right;
 }
 
+.home .post:nth-child(7) {
+	width: 50%;
+	float: left;
+	clear: right;
+}
+
+
 .components-post-title a h2, .components-post-title a {
 	font-size: 48px;
 	line-height: 48px;
@@ -143,10 +190,28 @@ h1.entry-title {
 
 .author-details-background-image {
 	float: left;
-	width: 12px;
-	height: 12px;
+	width: 15px;
+	height: 15px;
 	background-size: cover;
 	background-position: center;
+}
+
+.components-post-author a {
+	text-decoration: none;
+	border-bottom: 1px solid #000;
+}
+
+.components-post-author a.nickname {
+
+}
+.components-post-author a.link {
+	float: right;
+}
+.components-post-author a.url {
+	float: right;
+}
+.components-post-author a.email {
+	float: right;
 }
 
 /* caption */
@@ -175,7 +240,7 @@ h1.entry-title {
 
 .image-container {
 	width: 100%;
-	height: 480px;
+	max-height: 480px;
 	display: flex;
 }
 
@@ -183,14 +248,15 @@ h1.entry-title {
 	height: 100%;
 	width: auto;
 	margin: auto;
+	max-width: 100%;
 }
 
 /* ad inserter */
 .ad-insert {
-	margin: auto !important;;
-	width: 100%;
-	clear: both;
-	display: flex;
+    margin: 128px auto !important;
+    width: 100%;
+    clear: both;
+    display: inline-flex;
 }
 
 .ad-insert iframe {
@@ -233,4 +299,110 @@ div.spinner {
 
 .wp-block-embed-spotify iframe {
 	max-width: 548px !important;
+}
+
+
+/* responsive */
+
+/**
+ * desktop/tablet
+*/
+@media screen and (min-width: 1000px) {
+
+
+}
+
+/**
+ * phone
+*/
+@media screen and (max-width: 1000px) {
+
+	.main-navigation a {
+		line-height: 48px;
+		height: 48px;
+		border-radius: 0;
+		border: 1px solid #000000;
+	}
+ 	
+ 	.searchform > div #s {
+ 		line-height: 48px;
+ 		height: 48px;
+ 		border-radius: 0;
+ 		border: 1px solid #000000;
+ 	}
+
+ 	.searchform > div #searchsubmit {
+ 		line-height: 48px;
+ 		height: 48px;
+ 		border-radius: 0;
+ 		border: 1px solid #000000;
+ 	}
+
+	.copy_Link input {
+		line-height: 48px;
+		height: 48px;
+		border-radius: 0;
+		border: 1px solid #000000;
+	}
+
+ 	.author-details-background-image {
+    	width: 48px;
+    	height: 48px;
+ 	}
+
+ 	.components-post-author a {
+ 		line-height: 48px;
+ 	}
+
+ 	.entry-cats {
+ 		line-height: 48px;
+ 	}
+
+	.entry-tags {
+ 		line-height: 48px;
+ 	}
+
+	/* post preview */
+
+	.home .post:nth-child(1) {
+		width: 100%;
+		float: left;
+	}
+
+	.home .post:nth-child(2) {
+		width: 100%;
+		float: left;
+	}
+
+	.home .post:nth-child(3) {
+		width: 100%;
+		float: left;
+	}
+
+	.home .post:nth-child(4) {
+		width: 100%;
+		float: left;
+		clear: right;
+	}
+
+	.home .post:nth-child(5) {
+		width: 100%;
+		float: left;
+	}
+
+	.home .post:nth-child(6) {
+		width: 100%;
+		float: left;
+		clear: right;
+	}
+
+	.home .post:nth-child(7) {
+		width: 100%;
+		float: left;
+		clear: right;
+	}
+
+  	.post {
+    	margin-bottom: 20px;
+  	}
 }

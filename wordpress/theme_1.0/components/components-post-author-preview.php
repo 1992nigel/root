@@ -16,17 +16,14 @@
 
 	?>
 
-	<a href="<?php echo $user_url ?>" class="author-details-background-image" style = "background-image: url('<?php echo get_avatar_url(get_the_author_meta('ID') , array(
+	<a aria-label="<?php echo $user_nickname ?>" href="<?php echo $user_url ?>" class="author-details-background-image" style = "background-image: url('<?php echo get_avatar_url(get_the_author_meta('ID') , array(
 	"size" => 450
 	)); ?>');">
 
 	</a>
-	<a href="<?php echo $user_url ?>"><span class="author"><?php echo $user_nickname ?></span></a>
-
-	<a href="<?php echo $user_link ?>"><span class="author">follow</span></a>
-	<a href="<?php echo $user_url ?>"><span class="author">tweet</span></a>
-
-	<a href="mailto:<?php echo $user_email ?>"><span class="author">email</span></a>
-
+	<a class="nickname" href="<?php echo $user_url ?>"><span class="author"><?php echo $user_nickname ?></span></a>
+	<a class="link" href="<?php echo $user_link ?>"><span class="author">follow</span></a>
+	<a class="url" href="<?php echo $user_url ?>"><span class="author">tweet</span></a>
+	<a class="email" href="mailto:<?php echo $user_email ?>"><span class="author">email</span></a>
 
 </div>

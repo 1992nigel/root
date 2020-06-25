@@ -10,6 +10,7 @@
 </div>
 <!-- copy title link -->
 <div class="copy_Link">
-	<input type="text" value="<?php the_permalink() ?>">
+	<label for="copy_Link">share post</label>
+	<input name="copy_Link" value="<?php the_permalink() ?>">
 	<button onclick="copy_Link()">share</button>
 </div>
