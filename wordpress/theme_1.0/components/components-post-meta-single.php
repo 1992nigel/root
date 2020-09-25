@@ -32,6 +32,42 @@
 	</ul>
 </div>
 
+<div class="formats">
+
+	<?php if ( has_post_format('gallery') ): ?>
+		<p>gallery</p>
+	<?php endif; ?>
+
+	<?php if ( ! ((has_post_format('gallery')) && (has_post_format('aside')) ) ): ?>
+		<p>standard</p>		
+	<?php endif; ?>
+
+	<?php if ( has_post_format('aside') ): ?>
+		<p>aside</p>		
+	<?php endif; ?>
+
+	<?php if ( has_post_format('link') ): ?>
+		<p>link</p>
+	<?php endif; ?>
+
+	<?php if ( has_post_format('image') ): ?>
+		<p>image</p>
+	<?php endif; ?>
+
+	<?php if ( has_post_format('video') ): ?>
+		<p>video</p>
+	<?php endif; ?>
+
+	<?php if ( has_post_format('audio') ): ?>
+		<p>audio</p>
+	<?php endif; ?>
+
+	<?php if ( has_post_format('chat') ): ?>		
+		<p>chat</p>
+	<?php endif; ?>
+
+</div>
+
 <!-- date & views -->
 <div class="entry-date-views flat">
 

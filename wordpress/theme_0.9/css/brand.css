@@ -1,0 +1,358 @@
+
+
+/* night */
+
+html.night {
+	background: #040d14;
+}
+
+
+.night a.site-name {
+	color: #ffed00;
+}
+
+.night a.site-name h1 span.dotcom, .night a.site-name h2 span.dotcom{
+	color: #04080e;
+	background: #ffffff;
+}
+
+.night .site-tagline a, .night .site-tagline a{
+	color: #01ff8b;
+}
+
+.night body {
+	background: #04080e;
+}
+
+.night .components-post-title a h2, .night .components-post-title a {
+	color: #ffed00;
+}
+
+.night .single .components-post-title a h2, .night .single .components-post-title a {
+	color: #ffffff;
+}
+
+.night.entry-thumbnail-bg-info .single_line {
+	background: #04080e;
+}
+
+.night .menu #search {
+	background: #04080e;
+}
+
+.night .entry-thumbnail-bg-info .entry-cats-container a {
+	color: #ffffff;
+	background: #04080e;
+}
+
+.night .entry-thumbnail-bg-info .entry-tags-container a {
+	color: #01ff8b;
+	background: #04080e;
+}
+
+.night .components-post-author a.nickname {
+    color: #01ff8b;
+}
+
+.night .components-post-author a.link {
+	color: #01ff8b;
+}
+
+.night .components-post-author a.url {
+	color: #01ff8b;
+}
+
+.night .components-post-author a.email {
+	color: #01ff8b;
+}
+
+.night .entry-thumbnail-bg-info a h2 {
+	color: #ffed00;
+}
+
+.night .entry-thumbnail-bg-info .entry-date {
+	color: #ffffff;	
+}
+
+.night .entry-date-views .entry-date, .night .entry-date-views .entry-views {
+	color: #ffffff;
+}
+
+.night .formats p {
+	color: #ffffff;
+}
+
+.night .entry-thumbnail-bg-info .entry-subtitle {
+	color: #ffffff;
+}
+
+.night .entry-thumbnail-bg-info .entry-excerpt {
+	color: #ffffff;
+}
+
+.night .entry-thumbnail-bg-info .nickname {
+	color: #01ff8b;
+}
+
+.night .entry-thumbnail-bg-info .entry-format {
+	color: #ffffff;
+}
+
+.night .subtitle {
+	color: #ffffff;
+}
+
+.night .excerpt {
+	color: #ffffff;
+    margin: 0 auto 14px;
+}
+
+.night .entry-cats-container a {
+	background: #01ff8b;
+	color: #ffffff;
+}
+
+.night .entry-tags-container a {
+	background: #ffffff;
+	color: #01ff8b;
+}
+
+.night .edit a {
+    background: #01ff8b;
+    color: #ffffff;
+}
+
+.night .edit a:hover {
+    background: #ff018c;
+    color: #ffffff;
+}
+
+.night .copy_Link:after {
+	border-bottom: 12px solid #000000;
+}
+
+.night .single_line {
+	background: #04080e;
+}
+
+.night .entry-thumbnail-bg-info .entry-title {
+	background: #04080e;
+}
+
+.night .entry-thumbnail-bg-info .entry-subtitle {
+	background: #04080e;
+}
+
+.night .entry-thumbnail-bg-info .entry-excerpt {
+	background: #04080e;
+}
+
+.night .entry-thumbnail-bg-info .nickname {
+	background: #04080e;
+}
+
+.night .entry-thumbnail-bg-info .entry-format {
+	background: #04080e;
+}
+
+.night .copy_Link button {
+    background: #04080e;
+    color: #01ff8b;
+}
+
+.night .wp-block-image figcaption {
+    color: #5801ff;
+}
+
+.night .entry-content h2 {
+    color: #ffed00;
+}
+
+.night .entry-content p {
+    color: #ffffff;
+}
+
+.night .entry-content a {
+    color: #01ff8b;
+}
+
+.night .entry-content a:hover {
+    color: #ff018c;
+}
+
+.night .components-post-title a h2:hover, .night .components-post-title a:hover {
+    color: #ff018c;
+}
+
+.night .nav-next a, .night .nav-previous a{
+	color: #01ff8b;
+}
+
+.night .copy_Link:after {
+	position: absolute;
+	content: "";
+	width: 0px;
+	height: 0px;
+	border-bottom: 12px solid #ffffff;
+	border-right: 12px solid transparent;
+	border-top: 12px solid transparent;
+	border-left: 12px solid transparent;
+	bottom: 100%;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+
+.night ::placeholder {
+  color: #ffed00;
+}
+
+.night :-ms-input-placeholder {
+  color: #ffed00;
+}
+
+.night ::-ms-input-placeholder {
+  color: #ffed00;
+}
+
+.night .site-tagline a:active, .night .site-tagline a:active {
+	color: #ffed00;
+}
+
+.night .site-tagline a:hover, .night .site-tagline a:hover {
+	color: #ff018c;
+}
+
+.night .page-title span {
+	background: #ffed00;
+}
+
+.night .components-post-author a.nickname:hover,
+.night .components-post-author a.link:hover,
+.night .components-post-author a.url:hover,
+.night .components-post-author a.email:hover,
+.night .entry-thumbnail-bg-info .entry-title:hover,
+.night .entry-thumbnail-bg-info .nickname:hover,
+.night .entry-cats-container a:hover,
+.night .entry-tags-container a:hover {
+  color: #ff018c;
+}
+
+.night .entry-cats-container a:hover,
+.night .entry-tags-container a:hover {
+  background: #04080e;
+}
+
+/* bordered */
+
+.bordered .ad-insert iframe {
+	max-width: 978px;
+	border: 1px solid #000000;
+}
+
+.bordered .author-details-background-image {
+	border: 1px solid #000;
+}
+
+.bordered a.site-name h1, .bordered a.site-name h2 {
+	-webkit-text-stroke: 1px #000000;
+}
+
+.bordered a.site-name h1 span.dotcom, .bordered a.site-name h2 span.dotcom {
+	-webkit-text-stroke: 1px #000000;
+}
+
+.bordered .home .components-post-title a h2, .bordered .home .components-post-title a {
+	-webkit-text-stroke: 1px #000000;
+}
+
+.bordered .entry-content h2 {
+	-webkit-text-stroke: 1px #000000;
+}
+
+.bordered .entry-thumbnail-bg-info h3 {
+	-webkit-text-stroke: 1px #000000;
+}
+
+.bordered .thumbnail-bg {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border: 1px solid #000000;
+}
+
+.bordered .copy_Link input {
+    border: 1px solid #000000;
+}
+
+.bordered .copy_Link button {
+    border: 1px solid #000;
+	border-radius: 0px;
+}
+
+.bordered .copy_Link:after {
+	position: absolute;
+	content: "";
+	width: 0px;
+	height: 0px;
+	border-bottom: 12px solid #000000;
+	border-right: 12px solid transparent;
+	border-top: 12px solid transparent;
+	border-left: 12px solid transparent;
+	bottom: 100%;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.bordered .site-tagline a, .bordered .site-tagline a {
+	border-bottom: 1px solid #000000;
+	-webkit-text-stroke: 1px #000000;
+}
+
+.bordered .menu #search {
+	border: 1px solid #000000;
+}
+
+.bordered .components-post-author a {
+	border-bottom: 1px solid #000;
+}
+
+.bordered .entry-thumbnail-bg-info .single_line {
+	border: 1px solid #000000;
+}
+
+.bordered textarea:focus, .bordered input:focus{
+    outline: none;
+    width: -webkit-fill-available;
+	border: 1px solid #000000;
+	box-shadow: none;
+  	background-color: #ffed00 !important;
+}
+
+.bordered button:focus{
+    outline: none;
+	border: 1px solid #000000;
+	box-shadow: none;
+  	background-color: #ff018c !important;
+}
+
+/* responsive */
+
+/**
+ * phone
+*/
+@media screen and (max-width: 1000px) {
+
+	.bordered .main-navigation a {
+		border: 1px solid #000000;
+	}
+ 	
+ 	.bordered .menu #search {
+ 		border: 1px solid #000000;
+ 	}
+
+	.bordered .copy_Link input {
+		border: 1px solid #000000;
+	}
+}
