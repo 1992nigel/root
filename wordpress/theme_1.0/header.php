@@ -1,5 +1,5 @@
 <!doctype html>
-<html <?php language_attributes(); ?> class="">
+<html id="body" <?php language_attributes(); ?> class="">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -30,7 +30,7 @@
 	<script data-ad-client="ca-pub-8349031735725880" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	
 </head>
-<body id="body" <?php body_class(); ?>>
+<body <?php body_class(); ?>>
 
 <header class="header">
 

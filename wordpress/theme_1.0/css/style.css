@@ -6,11 +6,6 @@ article:nth-child(even) {
   background: #f9f9f9;
 }
 
-img {
-	width: 48px;
-	height: 48px;
-}
-
 textarea:focus, input:focus{
     outline: none;
 	text-align: center;
@@ -111,9 +106,24 @@ div.spinner {
 */
 @media screen and (max-width: 1000px) {
 
-	body {
-		width: 100vw;
-		overflow-x: hidden;
+
+	h1, h2, h3. h4, h5, h6 {
+		font-size: 48px;
+		line-height: 48px;
+	}
+
+	p {
+		font-size: 36px;
+		line-height: 48px;
+	}
+
+	a {
+		line-height: 48px;
+	}
+
+	img {
+		width: 48px;
+		height: 48px;
 	}
 
 }

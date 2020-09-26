@@ -1,0 +1,122 @@
+
+/* style */
+#search {
+  width: 100%;
+  border: 1px solid #000;
+}
+
+textarea#search, input#search{
+  outline: none;
+  text-align: center;
+  box-shadow: none;
+  border: none;
+  line-height: 48px;
+  font-size: 24px;
+}
+
+textarea#search:focus, input#search:focus{
+  outline: none;
+  text-align: center;
+  box-shadow: none;
+  border: none;
+  background: #000000;
+  color: #ffffff;
+}
+
+.searchTitle {
+    text-align: center;
+    font-size: 48px;
+}
+
+.searchContainer {
+  display: inline-grid;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.searchPosition {
+  display: inline-grid;
+  position: relative;
+  margin: auto;
+}
+
+
+/* responsive */
+
+/**
+ * desktop/tablet
+*/
+@media screen and (min-width: 1000px) {
+
+}
+
+/**
+ * phone
+*/
+@media screen and (max-width: 1000px) {
+
+
+  h1, h2, h3. h4, h5, h6 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  p {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  a {
+    line-height: 48px;
+  }
+
+  img {
+    width: 48px;
+    height: 48px;
+  }
+
+}
+
+/* ui switches */
+
+#body.ui_switch_search_true article {
+  display: none;
+}
+
+#body.ui_switch_search_true .searching_menu {
+}
+
+#body.ui_switch_search_false .searching_menu {
+  display: none;
+}
+
+
+/* style */
+
+.logo {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+.bg {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+.me {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./me.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
