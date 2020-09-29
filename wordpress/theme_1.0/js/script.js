@@ -2,7 +2,7 @@
 console.log('from script.js');
 
 // elements
-var search_menu = document.getElementById("search_menu");
+var search = document.getElementById("search");
 var body = document.getElementById("body");
 var main = document.getElementById("main");
 
@@ -41,9 +41,12 @@ function cLog(x) {
 }
 
 // events
-search_menu.addEventListener("click", function() {
+window.addEventListener("click", function() {
 
-  if (ui_switch_search == false) {
+  // check for focus
+  var isFocused = (document.activeElement === search);
+
+  if (!isFocused) {
     body.classList.add("ui_switch_search_false");
     body.classList.remove("ui_switch_search_true");
     ui_switch_search = true;
@@ -51,7 +54,7 @@ search_menu.addEventListener("click", function() {
     return;
   }
 
-  if (ui_switch_search == true) {
+  if (isFocused) {
     body.classList.remove("ui_switch_search_false");
     body.classList.add("ui_switch_search_true");
     ui_switch_search = false;
@@ -59,6 +62,7 @@ search_menu.addEventListener("click", function() {
     return;
   }
 
+  console.log(isFocused);
 
 });
 

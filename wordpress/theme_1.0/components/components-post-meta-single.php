@@ -33,39 +33,39 @@
 </div>
 
 <div class="formats">
+	<p>
+		<?php if ( has_post_format('gallery') ): ?>
+			<p>gallery</p>
+		<?php endif; ?>
 
-	<?php if ( has_post_format('gallery') ): ?>
-		<p>gallery</p>
-	<?php endif; ?>
+		<?php if ( ! ((has_post_format('gallery')) && (has_post_format('aside')) ) ): ?>
+			<p>standard</p>		
+		<?php endif; ?>
 
-	<?php if ( ! ((has_post_format('gallery')) && (has_post_format('aside')) ) ): ?>
-		<p>standard</p>		
-	<?php endif; ?>
+		<?php if ( has_post_format('aside') ): ?>
+			<p>aside</p>		
+		<?php endif; ?>
 
-	<?php if ( has_post_format('aside') ): ?>
-		<p>aside</p>		
-	<?php endif; ?>
+		<?php if ( has_post_format('link') ): ?>
+			<p>link</p>
+		<?php endif; ?>
 
-	<?php if ( has_post_format('link') ): ?>
-		<p>link</p>
-	<?php endif; ?>
+		<?php if ( has_post_format('image') ): ?>
+			<p>image</p>
+		<?php endif; ?>
 
-	<?php if ( has_post_format('image') ): ?>
-		<p>image</p>
-	<?php endif; ?>
+		<?php if ( has_post_format('video') ): ?>
+			<p>video</p>
+		<?php endif; ?>
 
-	<?php if ( has_post_format('video') ): ?>
-		<p>video</p>
-	<?php endif; ?>
+		<?php if ( has_post_format('audio') ): ?>
+			<p>audio</p>
+		<?php endif; ?>
 
-	<?php if ( has_post_format('audio') ): ?>
-		<p>audio</p>
-	<?php endif; ?>
-
-	<?php if ( has_post_format('chat') ): ?>		
-		<p>chat</p>
-	<?php endif; ?>
-
+		<?php if ( has_post_format('chat') ): ?>		
+			<p>chat</p>
+		<?php endif; ?>
+	</p>
 </div>
 
 <!-- date & views -->
@@ -76,7 +76,9 @@
 		<div class="entry-date">
 			<div class="entry-date-container">
 				<span>
-					<?php echo get_the_date( 'Y-m-d' ); ?>
+					<p>
+						<?php echo get_the_date( 'Y-m-d' ); ?>
+					</p>
 				</span>
 			</div>
 		</div>
@@ -84,7 +86,9 @@
 		<div class="entry-views">
 			<div class="entry-views-container">
 				<span>
-					<?php the_views(); ?>
+					<p>
+						<?php the_views(); ?>
+					</p>
 				</span>
 			</div>
 		</div>

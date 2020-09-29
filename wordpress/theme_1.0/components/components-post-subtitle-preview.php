@@ -1,3 +1,3 @@
 <div class="subtitle">
-	<?php the_subtitle() ?>
+	<p><?php the_subtitle() ?></p>
 </div>

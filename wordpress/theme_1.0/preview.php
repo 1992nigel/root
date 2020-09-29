@@ -143,7 +143,9 @@
 			<div class="entry-date">
 				<div class="entry-date-container">
 					<span>
-						<?php echo get_the_date( 'Y-m-d' ); ?>
+						<p>
+							<?php echo get_the_date( 'Y-m-d' ); ?>
+						</p>
 					</span>
 				</div>
 			</div>
@@ -151,7 +153,9 @@
 			<div class="entry-views">
 				<div class="entry-views-container">
 					<span>
-						<?php the_views(); ?>
+						<p>
+							<?php the_views(); ?>
+						</p>
 					</span>
 				</div>
 			</div>

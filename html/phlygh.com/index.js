@@ -42,6 +42,9 @@ function cLog(x) {
 // events
 search.addEventListener("click", function() {
 
+  // check for focus
+  var isFocused = (document.activeElement === search);
+
   if (ui_switch_search == false) {
     body.classList.add("ui_switch_search_false");
     body.classList.remove("ui_switch_search_true");
@@ -58,7 +61,8 @@ search.addEventListener("click", function() {
     return;
   }
 
-
+  console.log(isFocused);
+  
 });
 
 window.onload = function() {

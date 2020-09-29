@@ -2,8 +2,13 @@
 <div class="components-post-thumbnail">
 
 	<?php
+		$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+
+		if ( has_post_thumbnail() ) {
 
 		echo '<img src="'. $url.'" alt="'. $url.'" width="500" height="600">';
+		
+		}
 	?>
 
 </div>

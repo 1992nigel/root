@@ -34,77 +34,87 @@
 
 <header class="header">
 
-	<span class="branding">
-		<?php if ( is_front_page() && is_home() ) : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-name">
-				<h1>
-					<span id="ui_1" class="brand">phlygh</span><span class="dotcom">.com</span>
-				</h1>
-			</a>
-		<?php else : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-name">
-				<h2>
-					
-					<span id="ui_1" class="brand">phlygh</span><span class="dotcom">.com</span>
-				</h2>
-			</a>
-		<?php endif; ?>
+	<?php if ( is_front_page() && is_home() ) : ?>
+				
+		<div class="searchContainer">
+		    	
+	    	<div class="searchPosition">
 
-		<p class="site-tagline">
+		    	<div class="searchTitle">
+			    	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-name">
+						<h1>
+							<span id="ui_1" class="brand">phlygh</span><span class="dotcom">.com</span>
+						</h1>
+					</a>
+			    </div>
 
-			<span class="action_hover site-tagline-catgeory">
-				<a class="site-tagline-link" href="https://phlygh.com/category/bitcoin/"> development</a> 
-			</span>
+		    	
+		    	<div class="searchInput">
+			    	<button> + </button><input id="search" type="text" name="s" placeholder="@phlygh" autocomplete="off">
+			    	<button> ? </button>
+			    </div>
 
-			<span class="comma"> , </span>
+		    	<div class="searchButtons">
+			    	<button> search </button>
 
+			    	<button> shuffle </button>
+			    </div>
 
-			<span class="action_hover site-tagline-catgeory">
-				<a class="site-tagline-link" href="https://phlygh.com/category/bitcoin/"> design</a> 
-			</span>
+	    	</div>
 
-			<span class="comma"> , </span>
+		</div>
 
-
-			<span class="action_hover site-tagline-catgeory">
-				<a class="site-tagline-link" href="https://phlygh.com/category/bitcoin/"> motion</a> 
-			</span>
-
-			<span class="comma"> , </span>
-
-
-			<span class="action_hover site-tagline-catgeory">
-				<a class="site-tagline-link" href="https://phlygh.com/category/bitcoin/"> ui/ux</a> 
-			</span>
-
-			<span class="comma"> , </span>
-
-
-			<span class="action_hover site-tagline-catgeory">
-				<a class="site-tagline-link" href="https://phlygh.com/category/bitcoin/"> finance</a> 
-			</span>
-
-			<span class=""> & </span>
-
-
-			<span class="action_hover site-tagline-catgeory">
-				<a class="site-tagline-link" href="https://phlygh.com/category/bitcoin/"> other</a> 
-			</span>
-		</p>
-	</span>
-
-	<div id="search_menu" class="search_menu">
-
-		<form action="/" method="get">
-		    <input type="text" name="s" id="search" placeholder="search" autocomplete="off" value="<?php the_search_query(); ?>" />
-		</form>
-
-	</div>
-
+	<?php else : ?>
+		
+	<?php endif; ?>
 
 	<div id="searching_menu" class="searching_menu">
 		<p>searching_menu<p>
 	</div>
+
+	<p class="site-tagline">
+
+		<span class="action_hover site-tagline-catgeory">
+			<a class="site-tagline-link" href="https://phlygh.com/category/bitcoin/"> development</a> 
+		</span>
+
+		<span class="comma"> , </span>
+
+
+		<span class="action_hover site-tagline-catgeory">
+			<a class="site-tagline-link" href="https://phlygh.com/category/bitcoin/"> design</a> 
+		</span>
+
+		<span class="comma"> , </span>
+
+
+		<span class="action_hover site-tagline-catgeory">
+			<a class="site-tagline-link" href="https://phlygh.com/category/bitcoin/"> motion</a> 
+		</span>
+
+		<span class="comma"> , </span>
+
+
+		<span class="action_hover site-tagline-catgeory">
+			<a class="site-tagline-link" href="https://phlygh.com/category/bitcoin/"> ui/ux</a> 
+		</span>
+
+		<span class="comma"> , </span>
+
+
+		<span class="action_hover site-tagline-catgeory">
+			<a class="site-tagline-link" href="https://phlygh.com/category/bitcoin/"> finance</a> 
+		</span>
+
+		<span class=""> & </span>
+
+
+		<span class="action_hover site-tagline-catgeory">
+			<a class="site-tagline-link" href="https://phlygh.com/category/bitcoin/"> other</a> 
+		</span>
+	</p>
+
+    <div class="bg"></div>
 
 </header>
 
