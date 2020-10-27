@@ -8,7 +8,3 @@
 		<?php endif; ?>
 	</a>
 </div>
-<!-- copy title link -->
-<div class="copy_Link">
-	<input onclick="copy_Link()" name="copy_Link" value="<?php the_permalink() ?>">
-</div>

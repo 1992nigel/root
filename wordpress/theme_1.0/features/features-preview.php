@@ -2,10 +2,10 @@
 	
 	<div class="components-post-info-preview">
 
-		<?php get_template_part( 'components/components', 'post-author-preview' ); ?>
-
 		<?php get_template_part( 'components/components', 'post-thumbnail-preview' ); ?>
 	
+		<?php get_template_part( 'components/components', 'post-author-preview' ); ?>
+
 		<?php get_template_part( 'components/components', 'post-title-preview' ); ?>
 
 		<?php get_template_part( 'components/components', 'post-subtitle-preview' ); ?>
