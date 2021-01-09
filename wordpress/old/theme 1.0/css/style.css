@@ -1,0 +1,169 @@
+/* styling */
+
+
+.site-title h1 {
+	font-size: 96px;
+}
+
+.site-title h2 {
+	font-size: 48px;
+}
+
+.blog .article-post-title-link-h2 {
+	font-size: 48px;
+}
+
+.single .article-post-title-link-h2 {
+	font-size: 96px;
+}
+
+.site-name {
+
+}
+
+.site-desc {
+
+}
+
+.site-title {
+  
+}
+
+.site-meta {
+  
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.grid {
+	display: grid;
+}
+
+.nav-next, .nav-previous {
+  width: 100%;
+  font-size: 24px;
+  line-height: 48px;
+  display: block;
+  text-align: center;
+}
+
+.nav-next a, .nav-previous a {
+  text-decoration: none;
+}
+
+::placeholder {
+  opacity: 1; 
+  text-align: right;
+  color: #242424 !important;
+}
+
+:-ms-input-placeholder {
+  text-align: right;
+  color: #242424 !important;
+}
+
+::-ms-input-placeholder {
+  text-align: right;
+  color: #242424 !important;
+}
+
+.code-block {
+  margin: 0px !important;
+}
+
+.ad-inserter {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin: 96px 0;
+}
+
+.ad-inserter p, .post .entry-content .ad-inserter p {
+  font-size: 24px;
+  line-height: 48px;
+}
+
+.ad-inserter iframe {
+  display: block;
+  margin: auto;
+}
+
+/* unvisited link */
+.front-end a:link {
+  color: green;
+}
+
+/* visited link */
+.front-end a:visited {
+  color: green;
+}
+
+/* mouse over link */
+.front-end a:hover {
+  color: red;
+}
+
+/* selected link */
+.front-end a:active {
+  color: yellow;
+}
+
+/* desktop/tablet */
+@media screen and (min-width: 1000px) {
+
+	.front-end article {
+		min-height: 1000px;
+	}
+
+}
+
+/* phone */
+@media screen and (max-width: 1000px) {
+	
+	.front-end article {
+		min-height: 480px;
+	}
+
+}
+
+
+/* jetpack */
+#infinite-footer {
+  display: none !important;
+  position: relative !important;
+}
+
+.infinite-loader {
+  display: none !important;
+  clear: both;
+  background: #ff0052 !important;
+}
+
+div.spinner {
+  display: none !important;
+}
+
+.post .wp-block-embed {
+  margin-bottom: 0;
+}
+
+.post .wp-block-embed iframe {
+  display: block;
+  margin: auto;
+}
+
+.post .wp-block-embed figcaption {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 24px;
+  line-height: 48px;
+}
+
+/* style */
+
+.ad-inserter iframe {
+  border: 12px solid #242424;
+}
