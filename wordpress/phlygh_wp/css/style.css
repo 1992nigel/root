@@ -548,8 +548,7 @@ table {
   border-spacing: 0;
 }
 
-
-/* style */
+/* custom style */
 
 body {
   background: #ffffff;
@@ -965,6 +964,25 @@ img {
 
 /* phone */
 @media screen and (max-width: 1000px) {
+  
+  #menu {
+    font-size: 24px;
+    padding: 0 12px;
+    line-height: 48px;
+  }
+
+  h2.logo .tiny {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  .post {
+    width: 100%;
+  }
+
+  .post:nth-child(3n + 2) {
+    width: 100%;
+  }
 
   .viewport {
     height: 100vh;
@@ -975,17 +993,8 @@ img {
   }
 
   h2.logo a {
-    font-size: 42px;
-    line-height: 42px;
-  }
-  .nav {
-    float: none;
-  }
-  .logo {
-    float: none;
-  }
-  .bar {
-    float: none;
+    font-size: 48px;
+    line-height: 48px;
   }
 
   .width_100_phone {
