@@ -8,31 +8,19 @@
 
 		<div class="page">
 			
-			<h2 class="textcenter">staff: <u class="tiny">library <i>of</i> <b>talent</b></u></h2>
+			<h2 class="textcenter">nigel: <u class="tiny">nigel <i>[at]</i> <b>phlygh.org</b></u></h2>
 
 			<div class="page_iframe">
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/szLDIVM8BBk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
 			<p class="textcenter">documentation for <a href="#">phlygh</a> as <br> a product, it's staff & their content</p>
-
-			<h3><a href="https://phlygh.org/nigel">clem</a></h3>
-			<p>president</p>
-			<h3><a href="https://phlygh.org/nigel">maisie</a></h3>
-			<p>cheif financial officer</p>
-			<h3><a href="https://phlygh.org/nigel">john</a></h3>
-			<p>audio engineer + photographer</p>
-			<h3><a href="https://phlygh.org/nigel">avys</a></h3>
-			<p>audio engineer</p>
-			<h3><a href="https://phlygh.org/nigel">reggie</a></h3>
-			<p>audio engineer</p>
-			<h3><a href="https://phlygh.org/nigel">kendall</a></h3>
-			<p>technical artist</p>
-			<h3><a href="https://phlygh.org/nigel">guiseppe</a></h3>
-			<p>actor & model</p>
-			<h3><a href="https://phlygh.org/nigel">nigel</a></h3></h3>
-			<p>technical artist</p>
-
+			
+			<h3>about</h3>
+			<p>1</p>
+			<h3>projects</h3>
+			<p>2</p>
+			
 			<hr>
 			<h2>are you a content creator?</h2>
 			<p>we are always interested in working with talent. contact us at 

@@ -12,7 +12,6 @@
 			<a class="button_h" href="http://phlygh.org/category/shop/">store</a>
 			<a class="button_h" href="http://phlygh.org/category/locations/">locations</a>
 			<a class="button_h" href="https://phlygh.org/support/">support</a>
-			<a class="button_g" href="https://phlygh.org">phlygh</a>
 		</div>
 
 

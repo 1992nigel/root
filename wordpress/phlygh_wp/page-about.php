@@ -7,50 +7,77 @@
 	<main id="main" class="site-main" role="main">
 
 		<div class="page">
-			<p class="textright">documentation for <a href="#">phlygh</a> as <br> a product, it's staff & their content</p>
 
-			<h3>product</h3>
-			<p>provide a platform, tools & guidance</p>
-			<ul>
-				<li>a website: with a newspaper fell</li>
-				<li>a 24 hour live: mixed with live and pre-recorded content</li>
-			</ul>
-			<h3>black: staff</h3>
-			<p>your perspective, made universally digestable</p>
-			<ul>
-				<li>audio engineers</li>
-				<li>video & audio talent</li>
-				<li>cameraperson/s</li>
-				<li>motion effects artist</li>
-			</ul>
-			<h3>grey: content</h3>
-			<p>assemble examplary information, consistancy with standards & scalability</p>
-			<ul>
-				<li>audio podcasts</li>
-				<li>video podcasts</li>
-				<li>commercials</li>
-				<li>business promotionals</li>
-				<li>ecommerce promotionals</li>
-				<li>event coverage</li>
-				<li>motion & special effects</li>
-				<li>live streams</li>
-				<li>music videos</li>
-				<li>interviews</li>
-				<li>instructional/infotainment</li>
-			</ul>
-			<h3>green: income</h3>
-			<p>analytics sold as advertising, dontations and merchandising</p>
-			<h3>yellow: expense</h3>
-			<p>tools, shelther and energy</p>
-			<h3>pink: audience</h3>
-			<p>all humans turned users</p>
+			<h2 class="textcenter">about: <u class="tiny"> program <i>of</i> <b>production</b></u></h2>
 
-			<h3>referential materials</h3>
-			<p>content creators, blogs & studios we are influenced by</p>
-			<a href="https://all3dp.com/">https://all3dp.com/</a>
-			<a href="https://www.prusaprinters.org/prints">https://www.prusaprinters.org/prints</a>
-			<a href="https://www.sonyalpharumors.com/">https://www.sonyalpharumors.com/</a>
-			<a href="https://trends.google.com/trends/?geo=US">https://trends.google.com/trends/?geo=US</a>
+
+			<div class="page_iframe">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/szLDIVM8BBk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+
+			<p class="textcenter">documentation for <a href="#">phlygh</a> as <br> a product, it's staff & their content</p>
+
+			<h3>current positions</h3>
+			<ul>
+				<li>cinematographers</li>
+				<li>photographers</li>
+				<li>javascript developers</li>
+				<li>graphics designers</li>
+				<li>3d/2d animators</li>
+				<li>investors</li>
+				<li>management</li>
+				<a href="https://phlygh.org/staff/">staff</a>
+			</ul>
+
+			<h3>original products</h3>
+			<ul>
+				<li>web app: with a newspaper feel</li>
+				<li>24 hour live: mixed with live and pre-recorded content</li>
+				<li>trending content: daily uploades of modern media</li>
+				<li>3d Prints: figurines, demonstrations and prototypes</li>
+				<a href="https://phlygh.org/staff/">library</a>
+			</ul>
+
+			<h3>talent for-hire</h3>
+			
+			<ul>
+				<li>graphic designers</li>
+				<li>film crew & equipment</li>
+				<li>actors & hosts</li>
+				<li>photographers</li><a href="https://phlygh.org/hire/">hire us</a>
+			</ul>
+
+			<h3>workflow patterns</h3>
+			<ul>
+				<li>prioritize collaberative effort to grow our skills through teamwork, shadowing and skill reviews.</li>
+				<li>utilize sharablity on: youtube, twitter, reddit, tiktok, instagram & facebook</li>
+				<li>assemble examplary information, consistancy with standards & scalability</li>
+				<a href="https://phlygh.org/supprt/">supprt</a>
+			</ul>
+
+			<h3>direction of interest</h3>
+			<p></p>
+			<ul>
+				<li>local news</li>
+				<li>stock market</li>
+				<li>3d printing</li>
+				<li>vr & ar design</li><a href="https://phlygh.org/news/">news</a>
+			</ul>
+
+			<h3>equipment available</h3>
+			<ul>
+				<li>sony a73</li>
+				<li>macbook pro 16 inch</li>
+				<li>voxxlab 3d printer</li>
+				<li>rode videomic</li>
+				<li>tacam 60d</li>
+				<li>akai mpk mini</li>
+				<li>50 mm lens</li>
+				<li>24-70 mm lens</li><a href="https://phlygh.org/locations/">locations</a>
+			</ul>
+
+			<hr>
+		
 		</div>
 
 	</main>
