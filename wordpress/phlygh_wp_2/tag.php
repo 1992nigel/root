@@ -15,7 +15,7 @@
 				<?php endwhile;
 
 			else :
-				echo '<p class="no_content_found">no content found</p>';
+				echo '<p>no content found</p>';
 
 			endif;
 			?>
@@ -23,6 +23,7 @@
 	</main>
 
 </div>
+
 <?php
 
  get_footer();
