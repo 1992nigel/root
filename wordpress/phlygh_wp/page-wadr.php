@@ -8,7 +8,7 @@
 
 	    <div class="viewport">
 			<video playsinline autoplay muted loop id="myVideo">
-			  <source src="https://phlygh.org/video/branding-white.mp4" type="video/mp4">
+			  <source src="https://phlygh.org/video/branding-wadr.mp4" type="video/mp4">
 			  Your browser does not support HTML5 video.
 			</video>
 
@@ -35,8 +35,3 @@
 	</main>
 
 </div>
-<?php
-
- get_footer();
-
-?>

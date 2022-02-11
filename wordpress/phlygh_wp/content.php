@@ -14,7 +14,7 @@
 			</a>
 
 			<!-- info -->
-			<div class="post-info">
+			<div class="post-preview-info">
 			
 				<!-- date & views -->
 				<div class="post-title">

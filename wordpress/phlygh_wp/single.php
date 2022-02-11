@@ -5,24 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta name="Description" content="phlygh: documentation">
 
-	<title><?php wp_title(''); ?> - <?php bloginfo(‘name’); ?></title>
+	<title><?php wp_title(''); ?> <?php bloginfo(‘name’); ?></title>
 
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 
-	<link rel="stylesheet" href="https://phlygh.org/wp-content/themes/phlygh_wp/css/reset.css">
-	<link rel="stylesheet" href="https://phlygh.org/wp-content/themes/phlygh_wp/css/normal.css">
 	<link rel="stylesheet" href="https://phlygh.org/wp-content/themes/phlygh_wp/css/style.css">
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-MN5JJHJS3K"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'G-MN5JJHJS3K');
-	</script>
 
 	<?php wp_head(); ?>
 
@@ -31,16 +19,33 @@
 
 <header>
 
-	<div class="nav">
-		
-		<h2 class="logo"><a href="https://phlygh.org"><div class="brand">phlygh</div></a>
+	<?php if ( !is_front_page() && !is_single() ) : ?>
 
-			<span class="tiny_title">
+		<div class="nav">
+			
+			<h2 class="logo"><a class="brand" href="https://phlygh.org"><div class="brand">phlygh.org</div></a>
+				
+			<span class="words">
+				<p>/</p>
+				<p><?php wp_title(''); ?></p>
+			</span>
 
+		</div>
+        
+	<?php endif; ?>
+
+	<?php if ( !is_front_page() && is_single() ) : ?>
+
+		<div class="nav">
+			
+			<h2 class="logo"><a class="brand" href="https://phlygh.org"><div class="brand">phlygh.org</div></a>
+				
+			<span class="words">
+				<a href="#">/news/</a>
 
 				<!-- categories  -->
 				<ul class="categories">
-					<p>:</p><?php
+					<?php
 					foreach((get_the_category()) as $category) {
 					  
 						$category_link = get_category_link($category->cat_ID);
@@ -53,20 +58,20 @@
 					}
 					?>
 				</ul>
-			</b></span>
 
-		</h2>
+			</span>
 
-		<div class="bar"><a id="menu" href="#">+</a></div>
-
-		<div class="links float_right">
-			<a class="button_a" href="#">audio</a>
-			<a class="button_b" href="#">video</a>
-			<a class="button_c" href="#">print</a>
 		</div>
 
-	</div>
-    
+
+		<div class="menu">
+			
+			<p><?php wp_title(''); ?></p>
+
+		</div>
+        
+	<?php endif; ?>
+
 </header>
 
 <div id="primary" class="content-area">
